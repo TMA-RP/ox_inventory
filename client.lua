@@ -1064,7 +1064,6 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 
 	PlayerData.loaded = true
 
-	lib.notify({ description = locale('inventory_setup') })
 	Shops()
 	Inventory.Stashes()
 	Inventory.Evidence()
@@ -1430,10 +1429,6 @@ RegisterNUICallback('buyItem', function(data, cb)
 	if data then
 		updateInventory({[data[1]] = data[2]}, data[4])
 		SendNUIMessage({ action = 'refreshSlots', data = data[3] and {items = {{item = data[2]}, {item = data[3], inventory = 'shop'}}} or {items = {item = data[2]}}})
-	end
-
-	if message then
-		lib.notify(message)
 	end
 
 	cb(response)
