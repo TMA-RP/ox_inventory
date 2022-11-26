@@ -229,9 +229,6 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 					return false, false, { type = 'error', description = "Vous n'avez pas les moyens" }
 				end
 
-        if fromItem.name == "sim" then
-          metadata.phonenumber = exports.npwd:generatePhoneNumber()
-        end
 				Inventory.SetSlot(playerInv, fromItem, count, metadata, data.toSlot)
 				playerInv.weight = newWeight
 				xPlayer.removeAccountMoney(currency, price, "Magasins")

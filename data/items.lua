@@ -350,7 +350,7 @@ return {
 
   ['screwdriver'] = {
     client = {
-      event = "ceeb_platechanger:changeplate"
+      export = "ceeb_platechanger.removeplate"
     },
     label = 'tournevis',
     weight = 0.2,
@@ -360,7 +360,10 @@ return {
   },
 
   ['fakeplate'] = {
-    label = 'fausse plaque',
+    client = {
+      export = "ceeb_platechanger.placeplate",
+    },
+    label = 'Fausse plaque',
     weight = 0.2,
     stack = true,
     close = true,
