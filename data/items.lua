@@ -319,7 +319,7 @@ return {
   ['sim'] = {
     label = 'Carte SIM',
     weight = 0.02,
-    stack = true,
+    stack = false,
     close = true,
     description = nil
   },
@@ -365,7 +365,7 @@ return {
     },
     label = 'Fausse plaque',
     weight = 0.2,
-    stack = true,
+    stack = false,
     close = true,
     description = nil
   },
