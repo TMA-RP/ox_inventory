@@ -1467,15 +1467,17 @@ RegisterNetEvent("ox_inventory:openPhone", function ()
 end)
 
 exports("checkSim", function()
+  if LocalPlayer.state.invBusy == true then return end
   local myNumber = exports.npwd:getPhoneNumber()
   local havePhoneForThisNumber = exports.ox_inventory:Search('count', 'phone', { phonenumber = myNumber}) > 0
-  
+
   return havePhoneForThisNumber
 end)
 
 exports.npwd:setPhoneDisabled(true) -- Disable phone by default 
 
 RegisterNetEvent("ox_inventory:updateInventory", function()
+  if LocalPlayer.state.invBusy == true then return end
   local havePhoneForThisNumber = exports.ox_inventory:checkSim()
 
   if havePhoneForThisNumber then
@@ -1486,5 +1488,27 @@ RegisterNetEvent("ox_inventory:updateInventory", function()
         exports.npwd:setPhoneVisible(false)
     end
     exports.npwd:setPhoneDisabled(true)
+  end
+end)
+
+AddStateBagChangeHandler('invBusy', nil, function(_, _, value)
+  if value then
+    local isVisible = exports.npwd:isPhoneVisible()
+    if isVisible then
+        exports.npwd:setPhoneVisible(false)
+    end
+    exports.npwd:setPhoneDisabled(true)
+  else
+    local havePhoneForThisNumber = exports.ox_inventory:checkSim()
+
+    if havePhoneForThisNumber then
+      exports.npwd:setPhoneDisabled(false)
+    else
+      local isVisible = exports.npwd:isPhoneVisible()
+      if isVisible then
+          exports.npwd:setPhoneVisible(false)
+      end
+      exports.npwd:setPhoneDisabled(true)
+    end
   end
 end)
