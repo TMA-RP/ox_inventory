@@ -289,12 +289,20 @@ function Inventory.SlotWeight(item, slot)
 	if not slot.metadata then slot.metadata = {} end
 
 	if item.ammoname and slot.metadata.ammo then
-		weight += (Items(item.ammoname).weight * slot.metadata.ammo)
+		local ammoWeight = Items(item.ammoname)?.weight
+
+		if ammoWeight then
+			weight += (ammoWeight * slot.metadata.ammo)
+		end
 	end
 
 	if slot.metadata.components then
-		for i = 1, #slot.metadata.components do
-			weight += Items(slot.metadata.components[i]).weight
+		for i = #slot.metadata.components, 1, -1 do
+			local componentWeight = Items(slot.metadata.components[i])?.weight
+
+			if componentWeight then
+				weight += componentWeight
+			end
 		end
 	end
 
@@ -1117,6 +1125,16 @@ end
 exports('CanCarryAmount', Inventory.CanCarryAmount)
 
 ---@param inv table | string | number
+---@param weight number
+function Inventory.CanCarryWeight(inv, weight)
+	inv = Inventory(inv)
+	local availableWeight = inv.maxWeight - inv.weight
+	local canHold = availableWeight >= weight
+	return canHold, availableWeight
+end
+exports('CanCarryWeight', Inventory.CanCarryWeight)
+
+---@param inv table | string | number
 ---@param firstItem string
 ---@param firstItemCount number
 ---@param testItem string
@@ -1133,74 +1151,13 @@ function Inventory.CanSwapItem(inv, firstItem, firstItemCount, testItem, testIte
 end
 exports('CanSwapItem', Inventory.CanSwapItem)
 
+---Mostly for internal use, but deprecated.
 ---@param name string
 ---@param count number
 ---@param metadata table
 ---@param slot number
----@param used boolean
-RegisterServerEvent('ox_inventory:removeItem', function(name, count, metadata, slot, used)
-	local inv = Inventory(source)
-
-	if used then
-		slot = inv.items[inv.usingItem]
-		local item = Items(slot.name)
-		local durability = item.consume ~= 0 and item.consume < 1 and slot.metadata.durability --[[@as number | false]]
-
-		if durability then
-			if durability > 100 then
-				local degrade = (slot.metadata.degrade or item.degrade) * 60
-				durability -= degrade * item.consume
-			else
-				durability -= item.consume * 100
-			end
-
-			if slot.count > 1 then
-				local emptySlot = Inventory.GetEmptySlot(inv)
-
-				if emptySlot then
-					local newItem = Inventory.SetSlot(inv, item, 1, table.deepclone(slot.metadata), emptySlot)
-
-					if newItem then
-						newItem.metadata.durability = durability
-
-						TriggerClientEvent('ox_inventory:updateSlots', inv.id, {
-							{
-								item = newItem,
-								inventory = inv.type
-							}
-						}, { left = inv.weight })
-					end
-				end
-
-				durability = 0
-			else
-				slot.metadata.durability = durability
-			end
-
-			if durability <= 0 then
-				durability = false
-			end
-		end
-
-		if not durability then
-			Inventory.RemoveItem(inv.id, slot.name, item.consume < 1 and 1 or item.consume, nil, slot.slot)
-		else
-			TriggerClientEvent('ox_inventory:updateSlots', inv.id, {
-				{
-					item = slot,
-					inventory = inv.type
-				}
-			}, { left = inv.weight })
-		end
-
-		if item?.cb then
-			item.cb('usedItem', item, inv, slot.slot)
-		end
-	else
-		Inventory.RemoveItem(source, name, count, metadata, slot)
-	end
-
-	inv.usingItem = nil
+RegisterServerEvent('ox_inventory:removeItem', function(name, count, metadata, slot)
+	Inventory.RemoveItem(source, name, count, metadata, slot)
 end)
 
 Inventory.Drops = {}
@@ -1987,6 +1944,9 @@ RegisterServerEvent('ox_inventory:giveItem', function(slot, target, count)
 
 	if toInventory?.player then
 		local data = fromInventory.items[slot]
+
+		if not data then return end
+
 		local item = Items(data.name)
 
 		if not toInventory.open and data and data.count >= count and Inventory.CanCarryItem(toInventory, item, count, data.metadata) and TriggerEventHooks('swapItems', {
