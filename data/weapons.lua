@@ -197,6 +197,20 @@ return {
       ammoname = 'ammo-45'
     },
 
+    ['WEAPON_P226'] = {
+      label = 'P226',
+      weight = 1110,
+      durability = 0.03,
+      ammoname = 'ammo-9'
+    },
+
+    ['WEAPON_P357'] = {
+      label = 'P357',
+      weight = 1360,
+      durability = 0.03,
+      ammoname = 'ammo-50'
+    },
+
     ['WEAPON_BENELLIM2'] = {
       label = 'Benelli M2',
       weight = 3100,
@@ -266,11 +280,18 @@ return {
       ammoname = 'ammo-45'
     },
 
-    ['WEAPON_LV338'] = {
-      label = 'LV338',
-      weight = 4370,
+    ['WEAPON_VICTUSXMR'] = {
+      label = 'VICTUS XMR',
+      weight = 4270,
       durability = 0.03,
       ammoname = 'ammo-sniper'
+    },
+
+    ['WEAPON_M249'] = {
+      label = 'M249',
+      weight = 7500,
+      durability = 0.03,
+      ammoname = 'ammo-762'
     },
   },
 
@@ -287,7 +308,7 @@ return {
       description = 'Pistolet : STVI DEAGLE G17 M9',
       type = 'magazine',
       client = {
-        component = { 'COMPONENT_MARKOMODS2011_CLIP_02', `COMPONENT_MARKOMODSL5_CLIP_02`, 'COMPONENT_G17_CLIP_04',
+        component = { 'COMPONENT_M45_CLIP_02', 'COMPONENT_P226_CLIP_02', 'COMPONENT_MARKOMODS2011_CLIP_02', `COMPONENT_MARKOMODSL5_CLIP_02`, 'COMPONENT_G17_CLIP_04',
           'COMPONENT_M9_CLIP_02' },
       }
     },
@@ -379,17 +400,17 @@ return {
       description = 'Pistolet : STVI G17 ',
       type = 'muzzle',
       client = {
-        component = { 'COMPONENT_MARKOMODS2011_MUZZLE_03', 'COMPONENT_G17_SUPPRESSOR_02' },
+        component = { 'COMPONENT_MARKOMODS2011_MUZZLE_01', 'COMPONENT_G17_SUPPRESSOR_02' },
       }
     },
 
     ['at_pistol_suppressor_mk2'] = {
       label = 'Silencieux MK2',
       weight = 120,
-      description = 'Pistolet : STVI G17 M9',
+      description = 'Pistolet : STVI G17 M9 P226',
       type = 'muzzle',
       client = {
-        component = { 'COMPONENT_MARKOMODS2011_MUZZLE_03', 'COMPONENT_G17_SUPPRESSOR_02', 'COMPONENT_AT_M9_SUPP' },
+        component = { 'COMPONENT_AT_P226_SUPP', 'COMPONENT_MARKOMODS2011_MUZZLE_03', 'COMPONENT_G17_SUPPRESSOR_03', 'COMPONENT_AT_M9_SUPP' },
 
       }
     },
@@ -400,19 +421,8 @@ return {
       description = 'Pistolet : G17 ',
       type = 'muzzle',
       client = {
-        component = { 'COMPONENT_G17_SUPPRESSOR_03' },
-
-      }
-    },
-
-    ['at_pistol_suppressor_mk4'] = {
-      label = 'Silencieux MK4',
-      weight = 120,
-      description = 'Pistolet : G17',
-      type = 'muzzle',
-      client = {
         component = { 'COMPONENT_G17_SUPPRESSOR_07' },
-        usetime = 0
+
       }
     },
 
@@ -453,11 +463,10 @@ return {
     ['at_shotgun_barrel_mk2'] = {
       label = 'Canon MK2',
       weight = 120,
-      description = 'Fusil à pompe : M870 BM2 MR43 ',
+      description = 'Fusil à pompe : BM2 MR43 ',
       type = 'barrel',
       client = {
-        component = { 'COMPONENT_DOUBLEBARREL_BARREL_05', 'COMPONENT_m870_BARREL_04',
-          'COMPONENT_MARKOMODSBENELLIM2_BARREL_05' },
+        component = { 'COMPONENT_DOUBLEBARREL_BARREL_05','COMPONENT_MARKOMODSBENELLIM2_BARREL_05' },
       }
     },
 
@@ -488,16 +497,6 @@ return {
       type = 'stock',
       client = {
         component = { 'COMPONENT_m870_STOCK_05', 'COMPONENT_MARKOMODSBENELLIM2_STOCK_02' },
-      }
-    },
-
-    ['at_shotgun_handguard_mk2'] = {
-      label = 'Garde main MK2',
-      weight = 120,
-      description = 'Fusil à pompe : M870',
-      type = 'handguard',
-      client = {
-        component = { 'COMPONENT_m870_HANDGUARD_02' },
       }
     },
 
@@ -776,7 +775,7 @@ return {
       description = 'AR : AKM M4A1 NSR9',
       type = 'scope',
       client = {
-        component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_04', 'COMPONENT_MARKOMODSM4_SCOPE_07', 'COMPONENT_AKM_SCOPE_07' },
+        component = {'COMPONENT_MARKOMODS_NSR9_SCOPE_04', 'COMPONENT_MARKOMODSM4_SCOPE_07', 'COMPONENT_AKM_SCOPE_07' },
       }
     },
 
@@ -995,7 +994,7 @@ return {
 
 
     ['at_sniper_barrel4_mk2'] = {
-      label = 'Canon Long MK2 ',
+      label = 'Canon Long MK2',
       weight = 120,
       description = 'SNIPER : AXMC ',
       type = 'barrel',
