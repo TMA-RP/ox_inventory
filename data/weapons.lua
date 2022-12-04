@@ -756,7 +756,7 @@ return {
       type = 'scope',
       client = {
         component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_03', 'COMPONENT_MARKOMODSM4_SCOPE_05', 'COMPONENT_MK18_SCOPE_07',
-          'COMPONENT_AKM_SCOPE_01' },
+          'COMPONENT_AKM_SCOPE_02' },
       }
     },
 
