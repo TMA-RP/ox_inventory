@@ -52,12 +52,12 @@ return {
   },
 
   ['money'] = {
-    label = 'Money',
+    label = 'Argent liquide',
   },
 
   ['radio'] = {
     label = 'Radio',
-    weight = 100,
+    weight = 230,
     stack = true,
     close = true,
     client = {
@@ -85,7 +85,7 @@ return {
 
   ['mask'] = {
     label = 'Masque',
-    weight = 150,
+    weight = 200,
     stack = false,
     consume = 1,
     client = {
@@ -97,7 +97,7 @@ return {
 
   ['hat'] = {
     label = 'Chapeau / Casque',
-    weight = 150,
+    weight = 200,
     stack = false,
     consume = 1,
     client = {
@@ -108,16 +108,16 @@ return {
   },
 
   ['cannabis'] = {
-    label = 'cannabis',
-    weight = 0.07,
+    label = 'Cannabis',
+    weight = 7,
     stack = true,
     close = true,
     description = nil
   },
 
   ['cubancigar'] = {
-    label = 'cigare cubain',
-    weight = 0.02,
+    label = 'Cigare',
+    weight = 10,
     stack = true,
     close = true,
     description = nil
@@ -132,16 +132,16 @@ return {
   },
 
   ['defibrilator'] = {
-    label = 'defibrilateur',
-    weight = 2.5,
+    label = 'Défibrilateur',
+    weight = 2500,
     stack = true,
     close = true,
     description = nil
   },
 
   ['fixtool'] = {
-    label = 'outils de réparations',
-    weight = 4.2,
+    label = 'Outils de réparations',
+    weight = 4200,
     stack = true,
     close = true,
     consume = 1,
@@ -151,16 +151,16 @@ return {
   },
 
   ['lighter'] = {
-    label = 'briquet',
-    weight = 0.03,
+    label = 'Briquet',
+    weight = 11,
     stack = true,
     close = true,
     description = nil
   },
 
   ['marijuana'] = {
-    label = 'marijuana',
-    weight = 0.09,
+    label = 'Marijuana',
+    weight = 9,
     stack = true,
     close = true,
     description = nil,
@@ -170,32 +170,32 @@ return {
   },
 
   ['marlboro'] = {
-    label = 'paquet de marlbarey ',
-    weight = 0.04,
+    label = 'Paquet de Marlbaré',
+    weight = 70,
     stack = true,
     close = true,
     description = nil
   },
 
   ['marlborocig'] = {
-    label = 'cigarette marlbarey',
-    weight = 0.01,
+    label = 'Cigarette Marlbaré',
+    weight = 5,
     stack = true,
     close = true,
     description = nil
   },
 
   ['handcuff'] = {
-    label = 'menottes',
-    weight = 0.3,
+    label = 'Menottes',
+    weight = 310,
     stack = true,
     close = true,
     description = nil
   },
 
   ['coke_pooch'] = {
-    label = 'pochon de coke',
-    weight = 0.02,
+    label = 'Pochon de coke',
+    weight = 2,
     stack = true,
     close = true,
     description = nil,
@@ -205,112 +205,112 @@ return {
   },
 
   ['coca_leaf'] = {
-    label = 'feuille de coca',
-    weight = 0.01,
+    label = 'Feuille de coca',
+    weight = 1,
     stack = true,
     close = true,
     description = nil
   },
 
   ['weed_seed'] = {
-    label = 'graine de weed',
-    weight = 0.01,
+    label = 'Graine de weed',
+    weight = 1,
     stack = true,
     close = true,
     description = nil
   },
 
   ['weed_fertilizer'] = {
-    label = 'engrais',
-    weight = 0.9,
+    label = 'Engrais',
+    weight = 1000,
     stack = true,
     close = true,
     description = nil
   },
 
   ['coca_seed'] = {
-    label = 'graine de coca',
-    weight = 0.01,
+    label = 'Graine de coca',
+    weight = 1,
     stack = true,
     close = true,
     description = nil
   },
 
   ['illegal_medical_pass'] = {
-    label = 'pass médical illégal',
-    weight = 0.02,
+    label = 'Pass médical illégal',
+    weight = 2,
     stack = true,
     close = true,
     description = nil
   },
 
   ['spike'] = {
-    label = 'herse',
-    weight = 3,
+    label = 'Herse',
+    weight = 3000,
     stack = true,
     close = true,
     description = nil
   },
 
   ['jumelles'] = {
-    label = 'jumelles',
-    weight = 0,
+    label = 'Jumelles',
+    weight = 600,
     stack = true,
     close = true,
     description = nil
   },
 
   ['pochon'] = {
-    label = 'pochon vide',
-    weight = 0.02,
+    label = 'Pochon vide',
+    weight = 1,
     stack = true,
     close = true,
     description = nil
   },
 
   ['timerbomb'] = {
-    label = 'bombe à retardement',
-    weight = 5,
+    label = 'Bombe à retardement',
+    weight = 1500,
     stack = true,
     close = true,
     description = nil
   },
 
   ['speedbomb'] = {
-    label = 'bombe à vitesse max',
-    weight = 5,
+    label = 'Bombe à vitesse max',
+    weight = 1500,
     stack = true,
     close = true,
     description = nil
   },
 
   ['remotebomb'] = {
-    label = 'bombe télécommandée',
-    weight = 5,
+    label = 'Bombe télécommandée',
+    weight = 1500,
     stack = true,
     close = true,
     description = nil
   },
 
   ['instantbomb'] = {
-    label = 'bombe instantannée',
-    weight = 5,
+    label = 'Bombe instantannée',
+    weight = 1500,
     stack = true,
     close = true,
     description = nil
   },
 
   ['cv_repas'] = {
-    label = 'repas',
-    weight = 1,
+    label = 'Repas',
+    weight = 500,
     stack = true,
     close = true,
     description = nil
   },
 
   ['cv_boisson'] = {
-    label = 'boisson',
-    weight = 1,
+    label = 'Boisson',
+    weight = 100,
     stack = true,
     close = true,
     description = nil
@@ -318,31 +318,31 @@ return {
 
   ['sim'] = {
     label = 'Carte SIM',
-    weight = 0.02,
+    weight = 1,
     stack = false,
     close = true,
     description = nil
   },
 
   ['braceletgps'] = {
-    label = 'bracelet gps actif',
-    weight = 1,
+    label = 'Bracelet gps actif',
+    weight = 250,
     stack = true,
     close = true,
     description = nil
   },
 
   ['braceletgps_off'] = {
-    label = 'bracelet gps inactif',
-    weight = 1,
+    label = 'Bracelet gps inactif',
+    weight = 250,
     stack = true,
     close = true,
     description = nil
   },
 
   ['coupebracelet'] = {
-    label = 'pince coupante',
-    weight = 1,
+    label = 'Pince coupante',
+    weight = 800,
     stack = true,
     close = true,
     description = nil
@@ -352,8 +352,8 @@ return {
     client = {
       export = "ceeb_platechanger.removeplate"
     },
-    label = 'tournevis',
-    weight = 0.2,
+    label = 'Tournevis',
+    weight = 110,
     stack = true,
     close = true,
     description = nil
@@ -364,23 +364,23 @@ return {
       export = "ceeb_platechanger.placeplate",
     },
     label = 'Fausse plaque',
-    weight = 0.2,
+    weight = 300,
     stack = false,
     close = true,
     description = nil
   },
 
   ['briefcasemoney'] = {
-    label = 'Valise d\'argent fermée',
-    weight = 3.36,
+    label = "Valise d'argent fermée",
+    weight = 5500,
     stack = true,
     close = true,
     description = nil
   },
 
   ['fishingrod'] = {
-    label = 'Canne a peche',
-    weight = 3.36,
+    label = 'Canne à pêche',
+    weight = 700,
     stack = true,
     close = true,
     description = nil
@@ -388,7 +388,7 @@ return {
 
   ['bait'] = {
     label = 'Appât',
-    weight = 0.30,
+    weight = 2,
     stack = true,
     close = true,
     description = nil
@@ -415,7 +415,7 @@ return {
   ['ocb_paper'] = {
     label = 'Feuille OCB slim',
     stack = true,
-    weight = 10,
+    weight = 1,
     close = true,
     client = {
       export = "devcore_smoke.Crollingpaper",
