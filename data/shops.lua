@@ -193,10 +193,22 @@ return {
     blip = {
       id = 59, colour = 69, scale = 0.8
     }, inventory = {
-      { name = 'water', price = 2 },
       { name = 'cubancigar', price = 10 },
       { name = 'marlboro', price = 20 },
       { name = 'lighter', price = 6 },
+      { name = 'bait', price = 6 },
+      { name = 'WEAPON_GOLFCLUB', price = 6 },
+      { name = 'fishingrod', price = 6 },
+      { name = 'pochon', price = 6 },
+      { name = 'WEAPON_BALL', price = 400 },
+      { name = 'WEAPON_BAT', price = 6 },
+      { name = 'parachute', price = 6 },
+      { name = 'screwdriver', price = 6 },
+      { name = 'jumelles', price = 6 },
+      { name = 'fixtool', price = 6 },
+      { name = 'WEAPON_WRENCH', price = 6 },
+      { name = 'WEAPON_HAMMER', price = 6 },
+      { name = 'WEAPON_FLASHLIGHT', price = 6 },
     }, locations = {
       vec3(373.8, 325.8, 103.5), vec3(2557.4, 382.2, 108.6), vec3(-3038.9, 585.9, 7.9),
       vec3(-3241.9, 1001.4, 12.8), vec3(547.4, 2671.7, 42.1), vec3(1961.4, 3740.6, 32.3),
@@ -276,7 +288,7 @@ return {
       -- { name = 'blood_1000', price = 5 },
     }, locations = {
       vec3(309.5337, -578.8837, 43.2654),
-      vec3(-249.5674, 6334.8374, 32.4272)
+      vec3(1672.6099, 3665.6235, 35.3396)
     }, targets = {
     }
   },
@@ -295,11 +307,57 @@ return {
   },
 
   ArmesIllegales = {
-    name = 'Black Market (Arms)',
+    name = 'Willy le chasseur',
     inventory = {
+      { name = 'ammo-50', price = 1, isIllegal = true },
+      { name = 'ammo-45', price = 1, isIllegal = true },
+      { name = 'ammo-9', price = 1, isIllegal = true },
+      { name = 'ammo-flare', price = 1, isIllegal = true },
+      { name = 'WEAPON_MINIUZI', price = 1, isIllegal = true },
+      { name = 'WEAPON_MP5', price = 1, isIllegal = true },
+      { name = 'WEAPON_G17', price = 1, isIllegal = true },
+      { name = 'WEAPON_M45', price = 1, isIllegal = true },
+      { name = 'WEAPON_M9', price = 1, isIllegal = true },
+      { name = 'WEAPON_L5', price = 1, isIllegal = true },
+      { name = 'WEAPON_P357', price = 1, isIllegal = true },
+      { name = 'WEAPON_P226', price = 1, isIllegal = true },
+      { name = 'WEAPON_2011', price = 1, isIllegal = true },
+      { name = 'WEAPON_MOLOTOV', price = 1, isIllegal = true },
+      { name = 'WEAPON_FLAREGUN', price = 1, isIllegal = true },
+      { name = 'WEAPON_BOTTLE', price = 1, isIllegal = true },
       -- { name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false }, isIllegal = true },
     }, locations = {
-      vec3(309.09, -913.75, 56.46)
+      vec3(-428.8799, 2063.5288, 120.7077)
+    }, targets = {
+
+    }
+  },
+
+  ArmesLourdesIllegales = {
+    name = '"BBC" Boby Beau Calibre',
+    inventory = {
+      { name = 'ammo-45', price = 1, isIllegal = true },
+      { name = 'ammo-556', price = 1, isIllegal = true },
+      { name = 'ammo-762', price = 1, isIllegal = true },
+      { name = 'ammo-50', price = 1, isIllegal = true },
+      { name = 'ammo-sniper', price = 1, isIllegal = true },
+      { name = 'ammo-shotgun', price = 1, isIllegal = true },
+      { name = 'WEAPON_AXMC', price = 1, isIllegal = true },
+      { name = 'WEAPON_GRENADE', price = 1, isIllegal = true },
+      { name = 'WEAPON_AKM', price = 1, isIllegal = true },
+      { name = 'WEAPON_BENELLIM2', price = 1, isIllegal = true },
+      { name = 'WEAPON_DOUBLEBARRELFM', price = 1, isIllegal = true },
+      { name = 'WEAPON_GUSENBERG', price = 1, isIllegal = true },
+      { name = 'WEAPON_MK18', price = 1, isIllegal = true },
+      { name = 'WEAPON_NSR9', price = 1, isIllegal = true },
+      { name = 'WEAPON_M4', price = 1, isIllegal = true },
+      { name = 'WEAPON_M249', price = 1, isIllegal = true },
+      { name = 'WEAPON_VICTUSXMR', price = 1, isIllegal = true },
+      
+
+      -- { name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false }, isIllegal = true },
+    }, locations = {
+      vec3(-2174.1914, 5194.1616, 16.8778)
     }, targets = {
 
     }
@@ -311,7 +369,7 @@ return {
       { name = 'weed_seed', price = 5000, isIllegal = true },
       { name = 'weed_fertilizer', price = 5000, isIllegal = true },
     }, locations = {
-      vec3(-1472.2466, 2130.8174, 39.8866)
+      vec3(-1470.9197, 2132.0679, 40.9629)
     }, targets = {
 
     }
@@ -323,7 +381,7 @@ return {
       { name = 'coca_seed', price = 5000, isIllegal = true },
       { name = 'weed_fertilizer', price = 5000, isIllegal = true },
     }, locations = {
-      vec3(1977.2164, -2606.6401, 2.7394)
+      vec3(1977.5743, -2608.5503, 3.5523)
     }, targets = {
 
     }
@@ -333,11 +391,20 @@ return {
     name = 'Mamie les bons tuyaux',
     inventory = {
       { name = 'lockpick', price = 5000, isIllegal = true },
-      -- { name = 'hack_usb', price = 5000, isIllegal = true },
-      -- { name = 'cutter', price = 5000, isIllegal = true },
+      { name = 'speedbomb', price = 5000, isIllegal = true },
+      { name = 'instantbomb', price = 5000, isIllegal = true },
+      { name = 'remotebomb', price = 5000, isIllegal = true },
+      { name = 'timerbomb', price = 5000, isIllegal = true },
+      { name = 'radio', price = 5000, isIllegal = true },
+      { name = 'WEAPON_FLARE', price = 5000, isIllegal = true },
       { name = 'spike', price = 5000, isIllegal = true },
+      { name = 'WEAPON_POOLCUE', price = 5000, isIllegal = true },
+      { name = 'coupebracelet', price = 5000, isIllegal = true },
+      { name = 'fakeplate', price = 5000, isIllegal = true },
+      -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
+      
     }, locations = {
-      vec3(2940.1358, 4624.7635, 48.34)
+      vec3(2940.4668, 4623.4497, 48.7208)
     }, targets = {
 
     }
