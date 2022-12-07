@@ -51,13 +51,13 @@ return {
 
     ['WEAPON_FLASHLIGHT'] = {
       label = 'Flashlight',
-      weight = 125,
+      weight = 325,
       durability = 0.1,
     },
 
     ['WEAPON_GOLFCLUB'] = {
       label = 'Golf Club',
-      weight = 330,
+      weight = 830,
       durability = 0.1,
     },
 
@@ -76,7 +76,7 @@ return {
 
     ['WEAPON_HAMMER'] = {
       label = 'Hammer',
-      weight = 1200,
+      weight = 950,
       durability = 0.1,
     },
 
@@ -88,7 +88,7 @@ return {
 
     ['WEAPON_KNIFE'] = {
       label = 'Knife',
-      weight = 300,
+      weight = 350,
       durability = 0.1,
     },
 
@@ -100,13 +100,13 @@ return {
 
     ['WEAPON_MACHETE'] = {
       label = 'Machete',
-      weight = 1000,
+      weight = 800,
       durability = 0.1,
     },
 
     ['WEAPON_MOLOTOV'] = {
       label = 'Molotov',
-      weight = 1800,
+      weight = 980,
       throwable = true,
     },
 
@@ -123,7 +123,7 @@ return {
 
     ['WEAPON_POOLCUE'] = {
       label = 'Pool Cue',
-      weight = 146,
+      weight = 350,
       durability = 0.1,
     },
 
@@ -141,19 +141,19 @@ return {
 
     ['WEAPON_STONE_HATCHET'] = {
       label = 'Stone Hatchet',
-      weight = 800,
+      weight = 1000,
       durability = 0.1,
     },
 
     ['WEAPON_STUNGUN_MP'] = {
       label = 'Tazer',
-      weight = 227,
+      weight = 827,
       durability = 0.1,
     },
 
     ['WEAPON_SWITCHBLADE'] = {
       label = 'Switch Blade',
-      weight = 300,
+      weight = 200,
       durability = 0.1,
       anim = { 'anim@melee@switchblade@holster', 'unholster', 200, 'anim@melee@switchblade@holster', 'holster', 600 },
     },
@@ -315,7 +315,7 @@ return {
 
     ['at_pistol_flashlight'] = {
       label = 'Lumière',
-      weight = 120,
+      weight = 90,
       description = 'Pistolet : G17 M9 STVI',
       type = 'flashlight',
       client = {
@@ -325,7 +325,7 @@ return {
 
     ['at_pistol_frame_mk2'] = {
       label = 'Armature MK2',
-      weight = 120,
+      weight = 200,
       description = 'Pistolet : G17',
       type = 'frame',
       client = {
@@ -335,7 +335,7 @@ return {
 
     ['at_pistol_slide_mk2'] = {
       label = 'Culasse MK2',
-      weight = 120,
+      weight = 210,
       description = 'Pistolet : G17 STVI',
       type = 'slide',
       client = {
@@ -346,7 +346,7 @@ return {
 
     ['at_pistol_slide_mk3'] = {
       label = 'Culasse MK3',
-      weight = 120,
+      weight = 210,
       description = 'Pistolet : G17',
       type = 'slide',
       client = {
@@ -356,7 +356,7 @@ return {
 
     ['at_pistol_slide_mk4'] = {
       label = 'Culasse MK4',
-      weight = 120,
+      weight = 210,
       description = 'Pistolet : G17',
       type = 'slide',
       client = {
@@ -366,7 +366,7 @@ return {
 
     ['at_pistol_barrel_mk2'] = {
       label = 'Canon MK2',
-      weight = 120,
+      weight = 70,
       description = 'Pistolet : STVI',
       type = 'barrel',
       client = {
@@ -376,7 +376,7 @@ return {
 
     ['at_pistol_barrel_mk3'] = {
       label = 'Canon MK3',
-      weight = 120,
+      weight = 70,
       description = 'Pistolet : STVI',
       type = 'barrel',
       client = {
@@ -386,7 +386,7 @@ return {
 
     ['at_pistol_muzzle_mk1'] = {
       label = 'Frein de bouche MK1',
-      weight = 120,
+      weight = 110,
       description = 'Pistolet : G17',
       type = 'muzzle',
       client = {
@@ -396,7 +396,7 @@ return {
 
     ['at_pistol_muzzle_mk2'] = {
       label = 'Frein de bouche MK2',
-      weight = 120,
+      weight = 110,
       description = 'Pistolet : STVI G17 ',
       type = 'muzzle',
       client = {
@@ -406,7 +406,7 @@ return {
 
     ['at_pistol_suppressor_mk2'] = {
       label = 'Silencieux MK2',
-      weight = 120,
+      weight = 170,
       description = 'Pistolet : STVI G17 M9 P226',
       type = 'muzzle',
       client = {
@@ -417,7 +417,7 @@ return {
 
     ['at_pistol_suppressor_mk3'] = {
       label = 'Silencieux MK3',
-      weight = 120,
+      weight = 170,
       description = 'Pistolet : G17 ',
       type = 'muzzle',
       client = {
@@ -428,7 +428,7 @@ return {
 
     ['at_pistol_scope_reddot'] = {
       label = 'Red dot',
-      weight = 120,
+      weight = 85,
       description = 'Pistolet : DEAGLE',
       type = 'scope',
       client = {
@@ -438,7 +438,7 @@ return {
 
     ['at_pistol_scope_holo'] = {
       label = 'Holographique',
-      weight = 120,
+      weight = 90,
       description = 'Pistolet : DEAGLE',
       type = 'scope',
       client = {
@@ -448,7 +448,7 @@ return {
 
     ['at_pistol_scope_reflex'] = {
       label = 'Reflex',
-      weight = 120,
+      weight = 85,
       description = 'Pistolet : DEAGLE',
       type = 'scope',
       client = {
@@ -462,7 +462,7 @@ return {
 
     ['at_shotgun_barrel_mk2'] = {
       label = 'Canon MK2',
-      weight = 120,
+      weight = 230,
       description = 'Fusil à pompe : BM2 MR43 ',
       type = 'barrel',
       client = {
@@ -472,7 +472,7 @@ return {
 
     ['at_shotgun_flashlight'] = {
       label = 'Lumière',
-      weight = 120,
+      weight = 90,
       description = 'Fusil à pompe : BM2',
       type = 'flashlight',
       client = {
@@ -482,7 +482,7 @@ return {
 
     ['at_shotgun_scope'] = {
       label = 'Holographique',
-      weight = 120,
+      weight = 90,
       description = 'Fusil à pompe : M870 BM2',
       type = 'scope',
       client = {
@@ -492,7 +492,7 @@ return {
 
     ['at_shotgun_stock'] = {
       label = 'Crosse',
-      weight = 120,
+      weight = 200,
       description = 'Fusil à pompe : M870 BM2',
       type = 'stock',
       client = {
@@ -502,7 +502,7 @@ return {
 
     ['at_shotgun_supressor_mk1'] = {
       label = 'Silencieux MK1',
-      weight = 120,
+      weight = 270,
       description = 'Fusil à pompe : BM2',
       type = 'supressor',
       client = {
@@ -512,7 +512,7 @@ return {
 
     ['at_shotgun_supressor_mk2'] = {
       label = 'Silencieux MK2',
-      weight = 120,
+      weight = 270,
       description = 'Fusil à pompe : BM2',
       type = 'supressor',
       client = {
@@ -522,7 +522,7 @@ return {
 
     ['at_shotgun_supressor_mk1_02'] = {
       label = 'Silencieux MK1',
-      weight = 120,
+      weight = 2700,
       description = 'Fusil à pompe : M870',
       type = 'suppressor',
       client = {
@@ -532,7 +532,7 @@ return {
 
     ['at_shotgun_supressor_mk2_02'] = {
       label = 'Silencieux MK2',
-      weight = 120,
+      weight = 270,
       description = 'Fusil à pompe : M870',
       type = 'suppressor',
       client = {
@@ -546,7 +546,7 @@ return {
 
     ['at_rifle_dustcover_mk2'] = {
       label = 'Armature MK2',
-      weight = 120,
+      weight = 1200,
       description = 'AR : AKM',
       type = 'cover',
       client = {
@@ -576,7 +576,7 @@ return {
 
     ['at_rifle_frame_mk2'] = {
       label = 'Armature MK2',
-      weight = 120,
+      weight = 1200,
       description = 'AR : MK18',
       type = 'frame',
       client = {
@@ -586,7 +586,7 @@ return {
 
     ['at_rifle_frame_mk3'] = {
       label = 'Armature MK3',
-      weight = 120,
+      weight = 1200,
       description = 'AR : MK18 NSR9',
       type = 'frame',
       client = {
@@ -596,7 +596,7 @@ return {
 
     ['at_rifle_handguard_mk2'] = {
       label = 'Garde main MK2',
-      weight = 120,
+      weight = 800,
       description = 'AR : AKM M4A1',
       type = 'handguard',
       client = {
@@ -606,7 +606,7 @@ return {
 
     ['at_rifle_handguard_mk3'] = {
       label = 'Garde main MK3',
-      weight = 120,
+      weight = 800,
       description = 'AR : AKM M4A1',
       type = 'handguard',
       client = {
@@ -616,7 +616,7 @@ return {
 
     ['at_rifle_handguard_mk4'] = {
       label = 'Garde main MK4',
-      weight = 120,
+      weight = 800,
       description = 'AR : AKM',
       type = 'handguard',
       client = {
@@ -626,7 +626,7 @@ return {
 
     ['at_rifle_clip_mk2'] = {
       label = 'chargeur MK2',
-      weight = 120,
+      weight = 190,
       description = 'AR : MK18 AKM M4A1 NSR9',
       type = 'clip',
       client = {
@@ -637,7 +637,7 @@ return {
 
     ['at_rifle_clip_mk3'] = {
       label = 'chargeur MK3',
-      weight = 120,
+      weight = 190,
       description = 'AR : MK18 AKM M4A1 NSR9',
       type = 'clip',
       client = {
@@ -648,7 +648,7 @@ return {
 
     ['at_rifle_clip_mk4'] = {
       label = 'chargeur MK4',
-      weight = 120,
+      weight = 190,
       description = 'AR : MK18 M4A1 NSR9',
       type = 'clip',
       client = {
@@ -658,7 +658,7 @@ return {
 
     ['at_rifle_clip_mk5'] = {
       label = 'chargeur MK5',
-      weight = 120,
+      weight = 270,
       description = 'AR : MK18 AKM M4A1 NSR9',
       type = 'clip',
       client = {
@@ -669,7 +669,7 @@ return {
 
     ['at_rifle_clip_mk6'] = {
       label = 'chargeur MK6',
-      weight = 120,
+      weight = 190,
       description = 'AR : NSR9',
       type = 'clip',
       client = {
@@ -679,7 +679,7 @@ return {
 
     ['at_rifle_clip_mk7'] = {
       label = 'chargeur MK7',
-      weight = 120,
+      weight = 190,
       description = 'AR : NSR9',
       type = 'clip',
       client = {
@@ -689,7 +689,7 @@ return {
 
     ['at_rifle_pistolgrip_mk2'] = {
       label = 'Poignée principale MK2',
-      weight = 120,
+      weight = 75,
       description = 'AR : AKM',
       type = 'grip',
       client = {
@@ -699,7 +699,7 @@ return {
 
     ['at_rifle_pistolgrip_mk3'] = {
       label = 'Poignée principale MK3',
-      weight = 120,
+      weight = 75,
       description = 'AR : AKM',
       type = 'grip',
       client = {
@@ -709,7 +709,7 @@ return {
 
     ['at_rifle_grip_mk1'] = {
       label = 'Poignée MK1',
-      weight = 120,
+      weight = 75,
       description = 'AR : MK18 M4A1 NSR9',
       type = 'grip',
       client = {
@@ -719,7 +719,7 @@ return {
 
     ['at_rifle_grip_mk2'] = {
       label = 'Poignée MK2',
-      weight = 120,
+      weight = 75,
       description = 'AR : MK18 M4A1 NSR9',
       type = 'grip',
       client = {
@@ -729,7 +729,7 @@ return {
 
     ['at_rifle_grip_mk3'] = {
       label = 'Poignée MK3',
-      weight = 120,
+      weight = 75,
       description = 'AR : NSR9',
       type = 'grip',
       client = {
@@ -739,7 +739,7 @@ return {
 
     ['at_rifle_holo_mk1'] = {
       label = 'Holographique MK1',
-      weight = 120,
+      weight = 75,
       description = 'AR : AKM Mk18 M4A1 NSR9',
       type = 'scope',
       client = {
@@ -750,7 +750,7 @@ return {
 
     ['at_rifle_holo_mk2'] = {
       label = 'Holographique MK2',
-      weight = 120,
+      weight = 90,
       description = 'AR : AKM MK18 M4A1 NSR9',
       type = 'scope',
       client = {
@@ -761,7 +761,7 @@ return {
 
     ['at_rifle_reflex_mk1'] = {
       label = 'Reflex MK1',
-      weight = 120,
+      weight = 85,
       description = 'AR : AKM M4A1 NSR9',
       type = 'scope',
       client = {
@@ -771,7 +771,7 @@ return {
 
     ['at_rifle_acog_mk1'] = {
       label = 'ACOG MK1',
-      weight = 120,
+      weight = 100,
       description = 'AR : AKM M4A1 NSR9',
       type = 'scope',
       client = {
@@ -781,7 +781,7 @@ return {
 
     ['at_rifle_stock_mk2'] = {
       label = 'Crosse MK2',
-      weight = 120,
+      weight = 300,
       description = 'AR : AKM MK18 M4A1 NSR9',
       type = 'stock',
       client = {
@@ -792,7 +792,7 @@ return {
 
     ['at_rifle_stock_mk3'] = {
       label = 'Crosse MK3',
-      weight = 120,
+      weight = 300,
       description = 'AR : AKM MK18 M4A1 NSR9',
       type = 'stock',
       client = {
@@ -803,7 +803,7 @@ return {
 
     ['at_rifle_stock_mk4'] = {
       label = 'Crosse MK4',
-      weight = 120,
+      weight = 300,
       description = 'AR : AKM MK18 M4A1',
       type = 'stock',
       client = {
@@ -814,7 +814,7 @@ return {
 
     ['at_rifle_stock_mk5'] = {
       label = 'Crosse MK5',
-      weight = 120,
+      weight = 300,
       description = 'AR : NSR9',
       type = 'stock',
       client = {
@@ -824,7 +824,7 @@ return {
 
     ['at_rifle_stock_mk6'] = {
       label = 'Crosse MK6',
-      weight = 120,
+      weight = 300,
       description = 'AR : NSR9',
       type = 'stock',
       client = {
@@ -834,7 +834,7 @@ return {
 
     ['at_rifle_stock_mk7'] = {
       label = 'Crosse MK7',
-      weight = 120,
+      weight = 300,
       description = 'AR : NSR9',
       type = 'stock',
       client = {
@@ -844,7 +844,7 @@ return {
 
     ['at_rifle_stock_mk8'] = {
       label = 'Crosse MK8',
-      weight = 120,
+      weight = 300,
       description = 'AR : NSR9',
       type = 'stock',
       client = {
@@ -854,7 +854,7 @@ return {
 
     ['at_rifle_stock_mk9'] = {
       label = 'Crosse MK9',
-      weight = 120,
+      weight = 300,
       description = 'AR : NSR9',
       type = 'stock',
       client = {
@@ -864,7 +864,7 @@ return {
 
     ['at_rifle_suppressor_mk1'] = {
       label = 'Silencieux MK1',
-      weight = 120,
+      weight = 200,
       description = 'AR : AKM MK18 M4A1 NSR9',
       type = 'suppressor',
       client = {
@@ -875,7 +875,7 @@ return {
 
     ['at_rifle_suppressor_mk2'] = {
       label = 'Silencieux MK2',
-      weight = 120,
+      weight = 200,
       description = 'AR : MK18 M4A1 NSR9',
       type = 'suppressor',
       client = {
@@ -886,7 +886,7 @@ return {
 
     ['at_rifle_suppressor_mk3'] = {
       label = 'Silencieux MK3',
-      weight = 120,
+      weight = 200,
       description = 'AR : M4A1',
       type = 'suppressor',
       client = {
@@ -896,7 +896,7 @@ return {
 
     ['at_rifle_suppressor_mk4'] = {
       label = 'Silencieux MK4',
-      weight = 120,
+      weight = 200,
       description = 'AR : M4A1',
       type = 'suppressor',
       client = {
@@ -920,7 +920,7 @@ return {
 
     ['at_smg_clip_mk2'] = {
       label = 'Chargeur MK2',
-      weight = 120,
+      weight = 130,
       description = 'SMG : UZI ',
       type = 'clip',
       client = {
@@ -930,7 +930,7 @@ return {
 
     ['at_smg_clip_mk3'] = {
       label = 'Chargeur MK3',
-      weight = 120,
+      weight = 130,
       description = 'SMG : UZI ',
       type = 'clip',
       client = {
@@ -940,7 +940,7 @@ return {
 
     ['at_smg_suppressor_mk1'] = {
       label = 'Silencieux MK1',
-      weight = 120,
+      weight = 200,
       description = 'SMG : MP5 UZI',
       type = 'suppressor',
       client = {
@@ -950,7 +950,7 @@ return {
 
     ['at_smg_scope_mk1'] = {
       label = 'Viseur MK1',
-      weight = 120,
+      weight = 85,
       description = 'SMG : MP5 UZI',
       type = 'scope',
       client = {
@@ -960,7 +960,7 @@ return {
 
     ['at_smg_scope_mk2'] = {
       label = 'Viseur MK2',
-      weight = 120,
+      weight = 85,
       description = 'SMG : UZI',
       type = 'scope',
       client = {
@@ -970,7 +970,7 @@ return {
 
     ['at_smg_stock_mk2'] = {
       label = 'Crosse MK2',
-      weight = 120,
+      weight = 175,
       description = 'SMG : UZI',
       type = 'scope',
       client = {
@@ -980,7 +980,7 @@ return {
 
     ['at_smg_suppressor_mk2'] = {
       label = 'Silencieux MK2',
-      weight = 120,
+      weight = 200,
       description = 'SMG : UZI',
       type = 'suppressor',
       client = {
@@ -995,7 +995,7 @@ return {
 
     ['at_sniper_barrel4_mk2'] = {
       label = 'Canon Long MK2',
-      weight = 120,
+      weight = 800,
       description = 'SNIPER : AXMC ',
       type = 'barrel',
       client = {
@@ -1005,7 +1005,7 @@ return {
 
     ['at_sniper_barrel5_silencieux_mk1'] = {
       label = 'Silencieux Canon Court MK1',
-      weight = 120,
+      weight = 1200,
       description = 'SNIPER : AXMC ',
       type = 'barrel',
       client = {
@@ -1015,7 +1015,7 @@ return {
 
     ['at_sniper_barrel8_silencecieux_mk2'] = {
       label = 'Silencieux Canon Long MK2',
-      weight = 120,
+      weight = 1400,
       description = 'SNIPER : AXMC ',
       type = 'barrel',
       client = {
@@ -1025,7 +1025,7 @@ return {
 
     ['at_sniper_grip1_bipod'] = {
       label = 'Bipied',
-      weight = 120,
+      weight = 750,
       description = 'SNIPER : AXMC ',
       type = 'grip',
       client = {
@@ -1035,7 +1035,7 @@ return {
 
     ['at_sniper_handguard_mk2'] = {
       label = 'Garde Main MK2',
-      weight = 120,
+      weight = 520,
       description = 'SNIPER : AXMC ',
       type = 'handguard',
       client = {
@@ -1055,7 +1055,7 @@ return {
 
     ['at_sniper_clip_mk2'] = {
       label = 'Chargeur MK2',
-      weight = 120,
+      weight = 210,
       description = 'SNIPER : AXMC ',
       type = 'clip',
       client = {
@@ -1065,7 +1065,7 @@ return {
 
     ['at_sniper_clip_mk3'] = {
       label = 'Chargeur MK3',
-      weight = 120,
+      weight = 220,
       description = 'SNIPER : AXMC ',
       type = 'clip',
       client = {
@@ -1511,12 +1511,12 @@ return {
   Ammo = {
     ['ammo-45'] = {
       label = '.45 ACP',
-      weight = 9,
+      weight = 10,
     },
 
     ['ammo-50'] = {
       label = '.50 AE',
-      weight = 19,
+      weight = 13,
     },
 
     ['ammo-9'] = {
@@ -1526,27 +1526,27 @@ return {
 
     ['ammo-flare'] = {
       label = 'Flare round',
-      weight = 38,
+      weight = 25,
     },
 
     ['ammo-556'] = {
       label = '5.56',
-      weight = 4,
+      weight = 6,
     },
 
     ['ammo-762'] = {
       label = '7.62',
-      weight = 8,
+      weight = 10,
     },
 
     ['ammo-shotgun'] = {
       label = '12 Gauge',
-      weight = 38,
+      weight = 13,
     },
 
     ['ammo-sniper'] = {
       label = '7.62 NATO',
-      weight = 11,
+      weight = 16,
     }
   }
 }
