@@ -500,7 +500,7 @@ local function registerCommands()
 
 	lib.addKeybind({
 		name = 'inv',
-		description = locale('open_player_inventory'),
+		description = "Inventaire - " .. locale('open_player_inventory'),
 		defaultKey = client.keys[1],
 		onPressed = function()
 			if not invOpen then
@@ -525,7 +525,7 @@ local function registerCommands()
 
 	lib.addKeybind({
 		name = 'inv2',
-		description = locale('open_secondary_inventory'),
+		description = "Inventaire - " .. locale('open_secondary_inventory'),
 		defaultKey = client.keys[2],
 		onPressed = function()
 			if invOpen then
@@ -705,7 +705,7 @@ local function registerCommands()
 
 	lib.addKeybind({
 		name = 'hotbar',
-		description = locale('disable_hotbar'),
+		description = "Inventaire - " .. locale('disable_hotbar'),
 		defaultKey = client.keys[3],
 		onPressed = function()
 			if EnableWeaponWheel or IsNuiFocused() or lib.progressActive() then return end
@@ -717,7 +717,7 @@ local function registerCommands()
 	for i = 1, 5 do
 		lib.addKeybind({
 			name = ('hotkey%s'):format(i),
-			description = locale('use_hotbar', i),
+			description = "Inventaire - " .. locale('use_hotbar', i),
 			defaultKey = tostring(i),
 			onPressed = function()
 				if invOpen or IsNuiFocused() or not invHotkeys then return end
