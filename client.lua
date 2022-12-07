@@ -275,7 +275,7 @@ local function useItem(data, cb)
 		invBusy = true
 		result = lib.callback.await('ox_inventory:useItem', 200, data.name, data.slot, slotData.metadata)
 
-		if not result then
+    if not result then
 			Wait(500)
 			invBusy = false
 			return
@@ -286,7 +286,7 @@ local function useItem(data, cb)
 		local success, response = pcall(cb, result and slotData)
 
 		if not success and response then
-			print(('^1An error occurred while calling item "%s" callback!\n^1SCRIPT ERROR: %s^0'):format(result.name, response))
+      print("^1" .. response)
 		end
 	end
 
@@ -1453,6 +1453,10 @@ RegisterNUICallback('buyItem', function(data, cb)
 	if data then
 		updateInventory({[data[1]] = data[2]}, data[4])
 		SendNUIMessage({ action = 'refreshSlots', data = data[3] and {items = {{item = data[2]}, {item = data[3], inventory = 'shop'}}} or {items = {item = data[2]}}})
+	end
+
+  if message then
+		lib.notify(message)
 	end
 
 	cb(response)

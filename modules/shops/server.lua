@@ -262,7 +262,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 					end
 				end
 
-				return true, {data.toSlot, playerInv.items[data.toSlot], shop.items[data.fromSlot].count and shop.items[data.fromSlot], playerInv.weight}, { type = 'success', description = message }
+				return true, {data.toSlot, playerInv.items[data.toSlot], shop.items[data.fromSlot].count and shop.items[data.fromSlot], playerInv.weight}
 			end
 
 			return false, false, { type = 'error', description = locale('unable_stack_items') }
