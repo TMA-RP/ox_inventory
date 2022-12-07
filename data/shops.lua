@@ -218,18 +218,35 @@ return {
     blip = {
       id = 110, colour = 69, scale = 0.8
     }, inventory = {
-      -- { name = 'weapon_heavypistol', price = 200, metadata = { registered = true }, license = 'weapon' },
+      { name = 'WEAPON_G17', price = 1000, metadata = { registered = true }, license = 'weapon' },
+      { name = 'WEAPON_M9', price = 1200, metadata = { registered = true }, license = 'weapon' },
+      { name = 'WEAPON_P357', price = 1350, metadata = { registered = true }, license = 'weapon' },
+      { name = 'WEAPON_M45', price = 1900, metadata = { registered = true }, license = 'weapon' },
+      { name = 'WEAPON_FLAREGUN', price = 500, metadata = { registered = true }, license = 'weapon' },
+      { name = 'WEAPON_STUNGUN_MP', price = 450, license = 'weapon' },
+      { name = 'WEAPON_KNUCKLE', price = 90 },
+      { name = 'WEAPON_SWITCHBLADE', price = 75 },
+      { name = 'WEAPON_DAGGER', price = 150 },
+      { name = 'WEAPON_KNIFE', price = 180 },
+      { name = 'WEAPON_MACHETE', price = 250 },
+      { name = 'WEAPON_STONE_HATCHET', price = 300 },
+      { name = 'WEAPON_HATCHET', price = 350 },
+      { name = 'WEAPON_BATTLEAXE', price = 400 },
+
+      { name = 'ammo-9', price = 1 },
+      { name = 'ammo-45', price = 1 },
+      { name = 'ammo-flare', price = 15 },
       -- { name = 'weapon_knuckle', price = 200 },
     }, locations = {
       vec3(-660.8675, -939.4791, 21.8293),
-      vec3(810.2, -2157.3, 29.6),
-      vec3(1693.4, 3759.5, 34.7),
-      vec3(-330.2, 6083.8, 31.4),
-      vec3(252.3, -50.0, 69.9),
-      vec3(22.0, -1107.2, 29.8),
-      vec3(2567.6, 294.3, 108.7),
-      vec3(-1117.5, 2698.6, 18.5),
-      vec3(842.4, -1033.4, 28.1)
+      vec3(813.1427, -2153.5947, 29.6192),
+      vec3(1696.7579, 3756.2576, 34.7054),
+      vec3(-327.3026, 6080.0117, 31.4548),
+      vec3(247.5067, -49.7142, 69.9412),
+      vec3(17.5895, -1109.5381, 29.7972),
+      vec3(2566.5090, 298.6732, 108.7350),
+      vec3(-1113.8441, 2696.1316, 18.5543),
+      vec3(842.8317, -1029.0250, 28.1949)
     }, targets = {
 
     }
