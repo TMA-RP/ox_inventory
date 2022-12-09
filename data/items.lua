@@ -419,4 +419,13 @@ return {
         weight = 15,
         close = true,
     },
+    ['test'] = {
+        label = "prop test",
+        weight = 1,
+        client = {
+            anim = 'drinking2',
+            prop = 'e_liquor_pernod',
+            usetime = 10000,
+        }
+    }
 }
