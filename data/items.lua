@@ -305,15 +305,21 @@ return {
         weight = 500,
         stack = true,
         close = true,
-        description = nil
+        description = nil,
+        client = {
+            export = "ceeb_fooddrink.useFromInventory"
+        }
     },
 
     ['cv_boisson'] = {
         label = 'Boisson',
         weight = 100,
-        stack = true,
+        stack = false,
         close = true,
-        description = nil
+        description = nil,
+        client = {
+            export = "ceeb_fooddrink.useFromInventory"
+        }
     },
 
     ['sim'] = {
@@ -424,7 +430,7 @@ return {
         weight = 1,
         client = {
             anim = 'drinking2',
-            prop = 'e_liquor_pernod',
+            prop = 'e_liquor_glass_blue',
             usetime = 10000,
         }
     }

@@ -31,6 +31,8 @@ return {
             { name = 'WEAPON_HAMMER', price = 6 },
             { name = 'WEAPON_FLASHLIGHT', price = 6 },
             { name = 'ocb_paper', price = 6 },
+            { name = 'cv_boisson', price = 6,
+                metadata = { customname = "wine", } },
         }, locations = {
             vec3(373.8, 325.8, 103.5), vec3(2557.4, 382.2, 108.6), vec3(-3038.9, 585.9, 7.9),
             vec3(-3241.9, 1001.4, 12.8), vec3(547.4, 2671.7, 42.1), vec3(1961.4, 3740.6, 32.3),
