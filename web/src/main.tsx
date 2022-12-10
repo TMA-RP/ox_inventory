@@ -1,5 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
+import { createRoot } from 'react-dom/client';
 import { Provider } from 'react-redux';
 import { DndProvider } from 'react-dnd';
 import { TouchBackend } from 'react-dnd-touch-backend';
@@ -10,9 +10,9 @@ import { isEnvBrowser } from './utils/misc';
 import { ThemeProvider } from '@mui/material';
 import { createTheme } from '@mui/material';
 
-if (isEnvBrowser()) {
-    const root = document.getElementById('root');
+const root = document.getElementById('root');
 
+if (isEnvBrowser()) {
     // https://i.imgur.com/iPTAdYV.png - Night time img
     root!.style.backgroundImage = 'url("https://i.imgur.com/3pzRj9n.png")';
     root!.style.backgroundSize = 'cover';
@@ -20,7 +20,7 @@ if (isEnvBrowser()) {
     root!.style.backgroundPosition = 'center';
 }
 
-ReactDOM.render(
+createRoot(root!).render(
     <React.StrictMode>
         <Provider store={store}>
             <ThemeProvider theme={createTheme({ palette: { mode: 'dark' } })}>
@@ -29,6 +29,5 @@ ReactDOM.render(
                 </DndProvider>
             </ThemeProvider>
         </Provider>
-    </React.StrictMode>,
-    document.getElementById('root')
+    </React.StrictMode>
 );
