@@ -62,6 +62,7 @@ files {
 	'web/build/assets/*.js',
 	'web/build/assets/*.css',
 	'web/images/*.png',
+	'web/images/**/*.png',
 	'modules/**/shared.lua',
 	'modules/bridge/**/client.lua',
 	'data/*.lua',

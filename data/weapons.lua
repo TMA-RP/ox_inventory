@@ -1073,6 +1073,19 @@ return {
       }
     },
 
+    -------------------
+    --MGC--
+    -------------------
+    
+    ['at_mg_clip_mk2'] = {
+      label = 'Chargeur 180 Mk2',
+      weight = 800,
+      description = 'MGC : M249 ',
+      type = 'barrel',
+      client = {
+        component = { 'COMPONENT_M249_CLIP_02' },
+      }
+    },
     -------------------------
     -- COMPENENTS VANNILLA --
     -------------------------

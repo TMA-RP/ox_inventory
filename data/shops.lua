@@ -31,8 +31,7 @@ return {
             { name = 'WEAPON_HAMMER', price = 6 },
             { name = 'WEAPON_FLASHLIGHT', price = 6 },
             { name = 'ocb_paper', price = 6 },
-            { name = 'cv_boisson', price = 6,
-                metadata = { customname = "wine", } },
+            { name = 'cv_boisson', price = 6, metadata = { customname = "orange", } },
         }, locations = {
             vec3(373.8, 325.8, 103.5), vec3(2557.4, 382.2, 108.6), vec3(-3038.9, 585.9, 7.9),
             vec3(-3241.9, 1001.4, 12.8), vec3(547.4, 2671.7, 42.1), vec3(1961.4, 3740.6, 32.3),
@@ -45,6 +44,60 @@ return {
             vec3(-1820.5, 792.5, 138.1),
             vec3(1698.3, 4924.4, 42.0), vec3(161.7914, 6641.0703, 31.6989), vec3(814.2743, -781.0761, 26.1750),
             vec3(303.5167, -580.4360, 47.2809), vec3(-160.4574, 6322.7124, 31.5869)
+        }, targets = {
+        }
+    },
+    
+    Bar = {
+        name = 'Bar',
+        groups = {
+            ['unicorn'] = 0,
+            ['bahamas'] = 0,
+            ['saloon'] = 0,
+            ['yellow'] = 0,
+        },
+        blip = {
+            id = 403, colour = 69, scale = 0.8
+        }, inventory = {
+            { name = 'cv_boisson', price = 0, metadata = { customname = "vodka", label = "Vodka", image = "fooddrink/absolut" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "wine", label = "Vin rouge", image = "fooddrink/wine" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "baileys", label = "Baileys", image = "fooddrink/baileys" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "becherovka", label = "Becherovka", image = "fooddrink/becherovka" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "beefeater", label = "Beefeater", image = "fooddrink/beefeater" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "chivas", label = "Chivas", image = "fooddrink/chivas" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "cointreau", label = "Cointreau", image = "fooddrink/cointreau" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "curacao", label = "Curacao", image = "fooddrink/curacao" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "havana", label = "Havana", image = "fooddrink/havana" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "jack", label = "Jacky Michel", image = "fooddrink/jack" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "jager", label = "Jager", image = "fooddrink/jager" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "jameson", label = "Jameson", image = "fooddrink/jameson" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "kahlua", label = "Kahlua", image = "fooddrink/kahlua" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "limoncino", label = "Limoncino", image = "fooddrink/limoncino" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "malibu", label = "Malibu", image = "fooddrink/malibu" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "olmeca", label = "Olmeca", image = "fooddrink/olmeca" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "pernod", label = "Pernod", image = "fooddrink/pernod" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "sambuka", label = "Sambuka", image = "fooddrink/sambuka" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "applejuice", label = "Jus de pommes", image = "fooddrink/applejuice" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "beer", label = "Bière en bouteille", image = "fooddrink/beer" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "beercan", label = "Bière en canette", image = "fooddrink/beercan" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "blackberryjuice", label = "Jus de raisin", image = "fooddrink/blackberryjuice" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "coffe", label = "Café", image = "fooddrink/coffe" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "coffemilkshake", label = "Café crème", image = "fooddrink/coffemilkshake" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "lemonade", label = "Limonade", image = "fooddrink/lemonade" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "mangojuice", label = "Jus de mangue", image = "fooddrink/mangojuice" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "mate", label = "mate", image = "fooddrink/mate" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "milk", label = "Lait", image = "fooddrink/milk" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "monster", label = "Boisson énergétique", image = "fooddrink/monster" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "notacola", label = "Caca Cola", image = "fooddrink/notacola" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "orange", label = "Jus d'orange", image = "fooddrink/orange" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "pipsi", label = "Pipipsi", image = "fooddrink/pipsi" } },
+            { name = 'cv_boisson', price = 0, metadata = { customname = "spite", label = "Spite", image = "fooddrink/spite" } },
+        }, locations = {
+            vec3(129.4361, -1281.2415, 29.2693),
+            vec3(-1379.1288, -593.0057, 30.2165),
+            vec3(-1385.7695, -627.0979, 35.8962),
+            vec3(1981.8220, 3052.3191, 47.2150),
+            vec3(-305.2897, 6269.2788, 31.5268),
         }, targets = {
         }
     },
@@ -176,6 +229,7 @@ return {
             { name = 'WEAPON_NSR9', price = 1, metadata = { registered = false }, isIllegal = true },
             { name = 'WEAPON_M4', price = 1, metadata = { registered = false }, isIllegal = true },
             { name = 'WEAPON_M249', price = 1, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_RPG', price = 1, metadata = { registered = false }, isIllegal = true },
             { name = 'WEAPON_VICTUSXMR', price = 1, metadata = { registered = false }, isIllegal = true },
 
 
