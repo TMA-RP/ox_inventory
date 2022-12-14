@@ -20,7 +20,7 @@ const InventoryHotbar: React.FC = () => {
         } else {
             if (handle) clearTimeout(handle);
             setHotbarVisible(true);
-            setHandle(setTimeout(() => setHotbarVisible(false), 3000));
+            setHandle(setTimeout(() => setHotbarVisible(false), 6000));
         }
     });
 
