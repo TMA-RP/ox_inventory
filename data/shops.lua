@@ -9,10 +9,13 @@
 ---@field groups? string | string[] | { [string]: number }
 
 return {
-    General = {
+    Superette = {
         name = '24/7 Superette',
         blip = {
-            id = 59, colour = 69, scale = 0.8
+            sprite = 59,
+            color = 69,
+            alwaysShow = false,
+            onlyInVehicle = false,
         }, inventory = {
             { name = 'cubancigar', price = 10 },
             { name = 'marlboro', price = 20 },
@@ -47,7 +50,7 @@ return {
         }, targets = {
         }
     },
-    
+
     Bar = {
         name = 'Bar',
         groups = {
@@ -56,43 +59,75 @@ return {
             ['saloon'] = 0,
             ['yellow'] = 0,
         },
-        blip = {
-            id = 403, colour = 69, scale = 0.8
-        }, inventory = {
-            { name = 'cv_boisson', price = 0, metadata = { customname = "vodka", label = "Vodka", image = "fooddrink/absolut" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "wine", label = "Vin rouge", image = "fooddrink/wine" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "baileys", label = "Baileys", image = "fooddrink/baileys" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "becherovka", label = "Becherovka", image = "fooddrink/becherovka" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "beefeater", label = "Beefeater", image = "fooddrink/beefeater" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "chivas", label = "Chivas", image = "fooddrink/chivas" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "cointreau", label = "Cointreau", image = "fooddrink/cointreau" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "curacao", label = "Curacao", image = "fooddrink/curacao" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "havana", label = "Havana", image = "fooddrink/havana" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "jack", label = "Jacky Michel", image = "fooddrink/jack" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "jager", label = "Jager", image = "fooddrink/jager" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "jameson", label = "Jameson", image = "fooddrink/jameson" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "kahlua", label = "Kahlua", image = "fooddrink/kahlua" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "limoncino", label = "Limoncino", image = "fooddrink/limoncino" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "malibu", label = "Malibu", image = "fooddrink/malibu" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "olmeca", label = "Olmeca", image = "fooddrink/olmeca" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "pernod", label = "Pernod", image = "fooddrink/pernod" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "sambuka", label = "Sambuka", image = "fooddrink/sambuka" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "applejuice", label = "Jus de pommes", image = "fooddrink/applejuice" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "beer", label = "Bière en bouteille", image = "fooddrink/beer" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "beercan", label = "Bière en canette", image = "fooddrink/beercan" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "blackberryjuice", label = "Jus de raisin", image = "fooddrink/blackberryjuice" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "coffe", label = "Café", image = "fooddrink/caffe" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "coffemilkshake", label = "Café crème", image = "fooddrink/caffemilkshake" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "lemonade", label = "Limonade", image = "fooddrink/lemonade" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "mangojuice", label = "Jus de mangue", image = "fooddrink/mangojuice" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "mate", label = "mate", image = "fooddrink/mate" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "milk", label = "Lait", image = "fooddrink/milk" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "monster", label = "Boisson énergétique", image = "fooddrink/monster" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "notacola", label = "Caca Cola", image = "fooddrink/notacola" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "orange2", label = "Jus d'orange pulpeux", image = "fooddrink/orangejuice2" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "orange", label = "Jus d'orange en brique", image = "fooddrink/orangejuice" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "pipsi", label = "Pipipsi", image = "fooddrink/pipsi" } },
-            { name = 'cv_boisson', price = 0, metadata = { customname = "spite", label = "Spite", image = "fooddrink/spite" } },
+        inventory = {
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "vodka", label = "Vodka", image = "fooddrink/absolut" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "wine", label = "Vin rouge", image = "fooddrink/wine" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "baileys", label = "Baileys", image = "fooddrink/baileys" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "becherovka", label = "Becherovka", image = "fooddrink/becherovka" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "beefeater", label = "Beefeater", image = "fooddrink/beefeater" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "chivas", label = "Chivas", image = "fooddrink/chivas" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "cointreau", label = "Cointreau", image = "fooddrink/cointreau" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "curacao", label = "Curacao", image = "fooddrink/curacao" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "havana", label = "Havana", image = "fooddrink/havana" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "jack", label = "Jacky Michel", image = "fooddrink/jack" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "jager", label = "Jager", image = "fooddrink/jager" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "jameson", label = "Jameson", image = "fooddrink/jameson" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "kahlua", label = "Kahlua", image = "fooddrink/kahlua" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "limoncino", label = "Limoncino", image = "fooddrink/limoncino" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "malibu", label = "Malibu", image = "fooddrink/malibu" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "olmeca", label = "Olmeca", image = "fooddrink/olmeca" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "pernod", label = "Pernod", image = "fooddrink/pernod" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "sambuka", label = "Sambuka", image = "fooddrink/sambuka" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "applejuice", label = "Jus de pommes", image = "fooddrink/applejuice" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "beer", label = "Bière en bouteille", image = "fooddrink/beer" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "beercan", label = "Bière en canette", image = "fooddrink/beercan" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "blackberryjuice", label = "Jus de raisin", image = "fooddrink/blackberryjuice" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "coffe", label = "Café", image = "fooddrink/caffe" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "coffemilkshake", label = "Café crème", image = "fooddrink/caffemilkshake" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "lemonade", label = "Limonade", image = "fooddrink/lemonade" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "mangojuice", label = "Jus de mangue", image = "fooddrink/mangojuice" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "mate", label = "mate", image = "fooddrink/mate" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "milk", label = "Lait", image = "fooddrink/milk" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "monster", label = "Boisson énergétique", image = "fooddrink/monster" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "notacola", label = "Caca Cola", image = "fooddrink/notacola" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "orange2", label = "Jus d'orange pulpeux", image = "fooddrink/orangejuice2" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "orange", label = "Jus d'orange en brique", image = "fooddrink/orangejuice" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "pipsi", label = "Pipipsi", image = "fooddrink/pipsi" } },
+            { name = 'cv_boisson', price = 0,
+                metadata = { customname = "spite", label = "Spite", image = "fooddrink/spite" } },
         }, locations = {
             vec3(129.4361, -1281.2415, 29.2693),
             vec3(-1379.1288, -593.0057, 30.2165),
@@ -102,11 +137,13 @@ return {
         }, targets = {
         }
     },
-
     Ammunation = {
         name = 'Ammunation',
         blip = {
-            id = 110, colour = 69, scale = 0.8
+            sprite = 110,
+            color = 69,
+            alwaysShow = false,
+            onlyInVehicle = false,
         }, inventory = {
             { name = 'WEAPON_G17', price = 1000, metadata = { registered = true }, license = 'weapon' },
             { name = 'WEAPON_M9', price = 1200, metadata = { registered = true }, license = 'weapon' },
@@ -147,9 +184,7 @@ return {
         groups = {
             ['ambulance'] = 0
         },
-        blip = {
-            id = 403, colour = 69, scale = 0.8
-        }, inventory = {
+        inventory = {
             { name = 'defibrilator', price = 26 },
             { name = 'bandage', price = 5 },
             -- { name = 'tourniquet', price = 5 },
@@ -173,9 +208,7 @@ return {
 
     HopitalIllegal = {
         name = 'Gunter les doigts de fée',
-        blip = {
-            id = 403, colour = 69, scale = 0.8
-        }, inventory = {
+        inventory = {
             { name = 'illegal_medical_pass', price = 26, isIllegal = true },
         }, locations = {
             vec3(260.7488, -1358.6775, 24.5378),
@@ -291,6 +324,12 @@ return {
 
     DigitalDen = {
         name = 'Digital Den',
+        blip = {
+            sprite = 110,
+            color = 69,
+            alwaysShow = false,
+            onlyInVehicle = false,
+        },
         inventory = {
             { name = 'phone', price = 5000 },
             { name = 'sim', price = 5000 },
