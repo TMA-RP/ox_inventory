@@ -425,4 +425,10 @@ return {
         weight = 15,
         close = true,
     },
+    ['casino_chip'] = {
+        label = 'Jeton Casino',
+        stack = true,
+        weight = 0,
+        close = true,
+    }
 }

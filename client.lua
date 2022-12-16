@@ -266,7 +266,6 @@ local function canUseItem(isAmmo)
 	return PlayerData.loaded
 	and not PlayerData.dead
 	and not invBusy
-	and not lib.progressActive()
     and not IsPedRagdoll(cache.ped) and not IsPedFalling(cache.ped)
 	and (not isAmmo or (isAmmo and currentWeapon and IsPlayerFreeAiming(cache.playerId)))
 end
@@ -439,7 +438,7 @@ exports('useSlot', useSlot)
 ---@param id number
 ---@param slot number
 local function useButton(id, slot)
-	if PlayerData.loaded and not invBusy and not lib.progressActive() then
+	if PlayerData.loaded and not invBusy then
 		local item = PlayerData.inventory[slot]
 		if not item then return end
 
@@ -717,9 +716,10 @@ local function registerCommands()
 		description = "Inventaire - " .. locale('disable_hotbar'),
 		defaultKey = client.keys[3],
 		onPressed = function()
-			if EnableWeaponWheel or IsNuiFocused() or lib.progressActive() then return end
+			if EnableWeaponWheel or IsNuiFocused() then return end
 			SendNUIMessage({ action = 'toggleHotbar' })
-      TriggerEvent("ceeb_hud:switchStatus")
+            TriggerEvent("ceeb_hud:switchStatus")
+            TriggerEvent("ox_lib:makeUpper")
 		end
 	})
 
