@@ -50,22 +50,21 @@ local function createShop(shopName, shopDetails)
 					print(('^1attempted to restrict slot %s (%s) to grade %s, but %s has no job restriction^0'):format(i, slot.name, slot.grade, shopDetails.name))
 					slot.grade = nil
 				end
-
+                
 				local Item = Items(slot.name)
-
 				if Item then
 					---@type OxShopItem
 					slot = {
 						name = Item.name,
 						slot = j,
-						weight = Item.weight,
+						weight = (slot.metadata and slot.metadata.weight) and (Item.weight + slot.metadata.weight) or Item.weight,
 						count = slot.count,
 						price = (server.randomprices and not slot.currency or slot.currency == 'money') and (math.ceil(slot.price * (math.random(80, 120)/100))) or slot.price or 0,
 						metadata = slot.metadata,
 						license = slot.license,
 						currency = slot.currency,
 						grade = slot.grade,
-            isIllegal = slot.isIllegal
+                        isIllegal = slot.isIllegal
 					}
 
 					Shops[shopName][i].items[j] = slot

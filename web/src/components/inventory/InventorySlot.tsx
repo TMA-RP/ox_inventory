@@ -156,7 +156,7 @@ const InventorySlot: React.FC<SlotProps> = ({ inventory, item }) => {
                                             })}g `
                                         : ''}
                                 </p>
-                                <p>{item.count ? item.count.toLocaleString('en-us') + `x` : ''}</p>
+                                <p>{item.count ? ["black_money", "money"].includes(item.name) ? item.count.toLocaleString('en-us') + `$` : item.count > 1 ? item.count.toLocaleString('en-us') + `x` : '' : ''}</p>
                             </div>
                         </div>
                         <div>
