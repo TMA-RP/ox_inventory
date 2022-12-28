@@ -120,7 +120,7 @@ return {
             { name = 'cv_boisson', price = 0,
                 metadata = { customname = "mate", weight = -45, label = "mate", image = "fooddrink/mate" } },
             { name = 'cv_boisson', price = 0,
-                metadata = { customname = "milk", weight = 400, label = "Lait", image = "fooddrink/milk" } },
+                metadata = { customname = "milk", weight = 900, label = "Lait", image = "fooddrink/milk" } },
             { name = 'cv_boisson', price = 0,
                 metadata = { customname = "monster", weight = -67, label = "Boisson énergétique",
                     image = "fooddrink/monster" } },
