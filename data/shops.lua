@@ -45,11 +45,25 @@ return {
             vec3(-48.5, -1757.5, 29.4), vec3(1163.3, -323.8, 69.2), vec3(-707.5, -914.2, 19.2),
             vec3(-1820.5, 792.5, 138.1),
             vec3(1698.3, 4924.4, 42.0), vec3(161.7914, 6641.0703, 31.6989), vec3(814.2743, -781.0761, 26.1750),
-            vec3(303.5167, -580.4360, 47.2809), vec3(-160.4574, 6322.7124, 31.5869)
+            vec3(-160.4574, 6322.7124, 31.5869)
         }, targets = {
         }
     },
-
+    SuperettePillbox = {
+        name = '24/7 Superette',
+        inventory = {
+            { name = 'cubancigar', price = 10 },
+            { name = 'marlboro', price = 20 },
+            { name = 'lighter', price = 6 },
+            { name = 'screwdriver', price = 6 },
+            { name = 'ocb_paper', price = 6 },
+            { name = 'cv_boisson', price = 6 },
+            { name = 'cv_repas', price = 6 },
+        }, locations = {
+            vec3(303.7165, -579.8060, 47.2809),
+        }, targets = {
+        }
+    },
     Bar = {
         name = 'Bar',
         groups = {
