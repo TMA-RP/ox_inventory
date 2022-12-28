@@ -293,6 +293,13 @@ return {
             durability = 0.06,
             ammoname = 'ammo-762'
         },
+
+        ['WEAPON_RPG'] = {
+            label = 'RPG 7',
+            weight = 17500,
+            durability = 0.01,
+            ammoname = 'ammo-rpg'
+        },
     },
 
     Components = {
@@ -1577,6 +1584,11 @@ return {
         ['ammo-sniper'] = {
             label = '7.62 NATO',
             weight = 16,
+        },
+
+        ['ammo-rpg'] = {
+            label = 'Roquette',
+            weight = 2000,
         }
     }
 }
