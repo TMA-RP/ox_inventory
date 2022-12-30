@@ -16,24 +16,24 @@ return {
             alwaysShow = false,
             onlyInVehicle = false,
         }, inventory = {
-            { name = 'cubancigar', price = 10 },
+            { name = 'cubancigar', price = 90 },
             { name = 'marlboro', price = 20 },
-            { name = 'lighter', price = 6 },
-            { name = 'bait', price = 6 },
-            { name = 'WEAPON_GOLFCLUB', price = 6 },
-            { name = 'fishingrod', price = 6 },
-            { name = 'pochon', price = 6 },
-            { name = 'WEAPON_BALL', price = 400 },
-            { name = 'WEAPON_BAT', price = 6 },
-            { name = 'parachute', price = 6 },
-            { name = 'screwdriver', price = 6 },
-            { name = 'jumelles', price = 6 },
-            { name = 'fixtool', price = 6 },
-            { name = 'WEAPON_WRENCH', price = 6 },
-            { name = 'WEAPON_HAMMER', price = 6 },
-            { name = 'WEAPON_FLASHLIGHT', price = 6 },
-            { name = 'ocb_paper', price = 6 },
-            { name = 'cv_boisson', price = 6, metadata = { customname = "orange", } },
+            { name = 'lighter', price = 2 },
+            { name = 'bait', price = 1 },
+            { name = 'WEAPON_GOLFCLUB', price = 130 },
+            { name = 'fishingrod', price = 65 },
+            { name = 'pochon', price = 3 },
+            { name = 'WEAPON_BALL', price = 25 },
+            { name = 'WEAPON_BAT', price = 40 },
+            { name = 'parachute', price = 1500 },
+            { name = 'screwdriver', price = 5 },
+            { name = 'jumelles', price = 60 },
+            { name = 'fixtool', price = 200 },
+            { name = 'WEAPON_WRENCH', price = 41 },
+            { name = 'WEAPON_HAMMER', price = 12 },
+            { name = 'WEAPON_FLASHLIGHT', price = 90 },
+            { name = 'ocb_paper', price = 1 },
+            { name = 'cv_boisson', price = 7 },
         }, locations = {
             vec3(373.8, 325.8, 103.5), vec3(2557.4, 382.2, 108.6), vec3(-3038.9, 585.9, 7.9),
             vec3(-3241.9, 1001.4, 12.8), vec3(547.4, 2671.7, 42.1), vec3(1961.4, 3740.6, 32.3),
@@ -52,13 +52,13 @@ return {
     SuperettePillbox = {
         name = '24/7 Superette',
         inventory = {
-            { name = 'cubancigar', price = 10 },
+            { name = 'cubancigar', price = 90 },
             { name = 'marlboro', price = 20 },
-            { name = 'lighter', price = 6 },
-            { name = 'screwdriver', price = 6 },
-            { name = 'ocb_paper', price = 6 },
-            { name = 'cv_boisson', price = 6 },
-            { name = 'cv_repas', price = 6 },
+            { name = 'lighter', price = 2 },
+            { name = 'screwdriver', price = 5 },
+            { name = 'ocb_paper', price = 1 },
+            { name = 'cv_boisson', price = 7 },
+            { name = 'cv_repas', price = 15 },
         }, locations = {
             vec3(303.7165, -579.8060, 47.2809),
         }, targets = {
@@ -169,7 +169,7 @@ return {
             { name = 'WEAPON_G17', price = 1000, metadata = { registered = true }, license = 'weapon' },
             { name = 'WEAPON_M9', price = 1200, metadata = { registered = true }, license = 'weapon' },
             { name = 'WEAPON_P357', price = 1350, metadata = { registered = true }, license = 'weapon' },
-            { name = 'WEAPON_M45', price = 1900, metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_M45', price = 1400, metadata = { registered = true }, license = 'weapon' },
             { name = 'WEAPON_FLAREGUN', price = 500, metadata = { registered = true }, license = 'weapon' },
             { name = 'WEAPON_STUNGUN_MP', price = 450, license = 'weapon' },
             { name = 'WEAPON_KNUCKLE', price = 90 },
@@ -206,8 +206,8 @@ return {
             ['ambulance'] = 0
         },
         inventory = {
-            { name = 'defibrilator', price = 26 },
-            { name = 'bandage', price = 5 },
+            { name = 'defibrilator', price = 0 },
+            { name = 'bandage', price = 0 },
             -- { name = 'tourniquet', price = 5 },
             -- { name = 'quickclot', price = 5 },
             -- { name = 'packing_bandage', price = 5 },
@@ -230,7 +230,7 @@ return {
     HopitalIllegal = {
         name = 'Gunter les doigts de fée',
         inventory = {
-            { name = 'illegal_medical_pass', price = 26, isIllegal = true },
+            { name = 'illegal_medical_pass', price = 5000, isIllegal = true },
         }, locations = {
             vec3(260.7488, -1358.6775, 24.5378),
         }, targets = {
@@ -241,22 +241,22 @@ return {
     ArmesIllegales = {
         name = 'Willy le chasseur',
         inventory = {
-            { name = 'ammo-50', price = 1, isIllegal = true },
-            { name = 'ammo-45', price = 1, isIllegal = true },
+            { name = 'ammo-50', price = 3, isIllegal = true },
+            { name = 'ammo-45', price = 2, isIllegal = true },
             { name = 'ammo-9', price = 1, isIllegal = true },
-            { name = 'ammo-flare', price = 1, isIllegal = true },
-            { name = 'WEAPON_MINIUZI', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_MP5', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_G17', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_M45', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_M9', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_L5', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_P357', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_P226', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_2011', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_MOLOTOV', price = 1, isIllegal = true },
-            { name = 'WEAPON_FLAREGUN', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_BOTTLE', price = 1, isIllegal = true },
+            { name = 'ammo-flare', price = 2, isIllegal = true },
+            { name = 'WEAPON_MINIUZI', price = 2500, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_MP5', price = 2800, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_G17', price = 1200, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_M45', price = 1600, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_M9', price = 1400, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_L5', price = 1980, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_P357', price = 1800, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_P226', price = 1450, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_2011', price = 1820, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_MOLOTOV', price = 40, isIllegal = true },
+            { name = 'WEAPON_FLAREGUN', price = 600, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_BOTTLE', price = 10, isIllegal = true },
             -- { name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false }, isIllegal = true },
         }, locations = {
             vec3(-428.8799, 2063.5288, 120.7077)
@@ -268,24 +268,24 @@ return {
     ArmesLourdesIllegales = {
         name = '"BBC" Boby Beau Calibre',
         inventory = {
-            { name = 'ammo-45', price = 1, isIllegal = true },
-            { name = 'ammo-556', price = 1, isIllegal = true },
-            { name = 'ammo-762', price = 1, isIllegal = true },
-            { name = 'ammo-50', price = 1, isIllegal = true },
-            { name = 'ammo-sniper', price = 1, isIllegal = true },
-            { name = 'ammo-shotgun', price = 1, isIllegal = true },
-            { name = 'WEAPON_AXMC', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_GRENADE', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_AKM', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_BENELLIM2', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_DOUBLEBARRELFM', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_GUSENBERG', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_MK18', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_NSR9', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_M4', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_M249', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_RPG', price = 1, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_VICTUSXMR', price = 1, metadata = { registered = false }, isIllegal = true },
+            { name = 'ammo-45', price = 2, isIllegal = true },
+            { name = 'ammo-556', price = 4, isIllegal = true },
+            { name = 'ammo-762', price = 5, isIllegal = true },
+            { name = 'ammo-50', price = 3, isIllegal = true },
+            { name = 'ammo-sniper', price = 6, isIllegal = true },
+            { name = 'ammo-shotgun', price = 4, isIllegal = true },
+            { name = 'WEAPON_AXMC', price = 7199, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_GRENADE', price = 95, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_AKM', price = 3200, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_BENELLIM2', price = 2600, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_DOUBLEBARRELFM', price = 2200, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_GUSENBERG', price = 3100, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_MK18', price = 3800, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_NSR9', price = 4100, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_M4', price = 3900, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_M249', price = 5200, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_RPG', price = 8400, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_VICTUSXMR', price = 6500, metadata = { registered = false }, isIllegal = true },
 
 
             -- { name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false }, isIllegal = true },
@@ -299,8 +299,8 @@ return {
     Weed = {
         name = 'Joey gros nuage',
         inventory = {
-            { name = 'weed_seed', price = 5000, isIllegal = true },
-            { name = 'weed_fertilizer', price = 5000, isIllegal = true },
+            { name = 'weed_seed', price = 2, isIllegal = true },
+            { name = 'weed_fertilizer', price = 15, isIllegal = true },
         }, locations = {
             vec3(-1470.9197, 2132.0679, 40.9629)
         }, targets = {
@@ -311,8 +311,8 @@ return {
     Cocaine = {
         name = 'Mike le poudré',
         inventory = {
-            { name = 'coca_seed', price = 5000, isIllegal = true },
-            { name = 'weed_fertilizer', price = 5000, isIllegal = true },
+            { name = 'coca_seed', price = 2, isIllegal = true },
+            { name = 'weed_fertilizer', price = 15, isIllegal = true },
         }, locations = {
             vec3(1977.5743, -2608.5503, 3.5523)
         }, targets = {
@@ -323,19 +323,18 @@ return {
     ObjetIllegaux = {
         name = 'Mamie les bons tuyaux',
         inventory = {
-            { name = 'lockpick', price = 5000, isIllegal = true },
-            { name = 'speedbomb', price = 5000, isIllegal = true },
-            { name = 'instantbomb', price = 5000, isIllegal = true },
-            { name = 'remotebomb', price = 5000, isIllegal = true },
-            { name = 'timerbomb', price = 5000, isIllegal = true },
-            { name = 'radio', price = 5000, isIllegal = true },
-            { name = 'WEAPON_FLARE', price = 5000, isIllegal = true },
-            { name = 'spike', price = 5000, isIllegal = true },
-            { name = 'WEAPON_POOLCUE', price = 5000, isIllegal = true },
-            { name = 'coupebracelet', price = 5000, isIllegal = true },
-            { name = 'fakeplate', price = 5000, isIllegal = true },
+            { name = 'lockpick', price = 8, isIllegal = true },
+            { name = 'speedbomb', price = 7000, isIllegal = true },
+            { name = 'instantbomb', price = 7000, isIllegal = true },
+            { name = 'remotebomb', price = 7000, isIllegal = true },
+            { name = 'timerbomb', price = 7000, isIllegal = true },
+            { name = 'radio', price = 2200, isIllegal = true },
+            { name = 'WEAPON_FLARE', price = 20, isIllegal = true },
+            { name = 'spike', price = 500, isIllegal = true },
+            { name = 'WEAPON_POOLCUE', price = 50, isIllegal = true },
+            { name = 'coupebracelet', price = 75, isIllegal = true },
+            { name = 'fakeplate', price = 950, isIllegal = true },
             -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
-
         }, locations = {
             vec3(2940.4668, 4623.4497, 48.7208)
         }, targets = {
@@ -351,8 +350,8 @@ return {
             onlyInVehicle = false,
         },
         inventory = {
-            { name = 'phone', price = 5000 },
-            { name = 'sim', price = 5000 },
+            { name = 'phone', price = 1200 },
+            { name = 'sim', price = 45 },
             -- { name = 'laptop', price = 5000 },
         }, locations = {
             vec3(-1209.1213, -1503.2405, 4.3739)

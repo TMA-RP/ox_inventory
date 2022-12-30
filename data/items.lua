@@ -273,7 +273,7 @@ return {
         weight = 1500,
         stack = true,
         close = true,
-        description = nil
+        description = "Permet de definir un compte à rebours pour déclencher l'explosion du véhicule"
     },
 
     ['speedbomb'] = {
@@ -281,7 +281,7 @@ return {
         weight = 1500,
         stack = true,
         close = true,
-        description = nil
+        description = "Permet de definir la vitesse du véhicule pour déclencher l'explosion"
     },
 
     ['remotebomb'] = {
@@ -289,7 +289,7 @@ return {
         weight = 1500,
         stack = true,
         close = true,
-        description = nil
+        description = "Permet de déclencher manuellement l'explosion du véhicule"
     },
 
     ['instantbomb'] = {
@@ -297,7 +297,7 @@ return {
         weight = 1500,
         stack = true,
         close = true,
-        description = nil
+        description = "Permet de de faire exploser le véhicule au démarrage"
     },
 
     ['cv_repas'] = {
