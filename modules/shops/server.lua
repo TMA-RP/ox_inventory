@@ -119,6 +119,10 @@ for shopName, shopDetails in pairs(data('shops')) do
 	createShop(shopName, shopDetails)
 end
 
+exports("getAllShops", function ()
+    return data('shops')
+end)
+
 ---@param shopName string
 ---@param shopDetails OxShop
 exports('RegisterShop', function(shopName, shopDetails)
