@@ -101,4 +101,226 @@ return {
 		weight = 70000,
 		groups = {['lawyer'] = 2}
 	},
+
+	{
+		coords = vec3(144.5641, -378.0396, 43.6919),
+		name = 'btpworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['builder'] = 0}
+	},
+
+	{
+		coords = vec3(31.0065, -119.9802, 56.2182),
+		name = 'btpofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['builder'] = 2}
+	},
+
+	{
+		coords = vec3(252.3730, 890.3681, 209.8388),
+		name = 'gardenerworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['gardener'] = 0}
+	},
+
+	{
+		coords = vec3(250.7979, 891.7830, 209.8389),
+		name = 'gardenerofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['gardener'] = 2}
+	},
+
+	{
+		coords = vec3(-1381.9060, -623.0039, 30.2489),
+		name = 'bahamasworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['bahamas'] = 0}
+	},
+
+	{
+		coords = vec3(-1378.0605, -625.5833, 35.8962),
+		name = 'bahamasofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['bahamas'] = 2}
+	},
+
+	{
+		coords = vec3(-595.3774, -920.5817, 29.7303),
+		name = 'weazelofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['weazelnews'] = 3}
+	},
+
+	{
+		coords = vec3(-603.2857, -920.6216, 23.7771),
+		name = 'weazelworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['weazelnews'] = 0}
+	},
+
+	{
+		coords = vec3(-595.3774, -920.5817, 29.7303),
+		name = 'weazelofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['weazelnews'] = 3}
+	},
+
+	{
+		coords = vec3(-601.4662, -1618.9290, 33.0102),
+		name = 'garbageworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['garbage'] = 0}
+	},
+
+	{
+		coords = vec3(-623.8763, -1616.7002, 33.0101),
+		name = 'garbageofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['garbage'] = 3}
+	},
+
+	{
+		coords = vec3(94.1070, -1290.9845, 29.2635),
+		name = 'unicornofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['unicorn'] = 3}
+	},
+
+	{
+		coords = vec3(106.5511, -1299.4854, 28.7690),
+		name = 'unicornworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['unicorn'] = 0}
+	},
+
+	{
+		coords = vec3(906.1691, -2114.5925, 31.2780),
+		name = 'bobcatworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['brinks'] = 0}
+	},
+
+	{
+		coords = vec3(908.2595, -2110.6289, 31.2303),
+		name = 'bobcatprivatelocker',
+		label = 'Rangement privée',
+		owner = true,
+		slots = 70,
+		weight = 70000,
+		groups = {['brinks'] = 0}
+	},
+
+	{
+		coords = vec3(876.4639, -2124.5471, 31.2303),
+		name = 'bobcatofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['brinks'] = 3}
+	},
+
+	{
+		coords = vec3(894.4803, -171.5737, 74.6826),
+		name = 'taxiworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['taxi'] = 0}
+	},
+
+	{
+		coords = vec3( 897.8604, -171.5505, 74.6827),
+		name = 'taxiofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['taxi'] = 3}
+	},
+
+	{
+		coords = vec3(841.3561, -824.6389, 26.3326),
+		name = 'bennysworklocker',
+		label = 'Rangement équipements',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['mechanic'] = 0}
+	},
+
+	{
+		coords = vec3(801.0602, -830.3229, 26.3369),
+		name = 'bennysofficelocker',
+		label = 'Rangement bureau patron',
+		owner = false,
+		slots = 70,
+		weight = 70000,
+		groups = {['mechanic'] = 3}
+	},
+
+	{
+		coords = vec3(801.0602, -830.3229, 26.3369),
+		name = 'bennysprivatepaletolocker',
+		label = 'Rangement privé',
+		owner = true,
+		slots = 70,
+		weight = 70000,
+		groups = {['mechanic'] = 0}
+	},
+
+	{
+		coords = vec3(-312.1833, 6267.2837, 31.5268),
+		name = 'gaysaloonprivatelocker',
+		label = 'Rangement bien frais',
+		owner = true,
+		slots = 70,
+		weight = 70000,
+		groups = {['yellowjack'] = 0}
+	},
+
+
 }
