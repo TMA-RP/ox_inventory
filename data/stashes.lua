@@ -321,4 +321,14 @@ return {
         weight = 70000,
         groups = { ['saloon'] = 0 }
     },
+
+	{
+        coords = vec3(1985.2283, 3048.8406, 47.2151),
+        name = 'yellowprivatelocker',
+        label = 'Rangement bien frais',
+        owner = true,
+        slots = 70,
+        weight = 70000,
+        groups = { ['yellowjack'] = 0 }
+    },
 }
