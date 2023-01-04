@@ -64,25 +64,6 @@ return {
         }, targets = {
         }
     },
-    -- TODOCV REMOVE THIS AFTER STRESS TEST
-    testitems = {
-        name = 'items illégaux',
-        inventory = {
-            { name = 'weed_seed', price = 2, },
-            { name = 'coca_seed', price = 2, },
-            { name = 'weed_fertilizer', price = 15, },
-            { name = 'lockpick', price = 8, },
-            { name = 'radio', price = 2200, },
-            { name = 'WEAPON_FLARE', price = 20, },
-            { name = 'spike', price = 500, },
-            { name = 'WEAPON_POOLCUE', price = 50, },
-            { name = 'coupebracelet', price = 75, },
-            { name = 'fakeplate', price = 950, },
-        }, locations = {
-            vec3(-141.9795, -876.5634, 29.6948),
-        }, targets = {
-        }
-    },
     Bar = {
         name = 'Bar',
         groups = {
