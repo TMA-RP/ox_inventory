@@ -259,7 +259,7 @@ return {
         owner = false,
         slots = 70,
         weight = 70000,
-        groups = { ['brinks'] = 3 }
+        groups = { ['brinks'] = 2 }
     },
 
     {
@@ -322,7 +322,7 @@ return {
         groups = { ['saloon'] = 0 }
     },
 
-	{
+    {
         coords = vec3(1985.2283, 3048.8406, 47.2151),
         name = 'yellowprivatelocker',
         label = 'Rangement bien frais',
