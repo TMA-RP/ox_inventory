@@ -956,9 +956,9 @@ local function setStateBagHandler(stateId)
 		invBusy = value
 
 		if value then
-			lib.disableControls:Add(23, 25, 36, 68, 263)
+			lib.disableControls:Add(25, 36, 68, 263)
 		else
-			lib.disableControls:Remove(23, 25, 36, 68, 263)
+			lib.disableControls:Remove(25, 36, 68, 263)
 		end
 	end)
 
