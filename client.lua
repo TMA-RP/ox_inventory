@@ -900,9 +900,9 @@ end)
 ---@param point CPoint
 local function onEnterDrop(point)
 	if not point.instance or point.instance == currentInstance and not point.entity then
-		lib.requestModel(`v_ind_rc_workbag`)
-		local entity = CreateObject(`v_ind_rc_workbag`, point.coords.x, point.coords.y, point.coords.z, false, true, true)
-		SetModelAsNoLongerNeeded(`v_ind_rc_workbag`)
+		lib.requestModel(`xs_prop_arena_bag_01`)
+		local entity = CreateObject(`xs_prop_arena_bag_01`, point.coords.x, point.coords.y, point.coords.z, false, true, true)
+		SetModelAsNoLongerNeeded(`xs_prop_arena_bag_01`)
 		PlaceObjectOnGroundProperly(entity)
 		FreezeEntityPosition(entity, true)
 		SetEntityCollision(entity, false, true)
