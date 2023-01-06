@@ -897,21 +897,12 @@ RegisterNetEvent('ox_inventory:inventoryConfiscated', function(message)
 	updateInventory(items, { left = 0 })
 end)
 
-
----@param point CPoint
-local function nearbyDrop(point)
-	if not point.instance or point.instance == currentInstance then
-		---@diagnostic disable-next-line: param-type-mismatch
-		-- DrawMarker(2, self.coords.x, self.coords.y, self.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 150, 30, 30, 222, false, false, 0, true, false, false, false)
-	end
-end
-
 ---@param point CPoint
 local function onEnterDrop(point)
 	if not point.instance or point.instance == currentInstance and not point.entity then
-		lib.requestModel(`prop_med_bag_01b`)
-		local entity = CreateObject(`prop_med_bag_01b`, point.coords.x, point.coords.y, point.coords.z, false, true, true)
-		SetModelAsNoLongerNeeded(`prop_med_bag_01b`)
+		lib.requestModel(`v_ind_rc_workbag`)
+		local entity = CreateObject(`v_ind_rc_workbag`, point.coords.x, point.coords.y, point.coords.z, false, true, true)
+		SetModelAsNoLongerNeeded(`v_ind_rc_workbag`)
 		PlaceObjectOnGroundProperly(entity)
 		FreezeEntityPosition(entity, true)
 		SetEntityCollision(entity, false, true)
@@ -940,8 +931,6 @@ local function createDrop(dropId, data)
 		point.distance = 30
 		point.onEnter = onEnterDrop
 		point.onExit = onExitDrop
-	else
-		point.nearby = nearbyDrop
 	end
 
 	drops[dropId] = point
