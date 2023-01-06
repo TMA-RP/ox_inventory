@@ -121,6 +121,6 @@ function server.convertInventory(playerId, items)
 	end
 end
 
-MySQL.ready(function()
-	MySQL.insert('INSERT IGNORE INTO `licenses` (`type`, `label`) VALUES (?, ?)', { 'weapon', 'Weapon License'})
-end)
+-- MySQL.ready(function()
+-- 	MySQL.insert('INSERT IGNORE INTO `licenses` (`type`, `label`) VALUES (?, ?)', { 'weapon', 'Weapon License'})
+-- end)
