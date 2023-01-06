@@ -1587,7 +1587,7 @@ return {
         },
 
         ['ammo-rpg'] = {
-            label = 'Roquette',
+            label = 'Rocket',
             weight = 2000,
         }
     }
