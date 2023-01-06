@@ -36,14 +36,24 @@ client.shops = setmetatable(data('shops'), {
         for type, shop in pairs(self) do
             if shop.jobs then shop.groups = shop.jobs end
 
+            local blip = shop.blip
+
+            if blip then
+                blip.name = ('ox_shop_%s'):format(type)
+                AddTextEntry(blip.name, shop.name or type)
+            end
+
             if not shop.groups or client.hasGroup(shop.groups) then
                 if shared.target then
                     if shop.model then
+                        local label = shop.label or locale('open_label', shop.name)
+
+                        exports.qtarget:RemoveTargetModel(shop.model, label)
                         exports.qtarget:AddTargetModel(shop.model, {
                             options = {
                                 {
                                     icon = 'fas fa-shopping-basket',
-                                    label = shop.label or locale('open_label', shop.name),
+                                    label = label,
                                     action = function()
                                         openShop({ type = type })
                                     end

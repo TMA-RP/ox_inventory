@@ -77,7 +77,7 @@ function server.buyLicense(inv, license)
 	end
 
 	Inventory.RemoveItem(inv, 'money', license.price)
-	TriggerEvent('esx_license:addLicense', inv.id, 'weapon')
+	TriggerEvent('esx_license:addLicense', inv.id, license.name)
 
 	return true, 'have_purchased'
 end
@@ -120,3 +120,7 @@ function server.convertInventory(playerId, items)
 		return returnData, totalWeight
 	end
 end
+
+MySQL.ready(function()
+	MySQL.insert('INSERT IGNORE INTO `licenses` (`type`, `label`) VALUES (?, ?)', { 'weapon', 'Weapon License'})
+end)
