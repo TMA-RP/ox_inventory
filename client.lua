@@ -263,11 +263,14 @@ lib.callback.register('ox_inventory:usingItem', function(data)
 end)
 
 local function canUseItem(isAmmo)
-	return PlayerData.loaded
+	local ped = cache.ped
+
+	return (not isAmmo or currentWeapon)
+	and PlayerData.loaded
 	and not PlayerData.dead
 	and not invBusy
-    and not IsPedRagdoll(cache.ped) and not IsPedFalling(cache.ped)
-	and (not isAmmo or (isAmmo and currentWeapon and IsPlayerFreeAiming(cache.playerId)))
+	and not IsPedRagdoll(ped)
+	and not IsPedFalling(ped)
 end
 
 ---@param data table
@@ -479,7 +482,6 @@ exports('openNearbyInventory', openNearbyInventory)
 local currentInstance
 local playerCoords
 local table = lib.table
-local Shops = client.shops
 local Inventory = client.inventory
 
 ---@todo remove or replace when the bridge module gets restructured
@@ -489,7 +491,7 @@ function OnPlayerData(key, val)
 	if key == 'groups' then
 		Inventory.Stashes()
 		Inventory.Evidence()
-		Shops()
+		client.refreshShops()
 	elseif key == 'dead' and val then
 		currentWeapon = Weapon.Disarm(currentWeapon)
 		client.closeInventory()
@@ -499,7 +501,7 @@ function OnPlayerData(key, val)
 end
 
 -- People consistently ignore errors when one of the "modules" failed to load
-if not Utils or not Weapon or not Items or not Shops or not Inventory then return end
+if not Utils or not Weapon or not Items or not Inventory then return end
 
 local invHotkeys = false
 
@@ -900,12 +902,17 @@ end)
 ---@param point CPoint
 local function onEnterDrop(point)
 	if not point.instance or point.instance == currentInstance and not point.entity then
-		lib.requestModel(`xs_prop_arena_bag_01`)
-		local entity = CreateObject(`xs_prop_arena_bag_01`, point.coords.x, point.coords.y, point.coords.z, false, true, true)
-		SetModelAsNoLongerNeeded(`xs_prop_arena_bag_01`)
+		local model = point.model or `xs_prop_arena_bag_01`
+
+		lib.requestModel(model)
+
+		local entity = CreateObject(model, point.coords.x, point.coords.y, point.coords.z, false, true, true)
+
+		SetModelAsNoLongerNeeded(model)
 		PlaceObjectOnGroundProperly(entity)
 		FreezeEntityPosition(entity, true)
 		SetEntityCollision(entity, false, true)
+
 		point.entity = entity
 	end
 end
@@ -925,6 +932,7 @@ local function createDrop(dropId, data)
 		distance = 16,
 		invId = dropId,
 		instance = data.instance,
+		model = data.model
 	})
 
 	if client.dropprops then
@@ -933,11 +941,11 @@ local function createDrop(dropId, data)
 		point.onExit = onExitDrop
 	end
 
-	drops[dropId] = point
+	client.drops[dropId] = point
 end
 
 RegisterNetEvent('ox_inventory:createDrop', function(dropId, data, owner, slot)
-	if drops then
+	if client.drops then
 		createDrop(dropId, data)
 	end
 
@@ -960,11 +968,11 @@ RegisterNetEvent('ox_inventory:createDrop', function(dropId, data, owner, slot)
 end)
 
 RegisterNetEvent('ox_inventory:removeDrop', function(dropId)
-	if drops then
-		local point = drops[dropId]
+	if client.drops then
+		local point = client.drops[dropId]
 
 		if point then
-			drops[dropId] = nil
+			client.drops[dropId] = nil
 			point:remove()
 
 			if point.entity then Utils.DeleteObject(point.entity) end
@@ -1079,7 +1087,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 		end
 	end
 
-	drops = currentDrops
+	client.drops = currentDrops
 
 	for dropId, data in pairs(currentDrops) do
 		createDrop(dropId, data)
@@ -1148,7 +1156,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 
 	PlayerData.loaded = true
 
-	Shops()
+	client.refreshShops()
 	Inventory.Stashes()
 	Inventory.Evidence()
 	registerCommands()
