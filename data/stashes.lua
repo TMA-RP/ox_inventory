@@ -14,32 +14,32 @@
 return {
     {
         coords = vec3(359.3871, -1599.8046, 29.3072),
-        name = 'policelocker',
-        label = 'Coffre équipements',
+        name = 'policecaptlocker',
+        label = 'Coffre Capitaine',
         owner = false,
-        slots = 100,
-        weight = 100000,
-        groups = { ['police'] = 1 }
+        slots = 70,
+        weight = 70000,
+        groups = { ['police'] = 7 }
     },
 
     {
-        coords = vec3(1837.6097, 3684.6589, 34.1893),
-        name = 'sandysherifflocker',
-        label = 'Coffre équipements',
+        coords = vec3(1824.8384, 3673.9180, 38.8595),
+        name = 'sandycaptlocker',
+        label = 'Coffre Capitaine',
         owner = false,
-        slots = 100,
-        weight = 100000,
-        groups = { ['sheriff'] = 1 }
+        slots = 70,
+        weight = 70000,
+        groups = { ['sheriff'] = 7 }
     },
 
     {
-        coords = vec3(-449.0974, 6015.1670, 36.9957),
-        name = 'paletosherifflocker',
-        label = 'Coffre équipements',
+        coords = vec3(-435.4863, 6008.1582, 36.9956),
+        name = 'paletocaptlocker',
+        label = 'Coffre Capitaine',
         owner = false,
-        slots = 100,
-        weight = 100000,
-        groups = { ['sheriff'] = 1 }
+        slots = 70,
+        weight = 70000,
+        groups = { ['sheriff'] = 7 }
     },
 
     {
@@ -242,15 +242,6 @@ return {
         groups = { ['brinks'] = 0 }
     },
 
-    {
-        coords = vec3(908.2595, -2110.6289, 31.2303),
-        name = 'bobcatprivatelocker',
-        label = 'Rangement privée',
-        owner = true,
-        slots = 70,
-        weight = 70000,
-        groups = { ['brinks'] = 0 }
-    },
 
     {
         coords = vec3(876.4639, -2124.5471, 31.2303),

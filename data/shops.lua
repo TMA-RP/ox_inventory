@@ -360,4 +360,75 @@ return {
 
         }
     },
+
+    Sheriffequipements = {
+        name = 'Réserve',
+        groups = {
+            ['sheriff'] = 6,
+        },
+        inventory = {
+            { name = 'radio', price = 0 },
+            { name = 'braceletgps', price = 0 },
+            { name = 'weapon_g17', price = 0 },
+            { name = 'weapon_mp5', price = 0 },
+            { name = 'weapon_benellim2', price = 0 },
+            { name = 'weapon_stungun_mp', price = 0 },
+            { name = 'weapon_flashlight', price = 0 },
+            { name = 'weapon_nightstick', price = 0 },
+            { name = 'hat', label = "Chapeau femme", price = 0, metadata = {
+                id = "addon11",
+                variation = 0
+            } },
+            { name = 'armour', label = "Pare balles femme", price = 0,metadata = {
+                id = "addon4",
+                variation = 2
+            } },
+            { name = 'hat', label = "Chapeau homme", price = 0, metadata = {
+                id = "addon30",
+                variation = 0
+            } },
+            { name = 'armour', label = "Pare balles homme", price = 0,metadata = {
+                id = "addon9",
+                variation = 2
+            } },
+        }, locations = {
+            vec3(-449.3686, 6015.1426, 36.9956),
+            vec3(1839.8301, 3684.5820, 34.1893),
+        }
+    },
+
+    Policeequipements = {
+        name = 'Réserve',
+        groups = {
+            ['police'] = 6,
+        },
+        inventory = {
+            { name = 'radio', price = 0 },
+            { name = 'braceletgps', price = 0 },
+            { name = 'weapon_m9', price = 0 },
+            { name = 'weapon_mp5', price = 0 },
+            { name = 'weapon_benellim2', price = 0 },
+            { name = 'weapon_stungun_mp', price = 0 },
+            { name = 'weapon_flashlight', price = 0 },
+            { name = 'weapon_nightstick', price = 0 },
+            { name = 'hat', label = "Chapeau femme", price = 0, metadata = {
+                id = "addon15",
+                variation = 0
+            } },
+            { name = 'armour', label = "Pare balles femme", price = 0,metadata = {
+                id = "addon4",
+                variation = 0
+            } },
+            { name = 'hat', label = "Chapeau homme", price = 0, metadata = {
+                id = "addon22",
+                variation = 0
+            } },
+            { name = 'armour', label = "Pare balles homme", price = 0,metadata = {
+                id = "addon9",
+                variation = 0
+            } },
+        }, locations = {
+            vec3(359.6745, -1599.8434, 29.3072),
+        }
+    },
 }
