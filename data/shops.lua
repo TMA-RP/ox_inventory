@@ -371,23 +371,28 @@ return {
             { name = 'braceletgps', price = 0 },
             { name = 'weapon_g17', price = 0 },
             { name = 'weapon_mp5', price = 0 },
+            { name = 'weapon_m4', price = 0 },
             { name = 'weapon_benellim2', price = 0 },
             { name = 'weapon_stungun_mp', price = 0 },
             { name = 'weapon_flashlight', price = 0 },
             { name = 'weapon_nightstick', price = 0 },
-            { name = 'hat', label = "Chapeau femme", price = 0, metadata = {
+            { name = 'hat',  price = 0, metadata = {
+                label = "Chapeau femme",
                 id = "addon11",
                 variation = 0
             } },
-            { name = 'armour', label = "Pare balles femme", price = 0,metadata = {
+            { name = 'armour', price = 0,metadata = {
+                label = "Pare balles femme",
                 id = "addon4",
                 variation = 2
             } },
-            { name = 'hat', label = "Chapeau homme", price = 0, metadata = {
+            { name = 'hat', price = 0, metadata = {
+                label = "Chapeau homme",
                 id = "addon30",
                 variation = 0
             } },
-            { name = 'armour', label = "Pare balles homme", price = 0,metadata = {
+            { name = 'armour',  price = 0,metadata = {
+                label = "Pare balles homme",
                 id = "addon9",
                 variation = 2
             } },
@@ -407,23 +412,28 @@ return {
             { name = 'braceletgps', price = 0 },
             { name = 'weapon_m9', price = 0 },
             { name = 'weapon_mp5', price = 0 },
+            { name = 'weapon_m4', price = 0 },
             { name = 'weapon_benellim2', price = 0 },
             { name = 'weapon_stungun_mp', price = 0 },
             { name = 'weapon_flashlight', price = 0 },
             { name = 'weapon_nightstick', price = 0 },
-            { name = 'hat', label = "Chapeau femme", price = 0, metadata = {
+            { name = 'hat',  price = 0, metadata = {
+                label = "Chapeau femme",
                 id = "addon15",
                 variation = 0
             } },
-            { name = 'armour', label = "Pare balles femme", price = 0,metadata = {
+            { name = 'armour',  price = 0,metadata = {
+                label = "Pare balles femme",
                 id = "addon4",
                 variation = 0
             } },
-            { name = 'hat', label = "Chapeau homme", price = 0, metadata = {
+            { name = 'hat',  price = 0, metadata = {
+                label = "Chapeau homme",
                 id = "addon22",
                 variation = 0
             } },
-            { name = 'armour', label = "Pare balles homme", price = 0,metadata = {
+            { name = 'armour', price = 0,metadata = {
+                label = "Pare balles homme",
                 id = "addon9",
                 variation = 0
             } },
