@@ -304,6 +304,36 @@ return {
     },
 
     {
+        coords = vec3(103.1225, 6625.5806, 31.7874),
+        name = 'bennysnorthworklocker',
+        label = 'Rangement équipements',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['mechanic'] = 0 }
+    },
+
+    {
+        coords = vec3(98.7723, 6621.1870, 32.4355),
+        name = 'bennysnorthofficelocker',
+        label = 'Rangement bureau patron',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['mechanic'] = 3 }
+    },
+
+    {
+        coords = vec3(98.7723, 6621.1870, 32.4355),
+        name = 'bennysnorthprivatepaletolocker',
+        label = 'Rangement privé',
+        owner = true,
+        slots = 70,
+        weight = 70000,
+        groups = { ['mechanic'] = 0 }
+    },
+
+    {
         coords = vec3(-312.1833, 6267.2837, 31.5268),
         name = 'gaysaloonprivatelocker',
         label = 'Rangement bien frais',
