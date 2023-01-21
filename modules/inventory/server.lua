@@ -80,20 +80,16 @@ local function loadInventoryData(data, player)
 			local model, class = lib.callback.await('ox_inventory:getVehicleData', source, data.netid)
 			local storage = Vehicles[data.type].models[model] or Vehicles[data.type][class]
 			local plate = server.trimplate and string.strtrim(data.id:sub(6)) or data.id:sub(6)
-      local label = "Coffre"
-      if data.type == "glovebox" then
-        label = "Boîte à gants"
-      end
 			if Ox then
 				local vehicle = Ox.GetVehicle(entity)
 
 				if vehicle then
-					inventory = Inventory.Create(vehicle.id or vehicle.plate, label, data.type, storage[1], 0, storage[2], false)
+					inventory = Inventory.Create(vehicle.id or vehicle.plate, plate, data.type, storage[1], 0, storage[2], false)
 				end
 			end
 
 			if not inventory then
-				inventory = Inventory.Create(data.id, label, data.type, storage[1], 0, storage[2], false)
+				inventory = Inventory.Create(data.id, plate, data.type, storage[1], 0, storage[2], false)
 			end
 		end
 	elseif data.type == 'policeevidence' then
