@@ -36,16 +36,16 @@ local ox_inventory = exports[shared.resource]
 -- Clientside item use functions
 -----------------------------------------------------------------------------------------------
 
-Item('bandage', function(data, slot)
-	local maxHealth = GetEntityMaxHealth(cache.ped)
-	local health = GetEntityHealth(cache.ped)
-	ox_inventory:useItem(data, function(data)
-		if data then
-			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health + maxHealth / 16)))
-			lib.notify({ description = 'You feel better already' })
-		end
-	end)
-end)
+-- Item('bandage', function(data, slot)
+-- 	local maxHealth = GetEntityMaxHealth(cache.ped)
+-- 	local health = GetEntityHealth(cache.ped)
+-- 	ox_inventory:useItem(data, function(data)
+-- 		if data then
+-- 			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health + maxHealth / 16)))
+-- 			lib.notify({ description = 'You feel better already' })
+-- 		end
+-- 	end)
+-- end)
 
 client.parachute = false
 Item('parachute', function(data, slot)
