@@ -13,7 +13,7 @@
 
 return {
     {
-        coords = vec3(359.3871, -1599.8046, 29.3072),
+        coords = vec3(363.0724, -1604.5717, 32.5107),
         name = 'policecaptlocker',
         label = 'Coffre Capitaine',
         owner = false,
