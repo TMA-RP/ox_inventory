@@ -1618,3 +1618,19 @@ AddStateBagChangeHandler('invBusy', nil, function(_, _, value)
     end
   end
 end)
+
+
+AddEventHandler('esx:onPlayerDeath', function(data)
+    local isVisible = exports.npwd:isPhoneVisible()
+      if isVisible then
+          exports.npwd:setPhoneVisible(false)
+      end
+      exports.npwd:setPhoneDisabled(true)
+end)
+
+RegisterNetEvent("esx_ambulancejob:revive", function ()
+    local havePhoneForThisNumber = exports.ox_inventory:checkSim()
+    if havePhoneForThisNumber then
+        exports.npwd:setPhoneDisabled(false)
+    end
+end)
