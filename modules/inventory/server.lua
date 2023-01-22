@@ -965,22 +965,23 @@ function Inventory.Search(inv, search, items, metadata)
 					if v.name == item then
 						if not v.metadata then v.metadata = {} end
 
+                        local allMetadataFound = true
+                        
 						if metadata then
-              local allMetadataFound = true
-              for key, value in pairs(metadata) do
-                if not v.metadata[key] or v.metadata[key] ~= value then
-                  allMetadataFound = false
-                end
-              end
+                            for key, value in pairs(metadata) do
+                                if not v.metadata[key] or v.metadata[key] ~= value then
+                                allMetadataFound = false
+                                end
+                            end
+                        end
 
-              if not allMetadataFound then return end
-            end
-
-						if search == 1 then
-							returnData[item][#returnData[item]+1] = inv[v.slot]
-						elseif search == 2 then
-							returnData[item] += v.count
-						end
+                        if allMetadataFound then
+                            if search == 1 then
+                                returnData[item][#returnData[item]+1] = inv[v.slot]
+                            elseif search == 2 then
+                                returnData[item] += v.count
+                            end
+                        end
 					end
 				end
 			end
