@@ -1008,8 +1008,8 @@ function Inventory.GetItemSlots(inv, item, metadata)
         if v.metadata == nil then v.metadata = {} end
 
         for key, value in pairs(metadata) do
-          if not v.metadata[key] or v.metadata[key] ~= value then
-            allMetadataFound = false
+            if v.metadata[key] == nil  or v.metadata[key] ~= value then
+                allMetadataFound = false
           end
         end
       end

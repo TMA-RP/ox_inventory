@@ -376,12 +376,12 @@ return {
             { name = 'weapon_stungun_mp', price = 0 },
             { name = 'weapon_flashlight', price = 0 },
             { name = 'weapon_nightstick', price = 0 },
-            { name = 'hat',  price = 0, metadata = {
+            { name = 'hat', price = 0, metadata = {
                 label = "Chapeau femme",
                 id = "addon11",
                 variation = 0
             } },
-            { name = 'armour', price = 0,metadata = {
+            { name = 'armour', price = 0, metadata = {
                 label = "Pare balles femme",
                 id = "addon4",
                 variation = 2
@@ -391,7 +391,7 @@ return {
                 id = "addon30",
                 variation = 0
             } },
-            { name = 'armour',  price = 0,metadata = {
+            { name = 'armour', price = 0, metadata = {
                 label = "Pare balles homme",
                 id = "addon9",
                 variation = 2
@@ -417,22 +417,22 @@ return {
             { name = 'weapon_stungun_mp', price = 0 },
             { name = 'weapon_flashlight', price = 0 },
             { name = 'weapon_nightstick', price = 0 },
-            { name = 'hat',  price = 0, metadata = {
+            { name = 'hat', price = 0, metadata = {
                 label = "Chapeau femme",
                 id = "addon15",
                 variation = 0
             } },
-            { name = 'armour',  price = 0,metadata = {
+            { name = 'armour', price = 0, metadata = {
                 label = "Pare balles femme",
                 id = "addon4",
                 variation = 0
             } },
-            { name = 'hat',  price = 0, metadata = {
+            { name = 'hat', price = 0, metadata = {
                 label = "Chapeau homme",
                 id = "addon22",
                 variation = 0
             } },
-            { name = 'armour', price = 0,metadata = {
+            { name = 'armour', price = 0, metadata = {
                 label = "Pare balles homme",
                 id = "addon9",
                 variation = 0
