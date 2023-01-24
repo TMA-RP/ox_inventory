@@ -246,17 +246,17 @@ return {
             { name = 'ammo-45', price = 2, isIllegal = true },
             { name = 'ammo-9', price = 1, isIllegal = true },
             { name = 'ammo-flare', price = 2, isIllegal = true },
-            { name = 'WEAPON_MINIUZI', price = 2500, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_MP5', price = 2800, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_G17', price = 1200, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_M45', price = 1600, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_M9', price = 1400, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_L5', price = 1980, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_P357', price = 1800, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_P226', price = 1450, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_2011', price = 1820, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_MOLOTOV', price = 40, isIllegal = true },
-            { name = 'WEAPON_FLAREGUN', price = 600, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_MINIUZI', price = 2500, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_MP5', price = 2800, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_G17', price = 1200, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_M45', price = 1600, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_M9', price = 1400, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_L5', price = 1980, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_P357', price = 1800, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_P226', price = 1450, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_2011', price = 1820, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_MOLOTOV', price = 40, isIllegal = true },
+            -- { name = 'WEAPON_FLAREGUN', price = 600, metadata = { registered = false }, isIllegal = true },
             { name = 'WEAPON_BOTTLE', price = 10, isIllegal = true },
             -- { name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false }, isIllegal = true },
         }, locations = {
@@ -275,18 +275,18 @@ return {
             { name = 'ammo-50', price = 3, isIllegal = true },
             { name = 'ammo-sniper', price = 6, isIllegal = true },
             { name = 'ammo-shotgun', price = 4, isIllegal = true },
-            { name = 'WEAPON_AXMC', price = 7199, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_GRENADE', price = 95, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_AKM', price = 3200, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_BENELLIM2', price = 2600, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_DOUBLEBARRELFM', price = 2200, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_GUSENBERG', price = 3100, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_MK18', price = 3800, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_NSR9', price = 4100, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_M4', price = 3900, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_M249', price = 5200, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_RPG', price = 8400, metadata = { registered = false }, isIllegal = true },
-            { name = 'WEAPON_VICTUSXMR', price = 6500, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_AXMC', price = 7199, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_GRENADE', price = 95, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_AKM', price = 3200, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_BENELLIM2', price = 2600, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_DOUBLEBARRELFM', price = 2200, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_GUSENBERG', price = 3100, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_MK18', price = 3800, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_NSR9', price = 4100, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_M4', price = 3900, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_M249', price = 5200, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_RPG', price = 8400, metadata = { registered = false }, isIllegal = true },
+            -- { name = 'WEAPON_VICTUSXMR', price = 6500, metadata = { registered = false }, isIllegal = true },
 
 
             -- { name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false }, isIllegal = true },
@@ -376,12 +376,12 @@ return {
             { name = 'weapon_stungun_mp', price = 0 },
             { name = 'weapon_flashlight', price = 0 },
             { name = 'weapon_nightstick', price = 0 },
-            { name = 'hat',  price = 0, metadata = {
+            { name = 'hat', price = 0, metadata = {
                 label = "Chapeau femme",
                 id = "addon11",
                 variation = 0
             } },
-            { name = 'armour', price = 0,metadata = {
+            { name = 'armour', price = 0, metadata = {
                 label = "Pare balles femme",
                 id = "addon4",
                 variation = 2
@@ -391,7 +391,7 @@ return {
                 id = "addon30",
                 variation = 0
             } },
-            { name = 'armour',  price = 0,metadata = {
+            { name = 'armour', price = 0, metadata = {
                 label = "Pare balles homme",
                 id = "addon9",
                 variation = 2
@@ -417,22 +417,22 @@ return {
             { name = 'weapon_stungun_mp', price = 0 },
             { name = 'weapon_flashlight', price = 0 },
             { name = 'weapon_nightstick', price = 0 },
-            { name = 'hat',  price = 0, metadata = {
+            { name = 'hat', price = 0, metadata = {
                 label = "Chapeau femme",
                 id = "addon15",
                 variation = 0
             } },
-            { name = 'armour',  price = 0,metadata = {
+            { name = 'armour', price = 0, metadata = {
                 label = "Pare balles femme",
                 id = "addon4",
                 variation = 0
             } },
-            { name = 'hat',  price = 0, metadata = {
+            { name = 'hat', price = 0, metadata = {
                 label = "Chapeau homme",
                 id = "addon22",
                 variation = 0
             } },
-            { name = 'armour', price = 0,metadata = {
+            { name = 'armour', price = 0, metadata = {
                 label = "Pare balles homme",
                 id = "addon9",
                 variation = 0
