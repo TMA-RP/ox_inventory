@@ -23,6 +23,36 @@ return {
     },
 
     {
+        coords = vec3(370.8888, -1602.6403, 29.3072),
+        name = 'lspdlocker',
+        label = 'Réserve LSPD',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['police'] = 0 }
+    },
+
+    {
+        coords = vec3(1819.0392, 3671.0464, 34.1893),
+        name = 'sandylocker',
+        label = 'Réserve Sheriff',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['sheriff'] = 0 }
+    },
+
+    {
+        coords = vec3(-445.7466, 6018.8970, 36.9956),
+        name = 'paletolocker',
+        label = 'Réserve Sheriff',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['sheriff'] = 0 }
+    },
+
+    {
         coords = vec3(1824.8384, 3673.9180, 38.8595),
         name = 'sandycaptlocker',
         label = 'Coffre Capitaine',
