@@ -1573,7 +1573,7 @@ RegisterNetEvent("ox_inventory:openPhone", function ()
 end)
 
 exports("checkSim", function()
-  if LocalPlayer.state.invBusy == true then return end
+  if LocalPlayer.state.invBusy == true then return false end
   local myNumber = exports.npwd:getPhoneNumber()
   local havePhoneForThisNumber = exports.ox_inventory:Search('count', 'phone', { phonenumber = myNumber}) > 0
 
@@ -1605,6 +1605,7 @@ AddStateBagChangeHandler('invBusy', nil, function(_, _, value)
     end
     exports.npwd:setPhoneDisabled(true)
   else
+    Wait(0)
     local havePhoneForThisNumber = exports.ox_inventory:checkSim()
 
     if havePhoneForThisNumber then
