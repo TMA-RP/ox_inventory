@@ -183,6 +183,7 @@ return {
 
             { name = 'ammo-9', price = 1 },
             { name = 'ammo-45', price = 1 },
+            { name = 'ammo-50', price = 2 },
             { name = 'ammo-flare', price = 15 },
             -- { name = 'weapon_knuckle', price = 200 },
         }, locations = {
