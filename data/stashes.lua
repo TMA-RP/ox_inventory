@@ -263,6 +263,26 @@ return {
     },
 
     {
+        coords = vec3(131.0292, -1283.9125, 29.2694),
+        name = 'unicorbarlocker',
+        label = 'Rangement bar',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['unicorn'] = 0 }
+    },
+
+    {
+        coords = vec3(131.0292, -1283.9125, 29.2694),
+        name = 'bahambarlocker',
+        label = 'Rangement bar',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['bahamas'] = 0 }
+    },
+
+    {
         coords = vec3(906.1691, -2114.5925, 31.2780),
         name = 'bobcatworklocker',
         label = 'Rangement équipements',
