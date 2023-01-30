@@ -411,7 +411,7 @@ return {
             { name = 'braceletgps', price = 0 },
             { name = 'weapon_m9', price = 0 },
             { name = 'weapon_mp5', price = 0 },
-            { name = 'weapon_m4', price = 0 },
+            { name = 'weapon_mk18', price = 0 },
             { name = 'weapon_benellim2', price = 0 },
             { name = 'weapon_stungun_mp', price = 0 },
             { name = 'weapon_flashlight', price = 0 },
