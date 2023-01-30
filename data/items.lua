@@ -1,8 +1,4 @@
 return {
-    ['bandage'] = {
-        label = 'Bandage',
-        weight = 45,
-    },
     ['black_money'] = {
         label = 'Argent sale',
     },
@@ -119,14 +115,6 @@ return {
     ['davidoffcigar'] = {
         label = 'cigare davidoff',
         weight = 10,
-        stack = true,
-        close = true,
-        description = nil
-    },
-
-    ['defibrilator'] = {
-        label = 'Défibrilateur',
-        weight = 2500,
         stack = true,
         close = true,
         description = nil

@@ -202,33 +202,6 @@ return {
         }
     },
 
-    Medicine = {
-        name = 'Réceptionniste Intendant',
-        groups = {
-            ['ambulance'] = 0
-        },
-        inventory = {
-            { name = 'defibrilator', price = 0 },
-            { name = 'bandage', price = 0 },
-            -- { name = 'tourniquet', price = 5 },
-            -- { name = 'quickclot', price = 5 },
-            -- { name = 'packing_bandage', price = 5 },
-            -- { name = 'elastic_bandage', price = 5 },
-            -- { name = 'surgical_kit', price = 5 },
-            -- { name = 'epinephrine', price = 5 },
-            -- { name = 'atropine', price = 5 },
-            -- { name = 'morphin', price = 5 },
-            -- { name = 'painkillers', price = 5 },
-            -- { name = 'blood_250', price = 5 },
-            -- { name = 'blood_500', price = 5 },
-            -- { name = 'blood_1000', price = 5 },
-        }, locations = {
-            vec3(309.5337, -578.8837, 43.2654),
-            vec3(1672.6099, 3665.6235, 35.3396)
-        }, targets = {
-        }
-    },
-
     HopitalIllegal = {
         name = 'Gunter les doigts de fée',
         inventory = {
