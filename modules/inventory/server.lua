@@ -2065,7 +2065,6 @@ RegisterServerEvent('ox_inventory:updateWeapon', function(action, value, slot)
 		return
 	end
 
-	local syncInventory = false
 	local type = type(value)
 
 	if type == 'table' and action == 'component' then
@@ -2100,7 +2099,6 @@ RegisterServerEvent('ox_inventory:updateWeapon', function(action, value, slot)
 				if Inventory.RemoveItem(inventory, ammo, diff) then
 					weapon.metadata.ammo = value
 					weapon.weight = Inventory.SlotWeight(item, weapon)
-					syncInventory = true
 				end
 			elseif action == 'throw' then
 				Inventory.RemoveItem(inventory, weapon.name, 1, weapon.metadata, weapon.slot)
@@ -2109,7 +2107,6 @@ RegisterServerEvent('ox_inventory:updateWeapon', function(action, value, slot)
 					if Inventory.AddItem(inventory, weapon.metadata.components[value], 1) then
 						table.remove(weapon.metadata.components, value)
 						weapon.weight = Inventory.SlotWeight(item, weapon)
-						syncInventory = true
 					end
 				elseif type == 'string' then
 					local component = inventory.items[tonumber(value)]
@@ -2117,11 +2114,10 @@ RegisterServerEvent('ox_inventory:updateWeapon', function(action, value, slot)
 					if Inventory.RemoveItem(inventory, component.name, 1) then
 						table.insert(weapon.metadata.components, component.name)
 						weapon.weight = Inventory.SlotWeight(item, weapon)
-						syncInventory = true
 					end
 				end
 			elseif action == 'ammo' then
-				if weapon.hash == `WEAPON_FIREEXTINGUISHER` or weapon.hash == `WEAPON_PETROLCAN` then
+				if item.hash == `WEAPON_FIREEXTINGUISHER` or item.hash == `WEAPON_PETROLCAN` or item.hash == `WEAPON_HAZARDCAN` or item.hash == `WEAPON_FERTILIZERCAN` then
 					weapon.metadata.durability = math.floor(value)
 					weapon.metadata.ammo = weapon.metadata.durability
 				elseif value < weapon.metadata.ammo then
@@ -2130,11 +2126,8 @@ RegisterServerEvent('ox_inventory:updateWeapon', function(action, value, slot)
 					weapon.metadata.durability = weapon.metadata.durability - durability
 					weapon.weight = Inventory.SlotWeight(item, weapon)
 				end
-
-				syncInventory = true
 			elseif action == 'melee' and value > 0 then
 				weapon.metadata.durability = weapon.metadata.durability - ((Items(weapon.name).durability or 1) * value)
-				syncInventory = true
 			end
 
 			if action ~= 'throw' then TriggerClientEvent('ox_inventory:updateSlots', inventory.id, {{item = weapon}}, {left=inventory.weight}) end
@@ -2143,9 +2136,7 @@ RegisterServerEvent('ox_inventory:updateWeapon', function(action, value, slot)
 				TriggerClientEvent('ox_inventory:disarm', inventory.id)
 			end
 
-			if server.syncInventory and syncInventory then
-				server.syncInventory(inventory)
-			end
+			if server.syncInventory then server.syncInventory(inventory) end
 		end
 	end
 end)
