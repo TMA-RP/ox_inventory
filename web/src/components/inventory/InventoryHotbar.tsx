@@ -21,7 +21,7 @@ const InventoryHotbar: React.FC = () => {
     } else {
       if (handle) clearTimeout(handle);
       setHotbarVisible(true);
-      setHandle(setTimeout(() => setHotbarVisible(false), 3000));
+      setHandle(setTimeout(() => setHotbarVisible(false), 6000));
     }
   });
 
@@ -32,7 +32,9 @@ const InventoryHotbar: React.FC = () => {
           <div
             className="hotbar-item-slot"
             style={{
-              backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
+                backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
+                width: '8vh',
+                height: '8vh',
             }}
             key={`hotbar-${item.slot}`}
           >

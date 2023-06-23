@@ -13,4 +13,5 @@ export type State = {
     leftInventory: Inventory;
     rightInventory: Inventory;
   };
+  paymentMethod: string;
 };

@@ -29,6 +29,7 @@ const initialState: State = {
   itemAmount: 0,
   shiftPressed: false,
   isBusy: false,
+  paymentMethod: "bank",
 };
 
 export const inventorySlice = createSlice({
@@ -62,6 +63,9 @@ export const inventorySlice = createSlice({
 
       container.weight = action.payload;
     },
+    setPaymentMethod: (state, action: PayloadAction<string>) => {
+        state.paymentMethod = action.payload
+    }
   },
   extraReducers: (builder) => {
     builder.addMatcher(isPending, (state) => {
@@ -96,10 +100,12 @@ export const {
   stackSlots,
   refreshSlots,
   setContainerWeight,
+  setPaymentMethod,
 } = inventorySlice.actions;
 export const selectLeftInventory = (state: RootState) => state.inventory.leftInventory;
 export const selectRightInventory = (state: RootState) => state.inventory.rightInventory;
 export const selectItemAmount = (state: RootState) => state.inventory.itemAmount;
 export const selectIsBusy = (state: RootState) => state.inventory.isBusy;
+export const selectPaymentMethod = (state: RootState) => state.inventory.paymentMethod;
 
 export default inventorySlice.reducer;

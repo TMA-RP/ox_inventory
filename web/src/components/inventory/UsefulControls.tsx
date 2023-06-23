@@ -39,17 +39,17 @@ const UsefulControls: React.FC<Props> = ({ infoVisible, setInfoVisible }) => {
       <DialogContent>
         <div className="useful-controls-content-wrapper">
           <p>
-            <kbd>RMB</kbd>
+            <kbd>Click droit</kbd>
             <br />
             {Locale.ui_rmb}
           </p>
           <p>
-            <kbd>ALT + LMB</kbd>
+            <kbd>ALT + Click gauche</kbd>
             <br />
             {Locale.ui_alt_lmb}
           </p>
           <p>
-            <kbd>CTRL + LMB</kbd>
+            <kbd>CTRL + Click gauche</kbd>
             <br />
             {Locale.ui_ctrl_lmb}
           </p>
@@ -59,13 +59,13 @@ const UsefulControls: React.FC<Props> = ({ infoVisible, setInfoVisible }) => {
             {Locale.ui_shift_drag}
           </p>
           <p>
-            <kbd>CTRL + SHIFT + LMB</kbd>
+            <kbd>CTRL + SHIFT + Click gauche</kbd>
             <br />
             {Locale.ui_ctrl_shift_lmb}
           </p>
         </div>
       </DialogContent>
-      <DialogActions>
+      {/* <DialogActions>
         <span onClick={() => setOpen(true)}>🐂</span>
       </DialogActions>
       <Snackbar
@@ -77,7 +77,7 @@ const UsefulControls: React.FC<Props> = ({ infoVisible, setInfoVisible }) => {
         <Alert severity="success" color="info" sx={{ width: '100%' }}>
           Made with 🐂 by the Overextended team
         </Alert>
-      </Snackbar>
+      </Snackbar> */}
     </Dialog>
   );
 };

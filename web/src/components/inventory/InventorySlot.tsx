@@ -139,7 +139,7 @@ const InventorySlot: React.FC<SlotProps> = ({ inventory, item }) => {
         ref={connectRef}
         onContextMenu={handleContext}
         onClick={handleClick}
-        className="inventory-slot"
+        className={isSlotWithItem(item) ? "inventory-slot occupied" : "inventory-slot"}
         style={{
           filter:
             !canPurchaseItem(item, inventory) || !canCraftItem(item, inventory.type)
@@ -147,7 +147,8 @@ const InventorySlot: React.FC<SlotProps> = ({ inventory, item }) => {
               : undefined,
           opacity: isDragging ? 0.4 : 1.0,
           backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
-          border: isOver ? '1px dashed rgba(255,255,255,0.4)' : '',
+        //   border: isOver ? '1px dashed rgba(255,255,255,0.4)' : '',
+          boxShadow: isOver ? '0px 0px 10px 0px rgba(0, 225, 255, 1)' : '',
         }}
       >
         {isSlotWithItem(item) && (
@@ -174,7 +175,17 @@ const InventorySlot: React.FC<SlotProps> = ({ inventory, item }) => {
                         })}g `
                     : ''}
                 </p>
-                <p>{item.count ? item.count.toLocaleString('en-us') + `x` : ''}</p>
+                <p>
+                    {
+                        item.count ? 
+                            ["black_money", "money"].includes(item.name) ? 
+                                item.count.toLocaleString('en-us') + `$` : 
+                                item.count > 1 ? 
+                                    item.count.toLocaleString('en-us') + `x` : 
+                                    '' : 
+                                    ''
+                    }
+                </p>
               </div>
             </div>
             <div>

@@ -39,6 +39,7 @@ export const onBuy = (source: DragSource, target: DropTarget) => {
     fromType: sourceInventory.type,
     toType: targetInventory.type,
     count: count,
+    paymentMethod: state.paymentMethod,
   };
 
   store.dispatch(
