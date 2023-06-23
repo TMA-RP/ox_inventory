@@ -11,171 +11,794 @@
 ---@field model? number[]
 
 return {
-	General = {
-		name = 'Shop',
-		blip = {
-			id = 59, colour = 69, scale = 0.8
-		}, inventory = {
-			{ name = 'burger', price = 10 },
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
-		}, locations = {
-			vec3(25.7, -1347.3, 29.49),
-			vec3(-3038.71, 585.9, 7.9),
-			vec3(-3241.47, 1001.14, 12.83),
-			vec3(1728.66, 6414.16, 35.03),
-			vec3(1697.99, 4924.4, 42.06),
-			vec3(1961.48, 3739.96, 32.34),
-			vec3(547.79, 2671.79, 42.15),
-			vec3(2679.25, 3280.12, 55.24),
-			vec3(2557.94, 382.05, 108.62),
-			vec3(373.55, 325.56, 103.56),
-		}, targets = {
-			{ loc = vec3(25.06, -1347.32, 29.5), length = 0.7, width = 0.5, heading = 0.0, minZ = 29.5, maxZ = 29.9, distance = 1.5 },
-			{ loc = vec3(-3039.18, 585.13, 7.91), length = 0.6, width = 0.5, heading = 15.0, minZ = 7.91, maxZ = 8.31, distance = 1.5 },
-			{ loc = vec3(-3242.2, 1000.58, 12.83), length = 0.6, width = 0.6, heading = 175.0, minZ = 12.83, maxZ = 13.23, distance = 1.5 },
-			{ loc = vec3(1728.39, 6414.95, 35.04), length = 0.6, width = 0.6, heading = 65.0, minZ = 35.04, maxZ = 35.44, distance = 1.5 },
-			{ loc = vec3(1698.37, 4923.43, 42.06), length = 0.5, width = 0.5, heading = 235.0, minZ = 42.06, maxZ = 42.46, distance = 1.5 },
-			{ loc = vec3(1960.54, 3740.28, 32.34), length = 0.6, width = 0.5, heading = 120.0, minZ = 32.34, maxZ = 32.74, distance = 1.5 },
-			{ loc = vec3(548.5, 2671.25, 42.16), length = 0.6, width = 0.5, heading = 10.0, minZ = 42.16, maxZ = 42.56, distance = 1.5 },
-			{ loc = vec3(2678.29, 3279.94, 55.24), length = 0.6, width = 0.5, heading = 330.0, minZ = 55.24, maxZ = 55.64, distance = 1.5 },
-			{ loc = vec3(2557.19, 381.4, 108.62), length = 0.6, width = 0.5, heading = 0.0, minZ = 108.62, maxZ = 109.02, distance = 1.5 },
-			{ loc = vec3(373.13, 326.29, 103.57), length = 0.6, width = 0.5, heading = 345.0, minZ = 103.57, maxZ = 103.97, distance = 1.5 },
-		}
-	},
+    Superette = {
+        name = '24/7 Superette',
+        blip = {
+            sprite = 38,
+            alwaysShow = false,
+            onlyInVehicle = false,
+        },
+        inventory = {
+            { name = 'cubancigar',        price = 90 },
+            { name = 'marlboro',          price = 20 },
+            { name = 'lighter',           price = 2 },
+            { name = 'bait',              price = 1 },
+            { name = 'WEAPON_GOLFCLUB',   price = 130 },
+            { name = 'fishingrod',        price = 65 },
+            { name = 'pochon',            price = 3 },
+            { name = 'WEAPON_BALL',       price = 25 },
+            { name = 'WEAPON_BAT',        price = 40 },
+            { name = 'parachute',         price = 1500 },
+            { name = 'screwdriver',       price = 5 },
+            { name = 'jumelles',          price = 60 },
+            { name = 'fixtool',           price = 200 },
+            { name = 'WEAPON_WRENCH',     price = 41 },
+            { name = 'WEAPON_HAMMER',     price = 12 },
+            { name = 'WEAPON_FLASHLIGHT', price = 90 },
+            { name = 'ocb_paper',         price = 1 },
+            { name = 'cv_boisson',        price = 7 },
+        },
+        locations = {
+            vec3(373.8, 325.8, 103.5), vec3(2557.4, 382.2, 108.6), vec3(-3038.9, 585.9, 7.9),
+            vec3(-3241.9, 1001.4, 12.8), vec3(547.4, 2671.7, 42.1), vec3(1961.4, 3740.6, 32.3),
+            vec3(2678.9, 3280.6, 55.2), vec3(1729.2, 6414.1, 35.0),
+            vec3(25.747049331665, -1346.6291503906, 29.497022628784), vec3(1135.8, -982.2, 46.4),
+            vec3(-1222.9, -906.9, 12.3),
+            vec3(-1487.5, -379.1, 40.1), vec3(-2968.2, 390.9, 15.0), vec3(1166.0, 2708.9, 38.1),
+            vec3(1392.5, 3604.6, 34.9),
+            vec3(-48.5, -1757.5, 29.4), vec3(1163.3, -323.8, 69.2), vec3(-707.5, -914.2, 19.2),
+            vec3(-1820.5, 792.5, 138.1),
+            vec3(1698.3, 4924.4, 42.0), vec3(161.7914, 6641.0703, 31.6989), vec3(814.2743, -781.0761, 26.1750),
+            vec3(-160.4574, 6322.7124, 31.5869)
+        },
+        targets = {
+        }
+    },
+    Bar = {
+        name = 'Bar',
+        groups = {
+            ['unicorn'] = 0,
+            ['bahamas'] = 0,
+            ['billiards'] = 0,
+            ['yellowjack'] = 0,
+        },
+        inventory = {
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "vodka", weight = 900, label = "Vodka", image = "fooddrink/absolut" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "wine", weight = 900, label = "Vin rouge", image = "fooddrink/wine" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "baileys", weight = 900, label = "Baileys", image = "fooddrink/baileys" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "becherovka",
+                    weight = 900,
+                    label = "Becherovka",
+                    image = "fooddrink/becherovka"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "beefeater", weight = 900, label = "Beefeater", image = "fooddrink/beefeater" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "chivas", weight = 900, label = "Chivas", image = "fooddrink/chivas" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "cointreau", weight = 900, label = "Cointreau", image = "fooddrink/cointreau" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "curacao", weight = 900, label = "Curacao", image = "fooddrink/curacao" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "havana", weight = 900, label = "Havana", image = "fooddrink/havana" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "jack", weight = 900, label = "Jacky Michel", image = "fooddrink/jack" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "jager", weight = 900, label = "Jager", image = "fooddrink/jager" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "jameson", weight = 900, label = "Jameson", image = "fooddrink/jameson" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "kahlua", weight = 900, label = "Kahlua", image = "fooddrink/kahlua" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "limoncino", weight = 900, label = "Limoncino", image = "fooddrink/limoncino" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "malibu", weight = 900, label = "Malibu", image = "fooddrink/malibu" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "olmeca", weight = 900, label = "Olmeca", image = "fooddrink/olmeca" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "pernod", weight = 900, label = "Pernod", image = "fooddrink/pernod" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "sambuka", weight = 900, label = "Sambuka", image = "fooddrink/sambuka" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "applejuice",
+                    weight = -80,
+                    label = "Jus de pommes",
+                    image = "fooddrink/applejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "beer", weight = -67, label = "Bière en bouteille", image = "fooddrink/beer" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "beercan",
+                    weight = -50,
+                    label = "Bière en canette",
+                    image = "fooddrink/beercan"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "blackberryjuice",
+                    weight = -80,
+                    label = "Jus de raisin",
+                    image = "fooddrink/blackberryjuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "coffe", weight = -70, label = "Café", image = "fooddrink/caffe" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "coffemilkshake",
+                    weight = -70,
+                    label = "Café crème",
+                    image = "fooddrink/caffemilkshake"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "lemonade", weight = -30, label = "Limonade", image = "fooddrink/lemonade" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "mangojuice",
+                    weight = -80,
+                    label = "Jus de mangue",
+                    image = "fooddrink/mangojuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "mate", weight = -45, label = "mate", image = "fooddrink/mate" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "milk", weight = 900, label = "Lait", image = "fooddrink/milk" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "monster",
+                    weight = -67,
+                    label = "Boisson énergétique",
+                    image = "fooddrink/monster"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "notacola", weight = -67, label = "Caca Cola", image = "fooddrink/notacola" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "orange2",
+                    weight = -25,
+                    label = "Jus d'orange pulpeux",
+                    image = "fooddrink/orangejuice2"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "orange",
+                    weight = -80,
+                    label = "Jus d'orange en brique",
+                    image = "fooddrink/orangejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "pipsi", weight = -67, label = "Pipipsi", image = "fooddrink/pipsi" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "spite", weight = -67, label = "Spite", image = "fooddrink/spite" }
+            },
+        },
+        locations = {
+            vec3(129.4361, -1281.2415, 29.2693),
+            vec3(-1403.5675, -599.0579, 30.3200),
+            vec3(1981.8220, 3052.3191, 47.2150),
+            vec3(1651.9128, 4847.1392, 42.0144),
+            vec3(-1583.4393, -992.0984, 13.0751)
+        },
+        targets = {
+        }
+    },
+    AutoBarman = {
+        name = 'Bar',
+        inventory = {
+            {
+                name = 'cv_boisson',
+                price = 50,
+                metadata = { customname = "vodka", weight = 900, label = "Vodka", image = "fooddrink/absolut" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 50,
+                metadata = { customname = "wine", weight = 900, label = "Vin rouge", image = "fooddrink/wine" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 50,
+                metadata = {
+                    customname = "cointreau",
+                    weight = 900,
+                    label = "Cointreau",
+                    image = "fooddrink/cointreau"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 50,
+                metadata = {
+                    customname = "havana",
+                    weight = 900,
+                    label = "Havana",
+                    image = "fooddrink/havana"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 50,
+                metadata = {
+                    customname = "jack",
+                    weight = 900,
+                    label = "Jacky Michel",
+                    image = "fooddrink/jack"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 50,
+                metadata = { customname = "jager", weight = 900, label = "Jager", image = "fooddrink/jager" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 50,
+                metadata = {
+                    customname = "malibu",
+                    weight = 900,
+                    label = "Malibu",
+                    image = "fooddrink/malibu"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 50,
+                metadata = {
+                    customname = "pernod",
+                    weight = 900,
+                    label = "Pernod",
+                    image = "fooddrink/pernod"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 30,
+                metadata = {
+                    customname = "applejuice",
+                    weight = -80,
+                    label = "Jus de pommes",
+                    image = "fooddrink/applejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 40,
+                metadata = {
+                    customname = "beer",
+                    weight = -67,
+                    label = "Bière en bouteille",
+                    image = "fooddrink/beer"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 30,
+                metadata = {
+                    customname = "beercan",
+                    weight = -50,
+                    label = "Bière en canette",
+                    image = "fooddrink/beercan"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 30,
+                metadata = {
+                    customname = "blackberryjuice",
+                    weight = -80,
+                    label = "Jus de raisin",
+                    image = "fooddrink/blackberryjuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 20,
+                metadata = { customname = "coffe", weight = -70, label = "Café", image = "fooddrink/caffe" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 20,
+                metadata = {
+                    customname = "coffemilkshake",
+                    weight = -70,
+                    label = "Café crème",
+                    image = "fooddrink/caffemilkshake"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 30,
+                metadata = {
+                    customname = "lemonade",
+                    weight = -30,
+                    label = "Limonade",
+                    image = "fooddrink/lemonade"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 30,
+                metadata = {
+                    customname = "mangojuice",
+                    weight = -80,
+                    label = "Jus de mangue",
+                    image = "fooddrink/mangojuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 20,
+                metadata = { customname = "mate", weight = -45, label = "mate", image = "fooddrink/mate" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 20,
+                metadata = { customname = "milk", weight = 900, label = "Lait", image = "fooddrink/milk" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = {
+                    customname = "monster",
+                    weight = -67,
+                    label = "Boisson énergétique",
+                    image = "fooddrink/monster"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = {
+                    customname = "notacola",
+                    weight = -67,
+                    label = "Caca Cola",
+                    image = "fooddrink/notacola"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = {
+                    customname = "orange2",
+                    weight = -25,
+                    label = "Jus d'orange pulpeux",
+                    image = "fooddrink/orangejuice2"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = {
+                    customname = "orange",
+                    weight = -80,
+                    label = "Jus d'orange en brique",
+                    image = "fooddrink/orangejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = { customname = "pipsi", weight = -67, label = "Pipipsi", image = "fooddrink/pipsi" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = { customname = "spite", weight = -67, label = "Spite", image = "fooddrink/spite" }
+            },
+        },
+    },
+    Ammunation = {
+        name = 'Ammunation',
+        blip = {
+            sprite = 50,
+            alwaysShow = false,
+            onlyInVehicle = false,
+        },
+        inventory = {
+            { name = 'WEAPON_G17',           price = 2500,  metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_M9',            price = 2500,  metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_P357',          price = 2900,  metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_M45',           price = 3000,  metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_FLAREGUN',      price = 900,   metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_STUNGUN_MP',    price = 900,   license = 'weapon' },
+            { name = 'WEAPON_KNUCKLE',       price = 250 },
+            { name = 'WEAPON_SWITCHBLADE',   price = 300 },
+            { name = 'WEAPON_DAGGER',        price = 380 },
+            { name = 'WEAPON_KNIFE',         price = 450 },
+            { name = 'WEAPON_MACHETE',       price = 550 },
+            { name = 'WEAPON_STONE_HATCHET', price = 550 },
+            { name = 'WEAPON_HATCHET',       price = 550 },
+            { name = 'WEAPON_BATTLEAXE',     price = 300 },
+            { name = 'WEAPON_BENELLIM2',     price = 8000,  metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_MK18',          price = 15000, metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_NSR9',          price = 18000, metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_M4',            price = 15000, metadata = { registered = true }, license = 'weapon' },
+            { name = 'WEAPON_VICTUSXMR',     price = 35000, metadata = { registered = true }, license = 'weapon' },
+            { name = 'weapon_smokegrenade',  price = 1200,  metadata = { registered = true }, license = 'weapon' },
+            { name = 'weapon_flashlight',    price = 110,   metadata = { registered = true }, license = 'weapon' },
+            { name = 'weapon_nightstick',    price = 110,   metadata = { registered = true }, license = 'weapon' },
+            { name = 'ammo-9',               price = 1 },
+            { name = 'ammo-45',              price = 1 },
+            { name = 'ammo-50',              price = 2 },
+            { name = 'ammo-flare',           price = 15 },
+            { name = 'ammo-556',             price = 4,     isIllegal = false },
+            { name = 'ammo-762',             price = 5,     isIllegal = false },
+            { name = 'ammo-50',              price = 3,     isIllegal = false },
+            { name = 'ammo-sniper',          price = 6,     isIllegal = false },
+            { name = 'ammo-shotgun',         price = 4,     isIllegal = false },
 
-	Liquor = {
-		name = 'Liquor Store',
-		blip = {
-			id = 93, colour = 69, scale = 0.8
-		}, inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
-			{ name = 'burger', price = 15 },
-		}, locations = {
-			vec3(1135.808, -982.281, 46.415),
-			vec3(-1222.915, -906.983, 12.326),
-			vec3(-1487.553, -379.107, 40.163),
-			vec3(-2968.243, 390.910, 15.043),
-			vec3(1166.024, 2708.930, 38.157),
-			vec3(1392.562, 3604.684, 34.980),
-			vec3(-1393.409, -606.624, 30.319)
-		}, targets = {
-			{ loc = vec3(1134.9, -982.34, 46.41), length = 0.5, width = 0.5, heading = 96.0, minZ = 46.4, maxZ = 46.8, distance = 1.5 },
-			{ loc = vec3(-1222.33, -907.82, 12.43), length = 0.6, width = 0.5, heading = 32.7, minZ = 12.3, maxZ = 12.7, distance = 1.5 },
-			{ loc = vec3(-1486.67, -378.46, 40.26), length = 0.6, width = 0.5, heading = 133.77, minZ = 40.1, maxZ = 40.5, distance = 1.5 },
-			{ loc = vec3(-2967.0, 390.9, 15.14), length = 0.7, width = 0.5, heading = 85.23, minZ = 15.0, maxZ = 15.4, distance = 1.5 },
-			{ loc = vec3(1165.95, 2710.20, 38.26), length = 0.6, width = 0.5, heading = 178.84, minZ = 38.1, maxZ = 38.5, distance = 1.5 },
-			{ loc = vec3(1393.0, 3605.95, 35.11), length = 0.6, width = 0.6, heading = 200.0, minZ = 35.0, maxZ = 35.4, distance = 1.5 }
-		}
-	},
 
-	YouTool = {
-		name = 'YouTool',
-		blip = {
-			id = 402, colour = 69, scale = 0.8
-		}, inventory = {
-			{ name = 'lockpick', price = 10 }
-		}, locations = {
-			vec3(2748.0, 3473.0, 55.67),
-			vec3(342.99, -1298.26, 32.51)
-		}, targets = {
-			{ loc = vec3(2746.8, 3473.13, 55.67), length = 0.6, width = 3.0, heading = 65.0, minZ = 55.0, maxZ = 56.8, distance = 3.0 }
-		}
-	},
+            -- { name = 'weapon_knuckle', price = 200 },
+        },
+        locations = {
+            vec3(-660.8675, -939.4791, 21.8293),
+            vec3(813.1427, -2153.5947, 29.6192),
+            vec3(1696.7579, 3756.2576, 34.7054),
+            vec3(-327.3026, 6080.0117, 31.4548),
+            vec3(247.5067, -49.7142, 69.9412),
+            vec3(17.5895, -1109.5381, 29.7972),
+            vec3(2566.5090, 298.6732, 108.7350),
+            vec3(-1113.8441, 2696.1316, 18.5543),
+            vec3(842.8317, -1029.0250, 28.1949),
+            vec3(-1310.4022, -392.5341, 36.6958)
+        },
+        targets = {
 
-	Ammunation = {
-		name = 'Ammunation',
-		blip = {
-			id = 110, colour = 69, scale = 0.8
-		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'WEAPON_KNIFE', price = 200 },
-			{ name = 'WEAPON_BAT', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 1000, metadata = { registered = true }, license = 'weapon' }
-		}, locations = {
-			vec3(-662.180, -934.961, 21.829),
-			vec3(810.25, -2157.60, 29.62),
-			vec3(1693.44, 3760.16, 34.71),
-			vec3(-330.24, 6083.88, 31.45),
-			vec3(252.63, -50.00, 69.94),
-			vec3(22.56, -1109.89, 29.80),
-			vec3(2567.69, 294.38, 108.73),
-			vec3(-1117.58, 2698.61, 18.55),
-			vec3(842.44, -1033.42, 28.19)
-		}, targets = {
-			{ loc = vec3(-660.92, -934.10, 21.94), length = 0.6, width = 0.5, heading = 180.0, minZ = 21.8, maxZ = 22.2, distance = 2.0 },
-			{ loc = vec3(808.86, -2158.50, 29.73), length = 0.6, width = 0.5, heading = 360.0, minZ = 29.6, maxZ = 30.0, distance = 2.0 },
-			{ loc = vec3(1693.57, 3761.60, 34.82), length = 0.6, width = 0.5, heading = 227.39, minZ = 34.7, maxZ = 35.1, distance = 2.0 },
-			{ loc = vec3(-330.29, 6085.54, 31.57), length = 0.6, width = 0.5, heading = 225.0, minZ = 31.4, maxZ = 31.8, distance = 2.0 },
-			{ loc = vec3(252.85, -51.62, 70.0), length = 0.6, width = 0.5, heading = 70.0, minZ = 69.9, maxZ = 70.3, distance = 2.0 },
-			{ loc = vec3(23.68, -1106.46, 29.91), length = 0.6, width = 0.5, heading = 160.0, minZ = 29.8, maxZ = 30.2, distance = 2.0 },
-			{ loc = vec3(2566.59, 293.13, 108.85), length = 0.6, width = 0.5, heading = 360.0, minZ = 108.7, maxZ = 109.1, distance = 2.0 },
-			{ loc = vec3(-1117.61, 2700.26, 18.67), length = 0.6, width = 0.5, heading = 221.82, minZ = 18.5, maxZ = 18.9, distance = 2.0 },
-			{ loc = vec3(841.05, -1034.76, 28.31), length = 0.6, width = 0.5, heading = 360.0, minZ = 28.2, maxZ = 28.6, distance = 2.0 }
-		}
-	},
+        }
+    },
+    HopitalIllegal = {
+        name = 'Gunter les doigts de fée',
+        inventory = {
+            { name = 'illegal_medical_pass', price = 5000, isIllegal = true },
+        },
+        locations = {
+            vec3(260.7488, -1358.6775, 24.5378),
+        },
+        targets = {
 
-	PoliceArmoury = {
-		name = 'Police Armoury',
-		groups = shared.police,
-		blip = {
-			id = 110, colour = 84, scale = 0.8
-		}, inventory = {
-			{ name = 'ammo-9', price = 5, },
-			{ name = 'ammo-rifle', price = 5, },
-			{ name = 'WEAPON_FLASHLIGHT', price = 200 },
-			{ name = 'WEAPON_NIGHTSTICK', price = 100 },
-			{ name = 'WEAPON_PISTOL', price = 500, metadata = { registered = true, serial = 'POL' }, license = 'weapon' },
-			{ name = 'WEAPON_CARBINERIFLE', price = 1000, metadata = { registered = true, serial = 'POL' }, license = 'weapon', grade = 3 },
-			{ name = 'WEAPON_STUNGUN', price = 500, metadata = { registered = true, serial = 'POL'} }
-		}, locations = {
-			vec3(451.51, -979.44, 30.68)
-		}, targets = {
-			{ loc = vec3(453.21, -980.03, 30.68), length = 0.5, width = 3.0, heading = 270.0, minZ = 30.5, maxZ = 32.0, distance = 6 }
-		}
-	},
+        }
+    },
+    ArmesIllegales = {
+        name = 'Willy le chasseur',
+        inventory = {
+            { name = 'ammo-50',         price = 3,     isIllegal = true },
+            { name = 'ammo-45',         price = 2,     isIllegal = true },
+            { name = 'ammo-9',          price = 1,     isIllegal = true },
+            { name = 'ammo-flare',      price = 2,     isIllegal = true },
+            { name = 'WEAPON_MINIUZI',  price = 15000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_MP5',      price = 18000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_G17',      price = 5000,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_M45',      price = 7000,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_M9',       price = 5000,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_L5',       price = 8000,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_P357',     price = 6000,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_P226',     price = 5000,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_2011',     price = 8000,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_MOLOTOV',  price = 350,   isIllegal = true },
+            { name = 'WEAPON_FLAREGUN', price = 1500,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_BOTTLE',   price = 50,    isIllegal = true },
+        },
+        locations = {
+            vec3(-428.8799, 2063.5288, 120.7077)
+        },
+        targets = {
 
-	Medicine = {
-		name = 'Medicine Cabinet',
-		groups = {
-			['ambulance'] = 0
-		},
-		blip = {
-			id = 403, colour = 69, scale = 0.8
-		}, inventory = {
-			{ name = 'medikit', price = 26 },
-			{ name = 'bandage', price = 5 }
-		}, locations = {
-			vec3(306.3687, -601.5139, 43.28406)
-		}, targets = {
+        }
+    },
+    ArmesLourdesIllegales = {
+        name = '"BBC" Boby Beau Calibre',
+        inventory = {
+            { name = 'ammo-45',               price = 2,     isIllegal = true },
+            { name = 'ammo-556',              price = 4,     isIllegal = true },
+            { name = 'ammo-762',              price = 5,     isIllegal = true },
+            { name = 'ammo-50',               price = 3,     isIllegal = true },
+            { name = 'ammo-sniper',           price = 6,     isIllegal = true },
+            { name = 'ammo-shotgun',          price = 4,     isIllegal = true },
+            { name = 'ammo-rpg',              price = 240,   isIllegal = true },
+            { name = 'WEAPON_AXMC',           price = 80000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_GRENADE',        price = 850,   metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_AKM',            price = 30000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_VECTOR',         price = 35000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_BENELLIM2',      price = 12500, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_DOUBLEBARRELFM', price = 8500,  metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_GUSENBERG',      price = 20000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_MK18',           price = 30000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_NSR9',           price = 30000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_M4',             price = 30000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_M249',           price = 50000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_RPG',            price = 90000, metadata = { registered = false }, isIllegal = true },
+            { name = 'WEAPON_VICTUSXMR',      price = 70000, metadata = { registered = false }, isIllegal = true },
 
-		}
-	},
 
-	BlackMarketArms = {
-		name = 'Black Market (Arms)',
-		inventory = {
-			{ name = 'WEAPON_DAGGER', price = 5000, metadata = { registered = false	}, currency = 'black_money' },
-			{ name = 'WEAPON_CERAMICPISTOL', price = 50000, metadata = { registered = false }, currency = 'black_money' },
-			{ name = 'at_suppressor_light', price = 50000, currency = 'black_money' },
-			{ name = 'ammo-rifle', price = 1000, currency = 'black_money' },
-			{ name = 'ammo-rifle2', price = 1000, currency = 'black_money' }
-		}, locations = {
-			vec3(309.09, -913.75, 56.46)
-		}, targets = {
+        },
+        locations = {
+            vec3(-2174.1914, 5194.1616, 16.8778)
+        },
+        targets = {
 
-		}
-	},
+        }
+    },
+    -- Cocaine = {
+    --     name = 'Mike le poudré',
+    --     inventory = {
+    --         { name = 'coca_seed',       price = 2,  isIllegal = true },
+    --         { name = 'weed_fertilizer', price = 15, isIllegal = true },
+    --     },
+    --     locations = {
+    --         vec3(1977.5743, -2608.5503, 3.5523)
+    --     },
+    --     targets = {
 
-	VendingMachineDrinks = {
-		name = 'Vending Machine',
-		inventory = {
-			{ name = 'water', price = 10 },
-			{ name = 'cola', price = 10 },
-		},
-		model = {
-			`prop_vend_soda_02`, `prop_vend_fridge01`, `prop_vend_water_01`, `prop_vend_soda_01`
-		}
-	}
+    --     }
+    -- },
+    ObjetIllegaux = {
+        name = 'Mamie les bons tuyaux',
+        inventory = {
+            { name = 'lockpick',            price = 15,    isIllegal = true },
+            { name = 'radio',               price = 2500,  isIllegal = true },
+            { name = 'WEAPON_FLARE',        price = 20,    isIllegal = true },
+            { name = 'weapon_smokegrenade', price = 1750,  isIllegal = true },
+            { name = 'spike',               price = 2500,  isIllegal = true },
+            { name = 'coupebracelet',       price = 200,   isIllegal = true },
+            { name = 'fakeplate',           price = 3500,  isIllegal = true },
+            { name = 'hack_phone',          price = 25000, isIllegal = true },
+            { name = 'hack_laptop',         price = 25000, isIllegal = true },
+            -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
+        },
+        locations = {
+            vec3(2940.4668, 4623.4497, 48.7208)
+        },
+        targets = {
+
+        }
+    },
+    DigitalDen = {
+        name = 'Digital Den',
+        blip = {
+            sprite = 94,
+            alwaysShow = false,
+            onlyInVehicle = false,
+        },
+        inventory = {
+            { name = 'phone', price = 520 },
+            -- { name = 'laptop', price = 5000 },
+        },
+        locations = {
+            vec3(-1209.1213, -1503.2405, 4.3739)
+        },
+        targets = {
+
+        }
+    },
+    Sheriffequipements = {
+        name = 'Réserve',
+        groups = {
+            ['sheriff'] = 6,
+        },
+        inventory = {
+            { name = 'parachute',   price = 0 },
+            { name = 'spike',       price = 0 },
+            { name = 'radio',       price = 0 },
+            { name = 'braceletgps', price = 0 },
+            {
+                name = 'hat',
+                price = 0,
+                metadata = {
+                    label = "Chapeau femme",
+                    id = "addon11",
+                    variation = 0
+                }
+            },
+            {
+                name = 'armour',
+                price = 0,
+                metadata = {
+                    label = "Pare balles femme",
+                    id = "addon4",
+                    variation = 2
+                }
+            },
+            {
+                name = 'hat',
+                price = 0,
+                metadata = {
+                    label = "Chapeau homme",
+                    id = "addon30",
+                    variation = 0
+                }
+            },
+            {
+                name = 'armour',
+                price = 0,
+                metadata = {
+                    label = "Pare balles homme",
+                    id = "addon9",
+                    variation = 2
+                }
+            },
+        },
+        locations = {
+            vec3(-449.3686, 6015.1426, 36.9956),
+            vec3(1839.8301, 3684.5820, 34.1893),
+        }
+    },
+    Policeequipements = {
+        name = 'Réserve',
+        groups = {
+            ['police'] = 6,
+        },
+        inventory = {
+            { name = 'parachute',   price = 0 },
+            { name = 'spike',       price = 0 },
+            { name = 'radio',       price = 0 },
+            { name = 'braceletgps', price = 0 },
+
+            {
+                name = 'hat',
+                price = 0,
+                metadata = {
+                    label = "Chapeau femme",
+                    id = "addon15",
+                    variation = 0
+                }
+            },
+            {
+                name = 'armour',
+                price = 0,
+                metadata = {
+                    label = "Pare balles femme",
+                    id = "addon4",
+                    variation = 0
+                }
+            },
+            {
+                name = 'hat',
+                price = 0,
+                metadata = {
+                    label = "Chapeau homme",
+                    id = "addon22",
+                    variation = 0
+                }
+            },
+            {
+                name = 'armour',
+                price = 0,
+                metadata = {
+                    label = "Pare balles homme",
+                    id = "addon9",
+                    variation = 0
+                }
+            },
+        },
+        locations = {
+            vec3(836.7073, -1287.2510, 28.2449), -- LAMESA
+            vec3(364.4244, -1603.8737, 25.4517)  -- DAVIS
+        }
+    },
+    BuilderStorage = {
+        name = 'Réserve',
+        groups = {
+            ['builder'] = 4,
+        },
+        inventory = {
+            {
+                name = 'hat',
+                price = 0,
+                metadata = {
+                    label = "Casque de chantier",
+                    job = "builder"
+                }
+            },
+        },
+        locations = {
+            vec3(148.5979, -371.3800, 43.3509),
+        }
+    },
 }

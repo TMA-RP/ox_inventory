@@ -50,27 +50,27 @@ local ox_inventory = exports[shared.resource]
 -- Clientside item use functions
 -----------------------------------------------------------------------------------------------
 
-Item('bandage', function(data, slot)
-	local maxHealth = GetEntityMaxHealth(cache.ped)
-	local health = GetEntityHealth(cache.ped)
-	ox_inventory:useItem(data, function(data)
-		if data then
-			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health + maxHealth / 16)))
-			lib.notify({ description = 'You feel better already' })
-		end
-	end)
-end)
+-- Item('bandage', function(data, slot)
+-- 	local maxHealth = GetEntityMaxHealth(cache.ped)
+-- 	local health = GetEntityHealth(cache.ped)
+-- 	ox_inventory:useItem(data, function(data)
+-- 		if data then
+-- 			SetEntityHealth(cache.ped, math.min(maxHealth, math.floor(health + maxHealth / 16)))
+-- 			lib.notify({ description = 'You feel better already' })
+-- 		end
+-- 	end)
+-- end)
 
-Item('armour', function(data, slot)
-	if GetPedArmour(cache.ped) < 100 then
-		ox_inventory:useItem(data, function(data)
-			if data then
-				SetPlayerMaxArmour(PlayerData.id, 100)
-				SetPedArmour(cache.ped, 100)
-			end
-		end)
-	end
-end)
+-- Item('armour', function(data, slot)
+-- 	if GetPedArmour(cache.ped) < 100 then
+-- 		ox_inventory:useItem(data, function(data)
+-- 			if data then
+-- 				SetPlayerMaxArmour(PlayerData.id, 100)
+-- 				SetPedArmour(cache.ped, 100)
+-- 			end
+-- 		end)
+-- 	end
+-- end)
 
 client.parachute = false
 Item('parachute', function(data, slot)
@@ -78,7 +78,7 @@ Item('parachute', function(data, slot)
 		ox_inventory:useItem(data, function(data)
 			if data then
 				local chute = `GADGET_PARACHUTE`
-				SetPlayerParachuteTintIndex(PlayerData.id, -1)
+				SetPlayerParachuteTintIndex(PlayerData.id, 6)
 				GiveWeaponToPed(cache.ped, chute, 0, true, false)
 				SetPedGadget(cache.ped, chute, true)
 				lib.requestModel(1269906701)
@@ -91,15 +91,15 @@ Item('parachute', function(data, slot)
 	end
 end)
 
-Item('phone', function(data, slot)
-	local success, result = pcall(function()
-		return exports.npwd:isPhoneVisible()
-	end)
+-- Item('phone', function(data, slot)
+-- 	local success, result = pcall(function()
+-- 		return exports.npwd:isPhoneVisible()
+-- 	end)
 
-	if success then
-		exports.npwd:setPhoneVisible(not result)
-	end
-end)
+-- 	if success then
+-- 		exports.npwd:setPhoneVisible(not result)
+-- 	end
+-- end)
 
 Item('clothing', function(data, slot)
 	local metadata = slot.metadata

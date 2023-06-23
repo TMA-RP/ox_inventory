@@ -222,7 +222,7 @@ end
 ---@param point CPoint
 local function nearbyEvidence(point)
 	---@diagnostic disable-next-line: param-type-mismatch
-	DrawMarker(2, point.coords.x, point.coords.y, point.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 30, 150, 222, false, false, 0, true, false, false, false)
+	-- DrawMarker(2, point.coords.x, point.coords.y, point.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 30, 150, 222, false, false, 0, true, false, false, false)
 
 	if point.isClosest and point.currentDistance < 1.2 and IsControlJustReleased(0, 38) then
 		openEvidence()
@@ -277,7 +277,7 @@ Inventory.Evidence = setmetatable(data('evidence'), {
 
 local function nearbyStash(self)
 	---@diagnostic disable-next-line: param-type-mismatch
-	DrawMarker(2, self.coords.x, self.coords.y, self.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 30, 150, 222, false, false, 0, true, false, false, false)
+	-- DrawMarker(2, self.coords.x, self.coords.y, self.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 30, 150, 222, false, false, 0, true, false, false, false)
 end
 
 Inventory.Stashes = setmetatable(data('stashes'), {

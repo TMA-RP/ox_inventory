@@ -370,7 +370,7 @@ local function canUseItem(isAmmo)
 	and PlayerData.loaded
 	and not PlayerData.dead
 	and not invBusy
-	and not lib.progressActive()
+	-- and not lib.progressActive()
 	and not IsPedRagdoll(ped)
 	and not IsPedFalling(ped)
 end
@@ -609,7 +609,7 @@ exports('useSlot', useSlot)
 ---@param id number
 ---@param slot number
 local function useButton(id, slot)
-	if PlayerData.loaded and not invBusy and not lib.progressActive() then
+	if PlayerData.loaded and not invBusy then
 		local item = PlayerData.inventory[slot]
 		if not item then return end
 
@@ -664,12 +664,16 @@ local function registerCommands()
 
 		local vehicleHash = GetEntityModel(vehicle)
 		local vehicleClass = GetVehicleClass(vehicle)
+        local vehicleEntity = Entity(vehicle)
 		local checkVehicle = Vehicles.Storage[vehicleHash]
-
+        local plate = GetVehicleNumberPlateText(vehicle)
+        if vehicleEntity.state.plateRemoved then
+            plate = vehicleEntity.state.realPlate
+        end
 		-- No storage or no glovebox
 		if (checkVehicle == 0 or checkVehicle == 2) or (not Vehicles.glovebox[vehicleClass] and not Vehicles.glovebox.models[vehicleHash]) then return end
 
-		local isOpen = client.openInventory('glovebox', { id = 'glove'..GetVehicleNumberPlateText(vehicle), netid = NetworkGetNetworkIdFromEntity(vehicle) })
+		local isOpen = client.openInventory('glovebox', { id = 'glove'..plate, netid = NetworkGetNetworkIdFromEntity(vehicle) })
 
 		if isOpen then
 			currentInventory.entity = vehicle
@@ -678,7 +682,7 @@ local function registerCommands()
 
 	local primary = lib.addKeybind({
 		name = 'inv',
-		description = locale('open_player_inventory'),
+		description = "Inventaire - " .. locale('open_player_inventory'),
 		defaultKey = client.keys[1],
 		onPressed = function()
 			if invOpen then
@@ -705,7 +709,7 @@ local function registerCommands()
 
 	lib.addKeybind({
 		name = 'inv2',
-		description = locale('open_secondary_inventory'),
+		description = "Inventaire - " .. locale('open_secondary_inventory'),
 		defaultKey = client.keys[2],
 		onPressed = function(self)
             if primary:getCurrentKey() == self:getCurrentKey() then
@@ -753,6 +757,7 @@ local function registerCommands()
 			local vehicleHash = GetEntityModel(entity)
 			local vehicleClass = GetVehicleClass(entity)
 			local checkVehicle = Vehicles.Storage[vehicleHash]
+            local vehicleEntity = Entity(entity)
 
 			local netId = VehToNet(entity)
 			local isTrailer = lib.callback.await('ox_inventory:isVehicleATrailer', false, netId)
@@ -760,7 +765,8 @@ local function registerCommands()
 			-- No storage or no glovebox
 			if (checkVehicle == 0 or checkVehicle == 1) or (not Vehicles.trunk[vehicleClass] and not Vehicles.trunk.models[vehicleHash]) then return end
 
-			if GetVehicleDoorLockStatus(entity) > 1 then
+            local unlocked = vehicleEntity.state.isOpen or false
+			if not unlocked then
 				return lib.notify({ id = 'vehicle_locked', type = 'error', description = locale('vehicle_locked') })
 			end
 
@@ -789,7 +795,10 @@ local function registerCommands()
 			position = GetWorldPositionOfEntityBone(entity, vehBone)
 
 			if #(playerCoords - position) < 3 and door then
-				local plate = GetVehicleNumberPlateText(entity)
+                local plate = GetVehicleNumberPlateText(entity)
+                if vehicleEntity.state.plateRemoved then
+                    plate = vehicleEntity.state.realPlate
+                end
 				local invId = 'trunk'..plate
 
 				TaskTurnPedToFaceCoord(playerPed, position.x, position.y, position.z, 0)
@@ -850,18 +859,20 @@ local function registerCommands()
 
 	lib.addKeybind({
 		name = 'hotbar',
-		description = locale('disable_hotbar'),
+		description = "Inventaire - " .. locale('disable_hotbar'),
 		defaultKey = client.keys[3],
 		onPressed = function()
-			if EnableWeaponWheel or IsNuiFocused() or lib.progressActive() then return end
+			if EnableWeaponWheel or IsNuiFocused() then return end
 			SendNUIMessage({ action = 'toggleHotbar' })
+            TriggerEvent("ceeb_hud:switchStatus")
+            TriggerEvent("ox_lib:makeUpper")
 		end
 	})
 
 	for i = 1, 5 do
 		lib.addKeybind({
 			name = ('hotkey%s'):format(i),
-			description = locale('use_hotbar', i),
+			description = "Inventaire - " .. locale('use_hotbar', i),
 			defaultKey = tostring(i),
 			onPressed = function()
 				if invOpen or IsNuiFocused() or not invHotkeys then return end
@@ -1319,7 +1330,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 
 	PlayerData.loaded = true
 
-	lib.notify({ description = locale('inventory_setup') })
+	-- lib.notify({ description = locale('inventory_setup') })
 	Shops.refreshShops()
 	Inventory.Stashes()
 	Inventory.Evidence()
@@ -1835,4 +1846,8 @@ lib.callback.register('ox_inventory:getVehicleData', function(netid)
 	if entity then
 		return GetEntityModel(entity), GetVehicleClass(entity)
 	end
+end)
+
+AddStateBagChangeHandler('invBusy', nil, function(_, _, value)
+    exports["lb-phone"]:ToggleDisabled(value)
 end)

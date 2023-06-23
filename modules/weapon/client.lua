@@ -32,8 +32,17 @@ function Weapon.Equip(item, data)
 
 		local sleep = anim and anim[3] or 1200
 
-		Utils.PlayAnimAdvanced(sleep, anim and anim[1] or 'reaction@intimidation@1h', anim and anim[2] or 'intro', coords.x, coords.y, coords.z, 0, 0, GetEntityHeading(playerPed), 8.0, 3.0, sleep*2, 50, 0.1)
-	end
+        if not exports.ceeb_weapons:isWeapon(item) then
+            local isPlayingAnimation = exports.scully_emotemenu:IsInAnimation()
+            local animationCommand = exports.scully_emotemenu:GetCurrentAnimation()
+            if not isPlayingAnimation or animationCommand ~= "holdholster" then
+                exports.scully_emotemenu:PlayByCommand("holdholster")
+                Wait(800)
+                -- TODOCV faire la sortie d'arme des pistols en fonction du holster
+            end
+            exports.scully_emotemenu:CancelAnimation()
+        end
+    end
 
 	::skipAnim::
 
@@ -117,7 +126,12 @@ function Weapon.Disarm(currentWeapon, noAnim)
 
 			local sleep = anim and anim[6] or 1400
 
-			Utils.PlayAnimAdvanced(sleep, anim and anim[4] or 'reaction@intimidation@1h', anim and anim[5] or 'outro', coords.x, coords.y, coords.z, 0, 0, GetEntityHeading(cache.ped), 8.0, 3.0, sleep, 50, 0)
+            if not exports.ceeb_weapons:isWeapon(item) then
+                exports.scully_emotemenu:PlayByCommand("holdholster")
+                Wait(800)
+                exports.scully_emotemenu:CancelAnimation()
+                -- TODOCV faire la sortie d'arme des pistols en fonction du holster
+            end
 		end
 
 		::skipAnim::

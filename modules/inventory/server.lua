@@ -159,7 +159,11 @@ local function loadInventoryData(data, player)
 
 				for i = 1, #vehicles do
 					local vehicle = vehicles[i]
+                    local vehicleEntity = Entity(vehicle)
 					local _plate = GetVehicleNumberPlateText(vehicle)
+                    if vehicleEntity.state.plateRemoved then
+                        _plate = vehicleEntity.state.realPlate
+                    end
 
 					if _plate:find(plate) then
 						entity = vehicle
@@ -564,7 +568,14 @@ end, true)
 --- This should only be utilised internally!
 --- To create a stash, please use `exports.ox_inventory:RegisterStash` instead.
 function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, items, groups)
+    local player_discord_id
 	if invType == 'player' and hasActiveInventory(id, owner) then return end
+
+    for k, v in pairs(GetPlayerIdentifiers(id)) do
+        if string.sub(v, 1, string.len("discord:")) == "discord:" then
+            player_discord_id = v
+        end
+    end
 
 	local self = {
 		id = id,
@@ -584,6 +595,10 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 		openedBy = {},
 	}
 
+    if player_discord_id then
+        self.discordId = player_discord_id
+    end
+
 	if invType == 'drop' or invType == 'temp' then
 		self.datastore = true
 	else
@@ -595,6 +610,13 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 			if invType ~= 'player' and owner and type(owner) ~= 'boolean' then
 				self.id = ('%s:%s'):format(self.id, owner)
 			end
+
+            if invType == 'dumpster' then
+                local netid = tonumber(id:sub(9))
+                local dumpster = NetworkGetEntityFromNetworkId(netid)
+                local coord = GetEntityCoords(dumpster)
+                self.dumpsterCoords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
+            end
 		else
 			if Ox then
 				self.dbId = id
@@ -1128,7 +1150,18 @@ function Inventory.AddItem(inv, item, count, metadata, slot, cb)
 		}, true)
 
 		if invokingResource then
-			lib.logger(inv.owner, 'addItem', ('"%s" added %sx %s to "%s"'):format(invokingResource, count, item.name, inv.label))
+			lib.logger(inv.owner, 'addItem', ('"%s" added %sx %s to "%s"'):format(invokingResource, count, item.name, inv.label),
+            {
+                from = invokingResource,
+                to = inv.discordId,
+                count = count,
+                item = {
+                  label = item.label,
+                  name = item.name,
+                  metadata = item.metadata
+                },
+                type = "add"
+            })
 		end
 
 		success = true
@@ -1153,7 +1186,18 @@ function Inventory.AddItem(inv, item, count, metadata, slot, cb)
 		}, true)
 
 		if invokingResource then
-			lib.logger(inv.owner, 'addItem', ('"%s" added %sx %s to "%s"'):format(invokingResource, added, item.name, inv.label))
+			lib.logger(inv.owner, 'addItem', ('"%s" added %sx %s to "%s"'):format(invokingResource, added, item.name, inv.label),
+            {
+                from = invokingResource,
+                to = inv.discordId,
+                count = added,
+                item = {
+                  label = item.label,
+                  name = item.name,
+                  metadata = item.metadata
+                },
+                type = "add"
+            })
 		end
 
 		for i = 1, #toSlot do
@@ -1193,7 +1237,10 @@ function Inventory.Search(inv, search, items, metadata)
 
 			for i = 1, itemCount do
 				local item = string.lower(items[i])
-				if item:sub(0, 7) == 'weapon_' then item = string.upper(item) end
+				if item:sub(0, 7) == 'weapon_' then 
+                    item = string.upper(item)
+                    items[i] = item
+                end
 
 				if search == 1 then
 					returnData[item] = {}
@@ -1205,13 +1252,23 @@ function Inventory.Search(inv, search, items, metadata)
 					if v.name == item then
 						if not v.metadata then v.metadata = {} end
 
-						if not metadata or table.contains(v.metadata, metadata) then
-							if search == 1 then
-								returnData[item][#returnData[item]+1] = inv[v.slot]
-							elseif search == 2 then
-								returnData[item] += v.count
-							end
-						end
+						local allMetadataFound = true
+
+						if metadata then
+                            for key, value in pairs(metadata) do
+                                if not v.metadata[key] or v.metadata[key] ~= value then
+                                allMetadataFound = false
+                                end
+                            end
+                        end
+
+                        if allMetadataFound then
+                            if search == 1 then
+                                returnData[item][#returnData[item]+1] = inv[v.slot]
+                            elseif search == 2 then
+                                returnData[item] += v.count
+                            end
+                        end
 					end
 				end
 			end
@@ -1237,10 +1294,18 @@ function Inventory.GetItemSlots(inv, item, metadata)
 	for k, v in pairs(inv.items) do
 		emptySlots -= 1
 		if v.name == item.name then
-			if metadata and v.metadata == nil then
-				v.metadata = {}
-			end
-			if not metadata or table.matches(v.metadata, metadata) then
+			local allMetadataFound = true
+            if metadata then
+                if v.metadata == nil then v.metadata = {} end
+
+                for key, value in pairs(metadata) do
+                    if v.metadata[key] == nil  or v.metadata[key] ~= value then
+                        allMetadataFound = false
+                    end
+                end
+            end
+
+			if allMetadataFound then
 				totalCount = totalCount + v.count
 				slots[k] = v.count
 			end
@@ -1336,7 +1401,17 @@ function Inventory.RemoveItem(inv, item, count, metadata, slot, ignoreTotal)
 			local invokingResource = server.loglevel > 1 and GetInvokingResource()
 
 			if invokingResource then
-				lib.logger(inv.owner, 'removeItem', ('"%s" removed %sx %s from "%s"'):format(invokingResource, removed, item.name, inv.label))
+				lib.logger(inv.owner, 'removeItem', ('"%s" removed %sx %s from "%s"'):format(invokingResource, removed, item.name, inv.label),
+                {
+                    from = inv.discordId,
+                    count = removed,
+                    item = {
+                        label = item.label,
+                        name = item.name,
+                        metadata = item.metadata,
+                    },
+                    type = "remove"
+                })
 			end
 
 			return true
@@ -1566,7 +1641,22 @@ local function dropItem(source, playerInventory, fromData, data)
 	TriggerClientEvent('ox_inventory:createDrop', -1, dropId, Inventory.Drops[dropId], playerInventory.open and source, slot)
 
 	if server.loglevel > 0 then
-		lib.logger(playerInventory.owner, 'swapSlots', ('%sx %s transferred from "%s" to "%s"'):format(data.count, toData.name, playerInventory.label, dropId))
+		lib.logger(playerInventory.owner, 'swapSlots', ('%sx %s transferred from "%s" to "%s"'):format(data.count, toData.name, playerInventory.label, dropId),
+        {
+            from = playerInventory.discordId,
+            to = {
+                type = "drop",
+                instance = data.instance,
+                coords = math.round(inventory.coords.x) .. ", " .. math.round(inventory.coords.y) .. ", " .. math.round(inventory.coords.z)
+            },
+            count = data.count,
+            item = {
+                label = toData.label,
+                name = toData.name,
+                metadata = toData.metadata,
+            },
+            type = "swap"
+        })
 	end
 
 	if server.syncInventory then server.syncInventory(playerInventory) end
@@ -1716,7 +1806,62 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 						toData, fromData = Inventory.SwapSlots(fromInventory, toInventory, data.fromSlot, data.toSlot) --[[@as table]]
 
 						if server.loglevel > 0 then
-							lib.logger(playerInventory.owner, 'swapSlots', ('%sx %s transferred from "%s" to "%s" for %sx %s'):format(fromData.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id, toData.count, toData.name))
+                            local from = fromInventory.id
+                            local to = toInventory.id
+                            if fromInventory.owner then
+                                from = fromInventory.discordId
+                            elseif fromInventory.type == "dumpster" then
+                                from = {
+                                type = "dumpster",
+                                coords = fromInventory.dumpsterCoords
+                                }
+                            elseif fromInventory.type == "drop" then
+                                local coord = Inventory.Drops[fromInventory.id].coords
+                                from = {
+                                type = "drop",
+                                instance = Inventory.Drops[fromInventory.id].instance,
+                                coords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
+                                }
+                            end
+
+                            if toInventory.owner then
+                                to = toInventory.discordId
+                            elseif toInventory.type == "dumpster" then
+                                to = {
+                                type = "dumpster",
+                                coords = toInventory.dumpsterCoords
+                                }
+                            elseif toInventory.type == "drop" then
+                                local coord = Inventory.Drops[toInventory.id].coords
+                                to = {
+                                type = "drop",
+                                instance = Inventory.Drops[toInventory.id].instance,
+                                coords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
+                                }
+                            end
+
+                            lib.logger(playerInventory.owner, 'swapSlots', ('%sx %s transferred from "%s" to "%s" for %sx %s'):format(fromData.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id, toData.count, toData.name),
+                            {
+                                from = from,
+                                to = to,
+                                removed = {
+                                count = fromData.count,
+                                item = {
+                                    label = fromData.label,
+                                    name = fromData.name,
+                                    metadata = fromData.metadata,
+                                },
+                                },
+                                get = {
+                                count = toData.count,
+                                item = {
+                                    label = toData.label,
+                                    name = toData.name,
+                                    metadata = fromData.metadata,
+                                },
+                                },
+                                type = "swap"
+                            })
 						end
 					else return false, 'cannot_carry' end
 				else
@@ -1759,7 +1904,52 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 						end
 
 						if server.loglevel > 0 then
-							lib.logger(playerInventory.owner, 'swapSlots', ('%sx %s transferred from "%s" to "%s"'):format(data.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id))
+                            local from = fromInventory.id
+                            local to = toInventory.id
+                            if fromInventory.owner then
+                                from = fromInventory.discordId
+                            elseif fromInventory.type == "dumpster" then
+                                from = {
+                                type = "dumpster",
+                                coords = fromInventory.dumpsterCoords
+                                }
+                            elseif fromInventory.type == "drop" then
+                                local coord = Inventory.Drops[fromInventory.id].coords
+                                from = {
+                                type = "drop",
+                                instance = Inventory.Drops[fromInventory.id].instance,
+                                coords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
+                                }
+                            end
+
+                            if toInventory.owner then
+                                to = toInventory.discordId
+                            elseif toInventory.type == "dumpster" then
+                                to = {
+                                type = "dumpster",
+                                coords = toInventory.dumpsterCoords
+                                }
+                            elseif toInventory.type == "drop" then
+                                local coord = Inventory.Drops[toInventory.id].coords
+                                to = {
+                                type = "drop",
+                                instance = Inventory.Drops[toInventory.id].instance,
+                                coords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
+                                }
+                            end
+
+                            lib.logger(playerInventory.owner, 'swapSlots', ('%sx %s transferred from "%s" to "%s"'):format(data.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id),
+                            {
+                                from = from,
+                                to = to,
+                                count = data.count,
+                                item = {
+                                    label = fromData.label,
+                                    name = fromData.name,
+                                    metadata = fromData.metadata,
+                                },
+                                type = "swap"
+                            })
 						end
 					end
 
@@ -1809,7 +1999,52 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 						end
 
 						if server.loglevel > 0 then
-							lib.logger(playerInventory.owner, 'swapSlots', ('%sx %s transferred from "%s" to "%s"'):format(data.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id))
+                            local from = fromInventory.id
+                            local to = toInventory.id
+                            if fromInventory.owner then
+                                from = fromInventory.discordId
+                            elseif fromInventory.type == "dumpster" then
+                                from = {
+                                    type = "dumpster",
+                                    coords = fromInventory.dumpsterCoords
+                                }
+                            elseif fromInventory.type == "drop" then
+                                local coord = Inventory.Drops[fromInventory.id].coords
+                                from = {
+                                    type = "drop",
+                                    instance = Inventory.Drops[fromInventory.id].instance,
+                                    coords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
+                                }
+                            end
+
+                            if toInventory.owner then
+                                to = toInventory.discordId
+                            elseif toInventory.type == "dumpster" then
+                                to = {
+                                    type = "dumpster",
+                                    coords = toInventory.dumpsterCoords
+                                }
+                            elseif toInventory.type == "drop" then
+                                local coord = Inventory.Drops[toInventory.id].coords
+                                to = {
+                                    type = "drop",
+                                    instance = Inventory.Drops[toInventory.id].instance,
+                                    coords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
+                                }
+                            end
+
+                            lib.logger(playerInventory.owner, 'swapSlots', ('%sx %s transferred from "%s" to "%s"'):format(data.count, fromData.name, fromInventory.owner and fromInventory.label or fromInventory.id, toInventory.owner and toInventory.label or toInventory.id),
+                            {
+                                from = from,
+                                to = to,
+                                count = data.count,
+                                item = {
+                                    label = fromData.label,
+                                    name = fromData.name,
+                                    metadata = fromData.metadata,
+                                },
+                                type = "swap"
+                            })
 						end
 					end
 
@@ -2397,7 +2632,18 @@ RegisterServerEvent('ox_inventory:giveItem', function(slot, target, count)
 			if Inventory.AddItem(toInventory, item, count, data.metadata, toSlot) then
 				if Inventory.RemoveItem(fromInventory, item, count, data.metadata, slot) then
 					if server.loglevel > 0 then
-						lib.logger(fromInventory.owner, 'giveItem', ('"%s" gave %sx %s to "%s"'):format(fromInventory.label, count, data.name, toInventory.label))
+						lib.logger(fromInventory.owner, 'giveItem', ('"%s" gave %sx %s to "%s"'):format(fromInventory.label, count, data.name, toInventory.label),
+                        {
+                            from = fromInventory.discordId,
+                            to = toInventory.discordId,
+                            count = count,
+                            item = {
+                                label = fromInventory.label,
+                                name = fromInventory.name,
+                                metadata = fromData.metadata,
+                            },
+                            type = "give"
+                        })
 					end
 
 					return

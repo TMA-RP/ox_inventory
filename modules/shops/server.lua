@@ -1,4 +1,5 @@
 if not lib then return end
+ESX = exports.es_extended.getSharedObject()
 
 local Items = require 'modules.items.server'
 local Inventory = require 'modules.inventory.server'
@@ -47,7 +48,8 @@ local function setupShopItems(id, shopType, shopName, groups)
 				metadata = slot.metadata,
 				license = slot.license,
 				currency = slot.currency,
-				grade = slot.grade
+				grade = slot.grade,
+                isIllegal = slot.isIllegal
 			}
 
 			if slot.metadata then
@@ -173,7 +175,8 @@ local function canAffordItem(inv, currency, price)
 end
 
 local function removeCurrency(inv, currency, price)
-	Inventory.RemoveItem(inv, currency, price)
+    local xPlayer = ESX.GetPlayerFromId(inv.id)
+    xPlayer.removeAccountMoney(currency, price, "Magasins")
 end
 
 local TriggerEventHooks = require 'modules.hooks.server'
@@ -229,7 +232,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 				end
 			end
 
-			local currency = fromData.currency or 'money'
+			local currency = data.paymentMethod
 			local fromItem = Items(fromData.name)
 
 			local result = fromItem.cb and fromItem.cb('buying', fromItem, playerInv, data.fromSlot, shop)
@@ -247,10 +250,16 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 					return false, false, { type = 'error', description = locale('cannot_carry') }
 				end
 
-				local canAfford = canAffordItem(playerInv, currency, price)
+                local xPlayer = ESX.GetPlayerFromId(source)
+                local moneyOnAccount = xPlayer.getAccount(currency).money
+
+                local canAfford = price >= 0 and moneyOnAccount >= price
+                if currency == "bank" and fromData.isIllegal then 
+                    return false, false, { type = 'error', description = "J'ai une gueule à prendre la carte ?!" }
+                end
 
 				if canAfford ~= true then
-					return false, false, canAfford
+					return false, false, { type = 'error', description = "Vous n'avez pas les moyens" }
 				end
 
 				if not TriggerEventHooks('buyItem', {
@@ -277,15 +286,27 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 
 				if server.syncInventory then server.syncInventory(playerInv) end
 
-				local message = locale('purchased_for', count, fromItem.label, (currency == 'money' and locale('$') or comma_value(price)), (currency == 'money' and comma_value(price) or ' '..Items(currency).label))
-
+                local message = locale('purchased_for', count, fromItem.label, locale('$'), currency)
 				if server.loglevel > 0 then
 					if server.loglevel > 1 or fromData.price >= 500 then
-						lib.logger(playerInv.owner, 'buyItem', ('"%s" %s'):format(playerInv.label, message:lower()), ('shop:%s'):format(shop.label))
+						lib.logger(playerInv.owner, 'buyItem', ('"%s" %s'):format(playerInv.label, message:lower()),
+                        {
+                            to = playerInv.discordId,
+                            cost = price,
+                            payment_method = currency,
+                            count = count,
+                            item = {
+                                label = fromItem.label,
+                                name = fromItem.name,
+                                metadata = fromItem.metadata,
+                            },
+                            shop = shop.label,
+                            type = "buy"
+                        })
 					end
 				end
 
-				return true, {data.toSlot, playerInv.items[data.toSlot], shop.items[data.fromSlot].count and shop.items[data.fromSlot], playerInv.weight}, { type = 'success', description = message }
+				return true, {data.toSlot, playerInv.items[data.toSlot], shop.items[data.fromSlot].count and shop.items[data.fromSlot], playerInv.weight}
 			end
 
 			return false, false, { type = 'error', description = locale('unable_stack_items') }
@@ -294,3 +315,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 end)
 
 server.shops = Shops
+
+exports("getAllShops", function ()
+    return data('shops')
+end)

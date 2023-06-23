@@ -8,7 +8,7 @@ for shopType, shopData in pairs(data('shops') --[[@as table<string, OxShop>]]) d
 	local shop = {
 		name = shopData.name,
 		groups = shopData.groups or shopData.jobs,
-		blip = shopData.blip,
+		-- blip = shopData.blip,
 		label = shopData.label,
 	}
 
@@ -20,18 +20,18 @@ for shopType, shopData in pairs(data('shops') --[[@as table<string, OxShop>]]) d
 	end
 
 	shopTypes[shopType] = shop
-	local blip = shop.blip
+	-- local blip = shop.blip
 
-	if blip then
-		blip.name = ('ox_shop_%s'):format(shopType)
-		AddTextEntry(blip.name, shop.name or shopType)
-	end
+	-- if blip then
+	-- 	blip.name = ('ox_shop_%s'):format(shopType)
+	-- 	AddTextEntry(blip.name, shop.name or shopType)
+	-- end
 end
 
 ---@param point CPoint
 local function nearbyShop(point)
 	---@diagnostic disable-next-line: param-type-mismatch
-	DrawMarker(2, point.coords.x, point.coords.y, point.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 150, 30, 222, false, false, 0, true, false, false, false)
+	-- DrawMarker(2, point.coords.x, point.coords.y, point.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 150, 30, 222, false, false, 0, true, false, false, false)
 
 	if point.isClosest and point.currentDistance < 1.2 and IsControlJustReleased(0, 38) then
 		client.openInventory('shop', { id = point.invId, type = point.type })
@@ -119,7 +119,7 @@ local function refreshShops()
 	local id = 0
 
 	for type, shop in pairs(shopTypes) do
-		local blip = shop.blip
+		-- local blip = shop.blip
 		local label = shop.label or locale('open_label', shop.name)
 
 		if shared.target then
@@ -215,7 +215,7 @@ local function refreshShops()
 					invId = i,
 					type = type,
 					nearby = nearbyShop,
-					blip = blip and createBlip(blip, coords)
+					-- blip = blip and createBlip(blip, coords)
 				})
 			end
 		end
