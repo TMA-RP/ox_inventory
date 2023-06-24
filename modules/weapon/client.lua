@@ -35,8 +35,8 @@ function Weapon.Equip(item, data)
         if not exports.ceeb_weapons:isWeapon(item) then
             local isPlayingAnimation = exports.scully_emotemenu:IsInAnimation()
             local animationCommand = exports.scully_emotemenu:GetCurrentAnimation()
-            if not isPlayingAnimation or animationCommand ~= "holdholster" then
-                exports.scully_emotemenu:PlayByCommand("holdholster")
+            if not isPlayingAnimation or animationCommand ~= "reaching" then
+                exports.scully_emotemenu:PlayByCommand("reaching")
                 Wait(800)
                 -- TODOCV faire la sortie d'arme des pistols en fonction du holster
             end
@@ -127,7 +127,7 @@ function Weapon.Disarm(currentWeapon, noAnim)
 			local sleep = anim and anim[6] or 1400
 
             if not exports.ceeb_weapons:isWeapon(item) then
-                exports.scully_emotemenu:PlayByCommand("holdholster")
+                exports.scully_emotemenu:PlayByCommand("reaching")
                 Wait(800)
                 exports.scully_emotemenu:CancelAnimation()
                 -- TODOCV faire la sortie d'arme des pistols en fonction du holster
