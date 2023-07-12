@@ -254,12 +254,12 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
                 local moneyOnAccount = xPlayer.getAccount(currency).money
 
                 local canAfford = price >= 0 and moneyOnAccount >= price
-                if currency == "bank" and fromData.isIllegal then 
-                    return false, false, { type = 'error', description = "J'ai une gueule à prendre la carte ?!" }
+                if currency == "bank" and fromData.isIllegal then
+                    return false, false, { type = 'error', description = exports.openai_fivem:generateAnswer(source, GetCurrentResourceName(), shopType), duration = 10000 }
                 end
 
 				if canAfford ~= true then
-					return false, false, { type = 'error', description = "Vous n'avez pas les moyens" }
+					return false, false, { type = 'error', description = exports.openai_fivem:generateAnswer(source, GetCurrentResourceName(), "nomoney") }
 				end
 
 				if not TriggerEventHooks('buyItem', {
@@ -318,4 +318,11 @@ server.shops = Shops
 
 exports("getAllShops", function ()
     return data('shops')
+end)
+
+CreateThread(function()
+    exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "HopitalIllegal", "Je veux acheter ça en carte bancaire", "tu joues un medecin peu scrupuleux qui n'accepte pas la carte bancaire", 5)
+    exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "ArmesIllegales", "Je veux acheter ça en carte bancaire", "tu joues un mec vulgaire qui a 70 ans et qui vend des armes et qui n'accepte pas la carte bancaire", 5)
+    exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "ArmesLourdesIllegales", "Je veux acheter ça en carte bancaire", "tu joues un mec vulgaire qui a la cinquantaine qui vend des armes lourdes et qui n'accepte pas la carte bancaire", 5)
+    exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "ObjetIllegaux", "Je veux acheter ça en carte bancaire", "tu joues une mamie vulgaire qui vend des trucs illegaux et qui n'accepte pas la carte bancaire", 5)
 end)
