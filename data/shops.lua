@@ -650,6 +650,13 @@ return {
             { name = 'fakeplate',           price = 3500,  isIllegal = true },
             { name = 'hack_phone',          price = 25000, isIllegal = true },
             { name = 'hack_laptop',         price = 25000, isIllegal = true },
+            { name = 'noskit',              price = 25000, isIllegal = true },
+            {
+                name = 'nos',
+                price = 0,
+                metadata = { nosLvl = "100%" }, 
+                isIllegal = true
+            },
             -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
         },
         locations = {

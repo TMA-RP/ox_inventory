@@ -288,7 +288,19 @@ return {
             disable = { move = true, car = true, combat = true },
             usetime = 3500,
             cancel = true,
-            export = "ND_Nitro.nos"
+            export = "ceeb_nitro.addNos"
+        }
+    },
+    ["noskit"] = {
+        label = "Kit de NOS",
+        weight = 10000,
+        stack = false,
+        close = true,
+        client = {
+            disable = { move = true, car = true, combat = true },
+            usetime = 30000,
+            cancel = true,
+            export = "ceeb_nitro.addKit"
         }
     },
     ['ocb_paper'] = {
