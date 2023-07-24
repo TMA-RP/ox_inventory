@@ -252,6 +252,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 
                 local xPlayer = ESX.GetPlayerFromId(source)
                 local moneyOnAccount = xPlayer.getAccount(currency).money
+                print(moneyOnAccount)
 
                 local canAfford = price >= 0 and moneyOnAccount >= price
                 if currency == "bank" and fromData.isIllegal then
@@ -325,4 +326,5 @@ CreateThread(function()
     exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "ArmesIllegales", "Je veux acheter ça en carte bancaire", "tu joues un mec vulgaire qui a 70 ans et qui vend des armes et qui n'accepte pas la carte bancaire", 5)
     exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "ArmesLourdesIllegales", "Je veux acheter ça en carte bancaire", "tu joues un mec vulgaire qui a la cinquantaine qui vend des armes lourdes et qui n'accepte pas la carte bancaire", 5)
     exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "ObjetIllegaux", "Je veux acheter ça en carte bancaire", "tu joues une mamie vulgaire qui vend des trucs illegaux et qui n'accepte pas la carte bancaire", 5)
+    exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "nomoney", "Je veux acheter ça mais je n'ai pas d'argent", "tu joues quelqu'un qui ne vend qu'a des gens qui ont de l'argent, pas de crédit", 5)
 end)
