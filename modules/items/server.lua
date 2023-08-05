@@ -465,7 +465,7 @@ function Items.UpdateDurability(inv, slot, item, value, ostime)
             item = slot,
             inventory = inv.id
         }
-    }, { left = inv.weight }, true)
+    }, true)
 end
 
 local function Item(name, cb)

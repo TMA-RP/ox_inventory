@@ -7,25 +7,11 @@ local Shops = {}
 local locations = shared.target and 'targets' or 'locations'
 
 ---@class OxShopItem
----@field name string
 ---@field slot number
 ---@field weight number
----@field price number
----@field metadata? table<string, any>
----@field license? string
----@field currency? string
----@field grade? number | number[]
----@field count? number
-
----@class OxShopServer : OxShop
----@field id string
----@field coords vector3
----@field items OxShopItem[]
----@field slots number
----@field [string] any
 
 local function setupShopItems(id, shopType, shopName, groups)
-	local shop = id and Shops[shopType][id] or Shops[shopType] --[[@as OxShopServer]]
+	local shop = id and Shops[shopType][id] or Shops[shopType] --[[@as OxShop]]
 
 	for i = 1, shop.slots do
 		local slot = shop.items[i]
@@ -62,7 +48,7 @@ local function setupShopItems(id, shopType, shopName, groups)
 end
 
 ---@param shopType string
----@param properties OxShopServer
+---@param properties OxShop
 local function registerShopType(shopType, properties)
 	local shopLocations = properties[locations] or properties.locations
 
@@ -94,7 +80,7 @@ local function createShop(shopType, id)
 
 	if not shopLocations or not shopLocations[id] then return end
 
-	---@type OxShopServer
+	---@type OxShop
 	shop[id] = {
 		label = shop.name,
 		id = shopType..' '..id,
@@ -116,7 +102,7 @@ for shopType, shopDetails in pairs(data('shops')) do
 end
 
 ---@param shopType string
----@param shopDetails OxShopServer
+---@param shopDetails OxShop
 exports('RegisterShop', function(shopType, shopDetails)
 	registerShopType(shopType, shopDetails)
 end)
@@ -137,7 +123,7 @@ lib.callback.register('ox_inventory:openShop', function(source, data)
 			if not shop then return end
 		end
 
-		---@cast shop OxShopServer
+		---@cast shop OxShop
 
 		if shop.groups then
 			local group = server.hasGroup(left, shop.groups)

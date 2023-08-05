@@ -467,21 +467,21 @@ local function useSlot(slot)
 
 			if IsCinematicCamRendering() then SetCinematicModeActive(false) end
 
-            GiveWeaponToPed(playerPed, data.hash, 0, false, true)
-            SetCurrentPedWeapon(playerPed, data.hash, true)
-
-            if data.hash ~= GetSelectedPedWeapon(playerPed) then
-                return lib.notify({ type = 'error', description = locale('cannot_use', data.label) })
-            end
-
-            RemoveAllPedWeapons(cache.ped, true)
-
 			if currentWeapon then
 				local weaponSlot = currentWeapon.slot
 				currentWeapon = Weapon.Disarm(currentWeapon)
 
 				if weaponSlot == data.slot then return end
 			end
+
+            GiveWeaponToPed(playerPed, data.hash, 0, false, true)
+            SetCurrentPedWeapon(playerPed, data.hash, false)
+
+            if data.hash ~= GetSelectedPedWeapon(playerPed) then
+                return lib.notify({ type = 'error', description = locale('cannot_use', data.label) })
+            end
+
+            RemoveWeaponFromPed(cache.ped, data.hash)
 
 			useItem(data, function(result)
 				if result then
@@ -924,7 +924,7 @@ RegisterNetEvent('ox_inventory:closeInventory', client.closeInventory)
 exports('closeInventory', client.closeInventory)
 
 ---@param data updateSlot[]
----@param weight number | table<string, number>
+---@param weight number
 local function updateInventory(data, weight)
 	local changes = {}
     ---@type table<string, number>
@@ -959,7 +959,8 @@ local function updateInventory(data, weight)
 	end
 
 	SendNUIMessage({ action = 'refreshSlots', data = { items = data, itemCount = itemCount} })
-	client.setPlayerData('weight', type(weight) == 'number' and weight or weight.left)
+
+    if weight ~= PlayerData.weight then client.setPlayerData('weight', weight) end
 
 	for itemName, count in pairs(itemCount) do
 		local item = Items(itemName)
@@ -1011,7 +1012,7 @@ RegisterNetEvent('ox_inventory:inventoryReturned', function(data)
 		items[num] = { item = slotData, inventory = cache.serverId }
 	end
 
-	updateInventory(items, { left = data[3] })
+	updateInventory(items, data[3])
 end)
 
 RegisterNetEvent('ox_inventory:inventoryConfiscated', function(message)
@@ -1028,7 +1029,7 @@ RegisterNetEvent('ox_inventory:inventoryConfiscated', function(message)
 		items[num] = { item = { slot = slot }, inventory = cache.serverId }
 	end
 
-	updateInventory(items, { left = 0 })
+	updateInventory(items, 0)
 end)
 
 
@@ -1180,8 +1181,8 @@ lib.onCache('seat', function(seat)
 	Utils.WeaponWheel(false)
 end)
 
-lib.onCache('vehicle', function(vehicle)
-	if invOpen and currentInventory.entity == cache.vehicle then
+lib.onCache('vehicle', function()
+	if invOpen and (not currentInventory.entity or currentInventory.entity == cache.vehicle) then
 		return client.closeInventory()
 	end
 end)
