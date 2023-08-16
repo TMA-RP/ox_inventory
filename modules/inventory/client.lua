@@ -24,7 +24,7 @@ local backDoorIds = { 2, 3 }
 
 function Inventory.CanAccessTrunk(entity)
     if cache.vehicle or not NetworkGetEntityIsNetworked(entity) then return end
-
+    if not Entity(entity).state.isOpen then return end
     local vehicleHash = GetEntityModel(entity)
     local vehicleClass = GetVehicleClass(entity)
     local checkVehicle = Vehicles.Storage[vehicleHash]
@@ -75,7 +75,9 @@ function Inventory.OpenTrunk(entity)
     TaskTurnPedToFaceCoord(cache.ped, coords.x, coords.y, coords.z, 0)
 
     if not client.openInventory('trunk', { id = invId, netid = NetworkGetNetworkIdFromEntity(entity), entityid = entity, door =
-        door }) then return end
+            door }) then
+        return
+    end
 
     if type(door) == 'table' then
         for i = 1, #door do
