@@ -341,5 +341,14 @@ return {
         stack = true,
         weight = 1100,
         close = true,
+    },
+    ['wheelchair'] = {
+        label = "Chaise roulante",
+        stack = false,
+        weight = 18000,
+        close = true,
+        server = {
+            export = "ceeb_job.wheelchair"
+        }
     }
 }
