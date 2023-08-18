@@ -260,13 +260,6 @@ return {
         close = true,
         description = nil
     },
-    ['fishingrod'] = {
-        label = 'Canne à pêche',
-        weight = 700,
-        stack = true,
-        close = true,
-        description = nil
-    },
     ['bait'] = {
         label = 'Appât',
         weight = 2,
@@ -320,12 +313,6 @@ return {
     },
     ['casino_chip'] = {
         label = 'Jeton Casino',
-        stack = true,
-        weight = 0,
-        close = true,
-    },
-    ['fish'] = {
-        label = 'Poisson',
         stack = true,
         weight = 0,
         close = true,
