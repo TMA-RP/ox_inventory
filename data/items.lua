@@ -337,5 +337,14 @@ return {
         server = {
             export = "ceeb_job.wheelchair"
         }
-    }
+    },
+    ['racingtablet'] = {
+        label = 'Tablette de courses',
+        weight = 500,
+        description = 'Ca semble être quelque chose en rapport avec des voitures...',
+        stack = false,
+        client = {
+            export = 'rahe-racing.racingtablet',
+        }
+    },
 }
