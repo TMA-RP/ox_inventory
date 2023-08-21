@@ -347,4 +347,28 @@ return {
             export = 'rahe-racing.racingtablet',
         }
     },
+    ['boostingtablet'] = {
+        label = 'Tablette boosting',
+        weight = 0,
+        description = "Il semble que quelque chose soit installé dessus",
+        client = {
+            export = 'rahe-boosting.boostingtablet',
+        }
+    },
+    ['hackingdevice'] = {
+        label = 'Dispositif de piratage',
+        weight = 0,
+        description = "Vous permettra de contourner les systèmes de sécurité d'un véhicule.",
+        client = {
+            export = 'rahe-boosting.hackingdevice',
+        }
+    },
+    ['gpshackingdevice'] = {
+        label = 'Dispositif de piratage GPS',
+        weight = 0,
+        description = "Si vous souhaitez désactiver les systèmes GPS d'un véhicule.",
+        client = {
+            export = 'rahe-boosting.gpshackingdevice',
+        }
+    },
 }
