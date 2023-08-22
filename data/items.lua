@@ -340,7 +340,7 @@ return {
     },
     ['racingtablet'] = {
         label = 'Tablette de courses',
-        weight = 500,
+        weight = 450,
         description = 'Ca semble être quelque chose en rapport avec des voitures...',
         stack = false,
         client = {
@@ -349,7 +349,7 @@ return {
     },
     ['boostingtablet'] = {
         label = 'Tablette boosting',
-        weight = 0,
+        weight = 450,
         description = "Il semble que quelque chose soit installé dessus",
         client = {
             export = 'rahe-boosting.boostingtablet',
@@ -357,7 +357,7 @@ return {
     },
     ['hackingdevice'] = {
         label = 'Dispositif de piratage',
-        weight = 0,
+        weight = 150,
         description = "Vous permettra de contourner les systèmes de sécurité d'un véhicule.",
         client = {
             export = 'rahe-boosting.hackingdevice',
@@ -365,10 +365,14 @@ return {
     },
     ['gpshackingdevice'] = {
         label = 'Dispositif de piratage GPS',
-        weight = 0,
+        weight = 300,
         description = "Si vous souhaitez désactiver les systèmes GPS d'un véhicule.",
         client = {
             export = 'rahe-boosting.gpshackingdevice',
         }
     },
+    ['headbag'] = {
+        label = "Sac en tissu",
+        weight = 30,
+    }
 }
