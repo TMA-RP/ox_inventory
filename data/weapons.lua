@@ -180,8 +180,36 @@ return {
         -------------------
         --WEAPONS ADDONS --
         -------------------
-
-
+        ['WEAPON_38SNUBNOSE'] = {
+            label = '38 Snubnose 1',
+            weight = 520,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_38SNUBNOSE2'] = {
+            label = '38 Snubnose 2',
+            weight = 520,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_38SNUBNOSE3'] = {
+            label = '38 Snubnose 3',
+            weight = 520,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_38SPECIAL'] = {
+            label = '38 SPECIAL',
+            weight = 920,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_44MAGNUM'] = {
+            label = '44 MAGNUM',
+            weight = 920,
+            durability = 0.01,
+            ammoname = 'ammo-50'
+        },
         ['WEAPON_L5'] = {
             label = 'Deagle L5',
             weight = 1400,
