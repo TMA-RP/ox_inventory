@@ -16,7 +16,7 @@ return {
         weight = 35,
         consume = 1,
         client = {
-            export = "ceeb_vehiclekey.lockpick"
+            export = "ceeb_vehicle.lockpick"
         }
     },
     ["phone"] = {
@@ -105,16 +105,6 @@ return {
         stack = true,
         close = true,
         description = nil
-    },
-    ['fixtool'] = {
-        label = 'Outils de réparations',
-        weight = 4200,
-        stack = true,
-        close = true,
-        consume = 1,
-        client = {
-            event = "ceeb_repairkit:doRepair",
-        }
     },
     ['lighter'] = {
         label = 'Briquet',
@@ -281,7 +271,7 @@ return {
             disable = { move = true, car = true, combat = true },
             usetime = 3500,
             cancel = true,
-            export = "ceeb_nitro.addNos"
+            export = "ceeb_vehicle.addNos"
         }
     },
     ["noskit"] = {
@@ -293,7 +283,7 @@ return {
             disable = { move = true, car = true, combat = true },
             usetime = 30000,
             cancel = true,
-            export = "ceeb_nitro.addKit"
+            export = "ceeb_vehicle.addKit"
         }
     },
     ['ocb_paper'] = {

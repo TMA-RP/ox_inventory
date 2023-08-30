@@ -19,7 +19,6 @@ return {
             { name = 'parachute',         price = 1500 },
             { name = 'screwdriver',       price = 5 },
             { name = 'jumelles',          price = 60 },
-            { name = 'fixtool',           price = 200 },
             { name = 'WEAPON_WRENCH',     price = 41 },
             { name = 'WEAPON_HAMMER',     price = 12 },
             { name = 'WEAPON_FLASHLIGHT', price = 90 },
@@ -642,7 +641,7 @@ return {
             {
                 name = 'nos',
                 price = 0,
-                metadata = { nosLvl = "100%" }, 
+                metadata = { nosLvl = "100%" },
                 isIllegal = true
             },
             -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
