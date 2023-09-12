@@ -32,7 +32,7 @@ local function setupShopItems(id, shopType, shopName, groups)
                 weight = Item.weight,
                 count = slot.count,
                 price = (server.randomprices and not slot.currency or slot.currency == 'money') and
-                (math.ceil(slot.price * (math.random(80, 120) / 100))) or slot.price or 0,
+                    (math.ceil(slot.price * (math.random(80, 120) / 100))) or slot.price or 0,
                 metadata = slot.metadata,
                 license = slot.license,
                 currency = slot.currency,
@@ -77,10 +77,23 @@ local function createShop(shopType, id)
 
     if not shop then return end
 
-    local shopLocations = shop[locations] or shop.locations
-    local groups = shop.groups or shop.jobs
+    local store = (shop[locations] or shop.locations)?[id]
 
-    if not shopLocations or not shopLocations[id] then return end
+    if not store then return end
+
+    local groups = shop.groups or shop.jobs
+    local coords
+
+    if shared.target then
+        if store.loc then
+            local z = store.loc.z + math.abs(store.minZ - store.maxZ) / 2
+            coords = vec3(store.loc.x, store.loc.y, z)
+        else
+            coords = store.coords
+        end
+    else
+        coords = store
+    end
 
     ---@type OxShop
     shop[id] = {
@@ -90,7 +103,7 @@ local function createShop(shopType, id)
         items = table.clone(shop.inventory),
         slots = #shop.inventory,
         type = 'shop',
-        coords = shared.target and shop.targets?[id]?.loc or shopLocations[id],
+        coords = coords,
         distance = shared.target and shop.targets?[id]?.distance,
     }
 
@@ -240,15 +253,19 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
                 local canAfford = price >= 0 and moneyOnAccount >= price
                 if currency == "bank" and fromData.isIllegal then
                     return false, false,
-                        { type = 'error',
+                        {
+                            type = 'error',
                             description = exports.openai_fivem:generateAnswer(source, GetCurrentResourceName(), shopType),
-                            duration = 10000 }
+                            duration = 10000
+                        }
                 end
 
                 if canAfford ~= true then
                     return false, false,
-                        { type = 'error',
-                            description = exports.openai_fivem:generateAnswer(source, GetCurrentResourceName(), "nomoney") }
+                        {
+                            type = 'error',
+                            description = exports.openai_fivem:generateAnswer(source, GetCurrentResourceName(), "nomoney")
+                        }
                 end
 
                 if not TriggerEventHooks('buyItem', {
