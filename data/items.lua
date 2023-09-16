@@ -390,7 +390,7 @@ return {
                         if v.slot == slot then
                             local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
                             TriggerServerEvent("ceeb_cards:showCardToPlayers", players, v.metadata.imageurl)
-                            TriggerEvent("ceeb_cards:playAnim")
+                            TriggerEvent("ceeb_cards:playAnim", "idcard")
                             exports.ox_inventory:closeInventory()
                             break
                         end
@@ -402,5 +402,35 @@ return {
     ['drivingcard'] = {
         label = "Permis de conduire",
         weight = 5,
+        buttons = {
+            {
+                label = "Regarder",
+                action = function(slot)
+                    local foundItems = exports.ox_inventory:Search("slots", "drivingcard")
+                    for _, v in pairs(foundItems) do
+                        if v.slot == slot then
+                            TriggerEvent("ceeb_cards:showCard", v.metadata.imageurl)
+                            exports.ox_inventory:closeInventory()
+                            break
+                        end
+                    end
+                end
+            },
+            {
+                label = "Montrer",
+                action = function(slot)
+                    local foundItems = exports.ox_inventory:Search("slots", "drivingcard")
+                    for _, v in pairs(foundItems) do
+                        if v.slot == slot then
+                            local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
+                            TriggerServerEvent("ceeb_cards:showCardToPlayers", players, v.metadata.imageurl)
+                            TriggerEvent("ceeb_cards:playAnim", "drivingcard")
+                            exports.ox_inventory:closeInventory()
+                            break
+                        end
+                    end
+                end
+            }
+        }
     },
 }
