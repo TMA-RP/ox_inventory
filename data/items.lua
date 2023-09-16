@@ -389,6 +389,9 @@ return {
                     for _, v in pairs(foundItems) do
                         if v.slot == slot then
                             local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
+                            for key, player in pairs(players) do
+                                players[key].id = GetPlayerServerId(player.id)
+                            end
                             TriggerServerEvent("ceeb_cards:showCardToPlayers", players, v.metadata.imageurl)
                             TriggerEvent("ceeb_cards:playAnim", "idcard")
                             exports.ox_inventory:closeInventory()
@@ -423,6 +426,9 @@ return {
                     for _, v in pairs(foundItems) do
                         if v.slot == slot then
                             local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
+                            for key, player in pairs(players) do
+                                players[key].id = GetPlayerServerId(player.id)
+                            end
                             TriggerServerEvent("ceeb_cards:showCardToPlayers", players, v.metadata.imageurl)
                             TriggerEvent("ceeb_cards:playAnim", "drivingcard")
                             exports.ox_inventory:closeInventory()
