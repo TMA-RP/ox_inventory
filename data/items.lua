@@ -365,6 +365,10 @@ return {
         label = "Sac en tissu",
         weight = 30,
     },
+    ['garbagebag'] = {
+        label = "Sac poubelle",
+        weight = 100,
+    },
     ['idcard'] = {
         label = "Carte d'identité",
         weight = 5,
