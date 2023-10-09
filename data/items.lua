@@ -225,7 +225,7 @@ return {
     },
     ['screwdriver'] = {
         client = {
-            export = "ceeb_platechanger.removeplate"
+            export = "ceeb_vehicle.removeplate"
         },
         label = 'Tournevis',
         weight = 110,
@@ -235,7 +235,7 @@ return {
     },
     ['fakeplate'] = {
         client = {
-            export = "ceeb_platechanger.placeplate",
+            export = "ceeb_vehicle.placeplate",
         },
         label = 'Fausse plaque',
         weight = 300,
