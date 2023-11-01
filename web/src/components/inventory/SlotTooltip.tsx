@@ -20,7 +20,6 @@ const SlotTooltip: React.ForwardRefRenderFunction<
     }, [item]);
     const description = item.metadata?.description || itemData?.description;
     const ammoName = itemData?.ammoName && Items[itemData?.ammoName]?.label;
-    console.log("la")
 
     return (
         <>
