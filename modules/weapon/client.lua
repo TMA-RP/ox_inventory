@@ -7,7 +7,8 @@ local Utils = require 'modules.utils.client'
 -- generic group animation data
 local anims = {}
 anims[`GROUP_MELEE`] = { 'melee@holster', 'unholster', 200, 'melee@holster', 'holster', 600 }
-anims[`GROUP_PISTOL`] = { 'reaction@intimidation@cop@unarmed', 'intro', 400, 'reaction@intimidation@cop@unarmed', 'outro', 450 }
+anims[`GROUP_PISTOL`] = { 'reaction@intimidation@cop@unarmed', 'intro', 400, 'reaction@intimidation@cop@unarmed',
+	'outro', 450 }
 anims[`GROUP_STUNGUN`] = anims[`GROUP_PISTOL`]
 
 local function vehicleIsCycle(vehicle)
@@ -18,7 +19,7 @@ end
 function Weapon.Equip(item, data)
 	local playerPed = cache.ped
 	local coords = GetEntityCoords(playerPed, true)
-    local sleep
+	local sleep
 
 	if client.weaponanims then
 		if cache.vehicle and vehicleIsCycle(cache.vehicle) then
@@ -33,17 +34,17 @@ function Weapon.Equip(item, data)
 
 		sleep = anim and anim[3] or 1200
 
-        if not exports.ceeb_weapons:isWeapon(item) then
-            local isPlayingAnimation = exports.scully_emotemenu:isInEmote()
-            local animationCommand = exports.scully_emotemenu:getLastEmote()
-            if not isPlayingAnimation or animationCommand ~= "reaching" then
-                exports.scully_emotemenu:playEmoteByCommand("reaching")
-                Wait(800)
-                -- TODOCV faire la sortie d'arme des pistols en fonction du holster
-            end
-            exports.scully_emotemenu:cancelEmote()
-        end
-    end
+		if not exports.ceeb_weapons:isWeapon(item) then
+			local isPlayingAnimation = exports.scully_emotemenu:isInEmote()
+			local animationCommand = exports.scully_emotemenu:getLastEmote()
+			if not isPlayingAnimation or animationCommand ~= "reaching" then
+				exports.scully_emotemenu:playEmoteByCommand("reaching")
+				Wait(800)
+				-- TODOCV faire la sortie d'arme des pistols en fonction du holster
+			end
+			exports.scully_emotemenu:cancelEmote()
+		end
+	end
 
 	::skipAnim::
 
@@ -61,7 +62,7 @@ function Weapon.Equip(item, data)
 	if item.metadata.components then
 		for i = 1, #item.metadata.components do
 			local components = Items[item.metadata.components[i]].client.component
-			for v=1, #components do
+			for v = 1, #components do
 				local component = components[v]
 				if DoesWeaponTakeWeaponComponent(data.hash, component) then
 					if not HasPedGotWeaponComponent(playerPed, data.hash, component) then
@@ -127,12 +128,12 @@ function Weapon.Disarm(currentWeapon, noAnim)
 
 			local sleep = anim and anim[6] or 1400
 
-            if not exports.ceeb_weapons:isWeapon(item) then
-                exports.scully_emotemenu:playEmoteByCommand("reaching")
-                Wait(800)
-                exports.scully_emotemenu:cancelEmote()
-                -- TODOCV faire la sortie d'arme des pistols en fonction du holster
-            end
+			if not exports.ceeb_weapons:isWeapon(item) then
+				exports.scully_emotemenu:playEmoteByCommand("reaching")
+				Wait(800)
+				exports.scully_emotemenu:cancelEmote()
+				-- TODOCV faire la sortie d'arme des pistols en fonction du holster
+			end
 		end
 
 		::skipAnim::

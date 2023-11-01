@@ -10,32 +10,32 @@ Items.containers = require 'modules.items.containers'
 
 -- Possible metadata when creating garbage
 local trash = {
-	{description = 'An old rolled up newspaper.', weight = 200, image = 'trash_newspaper'},
-	{description = 'A discarded burger shot carton.', weight = 50, image = 'trash_burgershot'},
-	{description = 'An empty soda can.', weight = 20, image = 'trash_can'},
-	{description = 'A mouldy piece of bread.', weight = 70, image = 'trash_bread'},
-	{description = 'An empty ciggarette carton.', weight = 10, image = 'trash_fags'},
-	{description = 'A slightly used pair of panties.', weight = 20, image = 'panties'},
-	{description = 'An empty coffee cup.', weight = 20, image = 'trash_coffee'},
-	{description = 'A crumpled up piece of paper.', weight = 5, image = 'trash_paper'},
-	{description = 'An empty chips bag.', weight = 5, image = 'trash_chips'},
+	{ description = 'An old rolled up newspaper.',      weight = 200, image = 'trash_newspaper' },
+	{ description = 'A discarded burger shot carton.',  weight = 50,  image = 'trash_burgershot' },
+	{ description = 'An empty soda can.',               weight = 20,  image = 'trash_can' },
+	{ description = 'A mouldy piece of bread.',         weight = 70,  image = 'trash_bread' },
+	{ description = 'An empty ciggarette carton.',      weight = 10,  image = 'trash_fags' },
+	{ description = 'A slightly used pair of panties.', weight = 20,  image = 'panties' },
+	{ description = 'An empty coffee cup.',             weight = 20,  image = 'trash_coffee' },
+	{ description = 'A crumpled up piece of paper.',    weight = 5,   image = 'trash_paper' },
+	{ description = 'An empty chips bag.',              weight = 5,   image = 'trash_chips' },
 }
 
 ---@param _ table?
 ---@param name string?
 ---@return table?
 local function getItem(_, name)
-    if not name then return ItemList end
+	if not name then return ItemList end
 
 	if type(name) ~= 'string' then return end
 
-    name = name:lower()
+	name = name:lower()
 
-    if name:sub(0, 7) == 'weapon_' then
-        name = name:upper()
-    end
+	if name:sub(0, 7) == 'weapon_' then
+		name = name:upper()
+	end
 
-    return ItemList[name]
+	return ItemList[name]
 end
 
 setmetatable(Items --[[@as table]], {
@@ -75,7 +75,7 @@ CreateThread(function()
 			end
 
 			if table.type(dump) ~= "empty" then
-				local file = {string.strtrim(LoadResourceFile(shared.resource, 'data/items.lua'))}
+				local file = { string.strtrim(LoadResourceFile(shared.resource, 'data/items.lua')) }
 				file[1] = file[1]:gsub('}$', '')
 
 				---@todo separate into functions for reusability, properly handle nil values
@@ -95,7 +95,8 @@ CreateThread(function()
 					if not ItemList[item.name] then
 						fileSize += 1
 
-						local itemStr = itemFormat:format(item.name, item.label, item.weight, item.stack, item.close, item.description and json.encode(item.description) or 'nil')
+						local itemStr = itemFormat:format(item.name, item.label, item.weight, item.stack, item.close,
+							item.description and json.encode(item.description) or 'nil')
 						-- temporary solution for nil values
 						itemStr = itemStr:gsub('[%s]-[%w]+ = "?nil"?,?', '')
 						file[fileSize] = itemStr
@@ -103,7 +104,7 @@ CreateThread(function()
 					end
 				end
 
-				file[fileSize+1] = '}'
+				file[fileSize + 1] = '}'
 
 				SaveResourceFile(shared.resource, 'data/items.lua', table.concat(file), -1)
 				shared.info(count, 'items have been copied from the database.')
@@ -114,7 +115,6 @@ CreateThread(function()
 		end
 
 		Wait(500)
-
 	elseif shared.framework == 'qb' then
 		local QBCore = exports['qb-core']:GetCoreObject()
 		local items = QBCore.Shared.Items
@@ -166,7 +166,7 @@ CreateThread(function()
 			end
 
 			if table.type(dump) ~= 'empty' then
-				local file = {string.strtrim(LoadResourceFile(shared.resource, 'data/items.lua'))}
+				local file = { string.strtrim(LoadResourceFile(shared.resource, 'data/items.lua')) }
 				file[1] = file[1]:gsub('}$', '')
 
 				---@todo separate into functions for reusability, properly handle nil values
@@ -196,7 +196,9 @@ CreateThread(function()
 						fileSize += 1
 
 						---@todo cry
-						local itemStr = itemFormat:format(item.name, item.label, item.weight, item.stack, item.close, item.description or 'nil', item.hunger or 'nil', item.thirst or 'nil', item.stress or 'nil', item.image or 'nil')
+						local itemStr = itemFormat:format(item.name, item.label, item.weight, item.stack, item.close,
+							item.description or 'nil', item.hunger or 'nil', item.thirst or 'nil', item.stress or 'nil',
+							item.image or 'nil')
 						-- temporary solution for nil values
 						itemStr = itemStr:gsub('[%s]-[%w]+ = "?nil"?,?', '')
 						-- temporary solution for empty status table
@@ -208,7 +210,7 @@ CreateThread(function()
 					end
 				end
 
-				file[fileSize+1] = '}'
+				file[fileSize + 1] = '}'
 
 				SaveResourceFile(shared.resource, 'data/items.lua', table.concat(file), -1)
 				shared.info(count, 'items have been copied from the QBCore.Shared.Items.')
@@ -223,32 +225,32 @@ CreateThread(function()
 
 	Wait(1000)
 
-    local function CopyFile(old_path, new_path)
-        local old_file = io.open(old_path, "rb")
-        local new_file = io.open(new_path, "wb")
-        local old_file_sz, new_file_sz = 0, 0
-        if not old_file or not new_file then
-            return false
-        end
-        while true do
-            local block = old_file:read(2^13)
-            if not block then 
-                old_file_sz = old_file:seek( "end" )
-                break
-            end
-            new_file:write(block)
-        end
-        old_file:close()
-        new_file_sz = new_file:seek( "end" )
-        new_file:close()
-        return new_file_sz == old_file_sz
-    end
+	local function CopyFile(old_path, new_path)
+		local old_file = io.open(old_path, "rb")
+		local new_file = io.open(new_path, "wb")
+		local old_file_sz, new_file_sz = 0, 0
+		if not old_file or not new_file then
+			return false
+		end
+		while true do
+			local block = old_file:read(2 ^ 13)
+			if not block then
+				old_file_sz = old_file:seek("end")
+				break
+			end
+			new_file:write(block)
+		end
+		old_file:close()
+		new_file_sz = new_file:seek("end")
+		new_file:close()
+		return new_file_sz == old_file_sz
+	end
 
 	for _, v in pairs(ItemList) do
-        local image = io.open(GetResourcePath(GetCurrentResourceName()) .. "/web/images/" .. v.name .. ".png", "r")
-        if image == nil then
-            print("Il manque l'image de " .. v.name)
-        end
+		local image = io.open(GetResourcePath(GetCurrentResourceName()) .. "/web/images/" .. v.name .. ".png", "r")
+		if image == nil then
+			print("Il manque l'image de " .. v.name)
+		end
 		count += 1
 	end
 
@@ -259,7 +261,8 @@ end)
 
 local function GenerateText(num)
 	local str
-	repeat str = {}
+	repeat
+		str = {}
 		for i = 1, num do str[i] = string.char(math.random(65, 90)) end
 		str = table.concat(str)
 	until str ~= 'POL' and str ~= 'EMS'
@@ -271,14 +274,15 @@ local function GenerateSerial(text)
 		return text
 	end
 
-	return ('%s%s%s'):format(math.random(100000,999999), text == nil and GenerateText(3) or text, math.random(100000,999999))
+	return ('%s%s%s'):format(math.random(100000, 999999), text == nil and GenerateText(3) or text,
+		math.random(100000, 999999))
 end
 
 local function setItemDurability(item, metadata)
 	local degrade = item.degrade
 
 	if degrade then
-		metadata.durability = os.time()+(degrade * 60)
+		metadata.durability = os.time() + (degrade * 60)
 		metadata.degrade = degrade
 	elseif item.durability then
 		metadata.durability = 100
@@ -297,7 +301,8 @@ local TriggerEventHooks = require 'modules.hooks.server'
 ---Generates metadata for new items being created through AddItem, buyItem, etc.
 function Items.Metadata(inv, item, metadata, count)
 	if type(inv) ~= 'table' then inv = Inventory(inv) end
-	if not item.weapon then metadata = not metadata and {} or type(metadata) == 'string' and {type=metadata} or metadata end
+	if not item.weapon then metadata = not metadata and {} or type(metadata) == 'string' and { type = metadata } or
+		metadata end
 	if not count then count = 1 end
 
 	---@cast metadata table<string, any>
@@ -327,14 +332,15 @@ function Items.Metadata(inv, item, metadata, count)
 
 		if container then
 			count = 1
-			metadata.container = metadata.container or GenerateText(3)..os.time()
+			metadata.container = metadata.container or GenerateText(3) .. os.time()
 			metadata.size = container.size
 		elseif not next(metadata) then
 			if item.name == 'identification' then
 				count = 1
 				metadata = {
 					type = inv.player.name,
-					description = locale('identification', (inv.player.sex) and locale('male') or locale('female'), inv.player.dateofbirth)
+					description = locale('identification', (inv.player.sex) and locale('male') or locale('female'),
+						inv.player.dateofbirth)
 				}
 			elseif item.name == 'garbage' then
 				local trashType = trash[math.random(1, #trash)]
@@ -366,9 +372,15 @@ function Items.Metadata(inv, item, metadata, count)
 
 	if metadata.imageurl and Utils.IsValidImageUrl then
 		if Utils.IsValidImageUrl(metadata.imageurl) then
-			Utils.DiscordEmbed('Valid image URL', ('Created item "%s" (%s) with valid url in "%s".\n%s\nid: %s\nowner: %s'):format(metadata.label or item.label, item.name, inv.label, metadata.imageurl, inv.id, inv.owner, metadata.imageurl), metadata.imageurl, 65280)
+			Utils.DiscordEmbed('Valid image URL',
+				('Created item "%s" (%s) with valid url in "%s".\n%s\nid: %s\nowner: %s'):format(
+				metadata.label or item.label, item.name, inv.label, metadata.imageurl, inv.id, inv.owner,
+					metadata.imageurl), metadata.imageurl, 65280)
 		else
-			Utils.DiscordEmbed('Invalid image URL', ('Created item "%s" (%s) with invalid url in "%s".\n%s\nid: %s\nowner: %s'):format(metadata.label or item.label, item.name, inv.label, metadata.imageurl, inv.id, inv.owner, metadata.imageurl), metadata.imageurl, 16711680)
+			Utils.DiscordEmbed('Invalid image URL',
+				('Created item "%s" (%s) with invalid url in "%s".\n%s\nid: %s\nowner: %s'):format(
+				metadata.label or item.label, item.name, inv.label, metadata.imageurl, inv.id, inv.owner,
+					metadata.imageurl), metadata.imageurl, 16711680)
 			metadata.imageurl = nil
 		end
 	end
@@ -384,7 +396,7 @@ end
 function Items.CheckMetadata(metadata, item, name, ostime)
 	if metadata.bag then
 		metadata.container = metadata.bag
-		metadata.size = Items.containers[name]?.size or {5, 1000}
+		metadata.size = Items.containers[name]?.size or { 5, 1000 }
 		metadata.bag = nil
 	end
 
@@ -441,31 +453,31 @@ end
 ---@param ostime? number
 ---@return boolean? removed
 function Items.UpdateDurability(inv, slot, item, value, ostime)
-    local durability = slot.metadata.durability or value
+	local durability = slot.metadata.durability or value
 
-    if not durability then return end
+	if not durability then return end
 
-    if value then
-        durability = value
-    elseif ostime and durability > 100 and ostime >= durability then
-        durability = 0
-    end
+	if value then
+		durability = value
+	elseif ostime and durability > 100 and ostime >= durability then
+		durability = 0
+	end
 
-    if item.decay and durability == 0 then
-        return Inventory.RemoveItem(inv, slot.name, slot.count, nil, slot.slot)
-    end
+	if item.decay and durability == 0 then
+		return Inventory.RemoveItem(inv, slot.name, slot.count, nil, slot.slot)
+	end
 
-    if slot.metadata.durability == durability then return end
+	if slot.metadata.durability == durability then return end
 
-    inv.changed = true
-    slot.metadata.durability = durability
+	inv.changed = true
+	slot.metadata.durability = durability
 
-    inv:syncSlotsWithClients({
-        {
-            item = slot,
-            inventory = inv.id
-        }
-    }, true)
+	inv:syncSlotsWithClients({
+		{
+			item = slot,
+			inventory = inv.id
+		}
+	}, true)
 end
 
 local function Item(name, cb)
