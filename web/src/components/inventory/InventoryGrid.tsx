@@ -1,4 +1,4 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import { Inventory } from '../../typings';
 import { selectPaymentMethod, setPaymentMethod } from '../../store/inventory';
 import InventorySlot from './InventorySlot';
@@ -13,10 +13,6 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
         () => (inventory.maxWeight !== undefined ? Math.floor(getTotalWeight(inventory.items) * 1000) / 1000 : 0),
         [inventory.maxWeight, inventory.items]
     );
-    const [page, setPage] = React.useState(0);
-    const containerRef = useRef(null);
-    const { ref, entry } = useIntersection({ threshold: 0.5 });
-    const isBusy = useAppSelector((state) => state.inventory.isBusy);
 
     const paymentMethod = useAppSelector(selectPaymentMethod);
     const dispatch = useAppDispatch();
@@ -24,6 +20,10 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
     const changePaymentMethod = (method: string) => {
         dispatch(setPaymentMethod(method));
     }
+    const [page, setPage] = React.useState(0);
+    const containerRef = useRef(null);
+    const { ref, entry } = useIntersection({ threshold: 0.5 });
+    const isBusy = useAppSelector((state) => state.inventory.isBusy);
 
     React.useEffect(() => {
         if (entry && entry.isIntersecting) {
@@ -35,8 +35,7 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
             <div className="inventory-grid-wrapper" style={{ pointerEvents: isBusy ? 'none' : 'auto' }}>
                 <div>
                     <div className="inventory-grid-header-wrapper">
-
-                        <p style={{ fontSize: 16 }}>
+                        <p>
                             {
                                 ["", "newdrop", "drop"].includes(inventory.type) ?
                                     "A côté de vous" :
@@ -48,12 +47,11 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
                             }
                         </p>
                         {inventory.maxWeight && !["", "newdrop", "drop"].includes(inventory.type) && (
-                            <p style={{ fontSize: 16 }}>
+                            <p>
                                 {(weight / 1000).toFixed(2)}/{inventory.maxWeight / 1000}kg
                             </p>
                         )}
                     </div>
-                    {/* <WeightBar percent={inventory.maxWeight ? (weight / inventory.maxWeight) * 100 : 0} /> */}
                 </div>
                 <div className="inventory-grid-container" ref={containerRef}>
                     <>
