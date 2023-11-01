@@ -2,7 +2,8 @@ $mainColor: #22232c;
 $textColor: #e4e4e4;
 $mainFont: Roboto;
 
-$seconaryColor: rgba(12, 12, 12, 0.4);
+$secondaryColor: rgba(12, 12, 12, 0.4);
+$secondaryColorHighlight: #33343F;
 $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
@@ -180,10 +181,32 @@ button:active {
     font-size: 18px;
 }
 
+.useful-controls-dialog-close {
+    width: 25px;
+    height: 25px;
+    padding: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    fill: $textColor;
+
+    &:hover {
+        background-color: $secondaryColorHighlight;
+        cursor: pointer;
+    }
+}
+
 .useful-controls-content-wrapper {
     display: flex;
     flex-direction: column;
     gap: 20px;
+}
+
+.divider {
+    width: 100%;
+    height: 1px;
+    background-color: rgba(255, 255, 255, 0.12);
 }
 
 .useful-controls-button {
