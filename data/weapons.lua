@@ -350,906 +350,906 @@ return {
         -------------------
 
 
-        ['at_pistol_extented_clip_mk2'] = {
-            label = 'Chargeur MK2',
-            weight = 120,
-            description = 'Pistolet : STVI DEAGLE G17 M9',
-            type = 'magazine',
-            client = {
-                component = { 'COMPONENT_M45_CLIP_02', 'COMPONENT_P226_CLIP_02', 'COMPONENT_MARKOMODS2011_CLIP_02',
-                    `COMPONENT_MARKOMODSL5_CLIP_02`, 'COMPONENT_G17_CLIP_04', 'COMPONENT_M9_CLIP_02',
-                    'COMPONENT_M45A1_CLIP_02' },
-            }
-        },
-        ['at_pistol_flashlight'] = {
-            label = 'Lumière',
-            weight = 90,
-            description = 'Pistolet : G17 M9 STVI',
-            type = 'flashlight',
-            client = {
-                component = { 'COMPONENT_G17_FLASH_04', 'COMPONENT_AT_M9_FLSH', 'COMPONENT_MARKOMODS2011_FLSH_03',
-                    'COMPONENT_M45A1_FLSH_01' },
-            }
-        },
-        ['at_pistol_frame_mk2'] = {
-            label = 'Armature MK2',
-            weight = 200,
-            description = 'Pistolet : G17',
-            type = 'frame',
-            client = {
-                component = { 'COMPONENT_G17_FRAME_02' },
-            }
-        },
-        ['at_pistol_slide_mk2'] = {
-            label = 'Culasse MK2',
-            weight = 210,
-            description = 'Pistolet : G17 STVI',
-            type = 'slide',
-            client = {
-                component = { 'COMPONENT_G17_SLIDE_04', 'COMPONENT_MARKOMODS2011_SLIDE_05' },
-            }
-        },
-        ['at_pistol_slide_mk3'] = {
-            label = 'Culasse MK3',
-            weight = 210,
-            description = 'Pistolet : G17',
-            type = 'slide',
-            client = {
-                component = { 'COMPONENT_G17_SLIDE_07' },
-            }
-        },
-        ['at_pistol_slide_mk4'] = {
-            label = 'Culasse MK4',
-            weight = 210,
-            description = 'Pistolet : G17',
-            type = 'slide',
-            client = {
-                component = { 'COMPONENT_G17_SLIDE_09' },
-            }
-        },
-        ['at_pistol_barrel_mk2'] = {
-            label = 'Canon MK2',
-            weight = 70,
-            description = 'Pistolet : STVI',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_MARKOMODS2011_BARREL_02' },
-            }
-        },
-        ['at_pistol_barrel_mk3'] = {
-            label = 'Canon MK3',
-            weight = 70,
-            description = 'Pistolet : STVI',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_MARKOMODS2011_BARREL_03' },
-            }
-        },
-        ['at_pistol_muzzle_mk1'] = {
-            label = 'Frein de bouche MK1',
-            weight = 110,
-            description = 'Pistolet : G17',
-            type = 'muzzle',
-            client = {
-                component = { 'COMPONENT_G17_SUPPRESSOR_01' },
-            }
-        },
-        ['at_pistol_muzzle_mk2'] = {
-            label = 'Frein de bouche MK2',
-            weight = 110,
-            description = 'Pistolet : STVI G17 ',
-            type = 'muzzle',
-            client = {
-                component = { 'COMPONENT_MARKOMODS2011_MUZZLE_01', 'COMPONENT_G17_SUPPRESSOR_02' },
-            }
-        },
-        ['at_pistol_suppressor_mk2'] = {
-            label = 'Silencieux MK2',
-            weight = 170,
-            description = 'Pistolet : STVI G17 M9 P226',
-            type = 'muzzle',
-            client = {
-                component = { 'COMPONENT_AT_P226_SUPP', 'COMPONENT_MARKOMODS2011_MUZZLE_03',
-                    'COMPONENT_G17_SUPPRESSOR_03', 'COMPONENT_AT_M9_SUPP', 'COMPONENT_M45A1_SUPP_01' },
-            }
-        },
-        ['at_pistol_suppressor_mk3'] = {
-            label = 'Silencieux MK3',
-            weight = 170,
-            description = 'Pistolet : G17 ',
-            type = 'muzzle',
-            client = {
-                component = { 'COMPONENT_G17_SUPPRESSOR_07' },
-
-            }
-        },
-        ['at_pistol_scope_reddot'] = {
-            label = 'Red dot',
-            weight = 85,
-            description = 'Pistolet : DEAGLE',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODSL5_SCOPE_01' },
-            }
-        },
-        ['at_pistol_scope_holo'] = {
-            label = 'Holographique',
-            weight = 90,
-            description = 'Pistolet : DEAGLE',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODSL5_SCOPE_06' },
-            }
-        },
-        ['at_pistol_scope_reflex'] = {
-            label = 'Reflex',
-            weight = 85,
-            description = 'Pistolet : DEAGLE',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODSL5_SCOPE_02' },
-            }
-        },
-        -------------------
-        --SHOTGUN --
-        -------------------
-
-        ['at_shotgun_barrel_mk2'] = {
-            label = 'Canon MK2',
-            weight = 230,
-            description = 'Fusil à pompe : BM2 MR43 ',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_DOUBLEBARREL_BARREL_05', 'COMPONENT_MARKOMODSBENELLIM2_BARREL_05' },
-            }
-        },
-        ['at_shotgun_flashlight'] = {
-            label = 'Lumière',
-            weight = 90,
-            description = 'Fusil à pompe : BM2',
-            type = 'flashlight',
-            client = {
-                component = { 'COMPONENT_MARKOMODSBENELLIM2_FLSH_04' },
-            }
-        },
-        ['at_shotgun_scope'] = {
-            label = 'Holographique',
-            weight = 90,
-            description = 'Fusil à pompe : M870 BM2',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_m870_SCOPE_03', 'COMPONENT_MARKOMODSBENELLIM2_SCOPE_04' },
-            }
-        },
-        ['at_shotgun_stock'] = {
-            label = 'Crosse',
-            weight = 200,
-            description = 'Fusil à pompe : M870 BM2',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_m870_STOCK_05', 'COMPONENT_MARKOMODSBENELLIM2_STOCK_02' },
-            }
-        },
-        ['at_shotgun_supressor_mk1'] = {
-            label = 'Silencieux MK1',
-            weight = 270,
-            description = 'Fusil à pompe : BM2',
-            type = 'supressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODSBENELLIM2_SUPP_02' },
-            }
-        },
-        ['at_shotgun_supressor_mk2'] = {
-            label = 'Silencieux MK2',
-            weight = 270,
-            description = 'Fusil à pompe : BM2',
-            type = 'supressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODSBENELLIM2_SUPP_08' },
-            }
-        },
-        ['at_shotgun_supressor_mk1_02'] = {
-            label = 'Silencieux MK1',
-            weight = 2700,
-            description = 'Fusil à pompe : M870',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_m870_BARREL_07' },
-            }
-        },
-        ['at_shotgun_supressor_mk2_02'] = {
-            label = 'Silencieux MK2',
-            weight = 270,
-            description = 'Fusil à pompe : M870',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_m870_BARREL_06' },
-            }
-        },
-        -------------------
-        --RIFLE ASSAULT --
-        -------------------
-
-        ['at_rifle_dustcover_mk2'] = {
-            label = 'Armature MK2',
-            weight = 1200,
-            description = 'AR : AKM',
-            type = 'cover',
-            client = {
-                component = { 'COMPONENT_AKM_DUSTCOVER_02' },
-            }
-        },
-        ['at_rifle_flashlight_mk1'] = {
-            label = 'flashlight MK1',
-            weight = 120,
-            description = 'AR : MK18 M4A1 NSR9',
-            type = 'flashlight',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_ACCS_01', 'COMPONENT_MARKOMODSM4_FLASH_03',
-                    'COMPONENT_MK18_FLASH_07' },
-            }
-        },
-        ['at_rifle_flashlight_mk2'] = {
-            label = 'flashlight MK2',
-            weight = 120,
-            description = 'AR : MK18 M4A1 NSR9',
-            type = 'flashlight',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_ACCS_02', 'COMPONENT_MARKOMODSM4_FLASH_08',
-                    'COMPONENT_MK18_FLASH_04' },
-            }
-        },
-        ['at_rifle_frame_mk2'] = {
-            label = 'Armature MK2',
-            weight = 1200,
-            description = 'AR : MK18',
-            type = 'frame',
-            client = {
-                component = { 'COMPONENT_MK18_FRAME_02' },
-            }
-        },
-        ['at_rifle_frame_mk3'] = {
-            label = 'Armature MK3',
-            weight = 1200,
-            description = 'AR : MK18 NSR9',
-            type = 'frame',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_BASE_02', 'COMPONENT_MK18_FRAME_03' },
-            }
-        },
-        ['at_rifle_handguard_mk2'] = {
-            label = 'Garde main MK2',
-            weight = 800,
-            description = 'AR : AKM M4A1',
-            type = 'handguard',
-            client = {
-                component = { 'COMPONENT_MARKOMODSM4_HANDGUARD_02', 'COMPONENT_AKM_HANDGUARD_09' },
-            }
-        },
-        ['at_rifle_handguard_mk3'] = {
-            label = 'Garde main MK3',
-            weight = 800,
-            description = 'AR : AKM M4A1',
-            type = 'handguard',
-            client = {
-                component = { 'COMPONENT_MARKOMODSM4_HANDGUARD_03', 'COMPONENT_AKM_HANDGUARD_07' },
-            }
-        },
-        ['at_rifle_handguard_mk4'] = {
-            label = 'Garde main MK4',
-            weight = 800,
-            description = 'AR : AKM',
-            type = 'handguard',
-            client = {
-                component = { 'COMPONENT_AKM_HANDGUARD_02' },
-            }
-        },
-        ['at_rifle_clip_mk2'] = {
-            label = 'chargeur MK2',
-            weight = 190,
-            description = 'AR : MK18 AKM M4A1 NSR9',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_02', 'COMPONENT_MARKOMODSM4_CLIP_03',
-                    'COMPONENT_MK18_CLIP_04',
-                    'COMPONENT_AKM_CLIP_07' },
-            }
-        },
-        ['at_rifle_clip_mk3'] = {
-            label = 'chargeur MK3',
-            weight = 190,
-            description = 'AR : MK18 AKM M4A1 NSR9',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_03', 'COMPONENT_MARKOMODSM4_CLIP_04',
-                    'COMPONENT_MK18_CLIP_05',
-                    'COMPONENT_AKM_CLIP_08' },
-            }
-        },
-        ['at_rifle_clip_mk4'] = {
-            label = 'chargeur MK4',
-            weight = 190,
-            description = 'AR : MK18 M4A1 NSR9',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_04', 'COMPONENT_MARKOMODSM4_CLIP_06',
-                    'COMPONENT_MK18_CLIP_06' },
-            }
-        },
-        ['at_rifle_clip_mk5'] = {
-            label = 'chargeur MK5',
-            weight = 270,
-            description = 'AR : MK18 AKM M4A1 NSR9',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_10', 'COMPONENT_MARKOMODSM4_CLIP_05',
-                    'COMPONENT_MK18_CLIP_07',
-                    'COMPONENT_AKM_CLIP_10' },
-            }
-        },
-        ['at_rifle_clip_mk6'] = {
-            label = 'chargeur MK6',
-            weight = 190,
-            description = 'AR : NSR9',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_06' },
-            }
-        },
-        ['at_rifle_clip_mk7'] = {
-            label = 'chargeur MK7',
-            weight = 190,
-            description = 'AR : NSR9',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_07' },
-            }
-        },
-        ['at_rifle_pistolgrip_mk2'] = {
-            label = 'Poignée principale MK2',
-            weight = 75,
-            description = 'AR : AKM',
-            type = 'grip',
-            client = {
-                component = { 'COMPONENT_AKM_PISTOLGRIP_03' },
-            }
-        },
-        ['at_rifle_pistolgrip_mk3'] = {
-            label = 'Poignée principale MK3',
-            weight = 75,
-            description = 'AR : AKM',
-            type = 'grip',
-            client = {
-                component = { 'COMPONENT_AKM_PISTOLGRIP_05' },
-            }
-        },
-        ['at_rifle_grip_mk1'] = {
-            label = 'Poignée MK1',
-            weight = 75,
-            description = 'AR : MK18 M4A1 NSR9',
-            type = 'grip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_GRIP_04', 'COMPONENT_MARKOMODSM4_GRIP_03',
-                    'COMPONENT_MK18_GRIP_04' },
-            }
-        },
-        ['at_rifle_grip_mk2'] = {
-            label = 'Poignée MK2',
-            weight = 75,
-            description = 'AR : MK18 M4A1 NSR9',
-            type = 'grip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_GRIP_05', 'COMPONENT_MARKOMODSM4_GRIP_02',
-                    'COMPONENT_MK18_GRIP_05' },
-            }
-        },
-        ['at_rifle_grip_mk3'] = {
-            label = 'Poignée MK3',
-            weight = 75,
-            description = 'AR : NSR9',
-            type = 'grip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_GRIP_03' },
-            }
-        },
-        ['at_rifle_holo_mk1'] = {
-            label = 'Holographique MK1',
-            weight = 75,
-            description = 'AR : AKM Mk18 M4A1 NSR9',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_02', 'COMPONENT_MARKOMODSM4_SCOPE_02',
-                    'COMPONENT_MK18_SCOPE_02',
-                    'COMPONENT_AKM_SCOPE_01' },
-            }
-        },
-        ['at_rifle_holo_mk2'] = {
-            label = 'Holographique MK2',
-            weight = 90,
-            description = 'AR : AKM MK18 M4A1 NSR9',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_03', 'COMPONENT_MARKOMODSM4_SCOPE_05',
-                    'COMPONENT_MK18_SCOPE_07',
-                    'COMPONENT_AKM_SCOPE_02' },
-            }
-        },
-        ['at_rifle_reflex_mk1'] = {
-            label = 'Reflex MK1',
-            weight = 85,
-            description = 'AR : AKM M4A1 NSR9',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_05', 'COMPONENT_MARKOMODSM4_SCOPE_06',
-                    'COMPONENT_AKM_SCOPE_05' },
-            }
-        },
-        ['at_rifle_acog_mk1'] = {
-            label = 'ACOG MK1',
-            weight = 100,
-            description = 'AR : AKM M4A1 NSR9',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_04', 'COMPONENT_MARKOMODSM4_SCOPE_07',
-                    'COMPONENT_AKM_SCOPE_07' },
-            }
-        },
-        ['at_rifle_stock_mk2'] = {
-            label = 'Crosse MK2',
-            weight = 300,
-            description = 'AR : AKM MK18 M4A1 NSR9',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_06', 'COMPONENT_MARKOMODSM4_STOCK_03',
-                    'COMPONENT_MK18_STOCK_05',
-                    'COMPONENT_AKM_STOCK_06' },
-            }
-        },
-        ['at_rifle_stock_mk3'] = {
-            label = 'Crosse MK3',
-            weight = 300,
-            description = 'AR : AKM MK18 M4A1 NSR9',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_03', 'COMPONENT_MARKOMODSM4_STOCK_05',
-                    'COMPONENT_MK18_STOCK_06',
-                    'COMPONENT_AKM_STOCK_08' },
-            }
-        },
-        ['at_rifle_stock_mk4'] = {
-            label = 'Crosse MK4',
-            weight = 300,
-            description = 'AR : AKM MK18 M4A1',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_04', 'COMPONENT_MARKOMODSM4_STOCK_02',
-                    'COMPONENT_MK18_STOCK_07',
-                    'COMPONENT_AKM_STOCK_09' },
-            }
-        },
-        ['at_rifle_stock_mk5'] = {
-            label = 'Crosse MK5',
-            weight = 300,
-            description = 'AR : NSR9',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_07' },
-            }
-        },
-        ['at_rifle_stock_mk6'] = {
-            label = 'Crosse MK6',
-            weight = 300,
-            description = 'AR : NSR9',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_08' },
-            }
-        },
-        ['at_rifle_stock_mk7'] = {
-            label = 'Crosse MK7',
-            weight = 300,
-            description = 'AR : NSR9',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_09' },
-            }
-        },
-        ['at_rifle_stock_mk8'] = {
-            label = 'Crosse MK8',
-            weight = 300,
-            description = 'AR : NSR9',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_10' },
-            }
-        },
-        ['at_rifle_stock_mk9'] = {
-            label = 'Crosse MK9',
-            weight = 300,
-            description = 'AR : NSR9',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_02' },
-            }
-        },
-        ['at_rifle_suppressor_mk1'] = {
-            label = 'Silencieux MK1',
-            weight = 200,
-            description = 'AR : AKM MK18 M4A1 NSR9',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_SUPPRESSOR_04', 'COMPONENT_MARKOMODSM4_SUPPRESSOR_07',
-                    'COMPONENT_MK18_suppressor_03', 'COMPONENT_AKM_SUPP_01' },
-            }
-        },
-        ['at_rifle_suppressor_mk2'] = {
-            label = 'Silencieux MK2',
-            weight = 200,
-            description = 'AR : MK18 M4A1 NSR9',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_NSR9_SUPPRESSOR_05', 'COMPONENT_MARKOMODSM4_SUPPRESSOR_05',
-                    'COMPONENT_MK18_suppressor_06' },
-            }
-        },
-        ['at_rifle_suppressor_mk3'] = {
-            label = 'Silencieux MK3',
-            weight = 200,
-            description = 'AR : M4A1',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODSM4_SUPPRESSOR_02' },
-            }
-        },
-        ['at_rifle_suppressor_mk4'] = {
-            label = 'Silencieux MK4',
-            weight = 200,
-            description = 'AR : M4A1',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODSM4_SUPPRESSOR_04' },
-            }
-        },
-        -- ['at_rifle_barrel_mk2'] = {
-        --     label = 'Canon long MK2',
+        -- ['at_pistol_extented_clip_mk2'] = {
+        --     label = 'Chargeur MK2',
         --     weight = 120,
-        --     description = 'AR : ',
-        --     type = 'suppressor',
+        --     description = 'Pistolet : STVI DEAGLE G17 M9',
+        --     type = 'magazine',
         --     client = {
-        --         component = { },
+        --         component = { 'COMPONENT_M45_CLIP_02', 'COMPONENT_P226_CLIP_02', 'COMPONENT_MARKOMODS2011_CLIP_02',
+        --             `COMPONENT_MARKOMODSL5_CLIP_02`, 'COMPONENT_G17_CLIP_04', 'COMPONENT_M9_CLIP_02',
+        --             'COMPONENT_M45A1_CLIP_02' },
         --     }
         -- },
+        -- ['at_pistol_flashlight'] = {
+        --     label = 'Lumière',
+        --     weight = 90,
+        --     description = 'Pistolet : G17 M9 STVI',
+        --     type = 'flashlight',
+        --     client = {
+        --         component = { 'COMPONENT_G17_FLASH_04', 'COMPONENT_AT_M9_FLSH', 'COMPONENT_MARKOMODS2011_FLSH_03',
+        --             'COMPONENT_M45A1_FLSH_01' },
+        --     }
+        -- },
+        -- ['at_pistol_frame_mk2'] = {
+        --     label = 'Armature MK2',
+        --     weight = 200,
+        --     description = 'Pistolet : G17',
+        --     type = 'frame',
+        --     client = {
+        --         component = { 'COMPONENT_G17_FRAME_02' },
+        --     }
+        -- },
+        -- ['at_pistol_slide_mk2'] = {
+        --     label = 'Culasse MK2',
+        --     weight = 210,
+        --     description = 'Pistolet : G17 STVI',
+        --     type = 'slide',
+        --     client = {
+        --         component = { 'COMPONENT_G17_SLIDE_04', 'COMPONENT_MARKOMODS2011_SLIDE_05' },
+        --     }
+        -- },
+        -- ['at_pistol_slide_mk3'] = {
+        --     label = 'Culasse MK3',
+        --     weight = 210,
+        --     description = 'Pistolet : G17',
+        --     type = 'slide',
+        --     client = {
+        --         component = { 'COMPONENT_G17_SLIDE_07' },
+        --     }
+        -- },
+        -- ['at_pistol_slide_mk4'] = {
+        --     label = 'Culasse MK4',
+        --     weight = 210,
+        --     description = 'Pistolet : G17',
+        --     type = 'slide',
+        --     client = {
+        --         component = { 'COMPONENT_G17_SLIDE_09' },
+        --     }
+        -- },
+        -- ['at_pistol_barrel_mk2'] = {
+        --     label = 'Canon MK2',
+        --     weight = 70,
+        --     description = 'Pistolet : STVI',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS2011_BARREL_02' },
+        --     }
+        -- },
+        -- ['at_pistol_barrel_mk3'] = {
+        --     label = 'Canon MK3',
+        --     weight = 70,
+        --     description = 'Pistolet : STVI',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS2011_BARREL_03' },
+        --     }
+        -- },
+        -- ['at_pistol_muzzle_mk1'] = {
+        --     label = 'Frein de bouche MK1',
+        --     weight = 110,
+        --     description = 'Pistolet : G17',
+        --     type = 'muzzle',
+        --     client = {
+        --         component = { 'COMPONENT_G17_SUPPRESSOR_01' },
+        --     }
+        -- },
+        -- ['at_pistol_muzzle_mk2'] = {
+        --     label = 'Frein de bouche MK2',
+        --     weight = 110,
+        --     description = 'Pistolet : STVI G17 ',
+        --     type = 'muzzle',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS2011_MUZZLE_01', 'COMPONENT_G17_SUPPRESSOR_02' },
+        --     }
+        -- },
+        -- ['at_pistol_suppressor_mk2'] = {
+        --     label = 'Silencieux MK2',
+        --     weight = 170,
+        --     description = 'Pistolet : STVI G17 M9 P226',
+        --     type = 'muzzle',
+        --     client = {
+        --         component = { 'COMPONENT_AT_P226_SUPP', 'COMPONENT_MARKOMODS2011_MUZZLE_03',
+        --             'COMPONENT_G17_SUPPRESSOR_03', 'COMPONENT_AT_M9_SUPP', 'COMPONENT_M45A1_SUPP_01' },
+        --     }
+        -- },
+        -- ['at_pistol_suppressor_mk3'] = {
+        --     label = 'Silencieux MK3',
+        --     weight = 170,
+        --     description = 'Pistolet : G17 ',
+        --     type = 'muzzle',
+        --     client = {
+        --         component = { 'COMPONENT_G17_SUPPRESSOR_07' },
 
-        -----------------
-        --SMG-
-        -------------------
+        --     }
+        -- },
+        -- ['at_pistol_scope_reddot'] = {
+        --     label = 'Red dot',
+        --     weight = 85,
+        --     description = 'Pistolet : DEAGLE',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSL5_SCOPE_01' },
+        --     }
+        -- },
+        -- ['at_pistol_scope_holo'] = {
+        --     label = 'Holographique',
+        --     weight = 90,
+        --     description = 'Pistolet : DEAGLE',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSL5_SCOPE_06' },
+        --     }
+        -- },
+        -- ['at_pistol_scope_reflex'] = {
+        --     label = 'Reflex',
+        --     weight = 85,
+        --     description = 'Pistolet : DEAGLE',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSL5_SCOPE_02' },
+        --     }
+        -- },
+        -- -------------------
+        -- --SHOTGUN --
+        -- -------------------
 
-        ['at_smg_clip_mk2'] = {
-            label = 'Chargeur MK2',
-            weight = 130,
-            description = 'SMG : UZI ',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODSUZI_CLIP_02' },
-            }
-        },
-        ['at_smg_clip_mk3'] = {
-            label = 'Chargeur MK3',
-            weight = 130,
-            description = 'SMG : UZI ',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODSUZI_CLIP_04' },
-            }
-        },
-        ['at_smg_grip_mk1'] = {
-            label = 'grip MK1',
-            weight = 130,
-            description = 'SMG : VECTOR ',
-            type = 'grip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_SHARED_GRIP_01' },
-            }
-        },
-        ['at_smg_grip_mk2'] = {
-            label = 'grip MK2',
-            weight = 130,
-            description = 'SMG : VECTOR ',
-            type = 'grip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_SHARED_GRIP_02' },
-            }
-        },
-        ['at_smg_suppressor_mk1'] = {
-            label = 'Silencieux MK1',
-            weight = 200,
-            description = 'SMG : MP5 UZI VECTOR',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_AT_MP5_SUPP', 'COMPONENT_MARKOMODSUZI_SUPP_01',
-                    'COMPONENT_MARKOMODS_VECTOR_SUPP_1' },
-            }
-        },
-        ['at_smg_suppressor_mk2'] = {
-            label = 'Silencieux MK2',
-            weight = 200,
-            description = 'SMG :VECTOR UZI',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODSUZI_SUPP_02', 'COMPONENT_MARKOMODS_VECTOR_SUPP_2' },
-            }
-        },
-        ['at_smg_suppressor_mk3'] = {
-            label = 'Silencieux MK3',
-            weight = 200,
-            description = 'SMG :VECTOR',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_3' },
-            }
-        },
-        ['at_smg_suppressor_mk4'] = {
-            label = 'Silencieux MK4',
-            weight = 200,
-            description = 'SMG :VECTOR',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_4' },
-            }
-        },
-        ['at_smg_suppressor_mk5'] = {
-            label = 'Silencieux MK5',
-            weight = 200,
-            description = 'SMG :VECTOR',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_5' },
-            }
-        },
-        ['at_smg_suppressor_mk6'] = {
-            label = 'Silencieux MK6',
-            weight = 200,
-            description = 'SMG :VECTOR',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_6' },
-            }
-        },
-        ['at_smg_suppressor_mk7'] = {
-            label = 'Silencieux MK7',
-            weight = 200,
-            description = 'SMG :VECTOR',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_7' },
-            }
-        },
-        ['at_smg_suppressor_mk8'] = {
-            label = 'Silencieux MK8',
-            weight = 200,
-            description = 'SMG :VECTOR',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_8' },
-            }
-        },
-        ['at_smg_suppressor_mk9'] = {
-            label = 'Silencieux MK9',
-            weight = 200,
-            description = 'SMG :VECTOR',
-            type = 'suppressor',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_9' },
-            }
-        },
-        ['at_smg_scope_mk1'] = {
-            label = 'Viseur MK1',
-            weight = 85,
-            description = 'SMG : MP5 UZI VECTOR',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODSUZI_SCOPE_01', 'COMPONENT_AT_SCOPE_MP5',
-                    'COMPONENT_MARKOMODS_SHARED_SCOPE_01' },
-            }
-        },
-        ['at_smg_scope_mk2'] = {
-            label = 'Viseur MK2',
-            weight = 85,
-            description = 'SMG : UZI VECTOR',
-            type = 'scope',
-            client = {
-                component = { 'COMPONENT_MARKOMODSUZI_SCOPE_04', 'COMPONENT_MARKOMODS_SHARED_SCOPE_01' },
-            }
-        },
-        ['at_smg_stock_mk2'] = {
-            label = 'Crosse MK2',
-            weight = 175,
-            description = 'SMG : VECTOR UZI',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODSUZI_STOCK_02', 'COMPONENT_MARKOMODS_VECTOR_STOCK_2' },
-            }
-        },
-        ['at_smg_stock_mk3'] = {
-            label = 'Crosse MK3',
-            weight = 175,
-            description = 'SMG : VECTOR',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_3' },
-            }
-        },
-        ['at_smg_stock_mk4'] = {
-            label = 'Crosse MK4',
-            weight = 175,
-            description = 'SMG : VECTOR',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_4' },
-            }
-        },
-        ['at_smg_stock_mk5'] = {
-            label = 'Crosse MK5',
-            weight = 175,
-            description = 'SMG : VECTOR',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_5' },
-            }
-        },
-        ['at_smg_stock_mk6'] = {
-            label = 'Crosse MK6',
-            weight = 175,
-            description = 'SMG : VECTOR',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_6' },
-            }
-        },
-        ['at_smg_stock_mk7'] = {
-            label = 'Crosse MK7',
-            weight = 175,
-            description = 'SMG : VECTOR',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_7' },
-            }
-        },
-        ['at_smg_stock_mk8'] = {
-            label = 'Crosse MK8',
-            weight = 175,
-            description = 'SMG : VECTOR',
-            type = 'stock',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_8' },
-            }
-        },
-        ['at_smg_handguard_mk2'] = {
-            label = 'Garde main MK2',
-            weight = 200,
-            description = 'SMG : VECTOR UZI',
-            type = 'handguard',
-            client = {
-                component = { 'COMPONENT_MARKOMODSUZI_SUPP_02', 'COMPONENT_MARKOMODS_VECTOR_HANDGUARD_2' },
-            }
-        },
-        ['at_smg_handguard_mk3'] = {
-            label = 'Garde main MK3',
-            weight = 200,
-            description = 'SMG : VECTOR',
-            type = 'handguard',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_HANDGUARD_3' },
-            }
-        },
-        ['at_smg_barrel_mk2'] = {
-            label = 'Canon MK2',
-            weight = 200,
-            description = 'SMG : VECTOR',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_BARREL_2' },
-            }
-        },
-        ['at_smg_barrel_mk3'] = {
-            label = 'Canon MK2',
-            weight = 200,
-            description = 'SMG : VECTOR',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_VECTOR_BARREL_3' },
-            }
-        },
-        -------------------
-        --SNIPER --
-        -------------------
+        -- ['at_shotgun_barrel_mk2'] = {
+        --     label = 'Canon MK2',
+        --     weight = 230,
+        --     description = 'Fusil à pompe : BM2 MR43 ',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_DOUBLEBARREL_BARREL_05', 'COMPONENT_MARKOMODSBENELLIM2_BARREL_05' },
+        --     }
+        -- },
+        -- ['at_shotgun_flashlight'] = {
+        --     label = 'Lumière',
+        --     weight = 90,
+        --     description = 'Fusil à pompe : BM2',
+        --     type = 'flashlight',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSBENELLIM2_FLSH_04' },
+        --     }
+        -- },
+        -- ['at_shotgun_scope'] = {
+        --     label = 'Holographique',
+        --     weight = 90,
+        --     description = 'Fusil à pompe : M870 BM2',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_m870_SCOPE_03', 'COMPONENT_MARKOMODSBENELLIM2_SCOPE_04' },
+        --     }
+        -- },
+        -- ['at_shotgun_stock'] = {
+        --     label = 'Crosse',
+        --     weight = 200,
+        --     description = 'Fusil à pompe : M870 BM2',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_m870_STOCK_05', 'COMPONENT_MARKOMODSBENELLIM2_STOCK_02' },
+        --     }
+        -- },
+        -- ['at_shotgun_supressor_mk1'] = {
+        --     label = 'Silencieux MK1',
+        --     weight = 270,
+        --     description = 'Fusil à pompe : BM2',
+        --     type = 'supressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSBENELLIM2_SUPP_02' },
+        --     }
+        -- },
+        -- ['at_shotgun_supressor_mk2'] = {
+        --     label = 'Silencieux MK2',
+        --     weight = 270,
+        --     description = 'Fusil à pompe : BM2',
+        --     type = 'supressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSBENELLIM2_SUPP_08' },
+        --     }
+        -- },
+        -- ['at_shotgun_supressor_mk1_02'] = {
+        --     label = 'Silencieux MK1',
+        --     weight = 2700,
+        --     description = 'Fusil à pompe : M870',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_m870_BARREL_07' },
+        --     }
+        -- },
+        -- ['at_shotgun_supressor_mk2_02'] = {
+        --     label = 'Silencieux MK2',
+        --     weight = 270,
+        --     description = 'Fusil à pompe : M870',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_m870_BARREL_06' },
+        --     }
+        -- },
+        -- -------------------
+        -- --RIFLE ASSAULT --
+        -- -------------------
+
+        -- ['at_rifle_dustcover_mk2'] = {
+        --     label = 'Armature MK2',
+        --     weight = 1200,
+        --     description = 'AR : AKM',
+        --     type = 'cover',
+        --     client = {
+        --         component = { 'COMPONENT_AKM_DUSTCOVER_02' },
+        --     }
+        -- },
+        -- ['at_rifle_flashlight_mk1'] = {
+        --     label = 'flashlight MK1',
+        --     weight = 120,
+        --     description = 'AR : MK18 M4A1 NSR9',
+        --     type = 'flashlight',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_ACCS_01', 'COMPONENT_MARKOMODSM4_FLASH_03',
+        --             'COMPONENT_MK18_FLASH_07' },
+        --     }
+        -- },
+        -- ['at_rifle_flashlight_mk2'] = {
+        --     label = 'flashlight MK2',
+        --     weight = 120,
+        --     description = 'AR : MK18 M4A1 NSR9',
+        --     type = 'flashlight',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_ACCS_02', 'COMPONENT_MARKOMODSM4_FLASH_08',
+        --             'COMPONENT_MK18_FLASH_04' },
+        --     }
+        -- },
+        -- ['at_rifle_frame_mk2'] = {
+        --     label = 'Armature MK2',
+        --     weight = 1200,
+        --     description = 'AR : MK18',
+        --     type = 'frame',
+        --     client = {
+        --         component = { 'COMPONENT_MK18_FRAME_02' },
+        --     }
+        -- },
+        -- ['at_rifle_frame_mk3'] = {
+        --     label = 'Armature MK3',
+        --     weight = 1200,
+        --     description = 'AR : MK18 NSR9',
+        --     type = 'frame',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_BASE_02', 'COMPONENT_MK18_FRAME_03' },
+        --     }
+        -- },
+        -- ['at_rifle_handguard_mk2'] = {
+        --     label = 'Garde main MK2',
+        --     weight = 800,
+        --     description = 'AR : AKM M4A1',
+        --     type = 'handguard',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSM4_HANDGUARD_02', 'COMPONENT_AKM_HANDGUARD_09' },
+        --     }
+        -- },
+        -- ['at_rifle_handguard_mk3'] = {
+        --     label = 'Garde main MK3',
+        --     weight = 800,
+        --     description = 'AR : AKM M4A1',
+        --     type = 'handguard',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSM4_HANDGUARD_03', 'COMPONENT_AKM_HANDGUARD_07' },
+        --     }
+        -- },
+        -- ['at_rifle_handguard_mk4'] = {
+        --     label = 'Garde main MK4',
+        --     weight = 800,
+        --     description = 'AR : AKM',
+        --     type = 'handguard',
+        --     client = {
+        --         component = { 'COMPONENT_AKM_HANDGUARD_02' },
+        --     }
+        -- },
+        -- ['at_rifle_clip_mk2'] = {
+        --     label = 'chargeur MK2',
+        --     weight = 190,
+        --     description = 'AR : MK18 AKM M4A1 NSR9',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_02', 'COMPONENT_MARKOMODSM4_CLIP_03',
+        --             'COMPONENT_MK18_CLIP_04',
+        --             'COMPONENT_AKM_CLIP_07' },
+        --     }
+        -- },
+        -- ['at_rifle_clip_mk3'] = {
+        --     label = 'chargeur MK3',
+        --     weight = 190,
+        --     description = 'AR : MK18 AKM M4A1 NSR9',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_03', 'COMPONENT_MARKOMODSM4_CLIP_04',
+        --             'COMPONENT_MK18_CLIP_05',
+        --             'COMPONENT_AKM_CLIP_08' },
+        --     }
+        -- },
+        -- ['at_rifle_clip_mk4'] = {
+        --     label = 'chargeur MK4',
+        --     weight = 190,
+        --     description = 'AR : MK18 M4A1 NSR9',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_04', 'COMPONENT_MARKOMODSM4_CLIP_06',
+        --             'COMPONENT_MK18_CLIP_06' },
+        --     }
+        -- },
+        -- ['at_rifle_clip_mk5'] = {
+        --     label = 'chargeur MK5',
+        --     weight = 270,
+        --     description = 'AR : MK18 AKM M4A1 NSR9',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_10', 'COMPONENT_MARKOMODSM4_CLIP_05',
+        --             'COMPONENT_MK18_CLIP_07',
+        --             'COMPONENT_AKM_CLIP_10' },
+        --     }
+        -- },
+        -- ['at_rifle_clip_mk6'] = {
+        --     label = 'chargeur MK6',
+        --     weight = 190,
+        --     description = 'AR : NSR9',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_06' },
+        --     }
+        -- },
+        -- ['at_rifle_clip_mk7'] = {
+        --     label = 'chargeur MK7',
+        --     weight = 190,
+        --     description = 'AR : NSR9',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_CLIP_07' },
+        --     }
+        -- },
+        -- ['at_rifle_pistolgrip_mk2'] = {
+        --     label = 'Poignée principale MK2',
+        --     weight = 75,
+        --     description = 'AR : AKM',
+        --     type = 'grip',
+        --     client = {
+        --         component = { 'COMPONENT_AKM_PISTOLGRIP_03' },
+        --     }
+        -- },
+        -- ['at_rifle_pistolgrip_mk3'] = {
+        --     label = 'Poignée principale MK3',
+        --     weight = 75,
+        --     description = 'AR : AKM',
+        --     type = 'grip',
+        --     client = {
+        --         component = { 'COMPONENT_AKM_PISTOLGRIP_05' },
+        --     }
+        -- },
+        -- ['at_rifle_grip_mk1'] = {
+        --     label = 'Poignée MK1',
+        --     weight = 75,
+        --     description = 'AR : MK18 M4A1 NSR9',
+        --     type = 'grip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_GRIP_04', 'COMPONENT_MARKOMODSM4_GRIP_03',
+        --             'COMPONENT_MK18_GRIP_04' },
+        --     }
+        -- },
+        -- ['at_rifle_grip_mk2'] = {
+        --     label = 'Poignée MK2',
+        --     weight = 75,
+        --     description = 'AR : MK18 M4A1 NSR9',
+        --     type = 'grip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_GRIP_05', 'COMPONENT_MARKOMODSM4_GRIP_02',
+        --             'COMPONENT_MK18_GRIP_05' },
+        --     }
+        -- },
+        -- ['at_rifle_grip_mk3'] = {
+        --     label = 'Poignée MK3',
+        --     weight = 75,
+        --     description = 'AR : NSR9',
+        --     type = 'grip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_GRIP_03' },
+        --     }
+        -- },
+        -- ['at_rifle_holo_mk1'] = {
+        --     label = 'Holographique MK1',
+        --     weight = 75,
+        --     description = 'AR : AKM Mk18 M4A1 NSR9',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_02', 'COMPONENT_MARKOMODSM4_SCOPE_02',
+        --             'COMPONENT_MK18_SCOPE_02',
+        --             'COMPONENT_AKM_SCOPE_01' },
+        --     }
+        -- },
+        -- ['at_rifle_holo_mk2'] = {
+        --     label = 'Holographique MK2',
+        --     weight = 90,
+        --     description = 'AR : AKM MK18 M4A1 NSR9',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_03', 'COMPONENT_MARKOMODSM4_SCOPE_05',
+        --             'COMPONENT_MK18_SCOPE_07',
+        --             'COMPONENT_AKM_SCOPE_02' },
+        --     }
+        -- },
+        -- ['at_rifle_reflex_mk1'] = {
+        --     label = 'Reflex MK1',
+        --     weight = 85,
+        --     description = 'AR : AKM M4A1 NSR9',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_05', 'COMPONENT_MARKOMODSM4_SCOPE_06',
+        --             'COMPONENT_AKM_SCOPE_05' },
+        --     }
+        -- },
+        -- ['at_rifle_acog_mk1'] = {
+        --     label = 'ACOG MK1',
+        --     weight = 100,
+        --     description = 'AR : AKM M4A1 NSR9',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_SCOPE_04', 'COMPONENT_MARKOMODSM4_SCOPE_07',
+        --             'COMPONENT_AKM_SCOPE_07' },
+        --     }
+        -- },
+        -- ['at_rifle_stock_mk2'] = {
+        --     label = 'Crosse MK2',
+        --     weight = 300,
+        --     description = 'AR : AKM MK18 M4A1 NSR9',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_06', 'COMPONENT_MARKOMODSM4_STOCK_03',
+        --             'COMPONENT_MK18_STOCK_05',
+        --             'COMPONENT_AKM_STOCK_06' },
+        --     }
+        -- },
+        -- ['at_rifle_stock_mk3'] = {
+        --     label = 'Crosse MK3',
+        --     weight = 300,
+        --     description = 'AR : AKM MK18 M4A1 NSR9',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_03', 'COMPONENT_MARKOMODSM4_STOCK_05',
+        --             'COMPONENT_MK18_STOCK_06',
+        --             'COMPONENT_AKM_STOCK_08' },
+        --     }
+        -- },
+        -- ['at_rifle_stock_mk4'] = {
+        --     label = 'Crosse MK4',
+        --     weight = 300,
+        --     description = 'AR : AKM MK18 M4A1',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_04', 'COMPONENT_MARKOMODSM4_STOCK_02',
+        --             'COMPONENT_MK18_STOCK_07',
+        --             'COMPONENT_AKM_STOCK_09' },
+        --     }
+        -- },
+        -- ['at_rifle_stock_mk5'] = {
+        --     label = 'Crosse MK5',
+        --     weight = 300,
+        --     description = 'AR : NSR9',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_07' },
+        --     }
+        -- },
+        -- ['at_rifle_stock_mk6'] = {
+        --     label = 'Crosse MK6',
+        --     weight = 300,
+        --     description = 'AR : NSR9',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_08' },
+        --     }
+        -- },
+        -- ['at_rifle_stock_mk7'] = {
+        --     label = 'Crosse MK7',
+        --     weight = 300,
+        --     description = 'AR : NSR9',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_09' },
+        --     }
+        -- },
+        -- ['at_rifle_stock_mk8'] = {
+        --     label = 'Crosse MK8',
+        --     weight = 300,
+        --     description = 'AR : NSR9',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_10' },
+        --     }
+        -- },
+        -- ['at_rifle_stock_mk9'] = {
+        --     label = 'Crosse MK9',
+        --     weight = 300,
+        --     description = 'AR : NSR9',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_STOCK_02' },
+        --     }
+        -- },
+        -- ['at_rifle_suppressor_mk1'] = {
+        --     label = 'Silencieux MK1',
+        --     weight = 200,
+        --     description = 'AR : AKM MK18 M4A1 NSR9',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_SUPPRESSOR_04', 'COMPONENT_MARKOMODSM4_SUPPRESSOR_07',
+        --             'COMPONENT_MK18_suppressor_03', 'COMPONENT_AKM_SUPP_01' },
+        --     }
+        -- },
+        -- ['at_rifle_suppressor_mk2'] = {
+        --     label = 'Silencieux MK2',
+        --     weight = 200,
+        --     description = 'AR : MK18 M4A1 NSR9',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_NSR9_SUPPRESSOR_05', 'COMPONENT_MARKOMODSM4_SUPPRESSOR_05',
+        --             'COMPONENT_MK18_suppressor_06' },
+        --     }
+        -- },
+        -- ['at_rifle_suppressor_mk3'] = {
+        --     label = 'Silencieux MK3',
+        --     weight = 200,
+        --     description = 'AR : M4A1',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSM4_SUPPRESSOR_02' },
+        --     }
+        -- },
+        -- ['at_rifle_suppressor_mk4'] = {
+        --     label = 'Silencieux MK4',
+        --     weight = 200,
+        --     description = 'AR : M4A1',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSM4_SUPPRESSOR_04' },
+        --     }
+        -- },
+        -- -- ['at_rifle_barrel_mk2'] = {
+        -- --     label = 'Canon long MK2',
+        -- --     weight = 120,
+        -- --     description = 'AR : ',
+        -- --     type = 'suppressor',
+        -- --     client = {
+        -- --         component = { },
+        -- --     }
+        -- -- },
+
+        -- -----------------
+        -- --SMG-
+        -- -------------------
+
+        -- ['at_smg_clip_mk2'] = {
+        --     label = 'Chargeur MK2',
+        --     weight = 130,
+        --     description = 'SMG : UZI ',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSUZI_CLIP_02' },
+        --     }
+        -- },
+        -- ['at_smg_clip_mk3'] = {
+        --     label = 'Chargeur MK3',
+        --     weight = 130,
+        --     description = 'SMG : UZI ',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSUZI_CLIP_04' },
+        --     }
+        -- },
+        -- ['at_smg_grip_mk1'] = {
+        --     label = 'grip MK1',
+        --     weight = 130,
+        --     description = 'SMG : VECTOR ',
+        --     type = 'grip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_SHARED_GRIP_01' },
+        --     }
+        -- },
+        -- ['at_smg_grip_mk2'] = {
+        --     label = 'grip MK2',
+        --     weight = 130,
+        --     description = 'SMG : VECTOR ',
+        --     type = 'grip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_SHARED_GRIP_02' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk1'] = {
+        --     label = 'Silencieux MK1',
+        --     weight = 200,
+        --     description = 'SMG : MP5 UZI VECTOR',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_AT_MP5_SUPP', 'COMPONENT_MARKOMODSUZI_SUPP_01',
+        --             'COMPONENT_MARKOMODS_VECTOR_SUPP_1' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk2'] = {
+        --     label = 'Silencieux MK2',
+        --     weight = 200,
+        --     description = 'SMG :VECTOR UZI',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSUZI_SUPP_02', 'COMPONENT_MARKOMODS_VECTOR_SUPP_2' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk3'] = {
+        --     label = 'Silencieux MK3',
+        --     weight = 200,
+        --     description = 'SMG :VECTOR',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_3' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk4'] = {
+        --     label = 'Silencieux MK4',
+        --     weight = 200,
+        --     description = 'SMG :VECTOR',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_4' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk5'] = {
+        --     label = 'Silencieux MK5',
+        --     weight = 200,
+        --     description = 'SMG :VECTOR',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_5' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk6'] = {
+        --     label = 'Silencieux MK6',
+        --     weight = 200,
+        --     description = 'SMG :VECTOR',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_6' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk7'] = {
+        --     label = 'Silencieux MK7',
+        --     weight = 200,
+        --     description = 'SMG :VECTOR',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_7' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk8'] = {
+        --     label = 'Silencieux MK8',
+        --     weight = 200,
+        --     description = 'SMG :VECTOR',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_8' },
+        --     }
+        -- },
+        -- ['at_smg_suppressor_mk9'] = {
+        --     label = 'Silencieux MK9',
+        --     weight = 200,
+        --     description = 'SMG :VECTOR',
+        --     type = 'suppressor',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_SUPP_9' },
+        --     }
+        -- },
+        -- ['at_smg_scope_mk1'] = {
+        --     label = 'Viseur MK1',
+        --     weight = 85,
+        --     description = 'SMG : MP5 UZI VECTOR',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSUZI_SCOPE_01', 'COMPONENT_AT_SCOPE_MP5',
+        --             'COMPONENT_MARKOMODS_SHARED_SCOPE_01' },
+        --     }
+        -- },
+        -- ['at_smg_scope_mk2'] = {
+        --     label = 'Viseur MK2',
+        --     weight = 85,
+        --     description = 'SMG : UZI VECTOR',
+        --     type = 'scope',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSUZI_SCOPE_04', 'COMPONENT_MARKOMODS_SHARED_SCOPE_01' },
+        --     }
+        -- },
+        -- ['at_smg_stock_mk2'] = {
+        --     label = 'Crosse MK2',
+        --     weight = 175,
+        --     description = 'SMG : VECTOR UZI',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSUZI_STOCK_02', 'COMPONENT_MARKOMODS_VECTOR_STOCK_2' },
+        --     }
+        -- },
+        -- ['at_smg_stock_mk3'] = {
+        --     label = 'Crosse MK3',
+        --     weight = 175,
+        --     description = 'SMG : VECTOR',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_3' },
+        --     }
+        -- },
+        -- ['at_smg_stock_mk4'] = {
+        --     label = 'Crosse MK4',
+        --     weight = 175,
+        --     description = 'SMG : VECTOR',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_4' },
+        --     }
+        -- },
+        -- ['at_smg_stock_mk5'] = {
+        --     label = 'Crosse MK5',
+        --     weight = 175,
+        --     description = 'SMG : VECTOR',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_5' },
+        --     }
+        -- },
+        -- ['at_smg_stock_mk6'] = {
+        --     label = 'Crosse MK6',
+        --     weight = 175,
+        --     description = 'SMG : VECTOR',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_6' },
+        --     }
+        -- },
+        -- ['at_smg_stock_mk7'] = {
+        --     label = 'Crosse MK7',
+        --     weight = 175,
+        --     description = 'SMG : VECTOR',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_7' },
+        --     }
+        -- },
+        -- ['at_smg_stock_mk8'] = {
+        --     label = 'Crosse MK8',
+        --     weight = 175,
+        --     description = 'SMG : VECTOR',
+        --     type = 'stock',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_STOCK_8' },
+        --     }
+        -- },
+        -- ['at_smg_handguard_mk2'] = {
+        --     label = 'Garde main MK2',
+        --     weight = 200,
+        --     description = 'SMG : VECTOR UZI',
+        --     type = 'handguard',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODSUZI_SUPP_02', 'COMPONENT_MARKOMODS_VECTOR_HANDGUARD_2' },
+        --     }
+        -- },
+        -- ['at_smg_handguard_mk3'] = {
+        --     label = 'Garde main MK3',
+        --     weight = 200,
+        --     description = 'SMG : VECTOR',
+        --     type = 'handguard',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_HANDGUARD_3' },
+        --     }
+        -- },
+        -- ['at_smg_barrel_mk2'] = {
+        --     label = 'Canon MK2',
+        --     weight = 200,
+        --     description = 'SMG : VECTOR',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_BARREL_2' },
+        --     }
+        -- },
+        -- ['at_smg_barrel_mk3'] = {
+        --     label = 'Canon MK2',
+        --     weight = 200,
+        --     description = 'SMG : VECTOR',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_VECTOR_BARREL_3' },
+        --     }
+        -- },
+        -- -------------------
+        -- --SNIPER --
+        -- -------------------
 
 
-        ['at_sniper_barrel4_mk2'] = {
-            label = 'Canon Long MK2',
-            weight = 800,
-            description = 'SNIPER : AXMC ',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_AXMC_BARREL_04' },
-            }
-        },
-        ['at_sniper_barrel5_silencieux_mk1'] = {
-            label = 'Silencieux Canon Court MK1',
-            weight = 120,
-            description = 'SNIPER : AXMC ',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_AXMC_BARREL_05' },
-            }
-        },
-        ['at_sniper_barrel8_silencecieux_mk2'] = {
-            label = 'Silencieux Canon Long MK2',
-            weight = 140,
-            description = 'SNIPER : AXMC ',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_AXMC_BARREL_08', "COMPONENT_AT_AR_SUPP_M700" },
-            }
-        },
-        ['at_sniper_grip1_bipod'] = {
-            label = 'Bipied',
-            weight = 750,
-            description = 'SNIPER : AXMC ',
-            type = 'grip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_AXMC_GRIP_01' },
-            }
-        },
-        ['at_sniper_handguard_mk2'] = {
-            label = 'Garde Main MK2',
-            weight = 520,
-            description = 'SNIPER : AXMC ',
-            type = 'handguard',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_AXMC_HANDGUARD_02' },
-            }
-        },
-        ['at_sniper_laser_mk1'] = {
-            label = 'Laser MK1',
-            weight = 120,
-            description = 'SNIPER : AXMC ',
-            type = 'laser',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_AXMC_LASER_01' },
-            }
-        },
-        ['at_sniper_clip_mk2'] = {
-            label = 'Chargeur MK2',
-            weight = 210,
-            description = 'SNIPER : AXMC ',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_AXMC_MAG_02' },
-            }
-        },
-        ['at_sniper_clip_mk3'] = {
-            label = 'Chargeur MK3',
-            weight = 220,
-            description = 'SNIPER : AXMC ',
-            type = 'clip',
-            client = {
-                component = { 'COMPONENT_MARKOMODS_AXMC_MAG_03' },
-            }
-        },
-        -------------------
-        --MGC--
-        -------------------
+        -- ['at_sniper_barrel4_mk2'] = {
+        --     label = 'Canon Long MK2',
+        --     weight = 800,
+        --     description = 'SNIPER : AXMC ',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_AXMC_BARREL_04' },
+        --     }
+        -- },
+        -- ['at_sniper_barrel5_silencieux_mk1'] = {
+        --     label = 'Silencieux Canon Court MK1',
+        --     weight = 120,
+        --     description = 'SNIPER : AXMC ',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_AXMC_BARREL_05' },
+        --     }
+        -- },
+        -- ['at_sniper_barrel8_silencecieux_mk2'] = {
+        --     label = 'Silencieux Canon Long MK2',
+        --     weight = 140,
+        --     description = 'SNIPER : AXMC ',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_AXMC_BARREL_08', "COMPONENT_AT_AR_SUPP_M700" },
+        --     }
+        -- },
+        -- ['at_sniper_grip1_bipod'] = {
+        --     label = 'Bipied',
+        --     weight = 750,
+        --     description = 'SNIPER : AXMC ',
+        --     type = 'grip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_AXMC_GRIP_01' },
+        --     }
+        -- },
+        -- ['at_sniper_handguard_mk2'] = {
+        --     label = 'Garde Main MK2',
+        --     weight = 520,
+        --     description = 'SNIPER : AXMC ',
+        --     type = 'handguard',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_AXMC_HANDGUARD_02' },
+        --     }
+        -- },
+        -- ['at_sniper_laser_mk1'] = {
+        --     label = 'Laser MK1',
+        --     weight = 120,
+        --     description = 'SNIPER : AXMC ',
+        --     type = 'laser',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_AXMC_LASER_01' },
+        --     }
+        -- },
+        -- ['at_sniper_clip_mk2'] = {
+        --     label = 'Chargeur MK2',
+        --     weight = 210,
+        --     description = 'SNIPER : AXMC ',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_AXMC_MAG_02' },
+        --     }
+        -- },
+        -- ['at_sniper_clip_mk3'] = {
+        --     label = 'Chargeur MK3',
+        --     weight = 220,
+        --     description = 'SNIPER : AXMC ',
+        --     type = 'clip',
+        --     client = {
+        --         component = { 'COMPONENT_MARKOMODS_AXMC_MAG_03' },
+        --     }
+        -- },
+        -- -------------------
+        -- --MGC--
+        -- -------------------
 
-        ['at_mg_clip_mk2'] = {
-            label = 'Chargeur 180 Mk2',
-            weight = 800,
-            description = 'MGC : M249 ',
-            type = 'barrel',
-            client = {
-                component = { 'COMPONENT_M249_CLIP_02' },
-            }
-        },
+        -- ['at_mg_clip_mk2'] = {
+        --     label = 'Chargeur 180 Mk2',
+        --     weight = 800,
+        --     description = 'MGC : M249 ',
+        --     type = 'barrel',
+        --     client = {
+        --         component = { 'COMPONENT_M249_CLIP_02' },
+        --     }
+        -- },
         -------------------------
         -- COMPENENTS VANNILLA --
         -------------------------

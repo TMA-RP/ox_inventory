@@ -1,7 +1,4 @@
 return {
-    ['black_money'] = {
-        label = 'Argent sale',
-    },
     ['parachute'] = {
         label = 'Parachute',
         weight = 14000,
@@ -161,13 +158,6 @@ return {
         close = true,
         description = nil
     },
-    ['illegal_medical_pass'] = {
-        label = 'Pass médical illégal',
-        weight = 2,
-        stack = true,
-        close = true,
-        description = nil
-    },
     ['spike'] = {
         label = 'Herse',
         weight = 3000,
@@ -209,20 +199,6 @@ return {
             export = "ceeb_fooddrink.useFromInventory"
         }
     },
-    ['braceletgps'] = {
-        label = 'Bracelet GPS',
-        weight = 250,
-        stack = true,
-        close = true,
-        description = nil
-    },
-    ['coupebracelet'] = {
-        label = 'Pince coupante',
-        weight = 800,
-        stack = true,
-        close = true,
-        description = nil
-    },
     ['screwdriver'] = {
         client = {
             export = "ceeb_vehicle.removeplate"
@@ -249,18 +225,6 @@ return {
         stack = true,
         close = true,
         description = nil
-    },
-    ['bait'] = {
-        label = 'Appât',
-        weight = 2,
-        stack = true,
-        close = true,
-        description = nil
-    },
-    ['mastercard'] = {
-        label = 'Mastercard',
-        stack = false,
-        weight = 10,
     },
     ["nos"] = {
         label = "Bouteille de NOS",
