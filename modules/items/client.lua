@@ -8,7 +8,8 @@ local Items = require 'modules.items.shared' --[[@as table<string, OxClientItem>
 local function displayMetadata(metadata, value)
 	local data = {}
 
-	if type(metadata) == 'string' and value then data = { [1] = { metadata = metadata, value = value } }
+	if type(metadata) == 'string' and value then
+		data = { [1] = { metadata = metadata, value = value } }
 	elseif metadata[1] then -- assume its an array
 		for i = 1, #metadata do
 			for k, v in pairs(metadata[i]) do
@@ -20,7 +21,7 @@ local function displayMetadata(metadata, value)
 		end
 	else
 		for k, v in pairs(metadata) do
-			data[#data+1] = {
+			data[#data + 1] = {
 				metadata = k,
 				value = v,
 			}
@@ -38,17 +39,17 @@ exports('displayMetadata', displayMetadata)
 ---@param name string?
 ---@return table?
 local function getItem(_, name)
-    if not name then return Items end
+	if not name then return Items end
 
 	if type(name) ~= 'string' then return end
 
-    name = name:lower()
+	name = name:lower()
 
-    if name:sub(0, 7) == 'weapon_' then
-        name = name:upper()
-    end
+	if name:sub(0, 7) == 'weapon_' then
+		name = name:upper()
+	end
 
-    return Items[name]
+	return Items[name]
 end
 
 setmetatable(Items --[[@as table]], {
