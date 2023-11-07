@@ -1,35 +1,35 @@
 return {
     Weapons = {
-        ['WEAPON_BALL'] = {
-            label = 'Ball',
-            weight = 149,
-            throwable = true,
-        },
-        ['WEAPON_BAT'] = {
-            label = 'Bat',
-            weight = 1134,
-            durability = 0.1,
-        },
-        ['WEAPON_BATTLEAXE'] = {
-            label = 'Battle Axe',
-            weight = 1200,
-            durability = 0.1,
-        },
-        ['WEAPON_BOTTLE'] = {
-            label = 'Bottle',
-            weight = 350,
-            durability = 0.1,
-        },
-        ['WEAPON_CROWBAR'] = {
-            label = 'Crowbar',
-            weight = 2500,
-            durability = 0.1,
-        },
-        ['WEAPON_DAGGER'] = {
-            label = 'Dagger',
-            weight = 800,
-            durability = 0.1,
-        },
+        -- ['WEAPON_BALL'] = {
+        --     label = 'Ball',
+        --     weight = 149,
+        --     throwable = true,
+        -- },
+        -- ['WEAPON_BAT'] = {
+        --     label = 'Bat',
+        --     weight = 1134,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_BATTLEAXE'] = {
+        --     label = 'Battle Axe',
+        --     weight = 1200,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_BOTTLE'] = {
+        --     label = 'Bottle',
+        --     weight = 350,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_CROWBAR'] = {
+        --     label = 'Crowbar',
+        --     weight = 2500,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_DAGGER'] = {
+        --     label = 'Dagger',
+        --     weight = 800,
+        --     durability = 0.1,
+        -- },
         ['WEAPON_FLARE'] = {
             label = 'Flare',
             weight = 235,
@@ -46,52 +46,52 @@ return {
             weight = 325,
             durability = 0.1,
         },
-        ['WEAPON_GOLFCLUB'] = {
-            label = 'Golf Club',
-            weight = 830,
-            durability = 0.1,
-        },
-        ['WEAPON_GRENADE'] = {
-            label = 'Grenade',
-            weight = 600,
-            throwable = true,
-        },
-        ['WEAPON_GUSENBERG'] = {
-            label = 'Gusenberg',
-            weight = 4900,
-            durability = 0.04,
-            ammoname = 'ammo-45'
-        },
-        ['WEAPON_HAMMER'] = {
-            label = 'Hammer',
-            weight = 950,
-            durability = 0.1,
-        },
-        ['WEAPON_HATCHET'] = {
-            label = 'Hatchet',
-            weight = 1000,
-            durability = 0.1,
-        },
-        ['WEAPON_KNIFE'] = {
-            label = 'Knife',
-            weight = 350,
-            durability = 0.1,
-        },
-        ['WEAPON_KNUCKLE'] = {
-            label = 'Knuckle Dusters',
-            weight = 300,
-            durability = 0.1,
-        },
-        ['WEAPON_MACHETE'] = {
-            label = 'Machete',
-            weight = 800,
-            durability = 0.1,
-        },
-        ['WEAPON_MOLOTOV'] = {
-            label = 'Molotov',
-            weight = 980,
-            throwable = true,
-        },
+        -- ['WEAPON_GOLFCLUB'] = {
+        --     label = 'Golf Club',
+        --     weight = 830,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_GRENADE'] = {
+        --     label = 'Grenade',
+        --     weight = 600,
+        --     throwable = true,
+        -- },
+        -- ['WEAPON_GUSENBERG'] = {
+        --     label = 'Gusenberg',
+        --     weight = 4900,
+        --     durability = 0.04,
+        --     ammoname = 'ammo-45'
+        -- },
+        -- ['WEAPON_HAMMER'] = {
+        --     label = 'Hammer',
+        --     weight = 950,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_HATCHET'] = {
+        --     label = 'Hatchet',
+        --     weight = 1000,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_KNIFE'] = {
+        --     label = 'Knife',
+        --     weight = 350,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_KNUCKLE'] = {
+        --     label = 'Knuckle Dusters',
+        --     weight = 300,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_MACHETE'] = {
+        --     label = 'Machete',
+        --     weight = 800,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_MOLOTOV'] = {
+        --     label = 'Molotov',
+        --     weight = 980,
+        --     throwable = true,
+        -- },
         ['WEAPON_NIGHTSTICK'] = {
             label = 'Nightstick',
             weight = 1000,
@@ -101,121 +101,121 @@ return {
             label = 'Gas Can',
             weight = 12000,
         },
-        ['WEAPON_POOLCUE'] = {
-            label = 'Pool Cue',
-            weight = 350,
-            durability = 0.1,
-        },
-        ['WEAPON_SMOKEGRENADE'] = {
-            label = 'Smoke Grenade',
-            weight = 600,
-            throwable = true,
-        },
-        ['WEAPON_SNOWBALL'] = {
-            label = 'Snow Ball',
-            weight = 5,
-            throwable = true,
-        },
-        ['WEAPON_STONE_HATCHET'] = {
-            label = 'Stone Hatchet',
-            weight = 1000,
-            durability = 0.1,
-        },
+        -- ['WEAPON_POOLCUE'] = {
+        --     label = 'Pool Cue',
+        --     weight = 350,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_SMOKEGRENADE'] = {
+        --     label = 'Smoke Grenade',
+        --     weight = 600,
+        --     throwable = true,
+        -- },
+        -- ['WEAPON_SNOWBALL'] = {
+        --     label = 'Snow Ball',
+        --     weight = 5,
+        --     throwable = true,
+        -- },
+        -- ['WEAPON_STONE_HATCHET'] = {
+        --     label = 'Stone Hatchet',
+        --     weight = 1000,
+        --     durability = 0.1,
+        -- },
         ['WEAPON_STUNGUN_MP'] = {
             label = 'Tazer',
             weight = 827,
             durability = 0.1,
         },
-        ['WEAPON_SWITCHBLADE'] = {
-            label = 'Switch Blade',
-            weight = 200,
-            durability = 0.1,
-            anim = { 'anim@melee@switchblade@holster', 'unholster', 200, 'anim@melee@switchblade@holster', 'holster', 600 },
-        },
-        ['WEAPON_WRENCH'] = {
-            label = 'Wrench',
-            weight = 2500,
-            durability = 0.1,
-        },
-        ['WEAPON_JOUJOU'] = {
-            label = 'Joujou',
-            weight = 400,
-            durability = 0.00001,
-        },
-        ['WEAPON_KATANA1'] = {
-            label = 'KATANA 1',
-            weight = 320,
-            durability = 0.00001,
-        },
-        ['WEAPON_KATANA2'] = {
-            label = 'KATANA 2',
-            weight = 320,
-            durability = 0.00001,
-        },
-        ['WEAPON_KATANA3'] = {
-            label = 'KATANA 3',
-            weight = 320,
-            durability = 0.00001,
-        },
-        ['WEAPON_KATANA4'] = {
-            label = 'KATANA 4',
-            weight = 320,
-            durability = 0.00001,
-        },
-        ['WEAPON_KATANA5'] = {
-            label = 'KATANA 5',
-            weight = 320,
-            durability = 0.00001,
-        },
-        ['WEAPON_YAKUCUT'] = {
-            label = 'YAKUCUT',
-            weight = 420,
-            durability = 0.00001,
-        },
-        ['WEAPON_KARAMBIT'] = {
-            label = 'KARAMBIT',
-            weight = 320,
-            durability = 0.00001,
-        },
+        -- ['WEAPON_SWITCHBLADE'] = {
+        --     label = 'Switch Blade',
+        --     weight = 200,
+        --     durability = 0.1,
+        --     anim = { 'anim@melee@switchblade@holster', 'unholster', 200, 'anim@melee@switchblade@holster', 'holster', 600 },
+        -- },
+        -- ['WEAPON_WRENCH'] = {
+        --     label = 'Wrench',
+        --     weight = 2500,
+        --     durability = 0.1,
+        -- },
+        -- ['WEAPON_JOUJOU'] = {
+        --     label = 'Joujou',
+        --     weight = 400,
+        --     durability = 0.00001,
+        -- },
+        -- ['WEAPON_KATANA1'] = {
+        --     label = 'KATANA 1',
+        --     weight = 320,
+        --     durability = 0.00001,
+        -- },
+        -- ['WEAPON_KATANA2'] = {
+        --     label = 'KATANA 2',
+        --     weight = 320,
+        --     durability = 0.00001,
+        -- },
+        -- ['WEAPON_KATANA3'] = {
+        --     label = 'KATANA 3',
+        --     weight = 320,
+        --     durability = 0.00001,
+        -- },
+        -- ['WEAPON_KATANA4'] = {
+        --     label = 'KATANA 4',
+        --     weight = 320,
+        --     durability = 0.00001,
+        -- },
+        -- ['WEAPON_KATANA5'] = {
+        --     label = 'KATANA 5',
+        --     weight = 320,
+        --     durability = 0.00001,
+        -- },
+        -- ['WEAPON_YAKUCUT'] = {
+        --     label = 'YAKUCUT',
+        --     weight = 420,
+        --     durability = 0.00001,
+        -- },
+        -- ['WEAPON_KARAMBIT'] = {
+        --     label = 'KARAMBIT',
+        --     weight = 320,
+        --     durability = 0.00001,
+        -- },
         -------------------
         --WEAPONS ADDONS --
         -------------------
-        ['WEAPON_38SNUBNOSE'] = {
-            label = '38 Snubnose 1',
-            weight = 520,
-            durability = 0.01,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_38SNUBNOSE2'] = {
-            label = '38 Snubnose 2',
-            weight = 520,
-            durability = 0.01,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_38SNUBNOSE3'] = {
-            label = '38 Snubnose 3',
-            weight = 520,
-            durability = 0.01,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_38SPECIAL'] = {
-            label = '38 SPECIAL',
-            weight = 920,
-            durability = 0.01,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_44MAGNUM'] = {
-            label = '44 MAGNUM',
-            weight = 920,
-            durability = 0.01,
-            ammoname = 'ammo-50'
-        },
-        ['WEAPON_L5'] = {
-            label = 'Deagle L5',
-            weight = 1400,
-            durability = 0.03,
-            ammoname = 'ammo-50'
-        },
+        -- ['WEAPON_38SNUBNOSE'] = {
+        --     label = '38 Snubnose 1',
+        --     weight = 520,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_38SNUBNOSE2'] = {
+        --     label = '38 Snubnose 2',
+        --     weight = 520,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_38SNUBNOSE3'] = {
+        --     label = '38 Snubnose 3',
+        --     weight = 520,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_38SPECIAL'] = {
+        --     label = '38 SPECIAL',
+        --     weight = 920,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_44MAGNUM'] = {
+        --     label = '44 MAGNUM',
+        --     weight = 920,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-50'
+        -- },
+        -- ['WEAPON_L5'] = {
+        --     label = 'Deagle L5',
+        --     weight = 1400,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-50'
+        -- },
         ['WEAPON_G17'] = {
             label = 'Glock 17',
             weight = 625,
@@ -228,121 +228,121 @@ return {
             durability = 0.03,
             ammoname = 'ammo-9'
         },
-        ['WEAPON_M45A1'] = {
-            label = 'M45A1',
-            weight = 920,
-            durability = 0.01,
-            ammoname = 'ammo-45'
-        },
-        ['WEAPON_2011'] = {
-            label = 'STI DVC 2011',
-            weight = 1110,
-            durability = 0.03,
-            ammoname = 'ammo-45'
-        },
-        ['WEAPON_P226'] = {
-            label = 'P226',
-            weight = 1110,
-            durability = 0.03,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_P357'] = {
-            label = 'P357',
-            weight = 1360,
-            durability = 0.03,
-            ammoname = 'ammo-50'
-        },
-        ['WEAPON_BENELLIM2'] = {
-            label = 'Benelli M2',
-            weight = 3100,
-            durability = 0.03,
-            ammoname = 'ammo-shotgun'
-        },
-        ['WEAPON_AKM'] = {
-            label = 'AK',
-            weight = 3140,
-            durability = 0.03,
-            ammoname = 'ammo-762'
-        },
-        ['WEAPON_MK18'] = {
-            label = 'MK18',
-            weight = 2720,
-            durability = 0.03,
-            ammoname = 'ammo-556'
-        },
-        ['WEAPON_M4'] = {
-            label = 'M4A1',
-            weight = 2930,
-            durability = 0.03,
-            ammoname = 'ammo-556'
-        },
-        ['WEAPON_DOUBLEBARRELFM'] = {
-            label = 'MR43',
-            weight = 3240,
-            durability = 0.03,
-            ammoname = 'ammo-shotgun'
-        },
-        ['WEAPON_MP5'] = {
-            label = 'MP5',
-            weight = 2610,
-            durability = 0.03,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_MINIUZI'] = {
-            label = 'UZI',
-            weight = 1310,
-            durability = 0.03,
-            ammoname = 'ammo-9'
+        -- ['WEAPON_M45A1'] = {
+        --     label = 'M45A1',
+        --     weight = 920,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-45'
+        -- },
+        -- ['WEAPON_2011'] = {
+        --     label = 'STI DVC 2011',
+        --     weight = 1110,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-45'
+        -- },
+        -- ['WEAPON_P226'] = {
+        --     label = 'P226',
+        --     weight = 1110,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_P357'] = {
+        --     label = 'P357',
+        --     weight = 1360,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-50'
+        -- },
+        -- ['WEAPON_BENELLIM2'] = {
+        --     label = 'Benelli M2',
+        --     weight = 3100,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-shotgun'
+        -- },
+        -- ['WEAPON_AKM'] = {
+        --     label = 'AK',
+        --     weight = 3140,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-762'
+        -- },
+        -- ['WEAPON_MK18'] = {
+        --     label = 'MK18',
+        --     weight = 2720,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-556'
+        -- },
+        -- ['WEAPON_M4'] = {
+        --     label = 'M4A1',
+        --     weight = 2930,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-556'
+        -- },
+        -- ['WEAPON_DOUBLEBARRELFM'] = {
+        --     label = 'MR43',
+        --     weight = 3240,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-shotgun'
+        -- },
+        -- ['WEAPON_MP5'] = {
+        --     label = 'MP5',
+        --     weight = 2610,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_MINIUZI'] = {
+        --     label = 'UZI',
+        --     weight = 1310,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-9'
 
-        },
-        ['WEAPON_AXMC'] = {
-            label = 'AXMC',
-            weight = 4220,
-            durability = 0.03,
-            ammoname = 'ammo-sniper'
-        },
-        ['WEAPON_M700'] = {
-            label = 'AXMC',
-            weight = 4120,
-            durability = 0.01,
-            ammoname = 'ammo-sniper'
-        },
-        ['WEAPON_NSR9'] = {
-            label = 'NSR9',
-            weight = 2870,
-            durability = 0.03,
-            ammoname = 'ammo-556'
-        },
-        ['WEAPON_M45'] = {
-            label = 'M45',
-            weight = 930,
-            durability = 0.03,
-            ammoname = 'ammo-45'
-        },
-        ['WEAPON_VICTUSXMR'] = {
-            label = 'VICTUS XMR',
-            weight = 4270,
-            durability = 0.03,
-            ammoname = 'ammo-sniper'
-        },
-        ['WEAPON_M249'] = {
-            label = 'M249',
-            weight = 7500,
-            durability = 0.06,
-            ammoname = 'ammo-762'
-        },
-        ['WEAPON_RPG'] = {
-            label = 'RPG 7',
-            weight = 17500,
-            durability = 0.01,
-            ammoname = 'ammo-rpg'
-        },
-        ['WEAPON_VECTOR'] = {
-            label = 'Vector Kriss',
-            weight = 4500,
-            durability = 0.01,
-            ammoname = 'ammo-45'
-        },
+        -- },
+        -- ['WEAPON_AXMC'] = {
+        --     label = 'AXMC',
+        --     weight = 4220,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-sniper'
+        -- },
+        -- ['WEAPON_M700'] = {
+        --     label = 'AXMC',
+        --     weight = 4120,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-sniper'
+        -- },
+        -- ['WEAPON_NSR9'] = {
+        --     label = 'NSR9',
+        --     weight = 2870,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-556'
+        -- },
+        -- ['WEAPON_M45'] = {
+        --     label = 'M45',
+        --     weight = 930,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-45'
+        -- },
+        -- ['WEAPON_VICTUSXMR'] = {
+        --     label = 'VICTUS XMR',
+        --     weight = 4270,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-sniper'
+        -- },
+        -- ['WEAPON_M249'] = {
+        --     label = 'M249',
+        --     weight = 7500,
+        --     durability = 0.06,
+        --     ammoname = 'ammo-762'
+        -- },
+        -- ['WEAPON_RPG'] = {
+        --     label = 'RPG 7',
+        --     weight = 17500,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-rpg'
+        -- },
+        -- ['WEAPON_VECTOR'] = {
+        --     label = 'Vector Kriss',
+        --     weight = 4500,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-45'
+        -- },
     },
     Components = {
         -------------------
