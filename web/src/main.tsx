@@ -13,7 +13,7 @@ const root = document.getElementById('root');
 
 if (isEnvBrowser()) {
   // https://i.imgur.com/iPTAdYV.png - Night time img
-  root!.style.backgroundImage = 'url("https://i.imgur.com/3pzRj9n.png")';
+  root!.style.backgroundImage = 'url("https://d1lss44hh2trtw.cloudfront.net/assets/editorial/2022/12/saving-arthur-morgan-rdr2-lenny-hosea.jpg")';
   root!.style.backgroundSize = 'cover';
   root!.style.backgroundRepeat = 'no-repeat';
   root!.style.backgroundPosition = 'center';

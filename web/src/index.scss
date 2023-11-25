@@ -1,6 +1,7 @@
+@import url(https://db.onlinewebfonts.com/c/ab21a97b9cae2e116d8d1473baefc9f0?family=RDR+Lino+Regular);
 $mainColor: #22232c;
 $textColor: #c1c2c5;
-$mainFont: Roboto;
+$mainFont: "RDR Lino Regular";
 
 $secondaryColor: rgba(12, 12, 12, 0.4);
 $secondaryColorHighlight: #33343F;
@@ -8,7 +9,7 @@ $secondaryColorLight: rgba(0, 0, 0, 0.5);
 $secondaryColorDark: rgba(12, 12, 12, 0.8);
 
 $gridCols: 5;
-$gridRows: 5;
+$gridRows: 7;
 $gridSize: 10.2vh;
 $gridGap: 2px;
 $containerSize: calc(#{$gridRows} * #{$gridSize + 0.22vh} + #{$gridRows} * #{$gridGap});
@@ -58,7 +59,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .context-menu-list {
   min-width: 200px;
-  background-color: $mainColor;
+  background-color: black;
   color: $textColor;
   padding: 4px;
   border-color: rgba(0, 0, 0, 0.2);
@@ -72,6 +73,7 @@ input[type='number']::-webkit-outer-spin-button {
 
 .context-menu-item  {
   padding: 8px;
+  font-family: $mainFont;
   border-radius: 4px;
   background-color: transparent;
   outline: none;
@@ -84,7 +86,7 @@ input[type='number']::-webkit-outer-spin-button {
     transform: none;
   }
   &:hover {
-    background-color: $secondaryColorHighlight;
+    background-color: rgb(65, 65, 65);
     cursor: pointer;
   }
 }
@@ -261,13 +263,18 @@ button:active {
   display: flex;
   flex-direction: column;
   gap: calc($gridGap * 2);
+  background: url(../images/redm.png) center center no-repeat;
+  background-size: cover;
+  aspect-ratio: 5/8;
 }
+
 .inventory-grid-header-wrapper {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   p {
-    font-size: 16px;
+    font-size: 30px;
+    padding: 5%;
   }
 }
 
@@ -278,25 +285,21 @@ button:active {
   grid-auto-rows: $gridSize + 0.22vh;
   gap: $gridGap;
   overflow-y: scroll;
+  padding: 0 30px;
 }
 
 // inventory slots
 .inventory-slot {
-  background-color: $secondaryColor;
   background-repeat: no-repeat;
   background-position: center;
-  border-radius: 2.5%;
   image-rendering: -webkit-optimize-contrast;
   position: relative;
   background-size: 7vh;
   color: $textColor;
-  border-color: rgba(0, 0, 0, 0.2);
-  border-style: inset;
-  border-width: 1px;
 }
 
 .inventory-slot-label-box {
-  background-color: $mainColor;
+  // background-color: $mainColor;
   color: $textColor;
   text-align: center;
   border-bottom-left-radius: 0.25vh;
@@ -387,7 +390,7 @@ button:active {
 .tooltip-wrapper {
   pointer-events: none;
   display: flex;
-  background-color: $mainColor;
+  background-color: black;
   width: 200px;
   padding: 8px;
   flex-direction: column;
