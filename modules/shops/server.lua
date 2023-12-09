@@ -32,7 +32,7 @@ local function setupShopItems(id, shopType, shopName, groups)
                 weight = Item.weight,
                 count = slot.count,
                 price = (server.randomprices and not slot.currency or slot.currency == 'money') and
-                (math.ceil(slot.price * (math.random(80, 120) / 100))) or slot.price or 0,
+                    (math.ceil(slot.price * (math.random(80, 120) / 100))) or slot.price or 0,
                 metadata = slot.metadata,
                 license = slot.license,
                 currency = slot.currency,
@@ -248,7 +248,6 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 
                 local xPlayer = ESX.GetPlayerFromId(source)
                 local moneyOnAccount = xPlayer.getAccount(currency).money
-                print(moneyOnAccount)
 
                 local canAfford = price >= 0 and moneyOnAccount >= price
                 if currency == "bank" and fromData.isIllegal then
@@ -294,9 +293,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 
                 if server.syncInventory then server.syncInventory(playerInv) end
 
-                local message = locale('purchased_for', count, fromItem.label,
-                    (currency == 'money' and locale('$') or math.groupdigits(price)),
-                    (currency == 'money' and math.groupdigits(price) or ' ' .. Items(currency).label))
+                local message = locale('purchased_for', count, fromItem.label, locale('$'), currency)
 
                 if server.loglevel > 0 then
                     if server.loglevel > 1 or fromData.price >= 500 then
