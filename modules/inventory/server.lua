@@ -165,8 +165,15 @@ local function loadInventoryData(data, player)
 
 			local model, class = lib.callback.await('ox_inventory:getVehicleData', source, data.netid)
 			local storage = Vehicles[data.type].models[model] or Vehicles[data.type][class]
-            local vehicleId = server.getOwnedVehicleId and server.getOwnedVehicleId(entity)
-            inventory = Inventory.Create(vehicleId or data.id, plate, data.type, storage[1], 0, storage[2], false)
+            local dbId
+
+            if server.getOwnedVehicleId then
+                dbId = server.getOwnedVehicleId(entity)
+            else
+                dbId = data.id:sub(6)
+            end
+
+            inventory = Inventory.Create(data.id, plate, data.type, storage[1], 0, storage[2], false, nil, nil, dbId)
 		end
 	elseif data.type == 'policeevidence' then
 		inventory = Inventory.Create(data.id, locale('police_evidence'), data.type, 100, 0, 100000, false)
@@ -545,10 +552,11 @@ end, true)
 ---@param maxWeight number
 ---@param owner string | number | boolean
 ---@param items? table
+---@param dbId? string | number
 ---@return OxInventory?
 --- This should only be utilised internally!
 --- To create a stash, please use `exports.ox_inventory:RegisterStash` instead.
-function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, items, groups)
+function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, items, groups, dbId)
     local player_discord_id
 	if invType == 'player' and hasActiveInventory(id, owner) then return end
 
@@ -574,6 +582,7 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 		time = os.time(),
 		groups = groups,
 		openedBy = {},
+        dbId = dbId
 	}
 
     if player_discord_id then
@@ -609,7 +618,7 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 	end
 
 	if not items then
-		self.items, self.weight = Inventory.Load(self.dbId or self.id, invType, owner, self.datastore)
+		self.items, self.weight = Inventory.Load(self.dbId, invType, owner, self.datastore)
 	elseif weight == 0 and next(items) then
 		self.weight = Inventory.CalculateWeight(items)
 	end
@@ -790,21 +799,25 @@ end
 ---@param owner string | number | boolean
 ---@param datastore? boolean
 function Inventory.Load(id, invType, owner, datastore)
+    if not invType then return end
+
 	local result
 
-	if id and invType then
+    if invType == 'trunk' or invType == 'glovebox' then
+        result = id and (invType == 'trunk' and db.loadTrunk(id) or db.loadGlovebox(id))
+
+        if not result then
+            if server.randomloot then
+                return generateItems(id, 'vehicle')
+            end
+        else
+            result = result[invType]
+        end
+	elseif id then
 		if invType == 'dumpster' then
 			if server.randomloot then
 				return generateItems(id, invType)
             end
-		elseif invType == 'trunk' or invType == 'glovebox' then
-			result = invType == 'trunk' and db.loadTrunk(id) or db.loadGlovebox(id)
-
-			if not result then
-				if server.randomloot then
-					return generateItems(id, 'vehicle')
-                end
-			else result = result[invType] end
 		elseif not datastore then
 			result = db.loadStash(owner or '', id)
 		end
@@ -1771,7 +1784,7 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 								return
 							end
 
-							Inventory.ContainerWeight(containerItem, toContainer and fromWeight or toWeight, playerInventory)
+							Inventory.ContainerWeight(containerItem, toContainer and toWeight or fromWeight, playerInventory)
 						end
 
 						if fromOtherPlayer then
