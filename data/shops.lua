@@ -1,4 +1,55 @@
 return {
+    Policeequipements = {
+        name = 'Réserve',
+        groups = {
+            ['police'] = 6,
+        },
+        inventory = {
+            { name = 'parachute', price = 0 },
+            { name = 'spike',     price = 0 },
+            { name = 'radio',     price = 0 },
+
+            {
+                name = 'hat',
+                price = 0,
+                metadata = {
+                    label = "Chapeau femme",
+                    id = "addon15",
+                    variation = 0
+                }
+            },
+            {
+                name = 'armour',
+                price = 0,
+                metadata = {
+                    label = "Pare balles femme",
+                    id = "addon4",
+                    variation = 0
+                }
+            },
+            {
+                name = 'hat',
+                price = 0,
+                metadata = {
+                    label = "Chapeau homme",
+                    id = "addon22",
+                    variation = 0
+                }
+            },
+            {
+                name = 'armour',
+                price = 0,
+                metadata = {
+                    label = "Pare balles homme",
+                    id = "addon9",
+                    variation = 0
+                }
+            },
+        },
+        locations = {
+            vec3(482.4936, -995.4624, 30.6898), -- MRPD
+        }
+    },
     Superette = {
         name = '24/7 Superette',
         blip = {
