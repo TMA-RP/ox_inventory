@@ -163,14 +163,20 @@ return {
         weight = 3000,
         stack = true,
         close = true,
-        description = nil
+        description = nil,
+        client = {
+            event = "mmtirespikes:AddSpike"
+        }
     },
     ['jumelles'] = {
         label = 'Jumelles',
         weight = 600,
         stack = true,
         close = true,
-        description = nil
+        description = nil,
+        client = {
+            event = "ceeb_binocular:use",
+        }
     },
     ['pochon'] = {
         label = 'Pochon vide',
