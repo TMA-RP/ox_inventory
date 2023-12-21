@@ -1,6 +1,4 @@
 if not lib then return end
-ESX = exports.es_extended.getSharedObject()
-
 local Items = require 'modules.items.server'
 local Inventory = require 'modules.inventory.server'
 local Shops = {}
@@ -170,8 +168,7 @@ local function canAffordItem(inv, currency, price)
 end
 
 local function removeCurrency(inv, currency, price)
-    local xPlayer = ESX.GetPlayerFromId(inv.id)
-    xPlayer.removeAccountMoney(currency, price, "Magasins")
+    exports.ceeb_globals:removeAccountMoney(inv.id, currency, price, "Magasins")
 end
 
 local TriggerEventHooks = require 'modules.hooks.server'
@@ -246,8 +243,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
                     return false, false, { type = 'error', description = locale('cannot_carry') }
                 end
 
-                local xPlayer = ESX.GetPlayerFromId(source)
-                local moneyOnAccount = xPlayer.getAccount(currency).money
+                local moneyOnAccount = exports.ceeb_globals:getAccountMoney(source, currency)
 
                 local canAfford = price >= 0 and moneyOnAccount >= price
                 if currency == "bank" and fromData.isIllegal then
