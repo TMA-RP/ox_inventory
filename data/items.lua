@@ -94,14 +94,10 @@ return {
         weight = 10,
         stack = true,
         close = true,
-        description = nil
-    },
-    ['davidoffcigar'] = {
-        label = 'cigare davidoff',
-        weight = 10,
-        stack = true,
-        close = true,
-        description = nil
+        description = nil,
+        client = {
+            export = "ceeb_smoke.cigar",
+        },
     },
     ['lighter'] = {
         label = 'Briquet',
@@ -122,17 +118,20 @@ return {
     },
     ['marlboro'] = {
         label = 'Paquet de Marlbaré',
-        weight = 70,
-        stack = true,
+        weight = 10,
+        stack = false,
         close = true,
         description = nil
     },
     ['marlborocig'] = {
         label = 'Cigarette Marlbaré',
         weight = 5,
-        stack = true,
+        stack = false,
         close = true,
-        description = nil
+        description = nil,
+        client = {
+            export = "ceeb_smoke.cigarette",
+        },
     },
     ['handcuff'] = {
         label = 'Menottes',
@@ -270,6 +269,9 @@ return {
         stack = true,
         weight = 15,
         close = true,
+        client = {
+            export = "ceeb_smoke.joint",
+        },
     },
     ['casino_chip'] = {
         label = 'Jeton Casino',

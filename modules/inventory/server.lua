@@ -2660,7 +2660,7 @@ RegisterServerEvent('ox_inventory:giveItem', function(slot, target, count)
                             item = {
                                 label = fromInventory.label,
                                 name = fromInventory.name,
-                                metadata = fromData.metadata,
+                                metadata = fromInventory.metadata,
                             },
                             type = "give"
                         })
