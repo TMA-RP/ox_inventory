@@ -454,7 +454,7 @@ local function useItem(data, cb)
 
     if result then
         TriggerEvent('ox_inventory:usedItem', slotData.name, slotData.slot, next(slotData.metadata) and slotData
-        .metadata)
+            .metadata)
     end
 
     Wait(500)
@@ -688,18 +688,17 @@ local function useSlot(slot)
 end
 exports('useSlot', useSlot)
 
----@param id number
+---@param buttonId number
 ---@param slot number
-local function useButton(id, slot)
+---@param itemName string
+---@param inventoryId string
+local function useButton(buttonId, slot, itemName, inventoryId)
     if PlayerData.loaded and not invBusy then
-        local item = PlayerData.inventory[slot]
-        if not item then return end
-
-        local data = Items[item.name]
+        local data = Items[itemName]
         local buttons = data?.buttons
 
-        if buttons and buttons[id]?.action then
-            buttons[id].action(slot)
+        if buttons and buttons[buttonId]?.action then
+            buttons[buttonId].action(slot, inventoryId)
         end
     end
 end
@@ -1230,7 +1229,8 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
             description = v.description,
             buttons = buttons,
             ammoName = v.ammoname,
-            image = v.client?.image
+            image = v.client?.image,
+            canUse = v.canUse or false
         }
     end
 
@@ -1758,7 +1758,7 @@ RegisterNUICallback('giveItem', function(data, cb)
 end)
 
 RegisterNUICallback('useButton', function(data, cb)
-    useButton(data.id, data.slot)
+    useButton(data.id, data.slot, data.itemName, data.inventoryId)
     cb(1)
 end)
 

@@ -33,7 +33,7 @@ interface ButtonWithIndex extends Button {
   index: number;
 }
 
-interface GroupedButtons extends Array<Group> {}
+interface GroupedButtons extends Array<Group> { }
 
 const InventoryContext: React.FC = () => {
   const contextMenu = useAppSelector((state) => state.contextMenu);
@@ -62,7 +62,7 @@ const InventoryContext: React.FC = () => {
         setClipboard(data.serial || '');
         break;
       case 'custom':
-        fetchNui('useButton', { id: (data?.id || 0) + 1, slot: item.slot });
+        fetchNui('useButton', { id: (data?.id || 0) + 1, slot: item.slot, itemName: item.name, inventoryId: item.inventoryId });
         break;
     }
   };
@@ -92,30 +92,6 @@ const InventoryContext: React.FC = () => {
   return (
     <>
       <Menu>
-        <MenuItem onClick={() => handleClick({ action: 'use' })} label={Locale.ui_use || 'Use'} />
-        <MenuItem onClick={() => handleClick({ action: 'give' })} label={Locale.ui_give || 'Give'} />
-        <MenuItem onClick={() => handleClick({ action: 'drop' })} label={Locale.ui_drop || 'Drop'} />
-        {item && item.metadata?.ammo > 0 && (
-          <MenuItem onClick={() => handleClick({ action: 'removeAmmo' })} label={Locale.ui_remove_ammo} />
-        )}
-        {item && item.metadata?.serial && (
-          <MenuItem
-            onClick={() => handleClick({ action: 'copy', serial: item.metadata?.serial })}
-            label={Locale.ui_copy}
-          />
-        )}
-        {item && item.metadata?.components && item.metadata?.components.length > 0 && (
-          <Menu label={Locale.ui_removeattachments}>
-            {item &&
-              item.metadata?.components.map((component: string, index: number) => (
-                <MenuItem
-                  key={index}
-                  onClick={() => handleClick({ action: 'remove', component, slot: item.slot })}
-                  label={Items[component]?.label || ''}
-                />
-              ))}
-          </Menu>
-        )}
         {((item && item.name && Items[item.name]?.buttons?.length) || 0) > 0 && (
           <>
             {item &&
@@ -143,6 +119,37 @@ const InventoryContext: React.FC = () => {
                   )}
                 </React.Fragment>
               ))}
+          </>
+        )}
+
+        {item && item.inventoryType === "player" && (
+          <>
+            {item && item.name && Items[item.name]?.canUse && (
+              <MenuItem onClick={() => handleClick({ action: 'use' })} label={Locale.ui_use || 'Use'} />
+            )}
+            <MenuItem onClick={() => handleClick({ action: 'give' })} label={Locale.ui_give || 'Give'} />
+            <MenuItem onClick={() => handleClick({ action: 'drop' })} label={Locale.ui_drop || 'Drop'} />
+            {item && item.metadata?.ammo > 0 && (
+              <MenuItem onClick={() => handleClick({ action: 'removeAmmo' })} label={Locale.ui_remove_ammo} />
+            )}
+            {item && item.metadata?.serial && (
+              <MenuItem
+                onClick={() => handleClick({ action: 'copy', serial: item.metadata?.serial })}
+                label={Locale.ui_copy}
+              />
+            )}
+            {item && item.metadata?.components && item.metadata?.components.length > 0 && (
+              <Menu label={Locale.ui_removeattachments}>
+                {item &&
+                  item.metadata?.components.map((component: string, index: number) => (
+                    <MenuItem
+                      key={index}
+                      onClick={() => handleClick({ action: 'remove', component, slot: item.slot })}
+                      label={Items[component]?.label || ''}
+                    />
+                  ))}
+              </Menu>
+            )}
           </>
         )}
       </Menu>

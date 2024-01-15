@@ -1,6 +1,7 @@
 return {
     ['parachute'] = {
         label = 'Parachute',
+        canUse = true,
         weight = 14000,
         stack = false,
         client = {
@@ -10,6 +11,7 @@ return {
     },
     ['lockpick'] = {
         label = 'Lockpick',
+        canUse = true,
         weight = 35,
         consume = 1,
         client = {
@@ -18,6 +20,7 @@ return {
     },
     ["phone"] = {
         label = "Téléphone",
+        canUse = true,
         weight = 190,
         stack = false,
         consume = 0,
@@ -36,6 +39,7 @@ return {
     },
     ['radio'] = {
         label = 'Radio',
+        canUse = true,
         weight = 230,
         stack = true,
         close = true,
@@ -51,6 +55,7 @@ return {
     },
     ['armour'] = {
         label = 'Gilet pare-balles',
+        canUse = true,
         weight = 3000,
         stack = false,
         consume = 1,
@@ -62,6 +67,7 @@ return {
     },
     ['mask'] = {
         label = 'Masque',
+        canUse = true,
         weight = 400,
         stack = false,
         consume = 1,
@@ -73,6 +79,7 @@ return {
     },
     ['hat'] = {
         label = 'Chapeau / Casque',
+        canUse = true,
         weight = 300,
         stack = false,
         consume = 1,
@@ -88,16 +95,6 @@ return {
         stack = true,
         close = true,
         description = nil
-    },
-    ['cubancigar'] = {
-        label = 'Cigare',
-        weight = 10,
-        stack = true,
-        close = true,
-        description = nil,
-        client = {
-            export = "ceeb_smoke.cigar",
-        },
     },
     ['lighter'] = {
         label = 'Briquet',
@@ -116,22 +113,51 @@ return {
             export = "devcore_smoke.Crollingpaper",
         },
     },
-    ['marlboro'] = {
+    ['cigarettebox'] = {
         label = 'Paquet de Marlbaré',
+        canUse = true,
         weight = 10,
         stack = false,
         close = true,
         description = nil
     },
-    ['marlborocig'] = {
+    ['cigarette'] = {
         label = 'Cigarette Marlbaré',
         weight = 5,
         stack = false,
         close = true,
         description = nil,
-        client = {
-            export = "ceeb_smoke.cigarette",
-        },
+        buttons = {
+            {
+                label = "Allumer la cigarette",
+                action = function(slot, inventoryId)
+                    exports.ceeb_smoke:cigarette(slot, inventoryId)
+                end
+            },
+        }
+    },
+    ['cigarbox'] = {
+        label = 'Boîte à cigares',
+        canUse = true,
+        weight = 200,
+        stack = false,
+        close = true,
+        description = nil
+    },
+    ['cigar'] = {
+        label = 'Cigare',
+        weight = 10,
+        stack = true,
+        close = true,
+        description = nil,
+        buttons = {
+            {
+                label = "Allumer le cigare",
+                action = function(slot, inventoryId)
+                    exports.ceeb_smoke:cigar(slot, inventoryId)
+                end
+            },
+        }
     },
     ['handcuff'] = {
         label = 'Menottes',
@@ -142,6 +168,7 @@ return {
     },
     ['coke_pooch'] = {
         label = 'Pochon de coke',
+        canUse = true,
         weight = 2,
         stack = true,
         close = true,
@@ -159,6 +186,7 @@ return {
     },
     ['spike'] = {
         label = 'Herse',
+        canUse = true,
         weight = 3000,
         stack = true,
         close = true,
@@ -169,6 +197,7 @@ return {
     },
     ['jumelles'] = {
         label = 'Jumelles',
+        canUse = true,
         weight = 600,
         stack = true,
         close = true,
@@ -186,6 +215,7 @@ return {
     },
     ['cv_repas'] = {
         label = 'Repas',
+        canUse = true,
         weight = 500,
         stack = true,
         close = true,
@@ -196,6 +226,7 @@ return {
     },
     ['cv_boisson'] = {
         label = 'Boisson',
+        canUse = true,
         weight = 100,
         stack = false,
         close = true,
@@ -209,6 +240,7 @@ return {
             export = "ceeb_vehicle.removeplate"
         },
         label = 'Tournevis',
+        canUse = true,
         weight = 110,
         stack = true,
         close = true,
@@ -219,6 +251,7 @@ return {
             export = "ceeb_vehicle.placeplate",
         },
         label = 'Fausse plaque',
+        canUse = true,
         weight = 300,
         stack = false,
         close = true,
@@ -233,6 +266,7 @@ return {
     },
     ["nos"] = {
         label = "Bouteille de NOS",
+        canUse = true,
         weight = 2000,
         stack = false,
         close = true,
@@ -245,6 +279,7 @@ return {
     },
     ["noskit"] = {
         label = "Kit de NOS",
+        canUse = true,
         weight = 10000,
         stack = false,
         close = true,
@@ -269,9 +304,14 @@ return {
         stack = true,
         weight = 15,
         close = true,
-        client = {
-            export = "ceeb_smoke.joint",
-        },
+        buttons = {
+            {
+                label = "Allumer le joint",
+                action = function(slot, inventoryId)
+                    exports.ceeb_smoke:joint(slot, inventoryId)
+                end
+            },
+        }
     },
     ['casino_chip'] = {
         label = 'Jeton Casino',
@@ -279,20 +319,9 @@ return {
         weight = 0,
         close = true,
     },
-    ['hack_phone'] = {
-        label = 'Téléphone pirate',
-        stack = true,
-        weight = 200,
-        close = true,
-    },
-    ['hack_laptop'] = {
-        label = 'Ordi pirate',
-        stack = true,
-        weight = 1100,
-        close = true,
-    },
     ['wheelchair'] = {
         label = "Chaise roulante",
+        canUse = true,
         stack = false,
         weight = 18000,
         close = true,
@@ -302,6 +331,7 @@ return {
     },
     ['racingtablet'] = {
         label = 'Tablette de courses',
+        canUse = true,
         weight = 450,
         description = 'Ca semble être quelque chose en rapport avec des voitures...',
         stack = false,
@@ -311,6 +341,7 @@ return {
     },
     ['boostingtablet'] = {
         label = 'Tablette boosting',
+        canUse = true,
         weight = 450,
         description = "Il semble que quelque chose soit installé dessus",
         client = {
@@ -319,6 +350,7 @@ return {
     },
     ['hackingdevice'] = {
         label = 'Dispositif de piratage',
+        canUse = true,
         weight = 150,
         description = "Vous permettra de contourner les systèmes de sécurité d'un véhicule.",
         client = {
@@ -327,6 +359,7 @@ return {
     },
     ['gpshackingdevice'] = {
         label = 'Dispositif de piratage GPS',
+        canUse = true,
         weight = 300,
         description = "Si vous souhaitez désactiver les systèmes GPS d'un véhicule.",
         client = {
@@ -349,6 +382,11 @@ return {
         label = "Piquouze",
         weight = 200,
     },
+    ['wallet'] = {
+        label = "Portefeuille",
+        canUse = true,
+        weight = 100,
+    },
     ['idcard'] = {
         label = "Carte d'identité",
         weight = 5,
@@ -356,32 +394,20 @@ return {
             {
                 label = "Regarder",
                 action = function(slot)
-                    local foundItems = exports.ox_inventory:Search("slots", "idcard")
-                    for _, v in pairs(foundItems) do
-                        if v.slot == slot then
-                            TriggerEvent("ceeb_cards:showCard", v.metadata.imageurl)
-                            exports.ox_inventory:closeInventory()
-                            break
-                        end
-                    end
+                    TriggerServerEvent("ceeb_cards:showCard", "idcard")
+                    exports.ox_inventory:closeInventory()
                 end
             },
             {
                 label = "Montrer",
                 action = function(slot)
-                    local foundItems = exports.ox_inventory:Search("slots", "idcard")
-                    for _, v in pairs(foundItems) do
-                        if v.slot == slot then
-                            local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
-                            for key, player in pairs(players) do
-                                players[key].id = GetPlayerServerId(player.id)
-                            end
-                            TriggerServerEvent("ceeb_cards:showCardToPlayers", players, v.metadata.imageurl)
-                            TriggerEvent("ceeb_cards:playAnim", "idcard")
-                            exports.ox_inventory:closeInventory()
-                            break
-                        end
+                    local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
+                    for key, player in pairs(players) do
+                        players[key].id = GetPlayerServerId(player.id)
                     end
+                    TriggerServerEvent("ceeb_cards:showCard", "idcard", players)
+                    TriggerEvent("ceeb_cards:playAnim", "idcard")
+                    exports.ox_inventory:closeInventory()
                 end
             }
         }
@@ -393,32 +419,45 @@ return {
             {
                 label = "Regarder",
                 action = function(slot)
-                    local foundItems = exports.ox_inventory:Search("slots", "drivingcard")
-                    for _, v in pairs(foundItems) do
-                        if v.slot == slot then
-                            TriggerEvent("ceeb_cards:showCard", v.metadata.imageurl)
-                            exports.ox_inventory:closeInventory()
-                            break
-                        end
-                    end
+                    TriggerServerEvent("ceeb_cards:showCard", "drivingcard")
+                    exports.ox_inventory:closeInventory()
                 end
             },
             {
                 label = "Montrer",
                 action = function(slot)
-                    local foundItems = exports.ox_inventory:Search("slots", "drivingcard")
-                    for _, v in pairs(foundItems) do
-                        if v.slot == slot then
-                            local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
-                            for key, player in pairs(players) do
-                                players[key].id = GetPlayerServerId(player.id)
-                            end
-                            TriggerServerEvent("ceeb_cards:showCardToPlayers", players, v.metadata.imageurl)
-                            TriggerEvent("ceeb_cards:playAnim", "drivingcard")
-                            exports.ox_inventory:closeInventory()
-                            break
-                        end
+                    local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
+                    for key, player in pairs(players) do
+                        players[key].id = GetPlayerServerId(player.id)
                     end
+                    TriggerServerEvent("ceeb_cards:showCard", "drivingcard", players)
+                    TriggerEvent("ceeb_cards:playAnim", "drivingcard")
+                    exports.ox_inventory:closeInventory()
+                end
+            }
+        }
+    },
+    ['jobcard'] = {
+        label = "Carte de job",
+        weight = 5,
+        buttons = {
+            {
+                label = "Regarder",
+                action = function(slot)
+                    TriggerServerEvent("ceeb_cards:showCard", "jobcard")
+                    exports.ox_inventory:closeInventory()
+                end
+            },
+            {
+                label = "Montrer",
+                action = function(slot)
+                    local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
+                    for key, player in pairs(players) do
+                        players[key].id = GetPlayerServerId(player.id)
+                    end
+                    TriggerServerEvent("ceeb_cards:showCard", "jobcard", players)
+                    TriggerEvent("ceeb_cards:playAnim", "jobcard")
+                    exports.ox_inventory:closeInventory()
                 end
             }
         }

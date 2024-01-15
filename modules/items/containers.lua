@@ -51,22 +51,22 @@ local function setContainerProperties(itemName, properties)
     }
 end
 
--- setContainerProperties('paperbag', {
--- 	slots = 5,
--- 	maxWeight = 1000,
--- 	blacklist = { 'testburger' }
--- })
-
--- setContainerProperties('pizzabox', {
--- 	slots = 5,
--- 	maxWeight = 1000,
--- 	whitelist = { 'pizza' }
--- })
-
-setContainerProperties('marlboro', {
+setContainerProperties('cigarettebox', {
     slots = 20,
     maxWeight = 100,
-    whitelist = { 'marlborocig' }
+    whitelist = { 'cigarette', 'joint' }
+})
+
+setContainerProperties('cigarbox', {
+    slots = 5,
+    maxWeight = 100,
+    whitelist = { 'cigar' }
+})
+
+setContainerProperties('wallet', {
+    slots = 5,
+    maxWeight = 100,
+    whitelist = { 'money', 'idcard', 'drivingcard', 'jobcard' }
 })
 
 return containers

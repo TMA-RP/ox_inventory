@@ -102,9 +102,12 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
 
     const handleContext = (event: React.MouseEvent<HTMLDivElement>) => {
         event.preventDefault();
-        if (inventoryType !== 'player' || !isSlotWithItem(item)) return;
+        if (inventoryType !== InventoryType.PLAYER && inventoryType !== InventoryType.CONTAINER || !isSlotWithItem(item)) return;
 
-        dispatch(openContextMenu({ item, coords: { x: event.clientX, y: event.clientY } }));
+        if ((inventoryType === InventoryType.CONTAINER && item && item.name && Items[item.name]?.buttons) || inventoryType === InventoryType.PLAYER) {
+            const toSend = { ...item, inventoryType: inventoryType, inventoryId };
+            dispatch(openContextMenu({ item: toSend, coords: { x: event.clientX, y: event.clientY } }));
+        }
     };
 
     const handleClick = (event: React.MouseEvent<HTMLDivElement>) => {

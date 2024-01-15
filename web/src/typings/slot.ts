@@ -20,4 +20,6 @@ export type SlotWithItem = Slot & {
   duration?: number;
   image?: string;
   grade?: number | number[];
+  inventoryType?: string;
+  inventoryId?: string;
 };
