@@ -393,19 +393,19 @@ return {
         buttons = {
             {
                 label = "Regarder",
-                action = function(slot)
-                    TriggerServerEvent("ceeb_cards:showCard", "idcard")
+                action = function(slot, inventoryId)
+                    TriggerServerEvent("ceeb_cards:showCard", "idcard", inventoryId)
                     exports.ox_inventory:closeInventory()
                 end
             },
             {
                 label = "Montrer",
-                action = function(slot)
+                action = function(slot, inventoryId)
                     local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
                     for key, player in pairs(players) do
                         players[key].id = GetPlayerServerId(player.id)
                     end
-                    TriggerServerEvent("ceeb_cards:showCard", "idcard", players)
+                    TriggerServerEvent("ceeb_cards:showCard", "idcard", inventoryId, players)
                     TriggerEvent("ceeb_cards:playAnim", "idcard")
                     exports.ox_inventory:closeInventory()
                 end
@@ -418,19 +418,19 @@ return {
         buttons = {
             {
                 label = "Regarder",
-                action = function(slot)
-                    TriggerServerEvent("ceeb_cards:showCard", "drivingcard")
+                action = function(slot, inventoryId)
+                    TriggerServerEvent("ceeb_cards:showCard", "drivingcard", inventoryId)
                     exports.ox_inventory:closeInventory()
                 end
             },
             {
                 label = "Montrer",
-                action = function(slot)
+                action = function(slot, inventoryId)
                     local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
                     for key, player in pairs(players) do
                         players[key].id = GetPlayerServerId(player.id)
                     end
-                    TriggerServerEvent("ceeb_cards:showCard", "drivingcard", players)
+                    TriggerServerEvent("ceeb_cards:showCard", "drivingcard", inventoryId, players)
                     TriggerEvent("ceeb_cards:playAnim", "drivingcard")
                     exports.ox_inventory:closeInventory()
                 end
@@ -443,19 +443,19 @@ return {
         buttons = {
             {
                 label = "Regarder",
-                action = function(slot)
-                    TriggerServerEvent("ceeb_cards:showCard", "jobcard")
+                action = function(slot, inventoryId)
+                    TriggerServerEvent("ceeb_cards:showCard", "jobcard", inventoryId)
                     exports.ox_inventory:closeInventory()
                 end
             },
             {
                 label = "Montrer",
-                action = function(slot)
+                action = function(slot, inventoryId)
                     local players = lib.getNearbyPlayers(GetEntityCoords(cache.ped), 4.0, false)
                     for key, player in pairs(players) do
                         players[key].id = GetPlayerServerId(player.id)
                     end
-                    TriggerServerEvent("ceeb_cards:showCard", "jobcard", players)
+                    TriggerServerEvent("ceeb_cards:showCard", "jobcard", inventoryId, players)
                     TriggerEvent("ceeb_cards:playAnim", "jobcard")
                     exports.ox_inventory:closeInventory()
                 end
