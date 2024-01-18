@@ -147,7 +147,7 @@ return {
     ['cigar'] = {
         label = 'Cigare',
         weight = 10,
-        stack = true,
+        stack = false,
         close = true,
         description = nil,
         buttons = {
