@@ -382,6 +382,12 @@ return {
         label = "Piquouze",
         weight = 200,
     },
+    ['detached_part'] = {
+        label = "Pièce détachée",
+        canUse = false,
+        weight = 0,
+        stack = false,
+    },
     ['wallet'] = {
         label = "Portefeuille",
         canUse = true,

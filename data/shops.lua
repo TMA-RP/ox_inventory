@@ -523,6 +523,292 @@ return {
             },
         },
     },
+    BennysDetachedParts = {
+        name = "Benny's Motorworks",
+        inventory = {
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "D", imageurl = "https://api.ceeb.studio/image/parts/axles/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "C", imageurl = "https://api.ceeb.studio/image/parts/axles/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "B", imageurl = "https://api.ceeb.studio/image/parts/axles/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "A", imageurl = "https://api.ceeb.studio/image/parts/axles/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "S", imageurl = "https://api.ceeb.studio/image/parts/axles/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "X", imageurl = "https://api.ceeb.studio/image/parts/axles/X" },
+            },
+
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "D", imageurl = "https://api.ceeb.studio/image/parts/clutch/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "C", imageurl = "https://api.ceeb.studio/image/parts/clutch/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "B", imageurl = "https://api.ceeb.studio/image/parts/clutch/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "A", imageurl = "https://api.ceeb.studio/image/parts/clutch/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "S", imageurl = "https://api.ceeb.studio/image/parts/clutch/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "X", imageurl = "https://api.ceeb.studio/image/parts/clutch/X" },
+            },
+
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "D", imageurl = "https://api.ceeb.studio/image/parts/radiator/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "C", imageurl = "https://api.ceeb.studio/image/parts/radiator/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "B", imageurl = "https://api.ceeb.studio/image/parts/radiator/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "A", imageurl = "https://api.ceeb.studio/image/parts/radiator/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "S", imageurl = "https://api.ceeb.studio/image/parts/radiator/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "X", imageurl = "https://api.ceeb.studio/image/parts/radiator/X" },
+            },
+
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "D", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "C", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "B", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "A", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "S", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "X", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/X" },
+            },
+
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "tires", weight = 2500, label = "Roues", class = "D", imageurl = "https://api.ceeb.studio/image/parts/tires/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "tires", weight = 2500, label = "Roues", class = "C", imageurl = "https://api.ceeb.studio/image/parts/tires/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "tires", weight = 2500, label = "Roues", class = "B", imageurl = "https://api.ceeb.studio/image/parts/tires/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "tires", weight = 2500, label = "Roues", class = "A", imageurl = "https://api.ceeb.studio/image/parts/tires/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "tires", weight = 2500, label = "Roues", class = "S", imageurl = "https://api.ceeb.studio/image/parts/tires/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "tires", weight = 2500, label = "Roues", class = "X", imageurl = "https://api.ceeb.studio/image/parts/tires/X" },
+            },
+
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "D", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "C", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "B", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "A", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "S", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "X", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/X" },
+            },
+
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "D", imageurl = "https://api.ceeb.studio/image/parts/transmission/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "C", imageurl = "https://api.ceeb.studio/image/parts/transmission/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "B", imageurl = "https://api.ceeb.studio/image/parts/transmission/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "A", imageurl = "https://api.ceeb.studio/image/parts/transmission/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "S", imageurl = "https://api.ceeb.studio/image/parts/transmission/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "X", imageurl = "https://api.ceeb.studio/image/parts/transmission/X" },
+            },
+
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "D", imageurl = "https://api.ceeb.studio/image/parts/injectors/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "C", imageurl = "https://api.ceeb.studio/image/parts/injectors/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "B", imageurl = "https://api.ceeb.studio/image/parts/injectors/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "A", imageurl = "https://api.ceeb.studio/image/parts/injectors/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "S", imageurl = "https://api.ceeb.studio/image/parts/injectors/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "X", imageurl = "https://api.ceeb.studio/image/parts/injectors/X" },
+            },
+
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "D", imageurl = "https://api.ceeb.studio/image/parts/suspensions/D" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "C", imageurl = "https://api.ceeb.studio/image/parts/suspensions/C" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "B", imageurl = "https://api.ceeb.studio/image/parts/suspensions/B" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "A", imageurl = "https://api.ceeb.studio/image/parts/suspensions/A" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "S", imageurl = "https://api.ceeb.studio/image/parts/suspensions/S" },
+            },
+            {
+                name = 'detached_part',
+                price = 0,
+                metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "X", imageurl = "https://api.ceeb.studio/image/parts/suspensions/X" },
+            },
+        },
+        locations = {
+            vec3(-328.6028, -113.3697, 39.0097)
+        },
+    },
     -- Ammunation = {
     --     name = 'Ammunation',
     --     blip = {
