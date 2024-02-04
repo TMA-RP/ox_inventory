@@ -289,7 +289,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
 
                 if server.syncInventory then server.syncInventory(playerInv) end
 
-                local message = locale('purchased_for', count, fromItem.label, locale('$'), currency)
+                local message = locale('purchased_for', count, metadata?.label or fromItem.label, locale('$'), currency)
 
                 if server.loglevel > 0 then
                     if server.loglevel > 1 or fromData.price >= 500 then
