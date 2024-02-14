@@ -388,6 +388,15 @@ return {
         weight = 0,
         stack = false,
     },
+    ['fishingrod'] = {
+        label = "Cânne à pêche",
+        canUse = true,
+        weight = 100,
+        stack = false,
+        client = {
+            export = "ceeb_fishing.start"
+        }
+    },
     ['wallet'] = {
         label = "Portefeuille",
         canUse = true,
