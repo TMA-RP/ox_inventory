@@ -1,4 +1,4 @@
-import React, { useRef, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Inventory } from '../../typings';
 import { selectPaymentMethod, setPaymentMethod } from '../../store/inventory';
 import InventorySlot from './InventorySlot';
@@ -9,7 +9,7 @@ import { useIntersection } from '../../hooks/useIntersection';
 const PAGE_SIZE = 30;
 
 const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
-    const weight = React.useMemo(
+    const weight = useMemo(
         () => (inventory.maxWeight !== undefined ? Math.floor(getTotalWeight(inventory.items) * 1000) / 1000 : 0),
         [inventory.maxWeight, inventory.items]
     );
@@ -20,12 +20,12 @@ const InventoryGrid: React.FC<{ inventory: Inventory }> = ({ inventory }) => {
     const changePaymentMethod = (method: string) => {
         dispatch(setPaymentMethod(method));
     }
-    const [page, setPage] = React.useState(0);
+    const [page, setPage] = useState(0);
     const containerRef = useRef(null);
     const { ref, entry } = useIntersection({ threshold: 0.5 });
     const isBusy = useAppSelector((state) => state.inventory.isBusy);
 
-    React.useEffect(() => {
+    useEffect(() => {
         if (entry && entry.isIntersecting) {
             setPage((prev) => ++prev);
         }
