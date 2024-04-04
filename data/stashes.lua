@@ -1,7 +1,7 @@
 return {
 
     {
-        coords = vec3(463.2498, -988.7775, 30.6899), -- MRPD CAPITAINE
+        coords = vec3(633.5067, -11.6888, 87.8021), -- MRPD CAPITAINE
         name = 'policedaviscaptlocker',
         label = 'Coffre Capitaine',
         owner = false,
@@ -11,7 +11,7 @@ return {
     },
 
     {
-        coords = vec3(460.9271, -996.9072, 30.6896), -- MRPD PERSO
+        coords = vec3(609.5630, 13.4261, 87.8020), -- MRPD PERSO
         name = 'lspddavislocker',
         label = 'Casier personnel',
         owner = true,
