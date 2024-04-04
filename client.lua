@@ -832,7 +832,7 @@ local function registerCommands()
 
     lib.addKeybind({
         name = 'reloadweapon',
-        description = locale('reload_weapon'),
+        description = "Inventaire - " .. locale('reload_weapon'),
         defaultKey = 'r',
         onPressed = function(self)
             if not currentWeapon or not canUseItem(true) then return end
