@@ -30,6 +30,11 @@ return {
         --     weight = 800,
         --     durability = 0.1,
         -- },
+        ['WEAPON_STUNGRENADE'] = {
+            label = 'Flashbang',
+            weight = 600,
+            throwable = true,
+        },
         ['WEAPON_FLARE'] = {
             label = 'Flare',
             weight = 235,
