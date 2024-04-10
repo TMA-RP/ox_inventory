@@ -97,6 +97,11 @@ return {
         --     weight = 980,
         --     throwable = true,
         -- },
+        ['WEAPON_ACIDPACKAGE'] = {
+            label = 'Journal',
+            weight = 100,
+            throwable = true,
+        },
         ['WEAPON_NIGHTSTICK'] = {
             label = 'Nightstick',
             weight = 1000,
