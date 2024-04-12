@@ -12,7 +12,7 @@ return {
                 name = 'hat',
                 price = 0,
                 metadata = {
-                    image = "",
+                    image = ("clothes/male_prop_0_%s"):format("addon17"),
                     job = "police",
                     cat = "hat"
                 }
@@ -21,7 +21,7 @@ return {
                 name = 'hat',
                 price = 0,
                 metadata = {
-                    image = "",
+                    image = ("clothes/male_prop_0_%s"):format("addon18"),
                     job = "police",
                     cat = "helmet"
                 }
