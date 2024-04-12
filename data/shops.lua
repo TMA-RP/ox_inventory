@@ -8,41 +8,30 @@ return {
             { name = 'parachute', price = 0 },
             { name = 'spike',     price = 0 },
             { name = 'radio',     price = 0 },
-
             {
                 name = 'hat',
                 price = 0,
                 metadata = {
-                    label = "Chapeau femme",
-                    id = "addon15",
-                    variation = 0
-                }
-            },
-            {
-                name = 'armour',
-                price = 0,
-                metadata = {
-                    label = "Pare balles femme",
-                    id = "addon4",
-                    variation = 0
+                    image = "",
+                    job = "police",
+                    cat = "hat"
                 }
             },
             {
                 name = 'hat',
                 price = 0,
                 metadata = {
-                    label = "Chapeau homme",
-                    id = "addon22",
-                    variation = 0
+                    image = "",
+                    job = "police",
+                    cat = "helmet"
                 }
             },
             {
                 name = 'armour',
                 price = 0,
                 metadata = {
-                    label = "Pare balles homme",
-                    id = "addon9",
-                    variation = 0
+                    job = "police",
+                    cat = "default"
                 }
             },
         },
