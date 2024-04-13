@@ -20,11 +20,11 @@ return {
         --     weight = 350,
         --     durability = 0.1,
         -- },
-        -- ['WEAPON_CROWBAR'] = {
-        --     label = 'Crowbar',
-        --     weight = 2500,
-        --     durability = 0.1,
-        -- },
+        ['WEAPON_CROWBAR'] = {
+            label = 'Pied de biche',
+            weight = 2500,
+            durability = 0.1,
+        },
         -- ['WEAPON_DAGGER'] = {
         --     label = 'Dagger',
         --     weight = 800,
