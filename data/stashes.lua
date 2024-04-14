@@ -160,5 +160,15 @@ return {
         groups = { ['bennys'] = 0 }
     },
 
+    {
+        coords = vec3(188.4180, -1626.0239, -0.0789),
+        name = 'sewercoffre',
+        label = 'Stockage',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+
+    },
+
 
 }
