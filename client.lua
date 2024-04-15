@@ -1041,7 +1041,7 @@ local function onEnterDrop(point)
     if not point.instance or point.instance == currentInstance and not point.entity then
         local model = point.model or client.dropmodel
 
-        lib.requestModel(model)
+        lib.requestModel(model, false)
 
         local entity = CreateObject(model, point.coords.x, point.coords.y, point.coords.z, false, true, true)
 
