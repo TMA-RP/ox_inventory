@@ -68,7 +68,8 @@ end
 ---@param ped number
 ---@return boolean
 local function canOpenTarget(ped)
-    return IsPedFatallyInjured(ped)
+    return Entity(ped).state.isDead
+        or IsPedFatallyInjured(ped)
         or IsEntityPlayingAnim(ped, 'dead', 'dead_a', 3)
         or IsPedCuffed(ped)
         or IsEntityPlayingAnim(ped, 'mp_arresting', 'idle', 3)
@@ -177,7 +178,7 @@ function client.openInventory(inv, data)
 
             local targetCoords = targetPed and GetEntityCoords(targetPed)
 
-            if not targetCoords or #(targetCoords - GetEntityCoords(playerPed)) > 1.8 or not (client.hasGroup(shared.police) or canOpenTarget(targetPed)) then
+            if not targetCoords or #(targetCoords - GetEntityCoords(playerPed)) > 1.8 or not (canOpenTarget(targetPed)) then
                 return lib.notify({
                     id = 'inventory_right_access',
                     type = 'error',
