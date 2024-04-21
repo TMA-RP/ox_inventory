@@ -116,11 +116,11 @@ return {
         --     weight = 350,
         --     durability = 0.1,
         -- },
-        -- ['WEAPON_SMOKEGRENADE'] = {
-        --     label = 'Smoke Grenade',
-        --     weight = 600,
-        --     throwable = true,
-        -- },
+        ['WEAPON_SMOKEGRENADE'] = {
+            label = 'Smoke Grenade',
+            weight = 600,
+            throwable = true,
+        },
         -- ['WEAPON_SNOWBALL'] = {
         --     label = 'Snow Ball',
         --     weight = 5,
