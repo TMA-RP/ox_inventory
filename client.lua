@@ -1400,7 +1400,9 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
         if EnableWeaponWheel then return end
 
         local weaponHash = GetSelectedPedWeapon(playerPed)
-
+        if weaponHash == `WEAPON_PRESSURE1` then
+            weaponHash = joaat("WEAPON_UNARMED")
+        end
         if currentWeapon then
             if weaponHash ~= currentWeapon.hash and currentWeapon.timer then
                 local weaponCount = Items[currentWeapon.name]?.count
