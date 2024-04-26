@@ -124,6 +124,7 @@ Item('parachute', function(data, slot)
                 if slot.metadata.type then
                     SetPlayerParachuteTintIndex(PlayerData.id, slot.metadata.type)
                 end
+                SetModelAsNoLongerNeeded(1269906701)
             end
         end)
     end
