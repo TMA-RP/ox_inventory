@@ -3,7 +3,7 @@ if not lib then return end
 local Utils = {}
 
 function Utils.PlayAnim(wait, dict, name, blendIn, blendOut, duration, flag, rate, lockX, lockY, lockZ)
-    lib.requestAnimDict(dict, false)
+    lib.requestAnimDict(dict)
     TaskPlayAnim(cache.ped, dict, name, blendIn, blendOut, duration, flag, rate, lockX, lockY, lockZ)
     RemoveAnimDict(dict)
 
@@ -12,7 +12,7 @@ end
 
 function Utils.PlayAnimAdvanced(wait, dict, name, posX, posY, posZ, rotX, rotY, rotZ, blendIn, blendOut, duration, flag,
                                 time)
-    lib.requestAnimDict(dict, false)
+    lib.requestAnimDict(dict)
     TaskPlayAnimAdvanced(cache.ped, dict, name, posX, posY, posZ, rotX, rotY, rotZ, blendIn, blendOut, duration, flag,
         time, 0, 0)
     RemoveAnimDict(dict)

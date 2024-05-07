@@ -42,7 +42,7 @@ end
 ---@param point CPoint
 local function onEnterShop(point)
     if not point.entity then
-        local model = lib.requestModel(point.ped, false)
+        local model = lib.requestModel(point.ped)
 
         if not model then return end
 
