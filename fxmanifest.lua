@@ -11,8 +11,6 @@ description 'Slot-based inventory with item metadata support'
 dependencies {
     '/server:6116',
     '/onesync',
-    'oxmysql',
-    'ox_lib',
 }
 
 shared_script '@ox_lib/init.lua'
