@@ -431,7 +431,13 @@ end
 local function useItem(data, cb, noAnim)
     local slotData, result = PlayerData.inventory[data.slot]
 
-    if not slotData or not canUseItem(data.ammo and true) then return end
+    if not slotData or not canUseItem(data.ammo and true) then
+        if currentWeapon then
+            return lib.notify({ id = 'cannot_perform', type = 'error', description = locale('cannot_perform') })
+        end
+
+        return
+    end
 
     if currentWeapon?.timer and currentWeapon.timer > 100 then return end
 
@@ -683,6 +689,10 @@ local function useSlot(slot, noAnim)
             useItem(data)
         end
     end
+
+    if currentWeapon then
+        return lib.notify({ id = 'cannot_perform', type = 'error', description = locale('cannot_perform') })
+    end
 end
 exports('useSlot', useSlot)
 
@@ -836,7 +846,7 @@ local function registerCommands()
         description = "Inventaire - " .. locale('reload_weapon'),
         defaultKey = 'r',
         onPressed = function(self)
-            if not currentWeapon or not canUseItem(true) then return end
+            if not currentWeapon or EnableWeaponWheel or not canUseItem(true) then return end
 
             if currentWeapon.ammo then
                 if currentWeapon.metadata.durability > 0 then
@@ -870,16 +880,16 @@ local function registerCommands()
     })
 
     for i = 1, 5 do
-        lib.addKeybind({
-            name = ('hotkey%s'):format(i),
-            description = "Inventaire - " .. locale('use_hotbar', i),
-            defaultKey = tostring(i),
-            onPressed = function()
-                if invOpen or IsNuiFocused() or not invHotkeys then return end
-                useSlot(i)
-            end
-        })
-    end
+		lib.addKeybind({
+			name = ('hotkey%s'):format(i),
+			description = "Inventaire - " .. locale('use_hotbar', i),
+			defaultKey = tostring(i),
+			onPressed = function()
+				if invOpen or EnableWeaponWheel or not invHotkeys or IsNuiFocused() then return end
+				useSlot(i)
+			end
+		})
+	end
 
     registerCommands = nil
 end
@@ -1795,6 +1805,11 @@ RegisterNUICallback('swapItems', function(data, cb)
 
     if data.toType == 'newdrop' then
         if cache.vehicle or IsPedFalling(playerPed) then return cb(false) end
+	if data.toType == 'newdrop' then
+		if cache.vehicle or IsPedFalling(playerPed) then
+			swapActive = false
+			return cb(false)
+		end
 
         local coords = GetEntityCoords(playerPed)
 
