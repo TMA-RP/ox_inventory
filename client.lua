@@ -1804,66 +1804,63 @@ RegisterNUICallback('swapItems', function(data, cb)
     swapActive = true
 
     if data.toType == 'newdrop' then
-        if cache.vehicle or IsPedFalling(playerPed) then return cb(false) end
-        if data.toType == 'newdrop' then
-            if cache.vehicle or IsPedFalling(playerPed) then
-                swapActive = false
-                return cb(false)
-            end
+        if cache.vehicle or IsPedFalling(playerPed) then
+            swapActive = false
+            return cb(false)
+        end
 
-            local coords = GetEntityCoords(playerPed)
+        local coords = GetEntityCoords(playerPed)
 
-            if IsEntityInWater(playerPed) then
-                local destination = vec3(coords.x, coords.y, -200)
-                local handle = StartShapeTestLosProbe(coords.x, coords.y, coords.z, destination.x, destination.y,
-                    destination.z, 511, cache.ped, 4)
+        if IsEntityInWater(playerPed) then
+            local destination = vec3(coords.x, coords.y, -200)
+            local handle = StartShapeTestLosProbe(coords.x, coords.y, coords.z, destination.x, destination.y,
+                destination.z, 511, cache.ped, 4)
 
-                while true do
-                    Wait(0)
-                    local retval, hit, endCoords = GetShapeTestResult(handle)
+            while true do
+                Wait(0)
+                local retval, hit, endCoords = GetShapeTestResult(handle)
 
-                    if retval ~= 1 then
-                        if not hit then return end
+                if retval ~= 1 then
+                    if not hit then return end
 
-                        data.coords = vec3(endCoords.x, endCoords.y, endCoords.z + 1.0)
+                    data.coords = vec3(endCoords.x, endCoords.y, endCoords.z + 1.0)
 
-                        break
-                    end
+                    break
                 end
-            else
-                data.coords = coords
             end
+        else
+            data.coords = coords
+        end
+    end
+
+    if currentInstance then
+        data.instance = currentInstance
+    end
+
+    if currentWeapon and data.fromType ~= data.toType then
+        if (data.fromType == 'player' and data.fromSlot == currentWeapon.slot) or (data.toType == 'player' and data.toSlot == currentWeapon.slot) then
+            currentWeapon = Weapon.Disarm(currentWeapon, true)
+        end
+    end
+
+    local success, response, weaponSlot = lib.callback.await('ox_inventory:swapItems', false, data)
+    swapActive = false
+
+    cb(success or false)
+
+    if success then
+        if weaponSlot and currentWeapon then
+            currentWeapon.slot = weaponSlot
         end
 
-        if currentInstance then
-            data.instance = currentInstance
+        if response then
+            updateInventory(response.items, response.weight)
         end
-
-        if currentWeapon and data.fromType ~= data.toType then
-            if (data.fromType == 'player' and data.fromSlot == currentWeapon.slot) or (data.toType == 'player' and data.toSlot == currentWeapon.slot) then
-                currentWeapon = Weapon.Disarm(currentWeapon, true)
-            end
-        end
-
-        local success, response, weaponSlot = lib.callback.await('ox_inventory:swapItems', false, data)
-        swapActive = false
-
-        cb(success or false)
-
-        if success then
-            if weaponSlot and currentWeapon then
-                currentWeapon.slot = weaponSlot
-            end
-
-            if response then
-                updateInventory(response.items, response.weight)
-            end
-        elseif response then
-            if type(response) == 'table' then
-                SendNUIMessage({ action = 'refreshSlots', data = { items = response } })
-            else
-                lib.notify({ type = 'error', description = locale(response) })
-            end
+    elseif response then
+        if type(response) == 'table' then
+            SendNUIMessage({ action = 'refreshSlots', data = { items = response } })
+        else
+            lib.notify({ type = 'error', description = locale(response) })
         end
     end
 end)
