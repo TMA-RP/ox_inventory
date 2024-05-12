@@ -127,11 +127,22 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
 
     if data then
         local isDataTable = type(data) == 'table'
+
         if invType == 'stash' then
             right = Inventory(data, left)
             if right == false then return false end
         elseif isDataTable then
             if data.netid then
+                if invType == 'trunk' then
+                    local entity = NetworkGetEntityFromNetworkId(data.netid)
+                    local isOpen = entity > 0 and Entity(entity).state.isOpen
+
+                    -- 0: no lock; 1: unlocked; 8: boot unlocked
+                    if not isOpen then
+                        return false, false, 'vehicle_locked'
+                    end
+                end
+
                 data.type = invType
                 right = Inventory(data)
             elseif invType == 'drop' then
