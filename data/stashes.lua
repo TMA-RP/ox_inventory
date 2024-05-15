@@ -169,6 +169,33 @@ return {
         weight = 70000,
 
     },
+    {
+        coords = vec3(-1068.3434, -1444.5249, -1.4201),
+        name = 'koisurplus',
+        label = 'Stockage',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+
+    },
+    {
+        coords = vec3(-1843.8068, -1198.0184, 14.3092),
+        name = 'pearlssurplus',
+        label = 'Stockage',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+
+    },
+    {
+        coords = vec3(806.1974, -764.8182, 26.7808),
+        name = 'pizzalssurplus',
+        label = 'Stockage',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+
+    },
 
 
 }

@@ -814,6 +814,257 @@ return {
             vec3(-328.6028, -113.3697, 39.0097)
         },
     },
+
+    Koi = {
+        name = 'Réserve',
+
+        inventory = {
+            { name = 'poissons_crus',    price = 0 },
+            { name = 'sauce_soja',       price = 0 },
+            { name = 'graines_sesame',   price = 0 },
+            { name = 'gingembre',        price = 0 },
+            { name = 'pate_miso',        price = 0 },
+            { name = 'bouillon_poisson', price = 0 },
+            { name = 'tofu',             price = 0 },
+            { name = 'algues',           price = 0 },
+            { name = 'oignons',          price = 0 },
+            { name = 'viandes_hachees',  price = 0 },
+            { name = 'chou_chinois',     price = 0 },
+            { name = 'ails',             price = 0 },
+            { name = 'galettes_riz',     price = 0 },
+            { name = 'legumes',          price = 0 },
+            { name = 'riz',              price = 0 },
+            { name = 'nouilles_ramen',   price = 0 },
+            { name = 'bouillon_legumes', price = 0 },
+            { name = 'viandes',          price = 0 },
+            { name = 'sauce_yakisoba',   price = 0 },
+            { name = 'huile_vegetale',   price = 0 },
+            { name = 'poulet',           price = 0 },
+            { name = 'filet_saumon',     price = 0 },
+            { name = 'sauce_teriyaki',   price = 0 },
+            { name = 'farine_riz',       price = 0 },
+            { name = 'sucre',            price = 0 },
+            { name = 'fecule_mais',      price = 0 },
+            { name = 'farine',           price = 0 },
+            { name = 'oeufs',            price = 0 },
+            { name = 'miel',             price = 0 },
+            { name = 'creme_glacee',     price = 0 },
+            { name = 'poudre_matcha',    price = 0 },
+            { name = 'fruits_rouges',    price = 0 },
+            { name = 'gelee_sucre',      price = 0 },
+            { name = 'fruits',           price = 0 },
+            { name = 'sirop_sucre',      price = 0 },
+            { name = 'haricots',         price = 0 },
+
+
+
+
+        },
+        locations = {
+            vec3(-1075.4238, -1440.6202, -1.4201),
+        },
+    },
+    Pearls = {
+        name = 'Réserve',
+
+        inventory = {
+            { name = 'poissons_crus',               price = 0 },
+            { name = 'legumes',                     price = 0 },
+            { name = 'bouillon_poisson',            price = 0 },
+            { name = 'herbes_aromatiques',          price = 0 },
+            { name = 'sel_poivre',                  price = 0 },
+            { name = 'homard',                      price = 0 },
+            { name = 'oignons',                     price = 0 },
+            { name = 'creme_fraiche',               price = 0 },
+            { name = 'oignons',                     price = 0 },
+            { name = 'cognac',                      price = 0 },
+            { name = 'crevettes',                   price = 0 },
+            { name = 'ails',                        price = 0 },
+            { name = 'huile_olive',                 price = 0 },
+            { name = 'crabe',                       price = 0 },
+            { name = 'chapelure',                   price = 0 },
+            { name = 'citron',                      price = 0 },
+            { name = 'beurre',                      price = 0 },
+            { name = 'riz',                         price = 0 },
+            { name = 'fruits_mer',                  price = 0 },
+            { name = 'bouillon_poisson',            price = 0 },
+            { name = 'vin_blanc',                   price = 0 },
+            { name = 'parmesan',                    price = 0 },
+            { name = 'coquilles_saint_jacques_ing', price = 0 },
+            { name = 'echalotes',                   price = 0 },
+            { name = 'paprika',                     price = 0 },
+            { name = 'creme_liquide',               price = 0 },
+            { name = 'vanille',                     price = 0 },
+            { name = 'oeufs',                       price = 0 },
+            { name = 'sucre_cassonade',             price = 0 },
+            { name = 'pate_brisee',                 price = 0 },
+            { name = 'fruits_rouges',               price = 0 },
+            { name = 'sucre',                       price = 0 },
+            { name = 'fecule_mais',                 price = 0 },
+            { name = 'gelatine',                    price = 0 },
+            { name = 'chocolat',                    price = 0 },
+
+
+
+
+        },
+        locations = {
+            vec3(-1844.6167, -1199.3854, 14.3092),
+        },
+    },
+
+    pizza = {
+        name = 'Réserve',
+
+        inventory = {
+            { name = 'pain_baguette',       price = 0 },
+            { name = 'ails',                price = 0 },
+            { name = 'legumes',             price = 0 },
+            { name = 'herbes_aromatiques',  price = 0 },
+            { name = 'huile_olive',         price = 0 },
+            { name = 'mozzarella',          price = 0 },
+            { name = 'vinaigre_balsamique', price = 0 },
+            { name = 'viandes',             price = 0 },
+            { name = 'citron',              price = 0 },
+            { name = 'parmesan',            price = 0 },
+            { name = 'riz',                 price = 0 },
+            { name = 'bouillon_legumes',    price = 0 },
+            { name = 'chapelure',           price = 0 },
+            { name = 'oeufs',               price = 0 },
+            { name = 'pate_pizza',          price = 0 },
+            { name = 'sauce_tomate',        price = 0 },
+            { name = 'gorgonzola',          price = 0 },
+            { name = 'fontina',             price = 0 },
+            { name = 'pepperoni',           price = 0 },
+            { name = 'piments_forts',       price = 0 },
+            { name = 'biscuits',            price = 0 },
+            { name = 'cafe_fort',           price = 0 },
+            { name = 'mascarpone',          price = 0 },
+            { name = 'sucre',               price = 0 },
+            { name = 'cacao_poudre',        price = 0 },
+            { name = 'creme_liquide',       price = 0 },
+            { name = 'gelatine',            price = 0 },
+            { name = 'vanille',             price = 0 },
+            { name = 'ricotta',             price = 0 },
+            { name = 'pate_brisee',         price = 0 },
+            { name = 'pepites_chocolat',    price = 0 },
+            { name = 'pistaches',           price = 0 },
+            { name = 'chantilly',           price = 0 },
+            { name = 'creme_glacee',        price = 0 },
+
+
+
+
+
+        },
+        locations = {
+            vec3(806.4497, -761.5865, 26.7808),
+        },
+    },
+
+    atom = {
+        name = 'Menus',
+
+        inventory = {
+            { name = 'chicken_wings',           price = 25 },
+            { name = 'onion_rings',             price = 25 },
+            { name = 'cheesy_breadsticks',      price = 25 },
+            { name = 'mozzarella_sticks',       price = 25 },
+            { name = 'classic_cheeseburger',    price = 32 },
+            { name = 'crispy_chicken_sandwich', price = 32 },
+            { name = 'fish_and_chips',          price = 32 },
+            { name = 'veggie_burger',           price = 30 },
+            { name = 'frites_croustillantes',   price = 25 },
+            { name = 'coleslaw',                price = 25 },
+            { name = 'mac_and_cheese',          price = 25 },
+            { name = 'sweet_potato_fries',      price = 25 },
+            { name = 'sundae',                  price = 22 },
+            { name = 'tarte_pommes',            price = 22 },
+            { name = 'brownie_chocolat',        price = 22 },
+
+        },
+        locations = {
+            vec3(89.5322, 286.0509, 110.2094),
+            vec3(96.1575, 284.6895, 109.9732),
+        },
+    },
+
+    burger = {
+        name = 'Menus',
+
+        inventory = {
+            { name = 'cheese_fries',              price = 25 },
+            { name = 'onion_rings',               price = 25 },
+            { name = 'chicken_nuggets',           price = 25 },
+            { name = 'mozzarella_sticks',         price = 25 },
+            { name = 'triple_cheeseburger',       price = 32 },
+            { name = 'bacon_double_cheeseburger', price = 32 },
+            { name = 'bbq_burger',                price = 32 },
+            { name = 'spicy_jalapeno_burger',     price = 32 },
+            { name = 'frites_croustillantes',     price = 25 },
+            { name = 'cheese_curds',              price = 25 },
+            { name = 'corn_dogs',                 price = 25 },
+            { name = 'deep_fried_oreos',          price = 22 },
+            { name = 'funnel_cake',               price = 22 },
+            { name = 'tarte_pommes',              price = 22 },
+            { name = 'churros_sauce_chocolat',    price = 22 },
+
+        },
+        locations = {
+            vec3(-1189.2380, -893.9323, 13.7984),
+            vec3(-1191.1930, -895.2631, 13.7984),
+            vec3(-1194.9648, -908.1935, 13.7730),
+        },
+    },
+
+    hornys = {
+        name = 'Menus',
+
+        inventory = {
+            { name = 'cheese_fries',              price = 25 },
+            { name = 'onion_rings',               price = 25 },
+            { name = 'chicken_nuggets',           price = 25 },
+            { name = 'mozzarella_sticks',         price = 25 },
+            { name = 'triple_cheeseburger',       price = 32 },
+            { name = 'bacon_double_cheeseburger', price = 32 },
+            { name = 'bbq_burger',                price = 32 },
+            { name = 'spicy_jalapeno_burger',     price = 32 },
+            { name = 'frites_croustillantes',     price = 25 },
+            { name = 'cheese_curds',              price = 25 },
+            { name = 'corn_dogs',                 price = 25 },
+            { name = 'deep_fried_oreos',          price = 22 },
+            { name = 'funnel_cake',               price = 22 },
+            { name = 'tarte_pommes',              price = 22 },
+            { name = 'churros_sauce_chocolat',    price = 22 },
+
+        },
+        locations = {
+            vec3(-1189.2380, -893.9323, 13.7984),
+            vec3(-1191.1930, -895.2631, 13.7984),
+            vec3(-1194.9648, -908.1935, 13.7730),
+        },
+    },
+
+    cat = {
+        name = 'Menus',
+
+        inventory = {
+            { name = 'cafe_lait_chat_noir',         price = 18 },
+            { name = 'cappuccino_griffe_chat',      price = 18 },
+            { name = 'latte_macchiato_miaou',       price = 18 },
+            { name = 'chai_tea_latte_chaton_calin', price = 18 },
+            { name = 'muffin_ronron',               price = 20 },
+            { name = 'tartelette_griffe_velours',   price = 20 },
+            { name = 'eclair_moustache_chat',       price = 20 },
+            { name = 'cookie_patte_chat',           price = 20 },
+
+
+        },
+        locations = {
+            vec3(-583.4153, -1061.6532, 22.3442),
+        },
+    },
+
     -- Ammunation = {
     --     name = 'Ammunation',
     --     blip = {
