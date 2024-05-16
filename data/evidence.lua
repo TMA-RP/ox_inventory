@@ -1,5 +1,5 @@
 return {
     {
-        coords = vec3(604.8019, 5.5714, 75.0449), -- LAMESA
+        coords = vec3(605.0256, 5.5795, 75.0447), -- vinewood
     },
 }

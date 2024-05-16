@@ -159,8 +159,12 @@ function client.openInventory(inv, data)
     end
 
     if not canOpenInventory() then
-        return lib.notify({ id = 'inventory_player_access', type = 'error', description = locale(
-        'inventory_player_access') })
+        return lib.notify({
+            id = 'inventory_player_access',
+            type = 'error',
+            description = locale(
+                'inventory_player_access')
+        })
     end
 
     local left, right, accessError
@@ -183,8 +187,12 @@ function client.openInventory(inv, data)
         local targetCoords = targetPed and GetEntityCoords(targetPed)
 
         if not targetCoords or #(targetCoords - GetEntityCoords(playerPed)) > 1.8 or not (canOpenTarget(targetPed)) then
-            return lib.notify({ id = 'inventory_right_access', type = 'error', description = locale(
-            'inventory_right_access') })
+            return lib.notify({
+                id = 'inventory_right_access',
+                type = 'error',
+                description = locale(
+                    'inventory_right_access')
+            })
         end
     end
 
@@ -213,7 +221,7 @@ function client.openInventory(inv, data)
                 distance = 2
             else
                 coords = shared.target and right.zones and right.zones[data.index].coords or
-                right.points and right.points[data.index]
+                    right.points and right.points[data.index]
                 distance = coords and shared.target and right.zones[data.index].distance or 2
             end
 
@@ -253,8 +261,12 @@ function client.openInventory(inv, data)
         if left == false then return false end
 
         if invOpen == false then
-            return lib.notify({ id = 'inventory_right_access', type = 'error', description = locale(
-            'inventory_right_access') })
+            return lib.notify({
+                id = 'inventory_right_access',
+                type = 'error',
+                description = locale(
+                    'inventory_right_access')
+            })
         end
 
         if invOpen then return client.closeInventory() end
@@ -1778,7 +1790,7 @@ end)
 lib.callback.register('ox_inventory:startCrafting', function(id, recipe)
     recipe = CraftingBenches[id].items[recipe]
 
-    return lib.progressCircle({
+    return lib.progressBar({
         label = locale('crafting_item', recipe.metadata?.label or Items[recipe.name].label),
         duration = recipe.duration or 3000,
         canCancel = true,
