@@ -966,21 +966,82 @@ return {
         name = 'Menus',
 
         inventory = {
-            { name = 'chicken_wings',           price = 25 },
-            { name = 'onion_rings',             price = 25 },
-            { name = 'cheesy_breadsticks',      price = 25 },
-            { name = 'mozzarella_sticks',       price = 25 },
-            { name = 'classic_cheeseburger',    price = 32 },
-            { name = 'crispy_chicken_sandwich', price = 32 },
-            { name = 'fish_and_chips',          price = 32 },
-            { name = 'veggie_burger',           price = 30 },
-            { name = 'frites_croustillantes',   price = 25 },
-            { name = 'coleslaw',                price = 25 },
-            { name = 'mac_and_cheese',          price = 25 },
-            { name = 'sweet_potato_fries',      price = 25 },
-            { name = 'sundae',                  price = 22 },
-            { name = 'tarte_pommes',            price = 22 },
-            { name = 'brownie_chocolat',        price = 22 },
+
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "chicken_wings", weight = 900, label = "Chicken Wings", image = "fooddrink/chicken_wings" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "onion_rings", weight = 900, label = "Onion Rings", image = "fooddrink/onion_rings" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "cheesy_breadsticks", weight = 900, label = "Cheesy Breadsticks", image = "fooddrink/cheesy_breadsticks" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "mozzarella_sticks", weight = 900, label = "Mozzarella Sticks", image = "fooddrink/mozzarella_sticks" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "classic_cheeseburger", weight = 900, label = "Classic Cheeseburger", image = "fooddrink/classic_cheeseburger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "crispy_chicken_sandwich", weight = 900, label = "Crispy Chicken Sandwich", image = "fooddrink/crispy_chicken_sandwich" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "fish_and_chips", weight = 900, label = "Fish and Chips", image = "fooddrink/fish_and_chips" },
+            },
+            {
+                name = 'cv_repas',
+                price = 30,
+                metadata = { customname = "veggie_burger", weight = 900, label = "Veggie Burger", image = "fooddrink/veggie_burger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "frites_croustillantes", weight = 900, label = "Frites croustillantes", image = "fooddrink/frites_croustillantes" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "coleslaw", weight = 900, label = "Coleslaw", image = "fooddrink/coleslaw" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "mac_and_cheese", weight = 900, label = "Mac and Cheese", image = "fooddrink/mac_and_cheese" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "sweet_potato_fries", weight = 900, label = "Sweet Potato Fries", image = "fooddrink/sweet_potato_fries" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "sundae", weight = 900, label = "Sundae", image = "fooddrink/sundae" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "tarte_pommes", weight = 900, label = "Tarte aux pommes", image = "fooddrink/tarte_pommes" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "brownie_chocolat", weight = 900, label = "Brownie au chocolat", image = "fooddrink/brownie_chocolat" },
+            },
 
         },
         locations = {
@@ -993,21 +1054,81 @@ return {
         name = 'Menus',
 
         inventory = {
-            { name = 'cheese_fries',              price = 25 },
-            { name = 'onion_rings',               price = 25 },
-            { name = 'chicken_nuggets',           price = 25 },
-            { name = 'mozzarella_sticks',         price = 25 },
-            { name = 'triple_cheeseburger',       price = 32 },
-            { name = 'bacon_double_cheeseburger', price = 32 },
-            { name = 'bbq_burger',                price = 32 },
-            { name = 'spicy_jalapeno_burger',     price = 32 },
-            { name = 'frites_croustillantes',     price = 25 },
-            { name = 'cheese_curds',              price = 25 },
-            { name = 'corn_dogs',                 price = 25 },
-            { name = 'deep_fried_oreos',          price = 22 },
-            { name = 'funnel_cake',               price = 22 },
-            { name = 'tarte_pommes',              price = 22 },
-            { name = 'churros_sauce_chocolat',    price = 22 },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "cheese_fries", weight = 900, label = "Cheese Fries", image = "fooddrink/cheese_fries" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "onion_rings", weight = 900, label = "Onion Rings", image = "fooddrink/onion_rings" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "chicken_nuggets", weight = 900, label = "Chicken Nuggets", image = "fooddrink/chicken_nuggets" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "mozzarella_sticks", weight = 900, label = "Mozzarella Sticks", image = "fooddrink/mozzarella_sticks" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "triple_cheeseburger", weight = 900, label = "Triple Cheeseburger", image = "fooddrink/triple_cheeseburger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "bacon_double_cheeseburger", weight = 900, label = "Bacon Double Cheeseburger", image = "fooddrink/bacon_double_cheeseburger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "bbq_burger", weight = 900, label = "BBQ Burger", image = "fooddrink/bbq_burger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "spicy_jalapeno_burger", weight = 900, label = "Spicy Jalapeno Burger", image = "fooddrink/spicy_jalapeno_burger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "frites_croustillantes", weight = 900, label = "Frites croustillantes", image = "fooddrink/frites_croustillantes" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "cheese_curds", weight = 900, label = "Cheese Curds", image = "fooddrink/cheese_curds" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "corn_dogs", weight = 900, label = "Corn Dogs", image = "fooddrink/corn_dogs" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "deep_fried_oreos", weight = 900, label = "Deep Fried Oreos", image = "fooddrink/deep_fried_oreos" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "funnel_cake", weight = 900, label = "Funnel Cake", image = "fooddrink/funnel_cake" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "tarte_pommes", weight = 900, label = "Tarte aux pommes", image = "fooddrink/tarte_pommes" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "churros_sauce_chocolat", weight = 900, label = "Churros Sauce Chocolat", image = "fooddrink/churros_sauce_chocolat" },
+            },
 
         },
         locations = {
@@ -1021,21 +1142,81 @@ return {
         name = 'Menus',
 
         inventory = {
-            { name = 'cheese_fries',              price = 25 },
-            { name = 'onion_rings',               price = 25 },
-            { name = 'chicken_nuggets',           price = 25 },
-            { name = 'mozzarella_sticks',         price = 25 },
-            { name = 'triple_cheeseburger',       price = 32 },
-            { name = 'bacon_double_cheeseburger', price = 32 },
-            { name = 'bbq_burger',                price = 32 },
-            { name = 'spicy_jalapeno_burger',     price = 32 },
-            { name = 'frites_croustillantes',     price = 25 },
-            { name = 'cheese_curds',              price = 25 },
-            { name = 'corn_dogs',                 price = 25 },
-            { name = 'deep_fried_oreos',          price = 22 },
-            { name = 'funnel_cake',               price = 22 },
-            { name = 'tarte_pommes',              price = 22 },
-            { name = 'churros_sauce_chocolat',    price = 22 },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "cheese_fries", weight = 900, label = "Cheese Fries", image = "fooddrink/cheese_fries" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "onion_rings", weight = 900, label = "Onion Rings", image = "fooddrink/onion_rings" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "chicken_nuggets", weight = 900, label = "Chicken Nuggets", image = "fooddrink/chicken_nuggets" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "mozzarella_sticks", weight = 900, label = "Mozzarella Sticks", image = "fooddrink/mozzarella_sticks" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "triple_cheeseburger", weight = 900, label = "Triple Cheeseburger", image = "fooddrink/triple_cheeseburger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "bacon_double_cheeseburger", weight = 900, label = "Bacon Double Cheeseburger", image = "fooddrink/bacon_double_cheeseburger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "bbq_burger", weight = 900, label = "BBQ Burger", image = "fooddrink/bbq_burger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 32,
+                metadata = { customname = "spicy_jalapeno_burger", weight = 900, label = "Spicy Jalapeno Burger", image = "fooddrink/spicy_jalapeno_burger" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "frites_croustillantes", weight = 900, label = "Frites croustillantes", image = "fooddrink/frites_croustillantes" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "cheese_curds", weight = 900, label = "Cheese Curds", image = "fooddrink/cheese_curds" },
+            },
+            {
+                name = 'cv_repas',
+                price = 25,
+                metadata = { customname = "corn_dogs", weight = 900, label = "Corn Dogs", image = "fooddrink/corn_dogs" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "deep_fried_oreos", weight = 900, label = "Deep Fried Oreos", image = "fooddrink/deep_fried_oreos" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "funnel_cake", weight = 900, label = "Funnel Cake", image = "fooddrink/funnel_cake" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "tarte_pommes", weight = 900, label = "Tarte aux pommes", image = "fooddrink/tarte_pommes" },
+            },
+            {
+                name = 'cv_repas',
+                price = 22,
+                metadata = { customname = "churros_sauce_chocolat", weight = 900, label = "Churros Sauce Chocolat", image = "fooddrink/churros_sauce_chocolat" },
+            },
 
         },
         locations = {
@@ -1049,16 +1230,46 @@ return {
         name = 'Menus',
 
         inventory = {
-            { name = 'cafe_lait_chat_noir',         price = 18 },
-            { name = 'cappuccino_griffe_chat',      price = 18 },
-            { name = 'latte_macchiato_miaou',       price = 18 },
-            { name = 'chai_tea_latte_chaton_calin', price = 18 },
-            { name = 'muffin_ronron',               price = 20 },
-            { name = 'tartelette_griffe_velours',   price = 20 },
-            { name = 'eclair_moustache_chat',       price = 20 },
-            { name = 'cookie_patte_chat',           price = 20 },
-
-
+            {
+                name = 'cv_boisson',
+                price = 18,
+                metadata = { customname = "cafe_lait_chat_noir", weight = 900, label = "Café au lait Chat Noir", image = "fooddrink/cafe_lait_chat_noir" },
+            },
+            {
+                name = 'cv_boisson',
+                price = 18,
+                metadata = { customname = "cappuccino_griffe_chat", weight = 900, label = "Cappuccino Griffe Chat", image = "fooddrink/cappuccino_griffe_chat" },
+            },
+            {
+                name = 'cv_boisson',
+                price = 18,
+                metadata = { customname = "latte_macchiato_miaou", weight = 900, label = "Latte Macchiato Miaou", image = "fooddrink/latte_macchiato_miaou" },
+            },
+            {
+                name = 'cv_boisson',
+                price = 18,
+                metadata = { customname = "chai_tea_latte_chaton_calin", weight = 900, label = "Chai Tea Latte Chaton Câlin", image = "fooddrink/chai_tea_latte_chaton_calin" },
+            },
+            {
+                name = 'cv_repas',
+                price = 20,
+                metadata = { customname = "muffin_ronron", weight = 900, label = "Muffin Ronron", image = "fooddrink/muffin_ronron" },
+            },
+            {
+                name = 'cv_repas',
+                price = 20,
+                metadata = { customname = "tartelette_griffe_velours", weight = 900, label = "Tartelette Griffe Velours", image = "fooddrink/tartelette_griffe_velours" },
+            },
+            {
+                name = 'cv_repas',
+                price = 20,
+                metadata = { customname = "eclair_moustache_chat", weight = 900, label = "Eclair Moustache Chat", image = "fooddrink/eclair_moustache_chat" },
+            },
+            {
+                name = 'cv_repas',
+                price = 20,
+                metadata = { customname = "cookie_patte_chat", weight = 900, label = "Cookie Patte Chat", image = "fooddrink/cookie_patte_chat" },
+            },
         },
         locations = {
             vec3(-583.4153, -1061.6532, 22.3442),
