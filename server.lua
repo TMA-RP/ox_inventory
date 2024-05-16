@@ -110,8 +110,7 @@ end
 ---@param invType string
 ---@param data? string|number|table
 ---@param ignoreSecurityChecks boolean?
----@return boolean|table|nil
----@return table?
+---@return table | false | nil, table | false | nil, string?
 local function openInventory(source, invType, data, ignoreSecurityChecks)
     if Inventory.Lock then return false end
 
@@ -155,6 +154,7 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
                 right = Inventory(('evidence-%s'):format(data))
             end
         elseif invType == 'dumpster' then
+            ---@cast data string
             right = Inventory(data)
 
             if not right then
