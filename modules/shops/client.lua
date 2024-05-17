@@ -31,8 +31,7 @@ end
 
 ---@param point CPoint
 local function nearbyShop(point)
-    ---@diagnostic disable-next-line: param-type-mismatch
-    -- DrawMarker(2, point.coords.x, point.coords.y, point.coords.z, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.3, 0.2, 0.15, 30, 150, 30, 222, false, false, 0, true, false, false, false)
+    exports.ceeb_markers:draw(point.coords, 93, 236, 255, 50)
 
     if point.isClosest and point.currentDistance < 1.2 and IsControlJustReleased(0, 38) then
         client.openInventory('shop', { id = point.invId, type = point.type })

@@ -68,9 +68,7 @@ local function createCraftingBench(id, data)
             ---@param point CPoint
             local function nearbyBench(point)
                 if not client.hasGroup(data.groups) then return end
-                ---@diagnostic disable-next-line: param-type-mismatch
-                DrawMarker(6, point.coords.x, point.coords.y, point.coords.z - 1, nil, nil, nil, -90, nil, nil, 0.5, 0.5,
-                    0.5, 255, 255, 255, 100)
+                exports.ceeb_markers:draw(point.coords, 93, 236, 255, 50)
 
                 if point.isClosest and point.currentDistance < 1.2 and IsControlJustReleased(0, 38) then
                     client.openInventory('crafting', { id = point.benchid, index = point.index })
