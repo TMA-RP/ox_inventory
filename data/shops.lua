@@ -47,16 +47,55 @@ return {
             onlyInVehicle = false,
         },
         inventory = {
+            {
+                name = 'cv_boisson',
+                price = 20,
+                metadata = { customname = "water", weight = 400, label = "Eau", image = "fooddrink/water" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = {
+                    customname = "applejuice",
+                    weight = 200,
+                    label = "Jus de pommes",
+                    image = "fooddrink/applejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = {
+                    customname = "orange",
+                    weight = 200,
+                    label = "Jus d'orange en brique",
+                    image = "fooddrink/orangejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 25,
+                metadata = { customname = "notacola", weight = 230, label = "Caca Cola", image = "fooddrink/notacola" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 35,
+                metadata = {
+                    customname = "beercan",
+                    weight = 400,
+                    label = "Bière en canette",
+                    image = "fooddrink/beercan"
+                }
+            },
             { name = 'cigar',          price = 90 },
             { name = 'cigarbox',       price = 300 },
-            { name = 'cigarettebox',   price = 20 },
-            { name = 'lighter',        price = 2 },
-            { name = 'pochon',         price = 3 },
+            { name = 'cigarettebox',   price = 35 },
+            { name = 'lighter',        price = 10 },
+            { name = 'pochon',         price = 5 },
             { name = 'parachute',      price = 1500 },
-            { name = 'screwdriver',    price = 5 },
-            { name = 'jumelles',       price = 60 },
-            { name = 'ocb_paper',      price = 1 },
-            { name = 'cv_boisson',     price = 7 },
+            { name = 'screwdriver',    price = 10 },
+            { name = 'jumelles',       price = 100 },
+            { name = 'ocb_paper',      price = 5 },
             { name = 'weapon_crowbar', price = 75 },
             { name = 'fishingrod',     price = 60 },
 
@@ -201,7 +240,7 @@ return {
             {
                 name = 'cv_boisson',
                 price = 0,
-                metadata = { customname = "sake", weight = 600, label = "Saké", image = "fooddrink/sake" }
+                metadata = { customname = "sake", weight = -40, label = "Saké", image = "fooddrink/sake" }
             },
             {
                 name = 'cv_boisson',
@@ -338,27 +377,27 @@ return {
         inventory = {
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 10,
                 metadata = { customname = "water", weight = 400, label = "Eau", image = "fooddrink/water" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "vodka", weight = 600, label = "Vodka", image = "fooddrink/absolut" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "wine", weight = 750, label = "Vin rouge", image = "fooddrink/wine" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "baileys", weight = 600, label = "Baileys", image = "fooddrink/baileys" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = {
                     customname = "becherovka",
                     weight = 600,
@@ -368,82 +407,82 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "beefeater", weight = 600, label = "Beefeater", image = "fooddrink/beefeater" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "chivas", weight = 600, label = "Chivas", image = "fooddrink/chivas" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "cointreau", weight = 600, label = "Cointreau", image = "fooddrink/cointreau" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "curacao", weight = 600, label = "Curacao", image = "fooddrink/curacao" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "havana", weight = 600, label = "Havana", image = "fooddrink/havana" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "jack", weight = 600, label = "Jacky Michel", image = "fooddrink/jack" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "jager", weight = 900, label = "Jager", image = "fooddrink/jager" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "jameson", weight = 600, label = "Jameson", image = "fooddrink/jameson" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "kahlua", weight = 600, label = "Kahlua", image = "fooddrink/kahlua" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "limoncino", weight = 600, label = "Limoncino", image = "fooddrink/limoncino" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "malibu", weight = 600, label = "Malibu", image = "fooddrink/malibu" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "olmeca", weight = 600, label = "Olmeca", image = "fooddrink/olmeca" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "pernod", weight = 600, label = "Pernod", image = "fooddrink/pernod" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "sambuka", weight = 600, label = "Sambuka", image = "fooddrink/sambuka" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
-                metadata = { customname = "sake", weight = 600, label = "Saké", image = "fooddrink/sake" }
+                price = 5,
+                metadata = { customname = "sake", weight = -40, label = "Saké", image = "fooddrink/sake" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 15,
                 metadata = {
                     customname = "applejuice",
                     weight = 200,
@@ -453,12 +492,12 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 35,
                 metadata = { customname = "beer", weight = 150, label = "Bière en bouteille", image = "fooddrink/beer" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 30,
                 metadata = {
                     customname = "beercan",
                     weight = 400,
@@ -468,7 +507,7 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 30,
                 metadata = {
                     customname = "blackberryjuice",
                     weight = 200,
@@ -478,12 +517,12 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 25,
                 metadata = { customname = "coffe", weight = 370, label = "Café", image = "fooddrink/caffe" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 25,
                 metadata = {
                     customname = "coffemilkshake",
                     weight = 300,
@@ -493,12 +532,12 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 20,
                 metadata = { customname = "lemonade", weight = 300, label = "Limonade", image = "fooddrink/lemonade" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 15,
                 metadata = {
                     customname = "mangojuice",
                     weight = 200,
@@ -508,17 +547,17 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 40,
                 metadata = { customname = "mate", weight = 220, label = "mate", image = "fooddrink/mate" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 15,
                 metadata = { customname = "milk", weight = 600, label = "Lait", image = "fooddrink/milk" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 15,
                 metadata = {
                     customname = "monster",
                     weight = 400,
@@ -528,12 +567,12 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 15,
                 metadata = { customname = "notacola", weight = 230, label = "Caca Cola", image = "fooddrink/notacola" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 20,
                 metadata = {
                     customname = "orange2",
                     weight = 300,
@@ -543,7 +582,7 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 15,
                 metadata = {
                     customname = "orange",
                     weight = 200,
@@ -553,12 +592,12 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 15,
                 metadata = { customname = "pipsi", weight = 230, label = "Pipipsi", image = "fooddrink/pipsi" }
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 15,
                 metadata = { customname = "spite", weight = 230, label = "Spite", image = "fooddrink/spite" }
             },
         },
@@ -568,280 +607,280 @@ return {
         inventory = {
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "D", imageurl = "https://api.ceeb.studio/image/parts/axles/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "C", imageurl = "https://api.ceeb.studio/image/parts/axles/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "B", imageurl = "https://api.ceeb.studio/image/parts/axles/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "A", imageurl = "https://api.ceeb.studio/image/parts/axles/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "S", imageurl = "https://api.ceeb.studio/image/parts/axles/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "X", imageurl = "https://api.ceeb.studio/image/parts/axles/X" },
             },
 
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "D", imageurl = "https://api.ceeb.studio/image/parts/clutch/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "C", imageurl = "https://api.ceeb.studio/image/parts/clutch/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "B", imageurl = "https://api.ceeb.studio/image/parts/clutch/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "A", imageurl = "https://api.ceeb.studio/image/parts/clutch/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "S", imageurl = "https://api.ceeb.studio/image/parts/clutch/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "X", imageurl = "https://api.ceeb.studio/image/parts/clutch/X" },
             },
 
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "D", imageurl = "https://api.ceeb.studio/image/parts/radiator/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "C", imageurl = "https://api.ceeb.studio/image/parts/radiator/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "B", imageurl = "https://api.ceeb.studio/image/parts/radiator/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "A", imageurl = "https://api.ceeb.studio/image/parts/radiator/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "S", imageurl = "https://api.ceeb.studio/image/parts/radiator/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "X", imageurl = "https://api.ceeb.studio/image/parts/radiator/X" },
             },
 
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "D", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "C", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "B", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "A", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "S", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "X", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/X" },
             },
 
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "tires", weight = 2500, label = "Roues", class = "D", imageurl = "https://api.ceeb.studio/image/parts/tires/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "tires", weight = 2500, label = "Roues", class = "C", imageurl = "https://api.ceeb.studio/image/parts/tires/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "tires", weight = 2500, label = "Roues", class = "B", imageurl = "https://api.ceeb.studio/image/parts/tires/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "tires", weight = 2500, label = "Roues", class = "A", imageurl = "https://api.ceeb.studio/image/parts/tires/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "tires", weight = 2500, label = "Roues", class = "S", imageurl = "https://api.ceeb.studio/image/parts/tires/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "tires", weight = 2500, label = "Roues", class = "X", imageurl = "https://api.ceeb.studio/image/parts/tires/X" },
             },
 
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "D", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "C", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "B", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "A", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "S", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "X", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/X" },
             },
 
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "D", imageurl = "https://api.ceeb.studio/image/parts/transmission/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "C", imageurl = "https://api.ceeb.studio/image/parts/transmission/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "B", imageurl = "https://api.ceeb.studio/image/parts/transmission/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "A", imageurl = "https://api.ceeb.studio/image/parts/transmission/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "S", imageurl = "https://api.ceeb.studio/image/parts/transmission/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "X", imageurl = "https://api.ceeb.studio/image/parts/transmission/X" },
             },
 
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "D", imageurl = "https://api.ceeb.studio/image/parts/injectors/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "C", imageurl = "https://api.ceeb.studio/image/parts/injectors/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "B", imageurl = "https://api.ceeb.studio/image/parts/injectors/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "A", imageurl = "https://api.ceeb.studio/image/parts/injectors/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "S", imageurl = "https://api.ceeb.studio/image/parts/injectors/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "X", imageurl = "https://api.ceeb.studio/image/parts/injectors/X" },
             },
 
             {
                 name = 'detached_part',
-                price = 0,
+                price = 50,
                 metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "D", imageurl = "https://api.ceeb.studio/image/parts/suspensions/D" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 100,
                 metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "C", imageurl = "https://api.ceeb.studio/image/parts/suspensions/C" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 200,
                 metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "B", imageurl = "https://api.ceeb.studio/image/parts/suspensions/B" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 300,
                 metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "A", imageurl = "https://api.ceeb.studio/image/parts/suspensions/A" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 400,
                 metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "S", imageurl = "https://api.ceeb.studio/image/parts/suspensions/S" },
             },
             {
                 name = 'detached_part',
-                price = 0,
+                price = 500,
                 metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "X", imageurl = "https://api.ceeb.studio/image/parts/suspensions/X" },
             },
         },
@@ -852,6 +891,10 @@ return {
 
     Koi = {
         name = 'Réserve',
+        groups = {
+            ['koi'] = 0,
+
+        },
 
         inventory = {
             { name = 'poissons_crus',    price = 0 },
@@ -895,6 +938,67 @@ return {
                 price = 0,
                 metadata = { customname = "water", weight = 400, label = "Eau", image = "fooddrink/water" }
             },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "lemonade", weight = 300, label = "Limonade", image = "fooddrink/lemonade" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "notacola", weight = 230, label = "Caca Cola", image = "fooddrink/notacola" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "pipsi", weight = 230, label = "Pipipsi", image = "fooddrink/pipsi" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "spite", weight = 230, label = "Spite", image = "fooddrink/spite" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "orange2",
+                    weight = 300,
+                    label = "Jus d'orange pulpeux",
+                    image = "fooddrink/orangejuice2"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "wine", weight = 750, label = "Vin rouge", image = "fooddrink/wine" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "sake", weight = -40, label = "Saké", image = "fooddrink/sake" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "applejuice",
+                    weight = 200,
+                    label = "Jus de pommes",
+                    image = "fooddrink/applejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "beer", weight = 150, label = "Bière en bouteille", image = "fooddrink/beer" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "coffe", weight = 370, label = "Café", image = "fooddrink/caffe" }
+            },
+
 
 
 
@@ -906,6 +1010,10 @@ return {
     },
     Pearls = {
         name = 'Réserve',
+        groups = {
+            ['pearls'] = 0,
+
+        },
 
         inventory = {
             { name = 'poissons_crus',               price = 0 },
@@ -943,6 +1051,71 @@ return {
             { name = 'fecule_mais',                 price = 0 },
             { name = 'gelatine',                    price = 0 },
             { name = 'chocolat',                    price = 0 },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "water", weight = 400, label = "Eau", image = "fooddrink/water" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "lemonade", weight = 300, label = "Limonade", image = "fooddrink/lemonade" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "notacola", weight = 230, label = "Caca Cola", image = "fooddrink/notacola" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "pipsi", weight = 230, label = "Pipipsi", image = "fooddrink/pipsi" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "spite", weight = 230, label = "Spite", image = "fooddrink/spite" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "orange2",
+                    weight = 300,
+                    label = "Jus d'orange pulpeux",
+                    image = "fooddrink/orangejuice2"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "wine", weight = 750, label = "Vin rouge", image = "fooddrink/wine" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "chivas", weight = 600, label = "Chivas", image = "fooddrink/chivas" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "applejuice",
+                    weight = 200,
+                    label = "Jus de pommes",
+                    image = "fooddrink/applejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "beer", weight = 150, label = "Bière en bouteille", image = "fooddrink/beer" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "coffe", weight = 370, label = "Café", image = "fooddrink/caffe" }
+            },
 
 
 
@@ -955,6 +1128,10 @@ return {
 
     pizza = {
         name = 'Réserve',
+        groups = {
+            ['pizza'] = 0,
+
+        },
 
         inventory = {
             { name = 'pain_baguette',       price = 0 },
@@ -991,6 +1168,71 @@ return {
             { name = 'pistaches',           price = 0 },
             { name = 'chantilly',           price = 0 },
             { name = 'creme_glacee',        price = 0 },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "water", weight = 400, label = "Eau", image = "fooddrink/water" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "lemonade", weight = 300, label = "Limonade", image = "fooddrink/lemonade" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "notacola", weight = 230, label = "Caca Cola", image = "fooddrink/notacola" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "pipsi", weight = 230, label = "Pipipsi", image = "fooddrink/pipsi" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "spite", weight = 230, label = "Spite", image = "fooddrink/spite" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "orange2",
+                    weight = 300,
+                    label = "Jus d'orange pulpeux",
+                    image = "fooddrink/orangejuice2"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "wine", weight = 750, label = "Vin rouge", image = "fooddrink/wine" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "limoncino", weight = 600, label = "Limoncino", image = "fooddrink/limoncino" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = {
+                    customname = "applejuice",
+                    weight = 200,
+                    label = "Jus de pommes",
+                    image = "fooddrink/applejuice"
+                }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "beer", weight = 150, label = "Bière en bouteille", image = "fooddrink/beer" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 0,
+                metadata = { customname = "coffe", weight = 370, label = "Café", image = "fooddrink/caffe" }
+            },
 
 
 
@@ -1082,6 +1324,41 @@ return {
                 price = 22,
                 metadata = { customname = "brownie_chocolat", weight = -320, label = "Brownie au chocolat", image = "fooddrink/brownie_chocolat" },
             },
+            {
+                name = 'cv_boisson',
+                price = 10,
+                metadata = { customname = "water", weight = 400, label = "Eau", image = "fooddrink/water" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "lemonade", weight = 300, label = "Limonade", image = "fooddrink/lemonade" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "notacola", weight = 230, label = "Caca Cola", image = "fooddrink/notacola" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "pipsi", weight = 230, label = "Pipipsi", image = "fooddrink/pipsi" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "spite", weight = 230, label = "Spite", image = "fooddrink/spite" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = {
+                    customname = "orange2",
+                    weight = 300,
+                    label = "Jus d'orange pulpeux",
+                    image = "fooddrink/orangejuice2"
+                }
+            },
 
         },
         locations = {
@@ -1168,6 +1445,41 @@ return {
                 name = 'cv_repas',
                 price = 22,
                 metadata = { customname = "churros_sauce_chocolat", weight = -370, label = "Churros Sauce Chocolat", image = "fooddrink/churros_sauce_chocolat" },
+            },
+            {
+                name = 'cv_boisson',
+                price = 10,
+                metadata = { customname = "water", weight = 400, label = "Eau", image = "fooddrink/water" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "lemonade", weight = 300, label = "Limonade", image = "fooddrink/lemonade" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "notacola", weight = 230, label = "Caca Cola", image = "fooddrink/notacola" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "pipsi", weight = 230, label = "Pipipsi", image = "fooddrink/pipsi" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "spite", weight = 230, label = "Spite", image = "fooddrink/spite" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = {
+                    customname = "orange2",
+                    weight = 300,
+                    label = "Jus d'orange pulpeux",
+                    image = "fooddrink/orangejuice2"
+                }
             },
 
         },
@@ -1257,6 +1569,41 @@ return {
                 price = 22,
                 metadata = { customname = "churros_sauce_chocolat", weight = -370, label = "Churros Sauce Chocolat", image = "fooddrink/churros_sauce_chocolat" },
             },
+            {
+                name = 'cv_boisson',
+                price = 10,
+                metadata = { customname = "water", weight = 400, label = "Eau", image = "fooddrink/water" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "lemonade", weight = 300, label = "Limonade", image = "fooddrink/lemonade" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "notacola", weight = 230, label = "Caca Cola", image = "fooddrink/notacola" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "pipsi", weight = 230, label = "Pipipsi", image = "fooddrink/pipsi" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = { customname = "spite", weight = 230, label = "Spite", image = "fooddrink/spite" }
+            },
+            {
+                name = 'cv_boisson',
+                price = 15,
+                metadata = {
+                    customname = "orange2",
+                    weight = 300,
+                    label = "Jus d'orange pulpeux",
+                    image = "fooddrink/orangejuice2"
+                }
+            },
 
         },
         locations = {
@@ -1273,42 +1620,42 @@ return {
             {
                 name = 'cv_boisson',
                 price = 18,
-                metadata = { customname = "cafe_lait_chat_noir", weight = 900, label = "Café au lait Chat Noir", image = "fooddrink/cafe_lait_chat_noir" },
+                metadata = { customname = "cafe_lait_chat_noir", weight = 300, label = "Café au lait Chat Noir", image = "fooddrink/cafe_lait_chat_noir" },
             },
             {
                 name = 'cv_boisson',
                 price = 18,
-                metadata = { customname = "cappuccino_griffe_chat", weight = 900, label = "Cappuccino Griffe Chat", image = "fooddrink/cappuccino_griffe_chat" },
+                metadata = { customname = "cappuccino_griffe_chat", weight = 300, label = "Cappuccino Griffe Chat", image = "fooddrink/cappuccino_griffe_chat" },
             },
             {
                 name = 'cv_boisson',
                 price = 18,
-                metadata = { customname = "latte_macchiato_miaou", weight = 900, label = "Latte Macchiato Miaou", image = "fooddrink/latte_macchiato_miaou" },
+                metadata = { customname = "latte_macchiato_miaou", weight = 300, label = "Latte Macchiato Miaou", image = "fooddrink/latte_macchiato_miaou" },
             },
             {
                 name = 'cv_boisson',
                 price = 18,
-                metadata = { customname = "chai_tea_latte_chaton_calin", weight = 900, label = "Chai Tea Latte Chaton Câlin", image = "fooddrink/chai_tea_latte_chaton_calin" },
+                metadata = { customname = "chai_tea_latte_chaton_calin", weight = 300, label = "Chai Tea Latte Chaton Câlin", image = "fooddrink/chai_tea_latte_chaton_calin" },
             },
             {
                 name = 'cv_repas',
                 price = 20,
-                metadata = { customname = "muffin_ronron", weight = 900, label = "Muffin Ronron", image = "fooddrink/muffin_ronron" },
+                metadata = { customname = "muffin_ronron", weight = -350, label = "Muffin Ronron", image = "fooddrink/muffin_ronron" },
             },
             {
                 name = 'cv_repas',
                 price = 20,
-                metadata = { customname = "tartelette_griffe_velours", weight = 900, label = "Tartelette Griffe Velours", image = "fooddrink/tartelette_griffe_velours" },
+                metadata = { customname = "tartelette_griffe_velours", weight = -350, label = "Tartelette Griffe Velours", image = "fooddrink/tartelette_griffe_velours" },
             },
             {
                 name = 'cv_repas',
                 price = 20,
-                metadata = { customname = "eclair_moustache_chat", weight = 900, label = "Eclair Moustache Chat", image = "fooddrink/eclair_moustache_chat" },
+                metadata = { customname = "eclair_moustache_chat", weight = -350, label = "Eclair Moustache Chat", image = "fooddrink/eclair_moustache_chat" },
             },
             {
                 name = 'cv_repas',
                 price = 20,
-                metadata = { customname = "cookie_patte_chat", weight = 900, label = "Cookie Patte Chat", image = "fooddrink/cookie_patte_chat" },
+                metadata = { customname = "cookie_patte_chat", weight = -350, label = "Cookie Patte Chat", image = "fooddrink/cookie_patte_chat" },
             },
         },
         locations = {
