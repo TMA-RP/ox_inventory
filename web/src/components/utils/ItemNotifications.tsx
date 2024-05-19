@@ -30,21 +30,11 @@ const ItemNotification = React.forwardRef(
 
     return (
       <div
-        className="item-notification-item-box"
-        style={{
-          backgroundImage: `url(${getItemUrl(slotItem) || 'none'}`,
-          ...props.style,
-        }}
+        className="item-notification"
         ref={ref}
       >
-        <div className="item-slot-wrapper">
-          <div className="item-notification-action-box">
-            <p>{props.item.text}</p>
-          </div>
-          <div className="inventory-slot-label-box">
-            <div className="inventory-slot-label-text">{slotItem.metadata?.label || Items[slotItem.name]?.label}</div>
-          </div>
-        </div>
+        <img src={getItemUrl(slotItem) || 'none'} />
+        <p>{props.item.text} {slotItem.metadata?.label || Items[slotItem.name]?.label}</p>
       </div>
     );
   }
@@ -70,14 +60,16 @@ export const ItemNotificationsProvider = ({ children }: { children: React.ReactN
   };
 
   useNuiEvent<[item: SlotWithItem, text: string, count?: number]>('itemNotify', ([item, text, count]) => {
-    add({ item: item, text: count ? `${Locale[text]} ${count}x` : `${Locale[text]}` });
+    const plusOrMinus = text === "ui_added" ? "+" : "-";
+    const realCount = count ? count : 1;
+    add({ item: item, text: `${plusOrMinus} ${realCount}` });
   });
 
   return (
     <ItemNotificationsContext.Provider value={{ add }}>
       {children}
       {createPortal(
-        <TransitionGroup className="item-notification-container">
+        <TransitionGroup className="item-notification-container-new">
           {queue.values.map((notification, index) => (
             <Fade key={`item-notification-${index}`}>
               <ItemNotification item={notification.item} ref={notification.ref} />
