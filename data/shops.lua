@@ -884,6 +884,9 @@ return {
                 metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "X", imageurl = "https://api.ceeb.studio/image/parts/suspensions/X" },
             },
         },
+        groups = {
+            ['bennys'] = 0,
+        },
         locations = {
             vec3(-328.6028, -113.3697, 39.0097)
         },

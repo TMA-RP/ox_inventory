@@ -176,6 +176,7 @@ return {
         owner = false,
         slots = 70,
         weight = 70000,
+        groups = { ['koi'] = 0 }
 
     },
     {
@@ -185,7 +186,7 @@ return {
         owner = false,
         slots = 70,
         weight = 70000,
-
+        groups = { ['pearls'] = 0 }
     },
     {
         coords = vec3(806.1974, -764.8182, 26.7808),
@@ -194,7 +195,7 @@ return {
         owner = false,
         slots = 70,
         weight = 70000,
-
+        groups = { ['pizza'] = 0 }
     },
 
 

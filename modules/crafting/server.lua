@@ -19,7 +19,8 @@ local function createCraftingBench(id, data)
 				recipe.weight = item.weight
 				recipe.slot = i
 			else
-				warn(('failed to setup crafting recipe (bench: %s, slot: %s) - item "%s" does not exist'):format(id, i, recipe.name))
+				warn(('failed to setup crafting recipe (bench: %s, slot: %s) - item "%s" does not exist'):format(id, i,
+					recipe.name))
 			end
 
 			for ingredient, needs in pairs(recipe.ingredients) do
@@ -112,7 +113,8 @@ lib.callback.register('ox_inventory:craftItem', function(source, id, index, reci
 			end
 
 			local craftedItem = Items(recipe.name)
-			local craftCount = (type(recipe.count) == 'number' and recipe.count) or (table.type(recipe.count) == 'array' and math.random(recipe.count[1], recipe.count[2])) or 1
+			local craftCount = (type(recipe.count) == 'number' and recipe.count) or
+				(table.type(recipe.count) == 'array' and math.random(recipe.count[1], recipe.count[2])) or 1
 			local newWeight = left.weight + (craftedItem.weight + (recipe.metadata?.weight or 0)) * craftCount
 			---@todo new iterator or something to accept a map
 			local items = Inventory.Search(left, 'slots', tbl) or {}
@@ -147,10 +149,12 @@ lib.callback.register('ox_inventory:craftItem', function(source, id, index, reci
 							end
 						end
 					elseif needs <= slot.count then
-						local itemWeight = slot.weight / slot.count
-						newWeight = (newWeight - slot.weight) + (slot.count - needs) * itemWeight
-						tbl[slot.slot] = needs
-						break
+						if not (slot.metadata and slot.metadata.degrade and slot.metadata.durability < os.time()) then
+							local itemWeight = slot.weight / slot.count
+							newWeight = (newWeight - slot.weight) + (slot.count - needs) * itemWeight
+							tbl[slot.slot] = needs
+							break
+						end
 					else
 						tbl[slot.slot] = slot.count
 						newWeight -= slot.weight
@@ -159,7 +163,11 @@ lib.callback.register('ox_inventory:craftItem', function(source, id, index, reci
 
 					if needs == 0 then break end
 					-- Player does not have enough items (ui should prevent crafting if lacking items, so this shouldn't trigger)
-					if needs > 0 and i == #slots then return end
+					if needs > 0 and i == #slots then
+						lib.notify(source,
+							{ description = "Certains ingredients sont périmés ou manquants", type = "error" })
+						return
+					end
 				end
 			end
 
@@ -168,13 +176,15 @@ lib.callback.register('ox_inventory:craftItem', function(source, id, index, reci
 			end
 
 			if not TriggerEventHooks('craftItem', {
-				source = source,
-				benchId = id,
-				benchIndex = index,
-				recipe = recipe,
-				toInventory = left.id,
-				toSlot = toSlot,
-			}) then return false end
+					source = source,
+					benchId = id,
+					benchIndex = index,
+					recipe = recipe,
+					toInventory = left.id,
+					toSlot = toSlot,
+				}) then
+				return false
+			end
 
 			local success = lib.callback.await('ox_inventory:startCrafting', source, id, recipeId)
 
@@ -203,16 +213,17 @@ lib.callback.register('ox_inventory:craftItem', function(source, id, index, reci
 							local emptySlot = Inventory.GetEmptySlot(left)
 
 							if emptySlot then
-								local newItem = Inventory.SetSlot(left, item, 1, table.deepclone(invSlot.metadata), emptySlot)
+								local newItem = Inventory.SetSlot(left, item, 1, table.deepclone(invSlot.metadata),
+									emptySlot)
 
 								if newItem then
-                                    Items.UpdateDurability(left, newItem, item, durability < 0 and 0 or durability)
+									Items.UpdateDurability(left, newItem, item, durability < 0 and 0 or durability)
 								end
 							end
 
 							invSlot.count -= 1
 						else
-                            Items.UpdateDurability(left, invSlot, item, durability < 0 and 0 or durability)
+							Items.UpdateDurability(left, invSlot, item, durability < 0 and 0 or durability)
 						end
 					else
 						local removed = invSlot and Inventory.RemoveItem(left, invSlot.name, count, nil, slot)
@@ -221,7 +232,8 @@ lib.callback.register('ox_inventory:craftItem', function(source, id, index, reci
 					end
 				end
 
-				Inventory.AddItem(left, craftedItem, craftCount, recipe.metadata or {}, craftedItem.stack and toSlot or nil)
+				Inventory.AddItem(left, craftedItem, craftCount, recipe.metadata or {},
+					craftedItem.stack and toSlot or nil)
 			end
 
 			return success

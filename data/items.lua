@@ -215,6 +215,7 @@ return {
     },
     ['cv_repas'] = {
         label = 'Repas',
+        degrade = 4 * 60,
         canUse = true,
         weight = 500,
         stack = true,
@@ -399,84 +400,98 @@ return {
     },
     ['truite_f'] = {
         label = "Truite",
+        degrade = 4 * 60,
         canUse = false,
         weight = 200,
         stack = true,
     },
     ['saumon_f'] = {
         label = "Saumon",
+        degrade = 4 * 60,
         canUse = false,
         weight = 300,
         stack = true,
     },
     ['dorade_f'] = {
         label = "Dorade",
+        degrade = 4 * 60,
         canUse = false,
         weight = 110,
         stack = true,
     },
     ['thon_f'] = {
         label = "Thon",
+        degrade = 4 * 60,
         canUse = false,
         weight = 510,
         stack = true,
     },
     ['merlu_f'] = {
         label = "Merlu",
+        degrade = 4 * 60,
         canUse = false,
         weight = 190,
         stack = true,
     },
     ['maquereau_f'] = {
         label = "Maquereau",
+        degrade = 4 * 60,
         canUse = false,
         weight = 100,
         stack = true,
     },
     ['bar_f'] = {
         label = "Bar",
+        degrade = 4 * 60,
         canUse = false,
         weight = 85,
         stack = true,
     },
     ['carpe_f'] = {
         label = "Bar",
+        degrade = 4 * 60,
         canUse = false,
         weight = 140,
         stack = true,
     },
     ['brochet_f'] = {
         label = "Bar",
+        degrade = 4 * 60,
         canUse = false,
         weight = 270,
         stack = true,
     },
     ['sandre_f'] = {
         label = "Sandre",
+        degrade = 4 * 60,
         canUse = false,
         weight = 95,
         stack = true,
     },
     ['perche_f'] = {
         label = "Perche",
+        degrade = 4 * 60,
         canUse = false,
         weight = 230,
         stack = true,
     },
     ['flétan_f'] = {
         label = "Flétan",
+        degrade = 4 * 60,
         canUse = false,
         weight = 175,
         stack = true,
     },
     ['cabillaud_f'] = {
         label = "Cabillaud",
+        degrade = 4 * 60,
         canUse = false,
         weight = 120,
         stack = true,
     },
     ['sole_f'] = {
         label = "Sole",
+        degrade = 4 * 60,
         canUse = false,
         weight = 200,
         stack = true,
@@ -509,6 +524,7 @@ return {
 
     ['ails'] = {
         label = "Ails",
+        degrade = 4 * 60,
         canUse = false,
         weight = 10,
         stack = true,
@@ -516,6 +532,7 @@ return {
 
     ['algues'] = {
         label = "Algues",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -523,6 +540,7 @@ return {
 
     ['baguette'] = {
         label = "Baguette",
+        degrade = 4 * 60,
         canUse = false,
         weight = 90,
         stack = true,
@@ -530,6 +548,7 @@ return {
 
     ['beurre'] = {
         label = "Beurre",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -537,6 +556,7 @@ return {
 
     ['biscuits'] = {
         label = "Biscuits",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -544,6 +564,7 @@ return {
 
     ['bouillon_legumes'] = {
         label = "Bouillon de légumes",
+        degrade = 4 * 60,
         canUse = false,
         weight = 60,
         stack = true,
@@ -551,12 +572,14 @@ return {
 
     ['bouillon_poisson'] = {
         label = "Bouillon de poisson",
+        degrade = 4 * 60,
         canUse = false,
         weight = 60,
         stack = true,
     },
     ['cacao_poudre'] = {
         label = "Cacao en poudre",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -564,6 +587,7 @@ return {
 
     ['cafe_fort'] = {
         label = "Café fort",
+        degrade = 4 * 60,
         canUse = false,
         weight = 20,
         stack = true,
@@ -571,6 +595,7 @@ return {
 
     ['chantilly'] = {
         label = "Chantilly",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -578,6 +603,7 @@ return {
 
     ['chapelure'] = {
         label = "Chapelure",
+        degrade = 4 * 60,
         canUse = false,
         weight = 25,
         stack = true,
@@ -585,6 +611,7 @@ return {
 
     ['chocolat'] = {
         label = "Chocolat",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -592,6 +619,7 @@ return {
 
     ['chou_chinois'] = {
         label = "Chou chinois",
+        degrade = 4 * 60,
         canUse = false,
         weight = 70,
         stack = true,
@@ -599,6 +627,7 @@ return {
 
     ['citron'] = {
         label = "Citron",
+        degrade = 4 * 60,
         canUse = false,
         weight = 15,
         stack = true,
@@ -613,6 +642,7 @@ return {
 
     ['coquilles_saint_jacques_ing'] = {
         label = "Coquilles Saint-Jacques",
+        degrade = 4 * 60,
         canUse = false,
         weight = 80,
         stack = true,
@@ -620,6 +650,7 @@ return {
 
     ['crabe'] = {
         label = "Crabe",
+        degrade = 4 * 60,
         canUse = false,
         weight = 70,
         stack = true,
@@ -627,6 +658,7 @@ return {
 
     ['creme_fraiche'] = {
         label = "Crème fraiche",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -634,6 +666,7 @@ return {
 
     ['creme_glacee'] = {
         label = "Crème glacée",
+        degrade = 4 * 60,
         canUse = false,
         weight = 90,
         stack = true,
@@ -641,6 +674,7 @@ return {
 
     ['creme_liquide'] = {
         label = "Crème liquide",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -648,12 +682,14 @@ return {
 
     ['crevettes'] = {
         label = "Crevettes",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
     },
     ['echalotes'] = {
         label = "Échalotes",
+        degrade = 4 * 60,
         canUse = false,
         weight = 15,
         stack = true,
@@ -661,6 +697,7 @@ return {
 
     ['farine'] = {
         label = "Farine",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -668,6 +705,7 @@ return {
 
     ['farine_riz'] = {
         label = "Farine de riz",
+        degrade = 4 * 60,
         canUse = false,
         weight = 35,
         stack = true,
@@ -675,6 +713,7 @@ return {
 
     ['fecule_mais'] = {
         label = "Fécule de maïs",
+        degrade = 4 * 60,
         canUse = false,
         weight = 25,
         stack = true,
@@ -682,6 +721,7 @@ return {
 
     ['filet_saumon'] = {
         label = "Filet de saumon",
+        degrade = 4 * 60,
         canUse = false,
         weight = 70,
         stack = true,
@@ -689,6 +729,7 @@ return {
 
     ['fontina'] = {
         label = "Fontina",
+        degrade = 4 * 60,
         canUse = false,
         weight = 60,
         stack = true,
@@ -696,6 +737,7 @@ return {
 
     ['fromages'] = {
         label = "Fromages",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -703,6 +745,7 @@ return {
 
     ['fruits'] = {
         label = "Fruits",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -710,6 +753,7 @@ return {
 
     ['fruits_mer'] = {
         label = "Fruits de mer",
+        degrade = 4 * 60,
         canUse = false,
         weight = 80,
         stack = true,
@@ -717,6 +761,7 @@ return {
 
     ['fruits_rouges'] = {
         label = "Fruits rouges",
+        degrade = 4 * 60,
         canUse = false,
         weight = 35,
         stack = true,
@@ -724,6 +769,7 @@ return {
 
     ['galettes_riz'] = {
         label = "Galettes de riz",
+        degrade = 4 * 60,
         canUse = false,
         weight = 20,
         stack = true,
@@ -731,6 +777,7 @@ return {
 
     ['gelatine'] = {
         label = "Gélatine",
+        degrade = 4 * 60,
         canUse = false,
         weight = 25,
         stack = true,
@@ -738,6 +785,7 @@ return {
 
     ['gelee_sucre'] = {
         label = "Gelée sucrée",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -745,6 +793,7 @@ return {
 
     ['gingembre'] = {
         label = "Gingembre",
+        degrade = 4 * 60,
         canUse = false,
         weight = 15,
         stack = true,
@@ -752,6 +801,7 @@ return {
 
     ['graines_sesame'] = {
         label = "Graines de sésame",
+        degrade = 4 * 60,
         canUse = false,
         weight = 20,
         stack = true,
@@ -759,6 +809,7 @@ return {
 
     ['gorgonzola'] = {
         label = "Gorgonzola",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -766,12 +817,14 @@ return {
 
     ['haricots'] = {
         label = "Haricots",
+        degrade = 4 * 60,
         canUse = false,
         weight = 25,
         stack = true,
     },
     ['herbes_aromatiques'] = {
         label = "Herbes aromatiques",
+        degrade = 4 * 60,
         canUse = false,
         weight = 15,
         stack = true,
@@ -779,6 +832,7 @@ return {
 
     ['homard'] = {
         label = "Homard",
+        degrade = 4 * 60,
         canUse = false,
         weight = 90,
         stack = true,
@@ -786,6 +840,7 @@ return {
 
     ['huile_olive'] = {
         label = "Huile d'olive",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -793,6 +848,7 @@ return {
 
     ['huile_vegetale'] = {
         label = "Huile végétale",
+        degrade = 4 * 60,
         canUse = false,
         weight = 35,
         stack = true,
@@ -800,6 +856,7 @@ return {
 
     ['legumes'] = {
         label = "Légumes",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -807,6 +864,7 @@ return {
 
     ['mascarpone'] = {
         label = "Mascarpone",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -821,6 +879,7 @@ return {
 
     ['mozzarella'] = {
         label = "Mozzarella",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -828,6 +887,7 @@ return {
 
     ['nouilles_ramen'] = {
         label = "Nouilles ramen",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -835,6 +895,7 @@ return {
 
     ['oeufs'] = {
         label = "Œufs",
+        degrade = 4 * 60,
         canUse = false,
         weight = 20,
         stack = true,
@@ -842,6 +903,7 @@ return {
 
     ['oignons'] = {
         label = "Oignons",
+        degrade = 4 * 60,
         canUse = false,
         weight = 15,
         stack = true,
@@ -849,6 +911,7 @@ return {
 
     ['pain_baguette'] = {
         label = "Pain baguette",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -856,6 +919,7 @@ return {
 
     ['paprika'] = {
         label = "Paprika",
+        degrade = 4 * 60,
         canUse = false,
         weight = 10,
         stack = true,
@@ -863,6 +927,7 @@ return {
 
     ['parmesan'] = {
         label = "Parmesan",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -870,6 +935,7 @@ return {
 
     ['pate_pizza'] = {
         label = "Pâte à pizza",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -877,6 +943,7 @@ return {
 
     ['pate_brisee'] = {
         label = "Pâte brisée/feuilletée",
+        degrade = 4 * 60,
         canUse = false,
         weight = 60,
         stack = true,
@@ -884,6 +951,7 @@ return {
 
     ['pate_miso'] = {
         label = "Pâte de miso",
+        degrade = 4 * 60,
         canUse = false,
         weight = 25,
         stack = true,
@@ -891,6 +959,7 @@ return {
 
     ['pepites_chocolat'] = {
         label = "Pépites de chocolat",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -898,12 +967,14 @@ return {
 
     ['pepperoni'] = {
         label = "Pepperoni",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
     },
     ['piments_forts'] = {
         label = "Piments forts",
+        degrade = 4 * 60,
         canUse = false,
         weight = 10,
         stack = true,
@@ -911,6 +982,7 @@ return {
 
     ['pistaches'] = {
         label = "Pistaches",
+        degrade = 4 * 60,
         canUse = false,
         weight = 25,
         stack = true,
@@ -918,6 +990,7 @@ return {
 
     ['poissons_crus'] = {
         label = "Poissons crus",
+        degrade = 4 * 60,
         canUse = false,
         weight = 60,
         stack = true,
@@ -925,6 +998,7 @@ return {
 
     ['poudre_matcha'] = {
         label = "Poudre de matcha",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -932,6 +1006,7 @@ return {
 
     ['poulet'] = {
         label = "Poulet",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -939,6 +1014,7 @@ return {
 
     ['ricotta'] = {
         label = "Ricotta",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -946,6 +1022,7 @@ return {
 
     ['riz'] = {
         label = "Riz",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -953,6 +1030,7 @@ return {
 
     ['sauce_nuoc_mam'] = {
         label = "Sauce nuoc-mâm",
+        degrade = 4 * 60,
         canUse = false,
         weight = 35,
         stack = true,
@@ -960,6 +1038,7 @@ return {
 
     ['sauce_soja'] = {
         label = "Sauce soja",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -967,6 +1046,7 @@ return {
 
     ['sauce_teriyaki'] = {
         label = "Sauce teriyaki",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -974,6 +1054,7 @@ return {
 
     ['sauce_tomate'] = {
         label = "Sauce tomate",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -981,6 +1062,7 @@ return {
 
     ['sauce_yakisoba'] = {
         label = "Sauce yakisoba",
+        degrade = 4 * 60,
         canUse = false,
         weight = 35,
         stack = true,
@@ -995,6 +1077,7 @@ return {
 
     ['sirop_sucre'] = {
         label = "Sirop sucré",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -1016,6 +1099,7 @@ return {
 
     ['tofu'] = {
         label = "Tofu",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -1023,6 +1107,7 @@ return {
 
     ['vanille'] = {
         label = "Vanille",
+        degrade = 4 * 60,
         canUse = false,
         weight = 15,
         stack = true,
@@ -1030,6 +1115,7 @@ return {
 
     ['viandes'] = {
         label = "Viandes",
+        degrade = 4 * 60,
         canUse = false,
         weight = 50,
         stack = true,
@@ -1037,6 +1123,7 @@ return {
 
     ['viandes_hachees'] = {
         label = "Viandes hachées",
+        degrade = 4 * 60,
         canUse = false,
         weight = 40,
         stack = true,
@@ -1044,6 +1131,7 @@ return {
 
     ['vin_blanc'] = {
         label = "Vin blanc",
+        degrade = 4 * 60,
         canUse = false,
         weight = 30,
         stack = true,
@@ -1051,6 +1139,7 @@ return {
 
     ['vinaigre_balsamique'] = {
         label = "Vinaigre balsamique",
+        degrade = 4 * 60,
         canUse = false,
         weight = 35,
         stack = true,

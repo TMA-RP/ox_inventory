@@ -168,7 +168,9 @@ local function canAffordItem(inv, currency, price)
 end
 
 local function removeCurrency(inv, currency, price)
-    exports.ceeb_globals:removeAccountMoney(inv.id, currency, price, "Magasins")
+    if price == 0 then return end
+    exports.ceeb_globals:removeAccountMoney(inv.id, currency, price,
+        currency == "society" and "Fournisseurs" or "Magasins")
 end
 
 local TriggerEventHooks = require 'modules.hooks.server'
@@ -243,6 +245,7 @@ lib.callback.register('ox_inventory:buyItem', function(source, data)
                     return false, false, { type = 'error', description = locale('cannot_carry') }
                 end
 
+                currency = shop.groups and "society" or currency
                 local moneyOnAccount = exports.ceeb_globals:getAccountMoney(source, currency)
 
                 local canAfford = price >= 0 and moneyOnAccount >= price
