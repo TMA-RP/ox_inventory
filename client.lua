@@ -1148,6 +1148,7 @@ local function setStateBagHandler(stateId)
 
     AddStateBagChangeHandler('invBusy', stateId, function(_, _, value)
         invBusy = value
+        exports["lb-phone"]:ToggleDisabled(value)
     end)
 
     AddStateBagChangeHandler('canUseWeapons', stateId, function(_, _, value)
@@ -1935,8 +1936,4 @@ lib.callback.register('ox_inventory:getVehicleData', function(netid)
     if entity then
         return GetEntityModel(entity), GetVehicleClass(entity)
     end
-end)
-
-AddStateBagChangeHandler('invBusy', nil, function(_, _, value)
-    exports["lb-phone"]:ToggleDisabled(value)
 end)
