@@ -197,6 +197,33 @@ return {
         weight = 70000,
         groups = { ['pizza'] = 0 }
     },
+    {
+        coords = vec3(-317.3918, -152.8889, 39.0098),
+        name = 'bennysstockage',
+        label = 'Stock',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['bennys'] = 0 }
+    },
+    {
+        coords = vec3(-313.0842, -141.8927, 39.0097),
+        name = 'bennysstockage',
+        label = 'Stock',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['bennys'] = 0 }
+    },
+    {
+        coords = vec3(-309.6478, -131.3248, 39.0097),
+        name = 'bennysstockage',
+        label = 'Stock',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['bennys'] = 0 }
+    },
 
 
 }
