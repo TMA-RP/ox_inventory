@@ -71,7 +71,7 @@ return {
     },
 
     {
-        coords = vec3(-601.4662, -1618.9290, 33.0102),
+        coords = vec3(-593.0764, -1617.6768, 33.0102),
         name = 'garbageworklocker',
         label = 'Rangement équipements',
         owner = false,
@@ -121,7 +121,7 @@ return {
     },
 
     {
-        coords = vec3(894.4803, -171.5737, 74.6826),
+        coords = vec3(905.5283, -149.8375, 74.1430),
         name = 'taxiworklocker',
         label = 'Rangement équipements',
         owner = false,
