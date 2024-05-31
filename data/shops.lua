@@ -5,9 +5,13 @@ return {
             ['police'] = 6,
         },
         inventory = {
-            { name = 'parachute', price = 0 },
-            { name = 'spike',     price = 0 },
-            { name = 'radio',     price = 0 },
+            { name = 'parachute',         price = 0 },
+            { name = 'spike',             price = 0 },
+            { name = 'radio',             price = 0 },
+            { name = 'weapon_flashlight', price = 0 },
+            { name = 'weapon_nightstick', price = 0 },
+            { name = 'WEAPON_STUNGUN_MP', price = 0 },
+            { name = 'weapon_glock17',    price = 0 },
             {
                 name = 'hat',
                 price = 0,

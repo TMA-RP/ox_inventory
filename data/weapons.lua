@@ -226,7 +226,13 @@ return {
         --     durability = 0.03,
         --     ammoname = 'ammo-50'
         -- },
-        ['WEAPON_G17'] = {
+        -- ['WEAPON_G17'] = {
+        --     label = 'Glock 17',
+        --     weight = 625,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-9'
+        -- },
+        ['WEAPON_GLOCK17'] = {
             label = 'Glock 17',
             weight = 625,
             durability = 0.03,
