@@ -250,6 +250,12 @@ return {
         --     durability = 0.01,
         --     ammoname = 'ammo-45'
         -- },
+        ['WEAPON_M45'] = {
+            label = 'M45',
+            weight = 920,
+            durability = 0.01,
+            ammoname = 'ammo-45'
+        },
         -- ['WEAPON_2011'] = {
         --     label = 'STI DVC 2011',
         --     weight = 1110,
