@@ -34,6 +34,10 @@ const InventoryHotbar: React.FC = () => {
                             backgroundImage: `url(${item?.name ? getItemUrl(item as SlotWithItem) : 'none'}`,
                             width: '8vh',
                             height: '8vh',
+                            filter:
+                                item.metadata?.degrade && item.metadata?.durability <= 0
+                                    ? 'brightness(80%) grayscale(100%)'
+                                    : undefined,
                         }}
                         key={`hotbar-${item.slot}`}
                     >

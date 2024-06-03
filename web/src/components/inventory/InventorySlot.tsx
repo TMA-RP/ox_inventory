@@ -130,7 +130,7 @@ const InventorySlot: React.ForwardRefRenderFunction<HTMLDivElement, SlotProps> =
             className={isSlotWithItem(item) ? "inventory-slot occupied" : "inventory-slot"}
             style={{
                 filter:
-                    !canPurchaseItem(item, { type: inventoryType, groups: inventoryGroups }) || !canCraftItem(item, inventoryType)
+                    !canPurchaseItem(item, { type: inventoryType, groups: inventoryGroups }) || !canCraftItem(item, inventoryType) || item.metadata?.degrade && item.metadata?.durability <= 0
                         ? 'brightness(80%) grayscale(100%)'
                         : undefined,
                 opacity: isDragging ? 0.4 : 1.0,
