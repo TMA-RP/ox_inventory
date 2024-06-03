@@ -197,7 +197,12 @@ function client.openInventory(inv, data)
     end
 
     if inv == 'shop' and invOpen == false then
-        if cache.vehicle then
+        local allowedVehicleShops = {
+            "atom",
+            "burger",
+            "hornys",
+        }
+        if cache.vehicle and not table.contains(allowedVehicleShops, data.type) then
             return lib.notify({ id = 'cannot_perform', type = 'error', description = locale('cannot_perform') })
         end
 
