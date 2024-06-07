@@ -108,8 +108,8 @@ return {
             durability = 0.1,
         },
         ['WEAPON_PETROLCAN'] = {
-            label = 'Gas Can',
-            weight = 12000,
+            label = 'Jerrycan',
+            weight = 4000,
         },
         -- ['WEAPON_POOLCUE'] = {
         --     label = 'Pool Cue',
