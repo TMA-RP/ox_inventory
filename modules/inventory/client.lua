@@ -285,14 +285,19 @@ local function openEvidence()
     client.openInventory('policeevidence')
 end
 
----@param point CPoint
-local function nearbyEvidence(point)
-    exports.ceeb_markers:draw(point.coords, 93, 236, 255, 50)
-
-    if point.isClosest and point.currentDistance < 1.2 and IsControlJustReleased(0, 38) then
-        openEvidence()
-    end
-end
+local markerColour = { 30, 30, 150 }
+local textPrompts = {
+    evidence = {
+        options = { icon = 'fa-box-archive' },
+        message = ('**%s**  \n%s'):format(locale('open_police_evidence'),
+            locale('interact_prompt', GetControlInstructionalButton(0, 38, true):sub(3)))
+    },
+    stash = {
+        options = { icon = 'fa-warehouse' },
+        message = ('**%s**  \n%s'):format(locale('open_stash'),
+            locale('interact_prompt', GetControlInstructionalButton(0, 38, true):sub(3)))
+    }
+}
 
 Inventory.Evidence = setmetatable(lib.load('data.evidence'), {
     __call = function(self)
@@ -323,17 +328,15 @@ Inventory.Evidence = setmetatable(lib.load('data.evidence'), {
                         coords = evidence.coords,
                         distance = 16,
                         inv = 'policeevidence',
-                        nearby = nearbyEvidence
+                        marker = markerColour,
+                        prompt = textPrompts.evidence,
+                        nearby = Utils.nearbyMarker
                     })
                 end
             end
         end
     end
 })
-
-local function nearbyStash(self)
-    exports.ceeb_markers:draw(self.coords, 93, 236, 255, 50)
-end
 
 Inventory.Stashes = setmetatable(lib.load('data.stashes'), {
     __call = function(self)
@@ -369,7 +372,9 @@ Inventory.Stashes = setmetatable(lib.load('data.stashes'), {
                         distance = 16,
                         inv = 'stash',
                         invId = stash.name,
-                        nearby = nearbyStash
+                        marker = markerColour,
+                        prompt = textPrompts.stash,
+                        nearby = Utils.nearbyMarker
                     })
                 end
             end

@@ -169,4 +169,34 @@ function Utils.CreateBoxZone(data, options)
     return exports.ox_target:addBoxZone(data)
 end
 
+local hasTextUi
+
+---@param point CPoint
+function Utils.nearbyMarker(point)
+    if point.groups and not client.hasGroup(point.groups) then return end
+    exports.ceeb_markers:draw(point.coords, 93, 236, 255, 50)
+
+    if point.isClosest and point.currentDistance < 1.2 then
+        if not hasTextUi then
+            hasTextUi = point
+            -- lib.showTextUI(point.prompt.message, point.prompt.options)
+        end
+
+        if IsControlJustReleased(0, 38) then
+            CreateThread(function()
+                if point.inv == 'policeevidence' then
+                    client.openInventory('policeevidence')
+                elseif point.inv == 'crafting' then
+                    client.openInventory('crafting', { id = point.benchid, index = point.index })
+                else
+                    client.openInventory(point.inv or 'drop', { id = point.invId, type = point.type })
+                end
+            end)
+        end
+    elseif hasTextUi == point then
+        hasTextUi = nil
+        -- lib.hideTextUI()
+    end
+end
+
 return Utils
