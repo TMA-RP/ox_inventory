@@ -292,7 +292,7 @@ return {
         }
     },
     ['ocb_paper'] = {
-        label = 'Feuille OCB slim',
+        label = 'Feuille BBC slim',
         stack = true,
         weight = 1,
         close = true,
