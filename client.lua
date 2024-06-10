@@ -1717,6 +1717,10 @@ local function giveItemToTarget(serverId, slotId, count)
     TriggerServerEvent('ox_inventory:giveItem', slotId, serverId, count or 0)
 end
 
+RegisterNetEvent("ox_inventory:receiveItem", function()
+    Utils.PlayAnim(0, 'mp_common', 'givetake2_a', 1.0, 1.0, 2000, 50, 0.0, 0, 0, 0)
+end)
+
 exports('giveItemToTarget', giveItemToTarget)
 
 local function isGiveTargetValid(ped, coords)
@@ -1733,7 +1737,7 @@ RegisterNUICallback('giveItem', function(data, cb)
     cb(1)
 
     if client.giveplayerlist then
-        local nearbyPlayers = lib.getNearbyPlayers(GetEntityCoords(playerPed), 3.0)
+        local nearbyPlayers = lib.getNearbyPlayers(GetEntityCoords(playerPed), 5.0)
         local nearbyCount = #nearbyPlayers
 
         if nearbyCount == 0 then return end

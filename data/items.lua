@@ -35,7 +35,7 @@ return {
         }
     },
     ['money'] = {
-        label = 'Argent liquide',
+        label = 'Dollars',
         weight = 1,
     },
     ['condom'] = {
@@ -326,7 +326,7 @@ return {
         }
     },
     ['casino_chip'] = {
-        label = 'Jeton Casino',
+        label = 'Jeton de Casino',
         stack = true,
         weight = 0,
         close = true,
@@ -391,7 +391,7 @@ return {
         weight = 2300,
     },
     ['piquouze'] = {
-        label = "Piquouze",
+        label = "Sérum médical",
         weight = 200,
     },
     ['detached_part'] = {
@@ -459,14 +459,14 @@ return {
         stack = true,
     },
     ['carpe_f'] = {
-        label = "Bar",
+        label = "Carpe",
         degrade = 4 * 60,
         canUse = false,
         weight = 140,
         stack = true,
     },
     ['brochet_f'] = {
-        label = "Bar",
+        label = "Brochet",
         degrade = 4 * 60,
         canUse = false,
         weight = 270,
@@ -1213,7 +1213,7 @@ return {
         }
     },
     ['jobcard'] = {
-        label = "Carte de job",
+        label = "Carte de travail",
         weight = 5,
         buttons = {
             {
