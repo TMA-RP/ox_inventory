@@ -99,14 +99,15 @@ return {
             { name = 'cigarettebox',      price = 35 },
             { name = 'lighter',           price = 10 },
             { name = 'condom',            price = 2 },
+            { name = 'lubrifiant',        price = 8 },
             { name = 'pochon',            price = 5 },
-            { name = 'parachute',         price = 1500 },
             { name = 'screwdriver',       price = 10 },
             { name = 'jumelles',          price = 100 },
             { name = 'weapon_flashlight', price = 64 },
             { name = 'ocb_paper',         price = 5 },
             { name = 'weapon_crowbar',    price = 75 },
             { name = 'fishingrod',        price = 60 },
+            { name = 'parachute',         price = 1500 },
 
 
         },

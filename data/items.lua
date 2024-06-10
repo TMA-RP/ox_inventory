@@ -43,6 +43,11 @@ return {
         weight = 3,
         stack = true,
     },
+    ['lubrifiant'] = {
+        label = 'Lubrifiant',
+        weight = 25,
+        stack = true,
+    },
     ['radio'] = {
         label = 'Radio',
         canUse = true,
