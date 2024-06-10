@@ -54,19 +54,19 @@ end
 setContainerProperties('cigarettebox', {
     slots = 20,
     maxWeight = 100,
-    whitelist = { 'cigarette', 'joint' }
+    whitelist = { 'cigarette', 'cigar', 'joint' }
 })
 
 setContainerProperties('cigarbox', {
     slots = 5,
     maxWeight = 100,
-    whitelist = { 'cigar' }
+    whitelist = { 'cigar', 'cigarette', 'joint' }
 })
 
 setContainerProperties('wallet', {
     slots = 5,
-    maxWeight = 100,
-    whitelist = { 'money', 'idcard', 'drivingcard', 'jobcard' }
+    maxWeight = 515,
+    whitelist = { 'money', 'idcard', 'drivingcard', 'jobcard', 'condom' }
 })
 
 return containers

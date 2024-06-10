@@ -36,6 +36,7 @@ return {
     },
     ['money'] = {
         label = 'Argent liquide',
+        weight = 1,
     },
     ['radio'] = {
         label = 'Radio',
