@@ -65,7 +65,7 @@ setContainerProperties('cigarbox', {
 
 setContainerProperties('wallet', {
     slots = 5,
-    maxWeight = 515,
+    maxWeight = 600,
     whitelist = { 'money', 'idcard', 'drivingcard', 'jobcard', 'condom' }
 })
 
