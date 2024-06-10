@@ -98,7 +98,7 @@ return {
         --     throwable = true,
         -- },
         ['WEAPON_ACIDPACKAGE'] = {
-            label = 'Journal',
+            label = 'Journaux',
             weight = 100,
             throwable = true,
         },
@@ -1708,15 +1708,15 @@ return {
     },
     Ammo = {
         ['ammo-45'] = {
-            label = '.45 ACP',
+            label = 'Balles de .45 ACP',
             weight = 10,
         },
         ['ammo-50'] = {
-            label = '.50 AE',
+            label = 'Balles de .50 AE',
             weight = 13,
         },
         ['ammo-9'] = {
-            label = '9mm',
+            label = 'Balles de 9mm',
             weight = 8,
         },
         ['ammo-flare'] = {
@@ -1724,19 +1724,19 @@ return {
             weight = 25,
         },
         ['ammo-556'] = {
-            label = '5.56',
+            label = 'Balles de 5.56',
             weight = 6,
         },
         ['ammo-762'] = {
-            label = '7.62',
+            label = 'Balles de 7.62',
             weight = 10,
         },
         ['ammo-shotgun'] = {
-            label = '12 Gauge',
+            label = 'Cartouches 12 Gauge',
             weight = 13,
         },
         ['ammo-sniper'] = {
-            label = '7.62 NATO',
+            label = 'Balles de 7.62 NATO',
             weight = 16,
         },
         ['ammo-rpg'] = {
