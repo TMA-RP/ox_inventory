@@ -98,6 +98,7 @@ return {
             { name = 'cigarbox',          price = 300 },
             { name = 'cigarettebox',      price = 35 },
             { name = 'lighter',           price = 10 },
+            { name = 'condom',            price = 2 },
             { name = 'pochon',            price = 5 },
             { name = 'parachute',         price = 1500 },
             { name = 'screwdriver',       price = 10 },

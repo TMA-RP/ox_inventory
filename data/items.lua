@@ -38,6 +38,11 @@ return {
         label = 'Argent liquide',
         weight = 1,
     },
+    ['condom'] = {
+        label = 'Préservatif',
+        weight = 3,
+        stack = true,
+    },
     ['radio'] = {
         label = 'Radio',
         canUse = true,
