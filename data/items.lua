@@ -162,6 +162,11 @@ return {
         close = true,
         description = nil
     },
+    ['vehicle_key'] = {
+        label = 'Clés de véhicule',
+        weight = 100,
+        stack = false,
+    },
     ['cigar'] = {
         label = 'Cigare',
         weight = 10,
