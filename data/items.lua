@@ -18,6 +18,13 @@ return {
             export = "ceeb_vehicle.lockpick"
         }
     },
+    ['hackwire'] = {
+        label = 'Dénudeur',
+        canUse = true,
+        weight = 120,
+        consume = 0,
+
+    },
     ["phone"] = {
         label = "Téléphone",
         canUse = true,
