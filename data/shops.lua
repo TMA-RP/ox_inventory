@@ -1171,6 +1171,7 @@ return {
             { name = 'cacao_poudre',        price = 0 },
             { name = 'creme_liquide',       price = 0 },
             { name = 'gelatine',            price = 0 },
+            { name = 'fruits_rouges',       price = 0 },
             { name = 'vanille',             price = 0 },
             { name = 'ricotta',             price = 0 },
             { name = 'pate_brisee',         price = 0 },

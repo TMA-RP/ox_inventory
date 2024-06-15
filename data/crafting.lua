@@ -524,7 +524,7 @@ return {
                 name = 'cv_repas',
                 ingredients = {
                     creme_glacee = 1,
-                    Chantilly    = 1,
+                    chantilly    = 1,
                 },
                 metadata = { customname = "gelato", weight = -400, label = "Gelato", image = "fooddrink/gelato" },
                 duration = 2000,
