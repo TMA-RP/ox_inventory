@@ -498,7 +498,7 @@ return {
         weight = 230,
         stack = true,
     },
-    ['flétan_f'] = {
+    ['fletan_f'] = {
         label = "Flétan",
         degrade = 4 * 60,
         canUse = false,
