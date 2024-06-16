@@ -552,6 +552,13 @@ return {
         weight = 10,
         stack = true,
     },
+    ['ananas'] = {
+        label = "Ananas",
+        degrade = 4 * 60,
+        canUse = false,
+        weight = 10,
+        stack = true,
+    },
 
     ['algues'] = {
         label = "Algues",
@@ -876,7 +883,13 @@ return {
         weight = 35,
         stack = true,
     },
-
+    ['lait'] = {
+        label = "Lait",
+        degrade = 4 * 60,
+        canUse = false,
+        weight = 50,
+        stack = true,
+    },
     ['legumes'] = {
         label = "Légumes",
         degrade = 4 * 60,
