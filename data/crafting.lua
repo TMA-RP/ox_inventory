@@ -43,7 +43,7 @@ return {
                     gingembre      = 1
                 },
                 metadata = { customname = "sashimi", weight = -350, label = "Sachimi", image = "fooddrink/sashimi" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -56,7 +56,7 @@ return {
                     oignons          = 1
                 },
                 metadata = { customname = "soupe_miso", weight = -435, label = "Soupe miso", image = "fooddrink/soupe_miso" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -70,7 +70,7 @@ return {
                     sauce_soja      = 1,
                 },
                 metadata = { customname = "gyozas", weight = -288, label = "Gyozas", image = "fooddrink/gyozas" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -82,7 +82,7 @@ return {
                     sauce_soja      = 1,
                 },
                 metadata = { customname = "nems", weight = -220, label = "Nems", image = "fooddrink/nems" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -94,7 +94,7 @@ return {
                     sauce_soja    = 1,
                 },
                 metadata = { customname = "sushis_varies", weight = -310, label = "Sushis variés", image = "fooddrink/sushis_varies" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -106,7 +106,7 @@ return {
                     legumes          = 1,
                 },
                 metadata = { customname = "ramen", weight = -150, label = "Ramen", image = "fooddrink/ramen" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -119,7 +119,7 @@ return {
                     huile_vegetale = 1,
                 },
                 metadata = { customname = "yakisoba", weight = -50, label = "Yakisoba", image = "fooddrink/yakisoba" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -131,7 +131,7 @@ return {
 
                 },
                 metadata = { customname = "teriyaki", weight = 300, label = "Teriyaki", image = "fooddrink/teriyaki" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -142,7 +142,7 @@ return {
                     riz            = 1,
                 },
                 metadata = { customname = "teriyaki", weight = -300, label = "Teriyaki", image = "fooddrink/teriyaki" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -153,7 +153,7 @@ return {
                     fecule_mais = 1,
                 },
                 metadata = { customname = "mochi", weight = -380, label = "Mochi", image = "fooddrink/mochi" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -165,7 +165,7 @@ return {
                     miel   = 1,
                 },
                 metadata = { customname = "dorayaki", weight = -340, label = "Dorayaki", image = "fooddrink/dorayaki" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -176,7 +176,7 @@ return {
                     fruits_rouges = 1,
                 },
                 metadata = { customname = "matcha_parfait", weight = -360, label = "Matcha parfait", image = "fooddrink/matcha_parfait" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -188,7 +188,7 @@ return {
                     haricots    = 1,
                 },
                 metadata = { customname = "anmitsu", weight = -320, label = "Anmitsu", image = "fooddrink/anmitsu" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
         },
@@ -213,7 +213,7 @@ return {
                     sel_poivre         = 1
                 },
                 metadata = { customname = "soupe_poisson", weight = -350, label = "Soupe de poisson", image = "fooddrink/soupe_poisson" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -227,7 +227,7 @@ return {
                     sel_poivre    = 1,
                 },
                 metadata = { customname = "bisque_homard", weight = -250, label = "Bisque de homard", image = "fooddrink/bisque_homard" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -240,7 +240,7 @@ return {
                     sel_poivre         = 1,
                 },
                 metadata = { customname = "crevettes_grillees", weight = -320, label = "Crevettes grillées", image = "fooddrink/crevettes_grillees" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -253,7 +253,7 @@ return {
                     sel_poivre = 1,
                 },
                 metadata = { customname = "crabe_farci", weight = -300, label = "Crabe farci", image = "fooddrink/crabe_farci" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -266,7 +266,7 @@ return {
                     sel_poivre         = 1,
                 },
                 metadata = { customname = "filet_saumon_grille", weight = -250, label = "Filet de saumon grillé", image = "fooddrink/filet_saumon_grille" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -281,7 +281,7 @@ return {
                     sel_poivre       = 1,
                 },
                 metadata = { customname = "risotto_fruits_mer", weight = -50, label = "Risotto fruits de mer", image = "fooddrink/risotto_fruits_mer" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -295,7 +295,7 @@ return {
                     sel_poivre                  = 1,
                 },
                 metadata = { customname = "coquilles_saint_jacques", weight = -150, label = "Coquilles Saint-Jacques", image = "fooddrink/coquilles_saint_jacques" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -309,7 +309,7 @@ return {
                     sel_poivre  = 1,
                 },
                 metadata = { customname = "brochette_crevettes_legumes", weight = -320, label = "Brochette crevettes et légumes", image = "fooddrink/brochette_crevettes_legumes" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -322,7 +322,7 @@ return {
                     sucre_cassonade = 1,
                 },
                 metadata = { customname = "creme_brulee", weight = -385, label = "Crème brûlée", image = "fooddrink/creme_brulee" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -334,7 +334,7 @@ return {
                     fecule_mais   = 1,
                 },
                 metadata = { customname = "tarte_fruits_rouges", weight = -370, label = "Tarte aux fruits rouges", image = "fooddrink/tarte_fruits_rouges" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -347,7 +347,7 @@ return {
                     fruits_rouges = 1,
                 },
                 metadata = { customname = "panna_cotta_fruits_rouges", weight = -350, label = "Panna cotta fruits rouges", image = "fooddrink/panna_cotta_fruits_rouges" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -358,7 +358,7 @@ return {
                     sucre    = 1,
                 },
                 metadata = { customname = "mousse_chocolat", weight = -410, label = "Mousse au chocolat", image = "fooddrink/mousse_chocolat" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
 
@@ -383,7 +383,7 @@ return {
                     viandes       = 1
                 },
                 metadata = { customname = "panini", weight = -150, label = "Panini", image = "fooddrink/panini" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -396,7 +396,7 @@ return {
                     huile_olive        = 1
                 },
                 metadata = { customname = "bruschetta", weight = -150, label = "Bruschetta", image = "fooddrink/bruschetta" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -409,7 +409,7 @@ return {
                     vinaigre_balsamique = 1,
                 },
                 metadata = { customname = "salade_caprese", weight = -350, label = "Salade caprese", image = "fooddrink/salade_caprese" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -424,7 +424,7 @@ return {
 
                 },
                 metadata = { customname = "salade_cesar", weight = -390, label = "Salde César", image = "fooddrink/salade_cesar" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -436,7 +436,7 @@ return {
                     herbes_aromatiques = 1,
                 },
                 metadata = { customname = "pizza_margherita", weight = -100, label = "Pizza margherita", image = "fooddrink/pizza_margherita" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -451,7 +451,7 @@ return {
                     herbes_aromatiques = 1,
                 },
                 metadata = { customname = "pizza_quattro_formaggi", weight = -100, label = "Pizza quattro formaggi", image = "fooddrink/pizza_quattro_formaggi" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -464,7 +464,7 @@ return {
                     herbes_aromatiques = 1,
                 },
                 metadata = { customname = "pizza_ananas", weight = -100, label = "Pizza prosciutto funghi", image = "fooddrink/pizza_ananas" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -477,7 +477,7 @@ return {
                     piments_forts = 1,
                 },
                 metadata = { customname = "pizza_pepperoni", weight = -100, label = "Pizza pepperoni", image = "fooddrink/pizza_pepperoni" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -490,7 +490,7 @@ return {
                     lait   = 1,
                 },
                 metadata = { customname = "crepe", weight = -400, label = "Crêpe", image = "fooddrink/crepe" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -502,7 +502,7 @@ return {
                     gelatine      = 1,
                 },
                 metadata = { customname = "panna_cotta_fruits_rouges", weight = -380, label = "Panna cotta fruits rouges", image = "fooddrink/panna_cotta_fruits_rouges" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -515,7 +515,7 @@ return {
                     pepites_chocolat = 1,
                 },
                 metadata = { customname = "cannoli", weight = -320, label = "Cannoli", image = "fooddrink/cannoli" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
             {
@@ -525,7 +525,7 @@ return {
                     chantilly    = 1,
                 },
                 metadata = { customname = "gelato", weight = -400, label = "Gelato", image = "fooddrink/gelato" },
-                duration = 2000,
+                duration = 8000,
                 count = 1,
             },
 
