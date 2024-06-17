@@ -18,12 +18,24 @@ return {
             export = "ceeb_vehicle.lockpick"
         }
     },
+    ['malette'] = {
+        label = 'Malette',
+        weight = 1000,
+        stack = false,
+        buttons = {
+            {
+                label = "Ouvrir",
+                action = function(slot, inventoryId)
+                    TriggerServerEvent("ceeb_malette:open", slot, inventoryId)
+                end
+            },
+        }
+    },
     ['hackwire'] = {
         label = 'Dénudeur',
         canUse = true,
         weight = 120,
         consume = 0,
-
     },
     ["phone"] = {
         label = "Téléphone",
