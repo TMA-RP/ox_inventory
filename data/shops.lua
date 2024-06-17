@@ -106,6 +106,7 @@ return {
             { name = 'weapon_crowbar',    price = 75 },
             { name = 'fishingrod',        price = 60 },
             { name = 'parachute',         price = 1500 },
+            { name = 'malette',           price = 500 },
 
 
         },
