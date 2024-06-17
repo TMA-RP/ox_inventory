@@ -36,8 +36,8 @@ function Weapon.Equip(item, data, noWeaponAnim)
 
 		if not exports.ceeb_weapons:isWeapon(item) then
 			local isPlayingAnimation = exports.scully_emotemenu:isInEmote()
-			local animationCommand = exports.scully_emotemenu:getLastEmote()
-			if not isPlayingAnimation or animationCommand ~= "reaching" then
+			local lastEmote, lastVariant = exports.scully_emotemenu:getLastEmote()
+			if not isPlayingAnimation or (lastEmote and lastEmote.Command ~= "reaching") then
 				exports.scully_emotemenu:playEmoteByCommand("reaching")
 				Wait(800)
 				-- TODOCV faire la sortie d'arme des pistols en fonction du holster
@@ -108,7 +108,7 @@ function Weapon.Disarm(currentWeapon, noAnim)
 	if currentWeapon?.timer then
 		currentWeapon.timer = nil
 
-        TriggerServerEvent('ox_inventory:updateWeapon')
+		TriggerServerEvent('ox_inventory:updateWeapon')
 		SetPedAmmo(cache.ped, currentWeapon.hash, 0)
 
 		if client.weaponanims and not noAnim then
