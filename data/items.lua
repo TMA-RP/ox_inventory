@@ -178,6 +178,14 @@ return {
         label = 'Clés de véhicule',
         weight = 100,
         stack = false,
+        buttons = {
+            {
+                label = "Renommer",
+                action = function(slot, inventoryId)
+                    TriggerEvent("ceeb_globals:renameItem", slot, inventoryId)
+                end
+            },
+        }
     },
     ['cigar'] = {
         label = 'Cigare',
