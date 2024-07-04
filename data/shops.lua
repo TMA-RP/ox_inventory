@@ -44,6 +44,19 @@ return {
             vec3(604.0552, 6.1679, 87.8020), -- MRPD
         }
     },
+    Emsstuff = {
+        name = 'Réserve',
+        groups = {
+            ['ambulance'] = 1,
+        },
+        inventory = {
+            { name = 'piquouze', price = 0 },
+
+        },
+        locations = {
+            vec3(604.0552, 6.1679, 87.8020), -- MRPD
+        }
+    },
     Superette = {
         name = '24/7 Superette',
         blip = {
