@@ -131,7 +131,7 @@ return {
     },
 
     {
-        coords = vec3(897.8604, -171.5505, 74.6827),
+        coords = vec3(891.2054, -171.1239, 74.1431),
         name = 'taxiofficelocker',
         label = 'Rangement bureau patron',
         owner = false,
