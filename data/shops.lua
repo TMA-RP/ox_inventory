@@ -54,7 +54,7 @@ return {
 
         },
         locations = {
-            vec3(604.0552, 6.1679, 87.8020), -- MRPD
+            vec3(310.1443, -568.3673, 43.2840), -- MRPD
         }
     },
     Superette = {
