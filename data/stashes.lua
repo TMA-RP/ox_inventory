@@ -30,6 +30,16 @@ return {
         groups = { ['ambulance'] = 0 }
     },
 
+	{
+        coords = vec3(337.5308, -595.7996, 43.2841),
+        name = 'lsmsboss',
+        label = 'Coffre patron',
+        owner = true,
+        slots = 25,
+        weight = 70000,
+        groups = { ['ambulance'] = 8 }
+    },
+
     {
         coords = vec3(-586.8375, -203.6964, 38.2271),
         name = 'judgelocker',
