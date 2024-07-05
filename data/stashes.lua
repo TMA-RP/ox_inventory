@@ -34,7 +34,7 @@ return {
         coords = vec3(337.5308, -595.7996, 43.2841),
         name = 'lsmsboss',
         label = 'Coffre patron',
-        owner = true,
+        owner = false,
         slots = 25,
         weight = 70000,
         groups = { ['ambulance'] = 6 }
@@ -159,6 +159,17 @@ return {
         weight = 70000,
         groups = { ['bennys'] = 0 }
     },
+
+	{
+        coords = vec3(-349.7244, -128.9993, 42.0369),
+        name = 'bennysboss',
+        label = 'Coffre patron',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['bennys'] = 4 }
+    },
+
 
     {
         coords = vec3(103.1225, 6625.5806, 31.7874),
