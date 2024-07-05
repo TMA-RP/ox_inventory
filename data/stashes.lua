@@ -37,7 +37,7 @@ return {
         owner = true,
         slots = 25,
         weight = 70000,
-        groups = { ['ambulance'] = 8 }
+        groups = { ['ambulance'] = 6 }
     },
 
     {
