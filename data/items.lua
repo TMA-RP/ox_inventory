@@ -20,16 +20,10 @@ return {
     },
     ['malette'] = {
         label = 'Malette',
+		canUse = true,
         weight = 1000,
         stack = false,
-        buttons = {
-            {
-                label = "Ouvrir",
-                action = function(slot, inventoryId)
-                    TriggerServerEvent("ceeb_malette:open", slot, inventoryId)
-                end
-            },
-        }
+		close =false
     },
     ['hackwire'] = {
         label = 'Dénudeur',
