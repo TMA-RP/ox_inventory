@@ -52,7 +52,7 @@ return {
         inventory = {
             { name = 'piquouze', price = 0 },
             { name = 'defibrilator', price = 0 },
-
+            { name = 'wheelchair', price = 0 },
         },
         locations = {
             vec3(310.1443, -568.3673, 43.2840), -- MRPD
