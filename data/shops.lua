@@ -51,6 +51,7 @@ return {
         },
         inventory = {
             { name = 'piquouze', price = 0 },
+            { name = 'defibrilator', price = 0 },
 
         },
         locations = {
