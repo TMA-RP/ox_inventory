@@ -68,7 +68,8 @@ end
 ---@param ped number
 ---@return boolean
 local function canOpenTarget(ped)
-    return Entity(ped).state.isDead
+	local targetId = GetPlayerServerId(NetworkGetPlayerIndexFromPed(ped))
+    return Player(targetId).state.isDead
         or IsPedFatallyInjured(ped)
         or IsEntityPlayingAnim(ped, 'dead', 'dead_a', 3)
         or IsPedCuffed(ped)
