@@ -629,13 +629,6 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 				local coord = GetEntityCoords(dumpster)
 				self.dumpsterCoords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
 			end
-		else
-			if string.find(id, '^glove') or string.find(id, '^trunk') then
-				self.dbId = id:sub(6)
-			else
-				self.dbId = id
-				self.id = (invType == 'glovebox' and 'glove' or invType) .. label
-			end
 		end
 	end
 
