@@ -661,6 +661,12 @@ return {
 
 			{
 				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "axles", weight = 2500, label = "Essieux", class = "M", imageurl = "https://api.ceeb.studio/image/parts/axles/M" },
+			},
+
+			{
+				name = 'detached_part',
 				price = 50,
 				metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "D", imageurl = "https://api.ceeb.studio/image/parts/clutch/D" },
 			},
@@ -688,6 +694,11 @@ return {
 				name = 'detached_part',
 				price = 500,
 				metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "X", imageurl = "https://api.ceeb.studio/image/parts/clutch/X" },
+			},
+			{
+				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "clutch", weight = 2500, label = "Embrayage", class = "M", imageurl = "https://api.ceeb.studio/image/parts/clutch/M" },
 			},
 
 			{
@@ -720,6 +731,11 @@ return {
 				price = 500,
 				metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "X", imageurl = "https://api.ceeb.studio/image/parts/radiator/X" },
 			},
+			{
+				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "radiator", weight = 2500, label = "Radiateur", class = "M", imageurl = "https://api.ceeb.studio/image/parts/radiator/M" },
+			},
 
 			{
 				name = 'detached_part',
@@ -750,6 +766,11 @@ return {
 				name = 'detached_part',
 				price = 500,
 				metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "X", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/X" },
+			},
+			{
+				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "brakediscs", weight = 2500, label = "Disques de freins", class = "M", imageurl = "https://api.ceeb.studio/image/parts/brakediscs/M" },
 			},
 
 			{
@@ -782,6 +803,11 @@ return {
 				price = 500,
 				metadata = { customname = "tires", weight = 2500, label = "Roues", class = "X", imageurl = "https://api.ceeb.studio/image/parts/tires/X" },
 			},
+			{
+				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "tires", weight = 2500, label = "Roues", class = "M", imageurl = "https://api.ceeb.studio/image/parts/tires/M" },
+			},
 
 			{
 				name = 'detached_part',
@@ -812,6 +838,11 @@ return {
 				name = 'detached_part',
 				price = 500,
 				metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "X", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/X" },
+			},
+			{
+				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "motorbloc", weight = 2500, label = "Bloc moteur", class = "M", imageurl = "https://api.ceeb.studio/image/parts/motorbloc/M" },
 			},
 
 			{
@@ -844,6 +875,11 @@ return {
 				price = 500,
 				metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "X", imageurl = "https://api.ceeb.studio/image/parts/transmission/X" },
 			},
+			{
+				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "transmission", weight = 2500, label = "Transmission", class = "M", imageurl = "https://api.ceeb.studio/image/parts/transmission/M" },
+			},
 
 			{
 				name = 'detached_part',
@@ -875,6 +911,11 @@ return {
 				price = 500,
 				metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "X", imageurl = "https://api.ceeb.studio/image/parts/injectors/X" },
 			},
+			{
+				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "injectors", weight = 2500, label = "Injecteurs", class = "M", imageurl = "https://api.ceeb.studio/image/parts/injectors/M" },
+			},
 
 			{
 				name = 'detached_part',
@@ -905,6 +946,11 @@ return {
 				name = 'detached_part',
 				price = 500,
 				metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "X", imageurl = "https://api.ceeb.studio/image/parts/suspensions/X" },
+			},
+			{
+				name = 'detached_part',
+				price = 200,
+				metadata = { customname = "suspensions", weight = 2500, label = "Suspensions", class = "M", imageurl = "https://api.ceeb.studio/image/parts/suspensions/M" },
 			},
 		},
 		groups = {
