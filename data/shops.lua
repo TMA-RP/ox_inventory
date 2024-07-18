@@ -122,8 +122,7 @@ return {
 			{ name = 'fishingrod',        price = 60 },
 			{ name = 'parachute',         price = 1500 },
 			{ name = 'malette',           price = 500 },
-
-
+			{ name = 'item_libre',        price = 1 },
 		},
 		locations = {
 			vec3(374.6613, 327.5485, 103.5664),
