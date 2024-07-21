@@ -1795,10 +1795,9 @@ RegisterNUICallback('giveItem', function(data, cb)
 		return
 	end
 
-	local entity = Utils.Raycast(1|2|4|8|16, GetOffsetFromEntityInWorldCoords(cache.ped, 0.0, 3.0, 0.5), 0.2)
-
-	if entity and IsPedAPlayer(entity) and IsEntityVisible(entity) and #(GetEntityCoords(playerPed, true) - GetEntityCoords(entity, true)) < 3.0 then
-		return giveItemToTarget(GetPlayerServerId(NetworkGetPlayerIndexFromPed(entity)), data.slot, data.count)
+	local playerId, playerPed, playerCoords = lib.getClosestPlayer(GetEntityCoords(cache.ped), 4.0, false)
+	if playerId then
+		return giveItemToTarget(GetPlayerServerId(playerId), data.slot, data.count)
 	end
 end)
 
