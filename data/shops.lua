@@ -1318,7 +1318,7 @@ return {
             vec3(806.4497, -761.5865, 26.7808),
         },
     },
-    pizza = {
+    pizzalibre = {
         name = "Pizza This...",
 
         inventory = {
