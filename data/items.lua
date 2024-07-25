@@ -569,6 +569,11 @@ return {
 		canUse = true,
 		weight = 100,
 	},
+	['keybox'] = {
+		label = "Boîte à clés",
+		canUse = true,
+		weight = 300,
+	},
 
 	-- ingrédients
 
