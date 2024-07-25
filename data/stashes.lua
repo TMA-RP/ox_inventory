@@ -7,7 +7,7 @@ return {
 		owner = false,
 		slots = 200,
 		weight = 200000,
-		groups = { ['police'] = 7 }
+		groups = { ['police'] = 8 }
 	},
 
 	{
@@ -17,7 +17,7 @@ return {
 		owner = true,
 		slots = 25,
 		weight = 70000,
-		groups = { ['police'] = 0 }
+		groups = { ['police'] = 1 }
 	},
 	{
 		coords = vec3(612.2084, -19.4670, 87.8020), -- MRPD PERSO
@@ -26,17 +26,17 @@ return {
 		owner = false,
 		slots = 25,
 		weight = 70000,
-		groups = { ['police'] = 0 }
+		groups = { ['police'] = 1 }
 	},
 
 	{
 		coords = vec3(308.8208, -562.4283, 43.2841),
-		name = 'lsemslocker',
+		name = 'lsemslockerperso',
 		label = 'Casier personnel',
 		owner = true,
 		slots = 25,
 		weight = 70000,
-		groups = { ['ambulance'] = 0 }
+		groups = { ['ambulance'] = 1 }
 	},
 	{
 		coords = vec3(311.8780, -597.5607, 43.2841),
@@ -45,7 +45,7 @@ return {
 		owner = false,
 		slots = 25,
 		weight = 70000,
-		groups = { ['ambulance'] = 0 }
+		groups = { ['ambulance'] = 1 }
 	},
 
 	{
@@ -65,7 +65,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['lawyer'] = 2 }
+		groups = { ['lawyer'] = 3 }
 	},
 
 	{
@@ -75,7 +75,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['weazelnews'] = 3 }
+		groups = { ['weazelnews'] = 4 }
 	},
 
 	{
@@ -85,17 +85,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['weazelnews'] = 0 }
-	},
-
-	{
-		coords = vec3(-595.3774, -920.5817, 29.7303),
-		name = 'weazelofficelocker',
-		label = 'Rangement bureau patron',
-		owner = false,
-		slots = 70,
-		weight = 70000,
-		groups = { ['weazelnews'] = 3 }
+		groups = { ['weazelnews'] = 1 }
 	},
 
 	{
@@ -105,7 +95,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['garbage'] = 0 }
+		groups = { ['garbage'] = 1 }
 	},
 
 	{
@@ -115,7 +105,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['garbage'] = 3 }
+		groups = { ['garbage'] = 6 }
 	},
 
 	{
@@ -125,7 +115,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['unicorn'] = 3 }
+		groups = { ['unicorn'] = 4 }
 	},
 
 	{
@@ -135,7 +125,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['unicorn'] = 0 }
+		groups = { ['unicorn'] = 1 }
 	},
 
 	{
@@ -145,7 +135,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['unicorn'] = 0 }
+		groups = { ['unicorn'] = 1 }
 	},
 
 	{
@@ -155,7 +145,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['taxi'] = 0 }
+		groups = { ['taxi'] = 1 }
 	},
 
 	{
@@ -165,7 +155,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['taxi'] = 3 }
+		groups = { ['taxi'] = 4 }
 	},
 
 	{
@@ -175,7 +165,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['bennys'] = 0 }
+		groups = { ['bennys'] = 1 }
 	},
 
 	{
@@ -196,7 +186,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['bennys'] = 0 }
+		groups = { ['bennys'] = 1 }
 	},
 
 	{
@@ -206,62 +196,33 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-
-	},
-	{
-		coords = vec3(-1068.3434, -1444.5249, -1.4201),
-		name = 'koisurplus',
-		label = 'Stockage',
-		owner = false,
-		slots = 70,
-		weight = 70000,
-		groups = { ['koi'] = 0 }
-
-	},
-	{
-		coords = vec3(-1843.8068, -1198.0184, 14.3092),
-		name = 'pearlssurplus',
-		label = 'Stockage',
-		owner = false,
-		slots = 70,
-		weight = 70000,
-		groups = { ['pearls'] = 0 }
-	},
-	{
-		coords = vec3(806.1974, -764.8182, 26.7808),
-		name = 'pizzalssurplus',
-		label = 'Stockage',
-		owner = false,
-		slots = 70,
-		weight = 70000,
-		groups = { ['pizza'] = 0 }
 	},
 	{
 		coords = vec3(-317.3918, -152.8889, 39.0098),
-		name = 'bennysstockage',
+		name = 'bennysstockage1',
 		label = 'Stock',
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['bennys'] = 0 }
+		groups = { ['bennys'] = 1 }
 	},
 	{
 		coords = vec3(-313.0842, -141.8927, 39.0097),
-		name = 'bennysstockage',
+		name = 'bennysstockage2',
 		label = 'Stock',
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['bennys'] = 0 }
+		groups = { ['bennys'] = 1 }
 	},
 	{
 		coords = vec3(-309.6478, -131.3248, 39.0097),
-		name = 'bennysstockage',
+		name = 'bennysstockage3',
 		label = 'Stock',
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['bennys'] = 0 }
+		groups = { ['bennys'] = 1 }
 	},
 	{
 		coords = vec3(-1878.1675, 2054.7922, 141.0060),
@@ -270,7 +231,7 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['vineyard'] = 0 }
+		groups = { ['vineyard'] = 1 }
 	},
 	{
 		coords = vec3(2706.0791, 4326.6362, 50.9490),
@@ -279,8 +240,6 @@ return {
 		owner = false,
 		slots = 70,
 		weight = 70000,
-		groups = { ['tumbleweed'] = 0 }
+		groups = { ['tumbleweed'] = 1 }
 	},
-
-
 }
