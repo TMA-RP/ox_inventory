@@ -31,7 +31,7 @@ return {
 
 	{
 		coords = vec3(308.8208, -562.4283, 43.2841),
-		name = 'lsemslockerperso',
+		name = 'lsemslocker',
 		label = 'Casier personnel',
 		owner = true,
 		slots = 25,
@@ -40,7 +40,7 @@ return {
 	},
 	{
 		coords = vec3(311.8780, -597.5607, 43.2841),
-		name = 'lsemslocker',
+		name = 'lsemslockercommon',
 		label = 'Stockage',
 		owner = false,
 		slots = 25,
