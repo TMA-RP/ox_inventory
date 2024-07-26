@@ -2591,7 +2591,7 @@ return {
             },
             {
                 name = 'cv_boisson',
-                price = 0,
+                price = 22,
                 metadata = { customname = "cointreau", weight = 600, label = "Cointreau", image = "fooddrink/cointreau" }
             },
             {
