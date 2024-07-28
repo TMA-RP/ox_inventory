@@ -1417,7 +1417,7 @@ function Inventory.RemoveItem(inv, item, count, metadata, slot, ignoreTotal, str
 		if not inv?.slots then return false, 'invalid_inventory' end
 
 		metadata = assertMetadata(metadata)
-		if strict == nil then strict = true end
+		if strict == nil then strict = false end
 		local itemSlots, totalCount = Inventory.GetItemSlots(inv, item, metadata, strict)
 
 		if not itemSlots then return false end
