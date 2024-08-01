@@ -123,6 +123,7 @@ return {
 			{ name = 'parachute',         price = 1500 },
 			{ name = 'malette',           price = 500 },
 			{ name = 'keybox',            price = 50 },
+			{ name = 'boombox',           price = 450 },
 			{ name = 'item_libre',        price = 1 },
 		},
 		locations = {

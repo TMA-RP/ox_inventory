@@ -25,6 +25,15 @@ return {
 		stack = false,
 		close = false
 	},
+	['boombox'] = {
+		label = 'Boombox',
+		canUse = true,
+		weight = 2000,
+		stack = false,
+		client = {
+			export = "ceeb_boombox.use"
+		}
+	},
 	['hackwire'] = {
 		label = 'Dénudeur',
 		canUse = true,
