@@ -582,6 +582,14 @@ return {
 		label = "Boîte à clés",
 		canUse = true,
 		weight = 300,
+		buttons = {
+			{
+				label = "Renommer",
+				action = function(slot, inventoryId)
+					TriggerEvent("ceeb_globals:renameItem", slot, inventoryId)
+				end
+			},
+		}
 	},
 
 	-- ingrédients
