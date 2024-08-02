@@ -3029,6 +3029,13 @@ return {
 
 		}
 	},
+	Mimi = {
+		name = 'Mimi',
+		inventory = {
+			{ name = 'boostingtablet', price = 4520, isIllegal = true },
+			-- { name = 'laptop', price = 5000 },
+		},
+	},
 	Vignoble = {
 		name = 'Cave à vin',
 		groups = {

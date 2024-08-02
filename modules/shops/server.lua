@@ -344,6 +344,9 @@ CreateThread(function()
 	exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "ObjetIllegaux",
 		"Je veux acheter ça en carte bancaire",
 		"tu joues une mamie vulgaire qui vend des trucs illegaux et qui n'accepte pas la carte bancaire", 5)
+	exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "Mimi",
+		"Je veux acheter ça en carte bancaire",
+		"tu joues une jeune femme qui vend des trucs illegaux et qui n'accepte pas la carte bancaire", 5)
 	exports.openai_fivem:generateAnswersPool(GetCurrentResourceName(), "nomoney",
 		"Je veux acheter ça mais je n'ai pas d'argent",
 		"tu joues quelqu'un qui ne vend qu'a des gens qui ont de l'argent, pas de crédit", 5)
