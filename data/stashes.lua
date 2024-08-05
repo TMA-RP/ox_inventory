@@ -242,4 +242,31 @@ return {
         weight = 70000,
         groups = { ['tumbleweed'] = 1 }
     },
+    {
+        coords = vec3(-1709.0619, -801.2203, 10.2447),
+        name = 'club55bar1',
+        label = 'Stock',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['club55'] = 1 }
+    },
+    {
+        coords = vec3(-1724.1661, -819.3600, 10.2444),
+        name = 'club55bar2',
+        label = 'Stock',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['club55'] = 1 }
+    },
+    {
+        coords = vec3(-1764.6787, -822.0328, 10.2445),
+        name = 'club55bar3',
+        label = 'Stock',
+        owner = false,
+        slots = 70,
+        weight = 70000,
+        groups = { ['club55'] = 1 }
+    },
 }
