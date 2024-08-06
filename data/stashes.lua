@@ -269,4 +269,13 @@ return {
         weight = 70000,
         groups = { ['club55'] = 1 }
     },
+    {
+        coords = vec3(-1764.6787, -822.0328, 10.2445),
+        name = 'club55patron',
+        label = 'Stock',
+        owner = true,
+        slots = 70,
+        weight = 70000,
+        groups = { ['club55'] = 6 }
+    },
 }
