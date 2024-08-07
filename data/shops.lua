@@ -3403,65 +3403,81 @@ return {
         },
     },
 
-    -- Ammunation = {
-    --     name = 'Ammunation',
-    --     blip = {
-    --         sprite = 50,
-    --         alwaysShow = false,
-    --         onlyInVehicle = false,
-    --     },
-    --     inventory = {
-    --         { name = 'WEAPON_G17',           price = 2500,  metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_M9',            price = 2500,  metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_P357',          price = 2900,  metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_M45',           price = 3000,  metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_FLAREGUN',      price = 900,   metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_STUNGUN_MP',    price = 900,   license = 'weapon' },
-    --         { name = 'WEAPON_KNUCKLE',       price = 250 },
-    --         { name = 'WEAPON_SWITCHBLADE',   price = 300 },
-    --         { name = 'WEAPON_DAGGER',        price = 380 },
-    --         { name = 'WEAPON_KNIFE',         price = 450 },
-    --         { name = 'WEAPON_MACHETE',       price = 550 },
-    --         { name = 'WEAPON_STONE_HATCHET', price = 550 },
-    --         { name = 'WEAPON_HATCHET',       price = 550 },
-    --         { name = 'WEAPON_BATTLEAXE',     price = 300 },
-    --         { name = 'WEAPON_BENELLIM2',     price = 8000,  metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_MK18',          price = 15000, metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_NSR9',          price = 18000, metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_M4',            price = 15000, metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'WEAPON_VICTUSXMR',     price = 35000, metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'weapon_smokegrenade',  price = 1200,  metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'weapon_flashlight',    price = 110,   metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'weapon_nightstick',    price = 110,   metadata = { registered = true }, license = 'weapon' },
-    --         { name = 'ammo-9',               price = 1 },
-    --         { name = 'ammo-45',              price = 1 },
-    --         { name = 'ammo-50',              price = 2 },
-    --         { name = 'ammo-flare',           price = 15 },
-    --         { name = 'ammo-556',             price = 4,     isIllegal = false },
-    --         { name = 'ammo-762',             price = 5,     isIllegal = false },
-    --         { name = 'ammo-50',              price = 3,     isIllegal = false },
-    --         { name = 'ammo-sniper',          price = 6,     isIllegal = false },
-    --         { name = 'ammo-shotgun',         price = 4,     isIllegal = false },
+    Ammunation = {
+        name = 'Ammunation',
+        blip = {
+            sprite = 50,
+            alwaysShow = false,
+            onlyInVehicle = false,
+        },
+        inventory = {
+            -- { name = 'WEAPON_38SNUBNOSE',  price = 0,   metadata = { registered = true }, },
+            -- { name = 'WEAPON_38SNUBNOSE2', price = 0,   metadata = { registered = true }, },
+            -- { name = 'WEAPON_38SNUBNOSE3', price = 0,   metadata = { registered = true }, },
+            -- { name = 'WEAPON_38SPECIAL',   price = 0,   metadata = { registered = true }, },
+            -- { name = 'WEAPON_44MAGNUM',    price = 0,   metadata = { registered = true }, },
+            -- { name = 'WEAPON_M249',        price = 0,   metadata = { registered = true }, },
+            -- { name = 'WEAPON_BENELLIM2',   price = 0,   metadata = { registered = true }, },
+            -- { name = 'WEAPON_G17',           price = 2500,  metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_M9',            price = 2500,  metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_P357',          price = 2900,  metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_M45',           price = 3000,  metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_FLAREGUN',      price = 900,   metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_STUNGUN_MP',    price = 900,   license = 'weapon' },
+            { name = 'WEAPON_KNUCKLE',     price = 350 },
+            { name = 'WEAPON_BAT',         price = 450 },
+            { name = 'WEAPON_SWITCHBLADE', price = 650 },
+            -- { name = 'WEAPON_DAGGER',      price = 750 },
+            -- { name = 'WEAPON_KNIFE',       price = 840 },
+            -- { name = 'WEAPON_KARAMBIT',    price = 910 },
+            -- { name = 'WEAPON_MACHETE',     price = 1200 },
+            -- { name = 'WEAPON_BATTLEAXE',   price = 1300 },
+            -- { name = 'WEAPON_STONE_HATCHET', price = 550 },
+            -- { name = 'WEAPON_HATCHET',     price = 650 },
+            -- { name = 'WEAPON_KATANA1',       price = 300 },
+            -- { name = 'WEAPON_KATANA2',       price = 300 },
+            -- { name = 'WEAPON_KATANA3',       price = 300 },
+            -- { name = 'WEAPON_KATANA4',       price = 300 },
+            -- { name = 'WEAPON_KATANA5',       price = 300 },
+            -- { name = 'WEAPON_YAKUCUT',     price = 900 },
+            -- { name = 'WEAPON_SHIV',          price = 300 },
+            -- { name = 'WEAPON_BENELLIM2',     price = 8000,  metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_MK18',          price = 15000, metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_NSR9',          price = 18000, metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_M4',            price = 15000, metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'WEAPON_VICTUSXMR',     price = 35000, metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'weapon_smokegrenade',  price = 1200,  metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'weapon_flashlight',    price = 110,   metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'weapon_nightstick',    price = 110,   metadata = { registered = true }, license = 'weapon' },
+            -- { name = 'ammo-9',             price = 1 },
+            -- { name = 'ammo-45',              price = 1 },
+            -- { name = 'ammo-50',              price = 2 },
+            -- { name = 'ammo-flare',           price = 15 },
+            -- { name = 'ammo-556',             price = 4,     isIllegal = false },
+            -- { name = 'ammo-762',           price = 5,   isIllegal = false },
+            -- { name = 'ammo-50',              price = 3,     isIllegal = false },
+            -- { name = 'ammo-sniper',          price = 6,     isIllegal = false },
+            -- { name = 'ammo-shotgun',       price = 4,   isIllegal = false },
 
 
-    --         -- { name = 'weapon_knuckle', price = 200 },
-    --     },
-    --     locations = {
-    --         vec3(-660.8675, -939.4791, 21.8293),
-    --         vec3(813.1427, -2153.5947, 29.6192),
-    --         vec3(1696.7579, 3756.2576, 34.7054),
-    --         vec3(-327.3026, 6080.0117, 31.4548),
-    --         vec3(247.5067, -49.7142, 69.9412),
-    --         vec3(17.5895, -1109.5381, 29.7972),
-    --         vec3(2566.5090, 298.6732, 108.7350),
-    --         vec3(-1113.8441, 2696.1316, 18.5543),
-    --         vec3(842.8317, -1029.0250, 28.1949),
-    --         vec3(-1310.4022, -392.5341, 36.6958)
-    --     },
-    --     targets = {
+            -- { name = 'weapon_knuckle',       price = 200 },
+        },
+        locations = {
+            vec3(-660.8675, -939.4791, 21.8293),
+            vec3(813.1427, -2153.5947, 29.6192),
+            vec3(1696.7579, 3756.2576, 34.7054),
+            vec3(-327.3026, 6080.0117, 31.4548),
+            vec3(247.5067, -49.7142, 69.9412),
+            vec3(17.5895, -1109.5381, 29.7972),
+            vec3(2566.5090, 298.6732, 108.7350),
+            vec3(-1113.8441, 2696.1316, 18.5543),
+            vec3(842.8317, -1029.0250, 28.1949),
+            vec3(-1310.4022, -392.5341, 36.6958)
+        },
+        targets = {
 
-    --     }
-    -- },
+        }
+    },
     -- HopitalIllegal = {
     --     name = 'Gunter les doigts de fée',
     --     inventory = {
@@ -3475,7 +3491,7 @@ return {
     --     }
     -- },
     -- ArmesIllegales = {
-    --     name = 'Willy le chasseur',
+    --     name = 'The RAT',
     --     inventory = {
     --         { name = 'ammo-50',         price = 3,     isIllegal = true },
     --         { name = 'ammo-45',         price = 2,     isIllegal = true },
@@ -3547,34 +3563,39 @@ return {
 
     --     }
     -- },
-    -- ObjetIllegaux = {
-    --     name = 'Mamie les bons tuyaux',
-    --     inventory = {
-    --         { name = 'lockpick',            price = 15,    isIllegal = true },
-    --         { name = 'radio',               price = 2500,  isIllegal = true },
-    --         { name = 'WEAPON_FLARE',        price = 20,    isIllegal = true },
-    --         { name = 'weapon_smokegrenade', price = 1750,  isIllegal = true },
-    --         { name = 'spike',               price = 2500,  isIllegal = true },
-    --         { name = 'coupebracelet',       price = 200,   isIllegal = true },
-    --         { name = 'fakeplate',           price = 3500,  isIllegal = true },
-    --         { name = 'hack_phone',          price = 25000, isIllegal = true },
-    --         { name = 'hack_laptop',         price = 25000, isIllegal = true },
-    --         { name = 'noskit',              price = 25000, isIllegal = true },
-    --         {
-    --             name = 'nos',
-    --             price = 0,
-    --             metadata = { nosLvl = "100%" },
-    --             isIllegal = true
-    --         },
-    --         -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
-    --     },
-    --     locations = {
-    --         vec3(2940.4668, 4623.4497, 48.7208)
-    --     },
-    --     targets = {
+    ObjetIllegaux = {
+        name = 'Mister RAT',
+        inventory = {
+            { name = 'WEAPON_SHIV',      price = 720,  isIllegal = true },
+            { name = 'WEAPON_KNIFE',     price = 840,  isIllegal = true },
+            { name = 'WEAPON_KARAMBIT',  price = 910,  isIllegal = true },
+            { name = 'WEAPON_MACHETE',   price = 1200, isIllegal = true },
+            { name = 'WEAPON_BATTLEAXE', price = 1300, isIllegal = true },
+            -- { name = 'lockpick',            price = 15,    isIllegal = true },
+            -- { name = 'radio',               price = 2500,  isIllegal = true },
+            -- { name = 'WEAPON_FLARE',        price = 20,    isIllegal = true },
+            -- { name = 'weapon_smokegrenade', price = 1750,  isIllegal = true },
+            -- { name = 'spike',               price = 2500,  isIllegal = true },
+            -- { name = 'coupebracelet',       price = 200,   isIllegal = true },
+            -- { name = 'fakeplate',           price = 3500,  isIllegal = true },
+            -- { name = 'hack_phone',          price = 25000, isIllegal = true },
+            -- { name = 'hack_laptop',         price = 25000, isIllegal = true },
+            -- { name = 'noskit',              price = 25000, isIllegal = true },
+            -- {
+            --     name = 'nos',
+            --     price = 0,
+            --     metadata = { nosLvl = "100%" },
+            --     isIllegal = true
+            -- },
+            -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
+        },
+        locations = {
+            vec3(-3160.1921, 1119.5640, 24.6328)
+        },
+        targets = {
 
-    --     }
-    -- },
+        }
+    },
     DigitalDen = {
         name = 'Digital Den',
         blip = {

@@ -5,21 +5,21 @@ return {
         --     weight = 149,
         --     throwable = true,
         -- },
-        -- ['WEAPON_BAT'] = {
-        --     label = 'Bat',
-        --     weight = 1134,
-        --     durability = 0.1,
-        -- },
-        -- ['WEAPON_BATTLEAXE'] = {
-        --     label = 'Battle Axe',
-        --     weight = 1200,
-        --     durability = 0.1,
-        -- },
-        -- ['WEAPON_BOTTLE'] = {
-        --     label = 'Bottle',
-        --     weight = 350,
-        --     durability = 0.1,
-        -- },
+        ['WEAPON_BAT'] = {
+            label = 'Bat',
+            weight = 1134,
+            durability = 0.1,
+        },
+        ['WEAPON_BATTLEAXE'] = {
+            label = 'Battle Axe',
+            weight = 1200,
+            durability = 0.1,
+        },
+        ['WEAPON_BOTTLE'] = {
+            label = 'Bottle',
+            weight = 350,
+            durability = 0.1,
+        },
         ['WEAPON_CROWBAR'] = {
             label = 'Pied de biche',
             weight = 2500,
@@ -67,31 +67,31 @@ return {
         --     durability = 0.04,
         --     ammoname = 'ammo-45'
         -- },
-        -- ['WEAPON_HAMMER'] = {
-        --     label = 'Hammer',
-        --     weight = 950,
-        --     durability = 0.1,
-        -- },
-        -- ['WEAPON_HATCHET'] = {
-        --     label = 'Hatchet',
-        --     weight = 1000,
-        --     durability = 0.1,
-        -- },
-        -- ['WEAPON_KNIFE'] = {
-        --     label = 'Knife',
-        --     weight = 350,
-        --     durability = 0.1,
-        -- },
-        -- ['WEAPON_KNUCKLE'] = {
-        --     label = 'Knuckle Dusters',
-        --     weight = 300,
-        --     durability = 0.1,
-        -- },
-        -- ['WEAPON_MACHETE'] = {
-        --     label = 'Machete',
-        --     weight = 800,
-        --     durability = 0.1,
-        -- },
+        ['WEAPON_HAMMER'] = {
+            label = 'Hammer',
+            weight = 950,
+            durability = 0.1,
+        },
+        ['WEAPON_HATCHET'] = {
+            label = 'Hatchet',
+            weight = 1000,
+            durability = 0.1,
+        },
+        ['WEAPON_KNIFE'] = {
+            label = 'Knife',
+            weight = 350,
+            durability = 0.1,
+        },
+        ['WEAPON_KNUCKLE'] = {
+            label = 'Knuckle Dusters',
+            weight = 300,
+            durability = 0.1,
+        },
+        ['WEAPON_MACHETE'] = {
+            label = 'Machete',
+            weight = 800,
+            durability = 0.1,
+        },
         -- ['WEAPON_MOLOTOV'] = {
         --     label = 'Molotov',
         --     weight = 980,
@@ -126,22 +126,22 @@ return {
         --     weight = 5,
         --     throwable = true,
         -- },
-        -- ['WEAPON_STONE_HATCHET'] = {
-        --     label = 'Stone Hatchet',
-        --     weight = 1000,
-        --     durability = 0.1,
-        -- },
+        ['WEAPON_STONE_HATCHET'] = {
+            label = 'Stone Hatchet',
+            weight = 1000,
+            durability = 0.1,
+        },
         ['WEAPON_STUNGUN_MP'] = {
             label = 'Tazer',
             weight = 827,
             durability = 0.1,
         },
-        -- ['WEAPON_SWITCHBLADE'] = {
-        --     label = 'Switch Blade',
-        --     weight = 200,
-        --     durability = 0.1,
-        --     anim = { 'anim@melee@switchblade@holster', 'unholster', 200, 'anim@melee@switchblade@holster', 'holster', 600 },
-        -- },
+        ['WEAPON_SWITCHBLADE'] = {
+            label = 'Switch Blade',
+            weight = 200,
+            durability = 0.1,
+            anim = { 'anim@melee@switchblade@holster', 'unholster', 200, 'anim@melee@switchblade@holster', 'holster', 600 },
+        },
         -- ['WEAPON_WRENCH'] = {
         --     label = 'Wrench',
         --     weight = 2500,
@@ -182,44 +182,49 @@ return {
         --     weight = 420,
         --     durability = 0.00001,
         -- },
-        -- ['WEAPON_KARAMBIT'] = {
-        --     label = 'KARAMBIT',
-        --     weight = 320,
-        --     durability = 0.00001,
-        -- },
+        ['WEAPON_KARAMBIT'] = {
+            label = 'KARAMBIT',
+            weight = 320,
+            durability = 0.00001,
+        },
+        ['WEAPON_SHIV'] = {
+            label = 'SURIN',
+            weight = 320,
+            durability = 0.00001,
+        },
         -------------------
         --WEAPONS ADDONS --
         -------------------
-        -- ['WEAPON_38SNUBNOSE'] = {
-        --     label = '38 Snubnose 1',
-        --     weight = 520,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_38SNUBNOSE2'] = {
-        --     label = '38 Snubnose 2',
-        --     weight = 520,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_38SNUBNOSE3'] = {
-        --     label = '38 Snubnose 3',
-        --     weight = 520,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_38SPECIAL'] = {
-        --     label = '38 SPECIAL',
-        --     weight = 920,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_44MAGNUM'] = {
-        --     label = '44 MAGNUM',
-        --     weight = 920,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-50'
-        -- },
+        ['WEAPON_38SNUBNOSE'] = {
+            label = '38 Snubnose 1',
+            weight = 520,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_38SNUBNOSE2'] = {
+            label = '38 Snubnose 2',
+            weight = 520,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_38SNUBNOSE3'] = {
+            label = '38 Snubnose 3',
+            weight = 520,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_38SPECIAL'] = {
+            label = '38 SPECIAL',
+            weight = 920,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_44MAGNUM'] = {
+            label = '44 MAGNUM',
+            weight = 920,
+            durability = 0.01,
+            ammoname = 'ammo-50'
+        },
         -- ['WEAPON_L5'] = {
         --     label = 'Deagle L5',
         --     weight = 1400,
@@ -274,12 +279,12 @@ return {
         --     durability = 0.03,
         --     ammoname = 'ammo-50'
         -- },
-        -- ['WEAPON_BENELLIM2'] = {
-        --     label = 'Benelli M2',
-        --     weight = 3100,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-shotgun'
-        -- },
+        ['WEAPON_BENELLIM2'] = {
+            label = 'Benelli M2',
+            weight = 3100,
+            durability = 0.03,
+            ammoname = 'ammo-shotgun'
+        },
         ['WEAPON_AKM'] = {
             label = 'AK',
             weight = 3140,
