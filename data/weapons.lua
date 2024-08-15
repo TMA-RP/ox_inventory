@@ -1724,6 +1724,10 @@ return {
             label = 'Balles de 9mm',
             weight = 8,
         },
+        ['ammo-38'] = {
+            label = 'Balles de 38mm',
+            weight = 8,
+        },
         ['ammo-flare'] = {
             label = 'Flare round',
             weight = 25,
