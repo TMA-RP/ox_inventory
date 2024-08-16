@@ -201,30 +201,30 @@ return {
             durability = 0.01,
             ammoname = 'ammo-9'
         },
-        ['WEAPON_38SNUBNOSE2'] = {
-            label = '38 Snubnose 2',
-            weight = 520,
-            durability = 0.01,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_38SNUBNOSE3'] = {
-            label = '38 Snubnose 3',
-            weight = 520,
-            durability = 0.01,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_38SPECIAL'] = {
-            label = '38 SPECIAL',
-            weight = 920,
-            durability = 0.01,
-            ammoname = 'ammo-9'
-        },
-        ['WEAPON_44MAGNUM'] = {
-            label = '44 MAGNUM',
-            weight = 920,
-            durability = 0.01,
-            ammoname = 'ammo-50'
-        },
+        -- ['WEAPON_38SNUBNOSE2'] = {
+        --     label = '38 Snubnose 2',
+        --     weight = 520,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_38SNUBNOSE3'] = {
+        --     label = '38 Snubnose 3',
+        --     weight = 520,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_38SPECIAL'] = {
+        --     label = '38 SPECIAL',
+        --     weight = 920,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-9'
+        -- },
+        -- ['WEAPON_44MAGNUM'] = {
+        --     label = '44 MAGNUM',
+        --     weight = 920,
+        --     durability = 0.01,
+        --     ammoname = 'ammo-50'
+        -- },
         -- ['WEAPON_L5'] = {
         --     label = 'Deagle L5',
         --     weight = 1400,
@@ -285,36 +285,36 @@ return {
             durability = 0.03,
             ammoname = 'ammo-shotgun'
         },
-        ['WEAPON_AKM'] = {
-            label = 'AK',
-            weight = 3140,
-            durability = 0.03,
-            ammoname = 'ammo-762'
-        },
+        -- ['WEAPON_AKM'] = {
+        --     label = 'AK',
+        --     weight = 3140,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-762'
+        -- },
         -- ['WEAPON_MK18'] = {
         --     label = 'MK18',
         --     weight = 2720,
         --     durability = 0.03,
         --     ammoname = 'ammo-556'
         -- },
-        ['WEAPON_M4'] = {
-            label = 'M4A1',
-            weight = 2930,
-            durability = 0.03,
-            ammoname = 'ammo-556'
-        },
+        -- ['WEAPON_M4'] = {
+        --     label = 'M4A1',
+        --     weight = 2930,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-556'
+        -- },
         -- ['WEAPON_DOUBLEBARRELFM'] = {
         --     label = 'MR43',
         --     weight = 3240,
         --     durability = 0.03,
         --     ammoname = 'ammo-shotgun'
         -- },
-        ['WEAPON_MP5'] = {
-            label = 'MP5',
-            weight = 2610,
-            durability = 0.03,
-            ammoname = 'ammo-9'
-        },
+        -- ['WEAPON_MP5'] = {
+        --     label = 'MP5',
+        --     weight = 2610,
+        --     durability = 0.03,
+        --     ammoname = 'ammo-9'
+        -- },
         -- ['WEAPON_MINIUZI'] = {
         --     label = 'UZI',
         --     weight = 1310,

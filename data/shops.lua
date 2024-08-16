@@ -3567,41 +3567,41 @@ return {
 
     --     }
     -- },
-    ObjetIllegaux = {
-        name = 'Mister RAT',
-        inventory = {
-            { name = 'WEAPON_SHIV',        price = 720,  isIllegal = true },
-            { name = 'WEAPON_KNIFE',       price = 840,  isIllegal = true },
-            { name = 'WEAPON_KARAMBIT',    price = 910,  isIllegal = true },
-            { name = 'WEAPON_MACHETE',     price = 1200, isIllegal = true },
-            { name = 'WEAPON_BATTLEAXE',   price = 1300, isIllegal = true },
-            -- { name = 'WEAPON_BAT',         price = 450 },
-            { name = 'WEAPON_SWITCHBLADE', price = 650 },
-            -- { name = 'lockpick',            price = 15,    isIllegal = true },
-            -- { name = 'radio',               price = 2500,  isIllegal = true },
-            -- { name = 'WEAPON_FLARE',        price = 20,    isIllegal = true },
-            -- { name = 'weapon_smokegrenade', price = 1750,  isIllegal = true },
-            -- { name = 'spike',               price = 2500,  isIllegal = true },
-            -- { name = 'coupebracelet',       price = 200,   isIllegal = true },
-            -- { name = 'fakeplate',           price = 3500,  isIllegal = true },
-            -- { name = 'hack_phone',          price = 25000, isIllegal = true },
-            -- { name = 'hack_laptop',         price = 25000, isIllegal = true },
-            -- { name = 'noskit',              price = 25000, isIllegal = true },
-            -- {
-            --     name = 'nos',
-            --     price = 0,
-            --     metadata = { nosLvl = "100%" },
-            --     isIllegal = true
-            -- },
-            -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
-        },
-        locations = {
-            vec3(-3160.2627, 1119.0944, 24.6328)
-        },
-        targets = {
+    -- ObjetIllegaux = {
+    --     name = 'Mister RAT',
+    --     inventory = {
+    --         { name = 'WEAPON_SHIV',        price = 720,  isIllegal = true },
+    --         { name = 'WEAPON_KNIFE',       price = 840,  isIllegal = true },
+    --         { name = 'WEAPON_KARAMBIT',    price = 910,  isIllegal = true },
+    --         { name = 'WEAPON_MACHETE',     price = 1200, isIllegal = true },
+    --         { name = 'WEAPON_BATTLEAXE',   price = 1300, isIllegal = true },
+    --         -- { name = 'WEAPON_BAT',         price = 450 },
+    --         { name = 'WEAPON_SWITCHBLADE', price = 650 },
+    --         -- { name = 'lockpick',            price = 15,    isIllegal = true },
+    --         -- { name = 'radio',               price = 2500,  isIllegal = true },
+    --         -- { name = 'WEAPON_FLARE',        price = 20,    isIllegal = true },
+    --         -- { name = 'weapon_smokegrenade', price = 1750,  isIllegal = true },
+    --         -- { name = 'spike',               price = 2500,  isIllegal = true },
+    --         -- { name = 'coupebracelet',       price = 200,   isIllegal = true },
+    --         -- { name = 'fakeplate',           price = 3500,  isIllegal = true },
+    --         -- { name = 'hack_phone',          price = 25000, isIllegal = true },
+    --         -- { name = 'hack_laptop',         price = 25000, isIllegal = true },
+    --         -- { name = 'noskit',              price = 25000, isIllegal = true },
+    --         -- {
+    --         --     name = 'nos',
+    --         --     price = 0,
+    --         --     metadata = { nosLvl = "100%" },
+    --         --     isIllegal = true
+    --         -- },
+    --         -- { name = 'WEAPON_SMOKEGRENADE', price = 5000, isIllegal = true },
+    --     },
+    --     locations = {
+    --         vec3(-3160.2627, 1119.0944, 24.6328)
+    --     },
+    --     targets = {
 
-        }
-    },
+    --     }
+    -- },
     DigitalDen = {
         name = 'Digital Den',
         blip = {
