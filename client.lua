@@ -441,6 +441,7 @@ local function canUseItem(isAmmo)
 		-- and not lib.progressActive()
 		and not IsPedRagdoll(ped)
 		and not IsPedFalling(ped)
+		and not IsPedShooting(playerPed)
 end
 
 ---@param data table
@@ -547,6 +548,8 @@ local function useSlot(slot, noAnim)
 			if IsCinematicCamRendering() then SetCinematicModeActive(false) end
 
 			if currentWeapon then
+				if not currentWeapon.timer or currentWeapon.timer ~= 0 then return end
+
 				local weaponSlot = currentWeapon.slot
 				currentWeapon = Weapon.Disarm(currentWeapon)
 
@@ -1578,7 +1581,7 @@ RegisterNetEvent('ox_inventory:setPlayerInventory', function(currentDrops, inven
 							currentWeapon.timer = GetGameTimer() + 200
 						else
 							currentWeapon.timer = GetGameTimer() + (GetWeaponTimeBetweenShots(currentWeapon.hash) * 1000) +
-							100
+								100
 						end
 					end
 				elseif currentWeapon.throwable then
