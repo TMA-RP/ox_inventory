@@ -5,17 +5,18 @@ local Inventory = {}
 Inventory.Dumpsters = { 218085040, 666561306, -58485588, -206690185, 1511880420, 682791951 }
 
 function Inventory.OpenDumpster(entity)
-	local netId = NetworkGetEntityIsNetworked(entity) and NetworkGetNetworkIdFromEntity(entity)
+	-- local netId = NetworkGetEntityIsNetworked(entity) and NetworkGetNetworkIdFromEntity(entity)
 
-	if not netId then
-		local coords = GetEntityCoords(entity)
-		entity = GetClosestObjectOfType(coords.x, coords.y, coords.z, 0.1, GetEntityModel(entity), true, true, true)
-		netId = entity ~= 0 and NetworkGetNetworkIdFromEntity(entity)
-	end
+	-- if not netId then
+	-- 	local coords = GetEntityCoords(entity)
+	-- 	entity = GetClosestObjectOfType(coords.x, coords.y, coords.z, 0.1, GetEntityModel(entity), true, true, true)
+	-- 	netId = entity ~= 0 and NetworkGetNetworkIdFromEntity(entity)
+	-- end
+	local coords = GetEntityCoords(entity)
 
-	if netId then
-		client.openInventory('dumpster', 'dumpster' .. netId)
-	end
+	-- if netId then
+	client.openInventory('dumpster', 'dumpster' .. math.floor(coords.x) .. math.floor(coords.y) .. math.floor(coords.z))
+	-- end
 end
 
 local Utils = require 'modules.utils.client'

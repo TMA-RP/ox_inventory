@@ -157,13 +157,7 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
 			right = Inventory(data)
 
 			if not right then
-				local netid = tonumber(data:sub(9))
-
-				-- dumpsters do not work with entity lockdown. need to rewrite, but having to do
-				-- distance checks to some ~7000 dumpsters and freeze the entities isn't ideal
-				if netid and NetworkGetEntityFromNetworkId(netid) > 0 then
-					right = Inventory.Create(data, locale('dumpster'), invType, 15, 0, 100000, false)
-				end
+				right = Inventory.Create(data, locale('dumpster'), invType, 15, 0, 100000, false)
 			end
 		elseif invType == 'container' then
 			left.containerSlot = data --[[@as number]]
