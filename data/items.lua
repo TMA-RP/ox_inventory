@@ -122,10 +122,17 @@ return {
 			usetime = 1500
 		}
 	},
-	['cannabis'] = {
-		label = 'Cannabis',
+	['fresh_weed'] = {
+		label = 'Plante fraîche de cannabis',
+		weight = 35,
+		stack = false,
+		close = true,
+		description = nil
+	},
+	['dryed_weed'] = {
+		label = 'Tête sêche de cannabis',
 		weight = 7,
-		stack = true,
+		stack = false,
 		close = true,
 		description = nil
 	},
