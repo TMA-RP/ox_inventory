@@ -1235,6 +1235,12 @@ return {
 		weight = 10,
 		stack = true,
 	},
+	['vehicle_keylock'] = {
+		label = "Serrure de véhicule",
+		canUse = false,
+		weight = 1500,
+		stack = true,
+	},
 
 	['idcard'] = {
 		label = "Carte d'identité",
