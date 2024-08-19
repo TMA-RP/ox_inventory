@@ -616,7 +616,7 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 		self.discordId = player_discord_id
 	end
 
-	if invType == 'drop' or invType == 'temp' or invType == 'dumpster' then
+	if invType == 'drop' or invType == 'temp' then
 		self.datastore = true
 	else
 		self.changed = false
@@ -626,13 +626,6 @@ function Inventory.Create(id, label, invType, slots, weight, maxWeight, owner, i
 
 			if invType ~= 'player' and owner and type(owner) ~= 'boolean' then
 				self.id = ('%s:%s'):format(self.id, owner)
-			end
-
-			if invType == 'dumpster' then
-				local netid = tonumber(id:sub(9))
-				local dumpster = NetworkGetEntityFromNetworkId(netid)
-				local coord = GetEntityCoords(dumpster)
-				self.dumpsterCoords = math.round(coord.x) .. ", " .. math.round(coord.y) .. ", " .. math.round(coord.z)
 			end
 		end
 	end
@@ -810,9 +803,7 @@ end
 ---@return table returnData, number totalWeight
 local function generateItems(inv, invType, items)
 	if items == nil then
-		if invType == 'dumpster' then
-			items = randomLoot(server.dumpsterloot)
-		elseif invType == 'vehicle' then
+		if invType == 'vehicle' then
 			items = randomLoot(server.vehicleloot)
 		end
 	end
@@ -866,10 +857,6 @@ function Inventory.Load(id, invType, owner)
 			end
 		else
 			result = result[invType]
-		end
-	elseif invType == 'dumpster' then
-		if server.randomloot then
-			return generateItems(id, invType)
 		end
 	elseif id then
 		result = db.loadStash(owner or '', id)
@@ -1921,11 +1908,6 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 							local to = toInventory.id
 							if fromInventory.owner then
 								from = fromInventory.discordId
-							elseif fromInventory.type == "dumpster" then
-								from = {
-									type = "dumpster",
-									coords = fromInventory.dumpsterCoords
-								}
 							elseif fromInventory.type == "drop" then
 								local coord = Inventory.Drops[fromInventory.id].coords
 								from = {
@@ -1938,11 +1920,6 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 
 							if toInventory.owner then
 								to = toInventory.discordId
-							elseif toInventory.type == "dumpster" then
-								to = {
-									type = "dumpster",
-									coords = toInventory.dumpsterCoords
-								}
 							elseif toInventory.type == "drop" then
 								local coord = Inventory.Drops[toInventory.id].coords
 								to = {
@@ -2029,11 +2006,6 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 							local to = toInventory.id
 							if fromInventory.owner then
 								from = fromInventory.discordId
-							elseif fromInventory.type == "dumpster" then
-								from = {
-									type = "dumpster",
-									coords = fromInventory.dumpsterCoords
-								}
 							elseif fromInventory.type == "drop" then
 								local coord = Inventory.Drops[fromInventory.id].coords
 								from = {
@@ -2046,11 +2018,6 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 
 							if toInventory.owner then
 								to = toInventory.discordId
-							elseif toInventory.type == "dumpster" then
-								to = {
-									type = "dumpster",
-									coords = toInventory.dumpsterCoords
-								}
 							elseif toInventory.type == "drop" then
 								local coord = Inventory.Drops[toInventory.id].coords
 								to = {
@@ -2132,11 +2099,6 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 							local to = toInventory.id
 							if fromInventory.owner then
 								from = fromInventory.discordId
-							elseif fromInventory.type == "dumpster" then
-								from = {
-									type = "dumpster",
-									coords = fromInventory.dumpsterCoords
-								}
 							elseif fromInventory.type == "drop" then
 								local coord = Inventory.Drops[fromInventory.id].coords
 								from = {
@@ -2149,11 +2111,6 @@ lib.callback.register('ox_inventory:swapItems', function(source, data)
 
 							if toInventory.owner then
 								to = toInventory.discordId
-							elseif toInventory.type == "dumpster" then
-								to = {
-									type = "dumpster",
-									coords = toInventory.dumpsterCoords
-								}
 							elseif toInventory.type == "drop" then
 								local coord = Inventory.Drops[toInventory.id].coords
 								to = {

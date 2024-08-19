@@ -152,13 +152,6 @@ local function openInventory(source, invType, data, ignoreSecurityChecks)
 			if ignoreSecurityChecks or server.hasGroup(left, shared.police) then
 				right = Inventory(('evidence-%s'):format(data))
 			end
-		elseif invType == 'dumpster' then
-			---@cast data string
-			right = Inventory(data)
-
-			if not right then
-				right = Inventory.Create(data, locale('dumpster'), invType, 15, 0, 100000, false)
-			end
 		elseif invType == 'container' then
 			left.containerSlot = data --[[@as number]]
 			data = left.items[data]
