@@ -249,12 +249,12 @@ return {
         --     durability = 0.03,
         --     ammoname = 'ammo-9'
         -- },
-        -- ['WEAPON_M45A1'] = {
-        --     label = 'M45A1',
-        --     weight = 920,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-45'
-        -- },
+        ['WEAPON_M45A1'] = {
+            label = 'M45A1',
+            weight = 920,
+            durability = 0.01,
+            ammoname = 'ammo-45'
+        },
         -- ['WEAPON_M45'] = {
         --     label = 'M45',
         --     weight = 920,
