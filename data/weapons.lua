@@ -147,11 +147,11 @@ return {
         --     weight = 2500,
         --     durability = 0.1,
         -- },
-        -- ['WEAPON_JOUJOU'] = {
-        --     label = 'Joujou',
-        --     weight = 400,
-        --     durability = 0.00001,
-        -- },
+        ['WEAPON_JOUJOU'] = {
+            label = 'Joujou',
+            weight = 400,
+            durability = 0.00001,
+        },
         -- ['WEAPON_KATANA1'] = {
         --     label = 'KATANA 1',
         --     weight = 320,
@@ -201,54 +201,54 @@ return {
             durability = 0.01,
             ammoname = 'ammo-9'
         },
-        -- ['WEAPON_38SNUBNOSE2'] = {
-        --     label = '38 Snubnose 2',
-        --     weight = 520,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_38SNUBNOSE3'] = {
-        --     label = '38 Snubnose 3',
-        --     weight = 520,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_38SPECIAL'] = {
-        --     label = '38 SPECIAL',
-        --     weight = 920,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_44MAGNUM'] = {
-        --     label = '44 MAGNUM',
-        --     weight = 920,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-50'
-        -- },
-        -- ['WEAPON_L5'] = {
-        --     label = 'Deagle L5',
-        --     weight = 1400,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-50'
-        -- },
-        -- ['WEAPON_G17'] = {
-        --     label = 'Glock 17',
-        --     weight = 625,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-9'
-        -- },
+        ['WEAPON_38SNUBNOSE2'] = {
+            label = '38 Snubnose 2',
+            weight = 520,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_38SNUBNOSE3'] = {
+            label = '38 Snubnose 3',
+            weight = 520,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_38SPECIAL'] = {
+            label = '38 SPECIAL',
+            weight = 920,
+            durability = 0.01,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_44MAGNUM'] = {
+            label = '44 MAGNUM',
+            weight = 920,
+            durability = 0.01,
+            ammoname = 'ammo-50'
+        },
+        ['WEAPON_L5'] = {
+            label = 'Deagle L5',
+            weight = 1400,
+            durability = 0.03,
+            ammoname = 'ammo-50'
+        },
+        ['WEAPON_G17'] = {
+            label = 'Glock 17',
+            weight = 625,
+            durability = 0.03,
+            ammoname = 'ammo-9'
+        },
         ['WEAPON_GLOCK17'] = {
             label = 'Glock 17',
             weight = 625,
             durability = 0.03,
             ammoname = 'ammo-9'
         },
-        -- ['WEAPON_M9'] = {
-        --     label = 'M9',
-        --     weight = 615,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-9'
-        -- },
+        ['WEAPON_M9'] = {
+            label = 'M9',
+            weight = 615,
+            durability = 0.03,
+            ammoname = 'ammo-9'
+        },
         ['WEAPON_M45A1'] = {
             label = 'M45A1',
             weight = 920,
@@ -261,24 +261,24 @@ return {
         --     durability = 0.01,
         --     ammoname = 'ammo-45'
         -- },
-        -- ['WEAPON_2011'] = {
-        --     label = 'STI DVC 2011',
-        --     weight = 1110,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-45'
-        -- },
-        -- ['WEAPON_P226'] = {
-        --     label = 'P226',
-        --     weight = 1110,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_P357'] = {
-        --     label = 'P357',
-        --     weight = 1360,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-50'
-        -- },
+        ['WEAPON_2011'] = {
+            label = 'STI DVC 2011',
+            weight = 1110,
+            durability = 0.03,
+            ammoname = 'ammo-45'
+        },
+        ['WEAPON_P226'] = {
+            label = 'P226',
+            weight = 1110,
+            durability = 0.03,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_P357'] = {
+            label = 'P357',
+            weight = 1360,
+            durability = 0.03,
+            ammoname = 'ammo-50'
+        },
         ['WEAPON_BENELLIM2'] = {
             label = 'Benelli M2',
             weight = 3100,
@@ -291,85 +291,85 @@ return {
             durability = 0.03,
             ammoname = 'ammo-762'
         },
-        -- ['WEAPON_MK18'] = {
-        --     label = 'MK18',
-        --     weight = 2720,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-556'
-        -- },
-        -- ['WEAPON_M4'] = {
-        --     label = 'M4A1',
-        --     weight = 2930,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-556'
-        -- },
-        -- ['WEAPON_DOUBLEBARRELFM'] = {
-        --     label = 'MR43',
-        --     weight = 3240,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-shotgun'
-        -- },
-        -- ['WEAPON_MP5'] = {
-        --     label = 'MP5',
-        --     weight = 2610,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-9'
-        -- },
-        -- ['WEAPON_MINIUZI'] = {
-        --     label = 'UZI',
-        --     weight = 1310,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-9'
+        ['WEAPON_MK18'] = {
+            label = 'MK18',
+            weight = 2720,
+            durability = 0.03,
+            ammoname = 'ammo-556'
+        },
+        ['WEAPON_M4'] = {
+            label = 'M4A1',
+            weight = 2930,
+            durability = 0.03,
+            ammoname = 'ammo-556'
+        },
+        ['WEAPON_DOUBLEBARRELFM'] = {
+            label = 'MR43',
+            weight = 3240,
+            durability = 0.03,
+            ammoname = 'ammo-shotgun'
+        },
+        ['WEAPON_MP5'] = {
+            label = 'MP5',
+            weight = 2610,
+            durability = 0.03,
+            ammoname = 'ammo-9'
+        },
+        ['WEAPON_MINIUZI'] = {
+            label = 'UZI',
+            weight = 1310,
+            durability = 0.03,
+            ammoname = 'ammo-9'
 
-        -- },
-        -- ['WEAPON_AXMC'] = {
-        --     label = 'AXMC',
-        --     weight = 4220,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-sniper'
-        -- },
-        -- ['WEAPON_M700'] = {
-        --     label = 'AXMC',
-        --     weight = 4120,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-sniper'
-        -- },
-        -- ['WEAPON_NSR9'] = {
-        --     label = 'NSR9',
-        --     weight = 2870,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-556'
-        -- },
-        -- ['WEAPON_M45'] = {
-        --     label = 'M45',
-        --     weight = 930,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-45'
-        -- },
-        -- ['WEAPON_VICTUSXMR'] = {
-        --     label = 'VICTUS XMR',
-        --     weight = 4270,
-        --     durability = 0.03,
-        --     ammoname = 'ammo-sniper'
-        -- },
-        -- ['WEAPON_M249'] = {
-        --     label = 'M249',
-        --     weight = 7500,
-        --     durability = 0.06,
-        --     ammoname = 'ammo-762'
-        -- },
-        -- ['WEAPON_RPG'] = {
-        --     label = 'RPG 7',
-        --     weight = 17500,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-rpg'
-        -- },
-        -- ['WEAPON_VECTOR'] = {
-        --     label = 'Vector Kriss',
-        --     weight = 4500,
-        --     durability = 0.01,
-        --     ammoname = 'ammo-45'
-        -- },
+        },
+        ['WEAPON_AXMC'] = {
+            label = 'AXMC',
+            weight = 4220,
+            durability = 0.03,
+            ammoname = 'ammo-sniper'
+        },
+        ['WEAPON_M700'] = {
+            label = 'AXMC',
+            weight = 4120,
+            durability = 0.01,
+            ammoname = 'ammo-sniper'
+        },
+        ['WEAPON_NSR9'] = {
+            label = 'NSR9',
+            weight = 2870,
+            durability = 0.03,
+            ammoname = 'ammo-556'
+        },
+        ['WEAPON_M45'] = {
+            label = 'M45',
+            weight = 930,
+            durability = 0.03,
+            ammoname = 'ammo-45'
+        },
+        ['WEAPON_VICTUSXMR'] = {
+            label = 'VICTUS XMR',
+            weight = 4270,
+            durability = 0.03,
+            ammoname = 'ammo-sniper'
+        },
+        ['WEAPON_M249'] = {
+            label = 'M249',
+            weight = 7500,
+            durability = 0.06,
+            ammoname = 'ammo-762'
+        },
+        ['WEAPON_RPG'] = {
+            label = 'RPG 7',
+            weight = 17500,
+            durability = 0.01,
+            ammoname = 'ammo-rpg'
+        },
+        ['WEAPON_VECTOR'] = {
+            label = 'Vector Kriss',
+            weight = 4500,
+            durability = 0.01,
+            ammoname = 'ammo-45'
+        },
     },
     Components = {
         -------------------
@@ -1281,15 +1281,15 @@ return {
         -- COMPENENTS VANNILLA --
         -------------------------
 
-        ['at_flashlight'] = {
-            label = 'Tactical Flashlight',
-            weight = 120,
-            type = 'flashlight',
-            client = {
-                component = { `COMPONENT_AT_PI_FLSH`, `COMPONENT_AT_AR_FLSH`, `COMPONENT_AT_PI_FLSH_02`, `COMPONENT_AT_AR_FLSH_REH` },
-                usetime = 2500
-            }
-        },
+        -- ['at_flashlight'] = {
+        --     label = 'Tactical Flashlight',
+        --     weight = 120,
+        --     type = 'flashlight',
+        --     client = {
+        --         component = { `COMPONENT_AT_PI_FLSH`, `COMPONENT_AT_AR_FLSH`, `COMPONENT_AT_PI_FLSH_02`, `COMPONENT_AT_AR_FLSH_REH` },
+        --         usetime = 2500
+        --     }
+        -- },
 
         ['at_flashlight'] = {
             label = 'Tactical Flashlight',
