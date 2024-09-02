@@ -149,9 +149,6 @@ return {
 		stack = true,
 		close = true,
 		description = nil,
-		client = {
-			export = "devcore_smoke.Crollingpaper",
-		},
 	},
 	['cigarettebox'] = {
 		label = 'Paquet de Marlbaré',
@@ -239,9 +236,6 @@ return {
 		stack = true,
 		close = true,
 		description = nil,
-		client = {
-			export = "devcore_smoke.cokeUse"
-		}
 	},
 	['coke'] = {
 		label = 'Cocaïne pure',
@@ -362,9 +356,6 @@ return {
 		stack = true,
 		weight = 1,
 		close = true,
-		client = {
-			export = "devcore_smoke.Crollingpaper",
-		},
 	},
 	['joint'] = {
 		label = 'Joint',
