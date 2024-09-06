@@ -113,7 +113,11 @@ local function loadInventoryData(data, player, ignoreSecurityChecks)
 
 	if data.type == 'trunk' or data.type == 'glovebox' then
 		local plate = data.id:sub(6)
-
+		if plate == "     TMA" then
+			plate = tostring(GetGameTimer())
+			-- Make plate max 8 characters and take the last 8 characters
+			plate = plate:sub(-8)
+		end
 		if server.trimplate then
 			plate = string.strtrim(plate)
 			data.id = ('%s%s'):format(data.id:sub(1, 5), plate)
