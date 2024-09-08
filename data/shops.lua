@@ -12,10 +12,8 @@ return {
 			{ name = 'weapon_nightstick', price = 0 },
 			{ name = 'WEAPON_STUNGUN_MP', price = 0 },
 			{ name = 'weapon_glock17',    price = 0 },
-			{ name = 'WEAPON_BENELLIM2',  price = 0 },
 
 			{ name = 'ammo-9',            price = 0 },
-			{ name = 'ammo-shotgun',      price = 0 },
 			{
 				name = 'hat',
 				price = 0,
