@@ -34,7 +34,7 @@ function Weapon.Equip(item, data, noWeaponAnim)
 
 		sleep = anim and anim[3] or 1200
 
-		if not exports.ceeb_weapons:isWeapon(item) then
+		if GetWeapontypeGroup(data.hash) == `GROUP_PISTOL` then
 			local isPlayingAnimation = exports.scully_emotemenu:isInEmote()
 			local lastEmote, lastVariant = exports.scully_emotemenu:getLastEmote()
 			if not isPlayingAnimation or (lastEmote and lastEmote.Command ~= "reaching") then
@@ -119,7 +119,6 @@ function Weapon.Disarm(currentWeapon, noAnim)
 			ClearPedSecondaryTask(cache.ped)
 
 			local item = Items[currentWeapon.name]
-			local coords = GetEntityCoords(cache.ped, true)
 			local anim = item.anim or anims[GetWeapontypeGroup(currentWeapon.hash)]
 
 			if anim == anims[`GROUP_PISTOL`] and not client.hasGroup(shared.police) then
@@ -127,8 +126,7 @@ function Weapon.Disarm(currentWeapon, noAnim)
 			end
 
 			local sleep = anim and anim[6] or 1400
-
-			if not exports.ceeb_weapons:isWeapon(item) then
+			if GetWeapontypeGroup(currentWeapon.hash) == `GROUP_PISTOL` then
 				exports.scully_emotemenu:playEmoteByCommand("reaching")
 				Wait(800)
 				exports.scully_emotemenu:cancelEmote()

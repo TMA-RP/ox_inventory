@@ -6,6 +6,12 @@ return {
 			durability = 0.1,
 			ammoname = 'ammo-9',
 		},
+
+		['WEAPON_STUNGUN_MP'] = {
+			label = 'Tazer',
+			weight = 227,
+		},
+
 		['WEAPON_BATTLERIFLE'] = {
 			label = 'Battle Rifle',
 			weight = 3300,
